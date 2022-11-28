@@ -1,0 +1,78 @@
+#partners {
+    margin-top: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../../../frontend-assets/images/partner_bg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.about_parntner_ships_card {
+    width: 90%;
+    color: white;
+    padding: 20px;
+    margin: 3rem auto;
+    background-color: rgba(205, 202, 202, 0.105);
+    font-size: 1rem;
+}
+.about_parntner_ships_card .title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5rem;
+    opacity: 1;
+    margin-bottom: 1rem;
+}
+.about_parntner_ships_card .title .underline {
+    background: #ED1C24;
+    height: 10px;
+    width: 5%;
+    opacity: 0.5;
+}
+
+.content {
+    opacity: 1;
+}
+.partners_icon {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.partners_icon .carrier,
+.partners_icon .samsung,
+.partners_icon .panasonic {
+    width: 160px;
+    height: 160px;
+}
+.partners_icon .carrier {
+    background-image: url("../../../frontend-assets/images/carrier.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.partners_icon .samsung {
+    background-image: url("../../../frontend-assets/images/samsung.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 200px;
+    height: 200px;
+}
+.partners_icon .panasonic {
+    background-image: url("../../../frontend-assets/images/panasonic.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 200px;
+    height: 200px;
+}
+
+@media screen and (min-width: 768px) {
+    .title {
+        font-size: 2.2rem;
+    }
+}

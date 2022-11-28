@@ -1,0 +1,28 @@
+
+.row {
+    margin: 0 auto;
+    max-width: 95em;
+}
+.employee_card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    transition: all 0.3s;
+}
+.employee_card img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.employee_card .footer div {
+    font-size: 12px !important;
+}
+.employee_card:hover {
+     transform: translateY(-20px);
+     cursor: pointer;
+ }
+
+
+.swiper-pagination-bullet-active {
+    background-color: #5bba47 !important;
+}

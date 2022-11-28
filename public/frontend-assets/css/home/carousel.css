@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+.fonts {
+    font-family: "Lobster", cursive;
+    font-family: "Lobster", cursive;
+    font-family: "Lobster Two", cursive;
+    font-family: "Libre Baskerville", serif;
+}
+
+.home-slide-container {
+    margin-top: 140px !important;
+    width: 100%;
+    min-height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    object-fit: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display: flex;
+}
+
+.carousel-content {
+    font-size: 40px;
+    color: #5BBA47;
+    font-family: "Lobster", cursive;
+    text-shadow: 2px 2px 2px #fff;
+}
+
+.home-carousel-1{
+    background-image: url('../../../frontend-assets/images/home_carousel_1.jpg');
+}
+.home-carousel-2{
+    background-image: url('../../../frontend-assets/images/home_carousel_2.jpg');
+}
+.home-carousel-3{
+    background-image: url('../../../frontend-assets/images/home_carousel_3.jpg');
+}
+.home-carousel-4{
+    background-image: url('../../../frontend-assets/images/home_carousel_4.jpg');
+}
+
+.swiper-slide {
+    z-index: 0 !important;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #3c8132 !important;
+}
+
+@media screen and (min-width: 768px) {
+    .carousel-content {
+        font-size: 60px;
+    }
+}

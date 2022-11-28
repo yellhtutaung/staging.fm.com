@@ -1,0 +1,27 @@
+
+.about_section {
+    margin-top: 3rem;
+    background-color: rgba(205, 202, 202, 0.105);
+}
+.about_bg {
+    display: flex;
+    justify-content: center;
+}
+.about_text {
+    padding: 0 20px;
+}
+@media screen and (min-width: 765px) {
+    .main_title {
+        color: white;
+    }
+    .about_bg {
+        /*background-image: url('/public/frontend-assets/images/about_us_bg.f2d574dd.jpg');*/
+        background-image: url("../../images/about_us_bg.f2d574dd.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .about_text {
+        padding: 0 50px;
+    }
+}

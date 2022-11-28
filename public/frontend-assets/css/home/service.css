@@ -1,0 +1,78 @@
+#services {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.our_service_card_container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.our_service_card {
+    margin-top: 6rem;
+    margin-bottom: 1rem;
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: all 0.3s;
+    overflow: hidden;
+    border-radius: 20px;
+}
+.service_card_title {
+    align-self: flex-start;
+    padding-left: 20px;
+    margin-top: 20px;
+    font-family: "Merriweather", serif;
+}
+.service_underline{
+    background-color:  #5BBA47;
+    height: 2px;
+    width: 80px;
+}
+
+.service_card_body {
+    padding: 20px;
+    text-align: left;
+    line-height: 1.5;
+    font-size: 17.5px;
+    font-family: "Lora", serif;
+}
+.service_card_img {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    overflow: hidden;
+}
+img {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+.our_service_card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    transform: translateY(-20px);
+    cursor: pointer;
+}
+
+.our_service_card_container:last-child {
+    border-right: none;
+}
+
+
+
+@media screen and (min-width: 768px) {
+    .our_service_card_container {
+        border-right: 3px solid #ebebeb;
+    }
+    .our_service_card_container .our_service_card {
+        margin-top: 4rem;
+        width: 65%;
+    }
+}

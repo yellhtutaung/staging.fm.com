@@ -1,0 +1,30 @@
+.transport_section {
+    background-color: rgba(205, 202, 202, 0.105);
+}
+.transport_section .transport_bg {
+    display: flex;
+    justify-content: center;
+}
+.transport_section .transport_text {
+    padding: 20px;
+}
+.transport_section .transport_text p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+@media screen and (min-width: 765px) {
+    .transport_section .main_title {
+        color: white;
+    }
+    .transport_section .transport_bg {
+        background-image: url('../../../frontend-assets/images/transport.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .transport_section .transport_text {
+        padding: 50px;
+    }
+}
+

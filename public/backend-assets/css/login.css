@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Merriweather&family=Noto+Serif&family=Open+Sans&family=PT+Serif&display=swap');
+
+.fonts {
+    font-family: 'Lora', serif;
+    font-family: 'Merriweather', serif;
+    font-family: 'Noto Serif', serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'PT Serif', serif;
+}
+
+.login-form-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../../../heart_bg.png");
+    background-origin: border-box;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center top;
+    background-size: 100% 105%;
+
+}
+
+.card-body {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+form {
+    font-family: 'Merriweather', serif;
+}
+
+.form-control:focus {border-color:#38c172!important;
+    -webkit-box-shadow: none!important;
+    -moz-box-shadow: none!important;
+    box-shadow: none!important;
+}
+
+.singin-btn {
+    background-color: #38c172;
+    color: white;
+    border-radius: 0 !important;
+    padding: 6px 12px;
+    border:1px solid #38c172;
+    font-family: 'PT Serif', serif;
+}
+
+.logo-img {
+    width: 130px;
+}
+
+.card-header .text {
+    font-size: 20px;
+    text-align: center;
+    font-family: 'PT Serif', serif;
+}
+
+.card-footer {
+    font-family: 'PT Serif', serif;
+}

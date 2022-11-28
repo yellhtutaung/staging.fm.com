@@ -1,0 +1,132 @@
+nav li.router-link-active {
+    text-decoration: underline;
+}
+#top_brand_bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    background-color: white;
+}
+#top_brand_bar .red_block {
+    background-color: #ED1C24;
+    width: 100%;
+    min-height: 10px;
+}
+#top_brand_bar .green_block {
+    background-color: #5BBA47;
+    width: 100%;
+    min-height: 30px;
+}
+#top_brand_bar .white_block {
+    background-color: #ffffff;
+    width: 100%;
+    min-height: 5px;
+}
+
+.navigation_bar.web {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navigation_bar.web .left_navigation_bar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.navigation_bar.web .left_navigation_bar ul {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation_bar.web .left_navigation_bar ul li {
+    list-style: none;
+    display: flex;
+}
+.navigation_bar.web .left_navigation_bar ul li a {
+    padding: 10px;
+    text-decoration: none;
+    font-size: 1.2em;
+    color: black;
+}
+.navigation_bar.web .left_navigation_bar ul li a:hover {
+     color: green;
+ }
+
+
+.right_navigation_bar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.right_navigation_bar ul {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right_navigation_bar ul li {
+    list-style: none;
+    display: flex;
+}
+.right_navigation_bar ul li a {
+    padding: 10px;
+    text-decoration: none;
+    font-size: 1.2em;
+    color: black;
+}
+.right_navigation_bar ul li a:hover {
+     color: green;
+ }
+
+
+.navigation_bar {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.mobile_menu_icon {
+    position: absolute;
+    top: 35%;
+    left: 0%;
+}
+
+.main_logo {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 150px;
+    height: auto;
+}
+
+.menu_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #00000085 !important;
+    padding: 0.5rem 1rem !important;
+.menu_button:hover {
+     background-color: #5BBA47;
+     color: #ffffff !important;
+     transition: ease-in 0.25s;
+     border-color: transparent;
+ }
+}
+@media screen and (max-width: 768px) {
+    .navigation_bar.web {
+        display: none;
+    }
+    .navigation_bar.mobile {
+        display: flex;
+    }
+}
