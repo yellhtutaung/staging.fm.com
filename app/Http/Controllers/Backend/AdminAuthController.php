@@ -20,7 +20,7 @@ class AdminAuthController extends Controller
         ]);
 
         if (Auth::attempt($formData)) {
-            return redirect('dashboard');
+            return redirect('admin');
         }else {
             return back();
         }
