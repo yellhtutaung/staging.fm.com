@@ -27,6 +27,8 @@ Route::get('target-market', [\App\Http\Controllers\Frontend\PagesController::cla
 
 Route::get('coldchain-transport', [\App\Http\Controllers\Frontend\PagesController::class, 'coldchain']);
 
+Route::get('employees/job', [\App\Http\Controllers\Frontend\PagesController::class, 'job']);
+
 Route::get('login', [AdminAuthController::class, 'login'])->name('login');
 Route::post('login', [AdminAuthController::class, 'post_login'])->name('post.login');
 

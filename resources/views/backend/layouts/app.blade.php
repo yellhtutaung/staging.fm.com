@@ -2,9 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+
+    <link rel="icon" href="{{ asset('favicon.ico') }}" />
+    <meta itemprop="image" content="{{ asset('meta/social-image.jpg') }}">
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="For 100% organic fresh fruits and vegetables, remember Fresh Moe!" />
+    <meta name="keywords" content="FreshMoe Ecommerce QuickCommerce E-commerce Freshmoe group business https://staging.freshmoe.com/  https://freshmoe.com/">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Green Earner</title>
+    <title>@yield('title')</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -14,6 +21,7 @@
 
     <script src="https://kit.fontawesome.com/7c0ec42130.js" crossorigin="anonymous"></script>
 
+    <link rel="stylesheet" href="{{asset('backend-assets/css/layout.css')}}">
     <link rel="stylesheet" href="{{asset('backend-assets/css/app.css')}}">
 
     @yield('extra-css')
@@ -28,7 +36,21 @@
 </div>
 
 <div class="main-container">
-    <?php echo View::make ('backend.layouts.sidebar'); ?>
+    {{-- <?php echo View::make ('backend.layouts.sidebar'); ?> --}}
+    <div class="sidebar bg-light shadow pt-2">
+        <div class="d-flex justify-content-center img-logo-container p-3">
+            <img class="img-logo" src="{{asset('freshmoe_logo.png')}}" alt="">
+        </div>
+        <div class="px-3">
+            <div class="p-2 logoContainer">
+                <a class="text-decoration-none text-light fw-bold" href="#"><i class="fa-solid fa-house-chimney"></i> Dashboard</a>
+            </div>
+
+
+        </div>
+
+    </div>
+
 
     <div class="main pt-2">
 

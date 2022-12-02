@@ -30,4 +30,8 @@ class PagesController extends Controller
     public function coldchain () {
         return view('frontend.coldchain');
     }
+
+    public function job () {
+        return view('frontend.job');
+    }
 }
