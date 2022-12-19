@@ -13,18 +13,16 @@ class AdminAuthController extends Controller
         return view('login');
     }
 
-    public function post_login (Request $request) {
+    public function post_login (Request $request)
+    {
         $formData = $request->validate([
             'email' => ['required', Rule::exists('users', 'email')],
             'password' => ['required']
         ]);
-
         if (Auth::attempt($formData)) {
             return redirect('admin');
         }else {
             return back();
         }
-
-
     }
 }

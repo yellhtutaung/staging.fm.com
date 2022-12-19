@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\Backend\DashboardController;
 use App\Http\Controllers\Backend\AdminAuthController;
+use App\Http\Controllers\Frontend\PagesController;
+use App\Http\Middleware\Admin;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,39 +17,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [\App\Http\Controllers\Frontend\PagesController::class, 'home']);
+Route::get('/', [PagesController::class, 'home']);
+Route::get('employees', [PagesController::class, 'employees']);
+Route::get('client', [PagesController::class, 'client']);
+Route::get('partnerships', [PagesController::class, 'partnerships']);
+Route::get('target-market', [PagesController::class, 'market']);
+Route::get('coldchain-transport', [PagesController::class, 'coldchain']);
+Route::get('employees/job', [PagesController::class, 'job']);
+Route::get('/register', [PagesController::class, 'register']);
+Route::get('login', [AdminAuthController::class, 'login'])->name('login');
 
-Route::get('employees', [\App\Http\Controllers\Frontend\PagesController::class, 'employees']);
+Route::get('admin/login', [AdminAuthController::class, 'login']);
 
-Route::get('client', [\App\Http\Controllers\Frontend\PagesController::class, 'client']);
-
-Route::get('partnerships', [\App\Http\Controllers\Frontend\PagesController::class, 'partnerships']);
-
-Route::get('target-market', [\App\Http\Controllers\Frontend\PagesController::class, 'market']);
-
-Route::get('coldchain-transport', [\App\Http\Controllers\Frontend\PagesController::class, 'coldchain']);
-
-Route::get('employees/job', [\App\Http\Controllers\Frontend\PagesController::class, 'job']);
-
-
-Route::get('/login', [\App\Http\Controllers\Frontend\PagesController::class, 'login']);
-Route::get('/register', [\App\Http\Controllers\Frontend\PagesController::class, 'register']);
-
-Route::prefix('admin')->name('admin.')->group(function () {
-    Route::get('login', [AdminAuthController::class, 'login'])->name('login');
+Route::middleware([Admin::class])->prefix('admin')->name('admin.')->group(function ()
+{
     Route::post('login', [AdminAuthController::class, 'post_login'])->name('post.login');
     Route::get('/', [DashboardController::class, 'home'])->name('home');
     Route::get('/job', [DashboardController::class, 'job'])->name('job');
 });
 
-
-
-
-
-//Auth::routes();
-//
-//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-//
-//Auth::routes();
-//
-//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

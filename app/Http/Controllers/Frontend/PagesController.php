@@ -7,35 +7,43 @@ use Illuminate\Http\Request;
 
 class PagesController extends Controller
 {
-    public function home () {
+    public function home ()
+    {
         return view('frontend.home');
     }
 
-    public function employees () {
+    public function employees ()
+    {
         return view('frontend.employees');
     }
 
-    public function client () {
+    public function client ()
+    {
         return view('frontend.client');
     }
 
-    public  function  partnerships () {
+    public  function  partnerships ()
+    {
         return view('frontend.partnerships');
     }
 
-    public function market () {
+    public function market ()
+    {
         return view('frontend.market');
     }
 
-    public function coldchain () {
+    public function coldchain ()
+    {
         return view('frontend.coldchain');
     }
 
-    public function job () {
+    public function job ()
+    {
         return view('frontend.job');
     }
 
-    public function register () {
+    public function register ()
+    {
         return view('frontend.auth.register');
     }
 }
