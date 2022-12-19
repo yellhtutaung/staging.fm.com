@@ -77,16 +77,7 @@ footer {
     margin-left: 0px;
 }
 
-
-.logoContainer {
-    margin-top: 15px;
-    /* background-color: rgba(0, 128, 0, 0.797); */
-    background-color: #5bba47 !important;
-    border-radius: 5px;
-    color: white;
-}
-
-.logoContainer > a {
+.linkContainer > a {
     display: inline-block;
     width: 100% !important;
 }
@@ -147,11 +138,11 @@ footer {
 }
 
 
+/*aside start */
 
 
 
-
-
+/*aside end*/
 
 @media screen and (max-width: 992px) {
     .sidebar{

@@ -34,4 +34,8 @@ class PagesController extends Controller
     public function job () {
         return view('frontend.job');
     }
+
+    public function register () {
+        return view('frontend.auth.register');
+    }
 }

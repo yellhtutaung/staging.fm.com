@@ -36,21 +36,7 @@
 </div>
 
 <div class="main-container">
-    {{-- <?php echo View::make ('backend.layouts.sidebar'); ?> --}}
-    <div class="sidebar bg-light shadow pt-2">
-        <div class="d-flex justify-content-center img-logo-container p-3">
-            <img class="img-logo" src="{{asset('freshmoe_logo.png')}}" alt="">
-        </div>
-        <div class="px-3">
-            <div class="p-2 logoContainer">
-                <a class="text-decoration-none text-light fw-bold" href="#"><i class="fa-solid fa-house-chimney"></i> Dashboard</a>
-            </div>
-
-
-        </div>
-
-    </div>
-
+     <?php echo View::make ('backend.layouts.sidebar'); ?>
 
     <div class="main pt-2">
 

@@ -152,25 +152,25 @@
 {{--employees cards end--}}
 
 
-<div class="container-fluid p-5">
-    <div class="row m-0 p-0 ">
-        <div class="col-lg-6 p-3 ">
-            <img class="w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVXSD2Nhis6g-BKTZ_luA-s3hbxtKFC39RoQ&usqp=CAU" alt="">
-        </div>
-        <div class="col-lg-6 p-3">
-            <div class="name title-fm">
-                <h5 class=" title-fm fw-bold">About The Job</h5>
-            </div>
-            <div class=" body-fm mt-3">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aspernatur beatae blanditiis cum cumque et perspiciatis suscipit. Amet consectetur molestiae nostrum officia optio, perspiciatis quaerat quidem. A assumenda dolorem reiciendis.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aspernatur beatae blanditiis cum cumque et perspiciatis suscipit. Amet consectetur molestiae nostrum officia optio, perspiciatis quaerat quidem. A assumenda dolorem reiciendis.
-            </div>
-            <div class="mt-4">
-                <a href="employees/job" class="job-btn text-decoration-none">Job Description</a>
-            </div>
-        </div>
-    </div>
-</div>
+{{--<div class="container-fluid p-5">--}}
+{{--    <div class="row m-0 p-0 ">--}}
+{{--        <div class="col-lg-6 p-3 ">--}}
+{{--            <img class="w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVXSD2Nhis6g-BKTZ_luA-s3hbxtKFC39RoQ&usqp=CAU" alt="">--}}
+{{--        </div>--}}
+{{--        <div class="col-lg-6 p-3">--}}
+{{--            <div class="name title-fm">--}}
+{{--                <h5 class=" title-fm fw-bold">About The Job</h5>--}}
+{{--            </div>--}}
+{{--            <div class=" body-fm mt-3">--}}
+{{--                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aspernatur beatae blanditiis cum cumque et perspiciatis suscipit. Amet consectetur molestiae nostrum officia optio, perspiciatis quaerat quidem. A assumenda dolorem reiciendis.--}}
+{{--                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aspernatur beatae blanditiis cum cumque et perspiciatis suscipit. Amet consectetur molestiae nostrum officia optio, perspiciatis quaerat quidem. A assumenda dolorem reiciendis.--}}
+{{--            </div>--}}
+{{--            <div class="mt-4">--}}
+{{--                <a href="employees/job" class="job-btn text-decoration-none">Job Description</a>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </div>--}}
+{{--</div>--}}
 
 
 {{--footer start--}}

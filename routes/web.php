@@ -29,12 +29,17 @@ Route::get('coldchain-transport', [\App\Http\Controllers\Frontend\PagesControlle
 
 Route::get('employees/job', [\App\Http\Controllers\Frontend\PagesController::class, 'job']);
 
-Route::get('login', [AdminAuthController::class, 'login'])->name('login');
-Route::post('login', [AdminAuthController::class, 'post_login'])->name('post.login');
+
+Route::get('/login', [\App\Http\Controllers\Frontend\PagesController::class, 'login']);
+Route::get('/register', [\App\Http\Controllers\Frontend\PagesController::class, 'register']);
 
 Route::prefix('admin')->name('admin.')->group(function () {
+    Route::get('login', [AdminAuthController::class, 'login'])->name('login');
+    Route::post('login', [AdminAuthController::class, 'post_login'])->name('post.login');
     Route::get('/', [DashboardController::class, 'home'])->name('home');
+    Route::get('/job', [DashboardController::class, 'job'])->name('job');
 });
+
 
 
 
