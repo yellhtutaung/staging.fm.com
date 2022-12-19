@@ -1,0 +1,120 @@
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.form-check-input:focus {border-color: rgb(217, 209, 209) !important;
+    -webkit-box-shadow: none!important;
+    -moz-box-shadow: none!important;
+    box-shadow: none!important;
+}
+
+/*.reg {*/
+/*    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/../../../heart_bg.png");*/
+/*    background-origin: border-box;*/
+/*    background-repeat: no-repeat;*/
+/*    background-attachment: fixed;*/
+/*    background-position: center top;*/
+/*    background-size: 100% 105%;*/
+/*}*/
+
+.input-wrapper{
+    display: flex;
+    flex-direction: column;
+    margin: 30px 0;
+}
+
+.register .input {
+    background-color: transparent;
+    width: 100%;
+    padding: .3rem 0;
+    border: none;
+    border-bottom: 2px solid #5d5a5a;
+    outline: none;
+    /*border-radius: 10px;*/
+}
+.register .input:focus {
+    border-color: #5bba47;
+}
+.register textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+.register textarea:focus {
+    outline-color: #5BBA47;
+}
+.register button {
+    float: right;
+    padding: 0.7rem 1.5rem;
+    margin-right: 0;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: #5bba47;
+    color: white;
+}
+.register button:hover {
+    background-color: transparent;
+    color: #ED1C24;
+    border: 2px solid #ED1C24;
+}
+
+.form-check-input{
+    border: 2px solid #5d5a5a;
+}
+.form-check-input:focus{
+    border-color: rgb(217, 209, 209);
+}
+.form-check-input:checked {
+    background-color: #5bba47 !important;
+    border-color: rgb(217, 209, 209);
+}
+
+
+.underline {
+    text-decoration: none;
+    color: #0074d9;
+    position: relative;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.underline::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 2px;
+    background-color:#5BBA47;
+    transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.underline:hover {
+    color: #5BBA47;
+}
+
+.underline:hover::before {
+    left: 0;
+    right: auto;
+    width: 100%;
+}
+
+/*@media screen and (max-width: 992px) {*/
+/*    .register .input {*/
+/*        padding: .15rem 0;*/
+/*    }*/
+
+/*    .input-wrapper{*/
+/*        margin: 20px 0;*/
+/*    }*/
+/*}*/
+
