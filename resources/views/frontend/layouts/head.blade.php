@@ -2,14 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="icon" href="{{ asset('favicon.ico') }}" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <link rel="icon" href="{{ asset('favicon.ico') }}" />
+    <meta itemprop="image" content="{{ asset('meta/social-image.jpg') }}">
     <meta name="theme-color" content="#000000" />
-    <meta
-        name="description"
-        content="Web site created using create-react-app"
-    />
-    <link rel="icon" href="./favicon.ico" />
+    <meta name="description" content="For 100% organic fresh fruits and vegetables, remember Fresh Moe!" />
+    <meta name="keywords" content="FreshMoe Ecommerce QuickCommerce E-commerce Freshmoe group business https://staging.freshmoe.com/  https://freshmoe.com/">
+
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <!--
       manifest.json provides metadata used when your web app is installed on a

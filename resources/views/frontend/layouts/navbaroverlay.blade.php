@@ -8,5 +8,7 @@
         <a href="/partnerships">About Partnerships</a>
         <a href="/target-market">Target of Market</a>
         <a href="/coldchain-transport">Cold Chain and Transportation</a>
+        <a href="/login">Login</a>
+        <a href="/register">Register</a>
     </div>
 </div>

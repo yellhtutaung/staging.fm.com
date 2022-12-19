@@ -25,7 +25,7 @@
                     <div class="text">Sign in to Admin Panel</div>
                 </div>
                 <div class="card-body">
-                    <form action="{{route('post.login')}}" method="post">
+                    <form action="{{route('admin.post.login')}}" method="post">
                         @csrf
                         <div class="mb-3">
                             <input type="email" name="email" id="" class="form-control p-2" placeholder="Email">
