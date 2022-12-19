@@ -6,6 +6,15 @@
     scroll-behavior: smooth;
 }
 
+
+.theme_bg{
+    background-color: #5BBA47;
+}
+
+.theme_color{
+    background-color: white;
+}
+
 .bg_green {
     background-color: #5BBA47;
     color: white;
