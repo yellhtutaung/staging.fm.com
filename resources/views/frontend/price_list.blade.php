@@ -47,8 +47,8 @@
 <div class="container-fluid p-lg-5">
     <section style="margin-top: 160px" >
         <div class="d-flex justify-content-between">
-            <h4 class="text-bold title-fm"> <b>REALTIME PRICE LIST </b></h4>
-            <h4 class="text-bold title-fm "> <b>MORE ITEM </b></h4>
+            <h4 class="text-bold title-fm"> REALTIME PRICE LIST </h4>
+            <h4 class="text-bold title-fm "> MORE ITEM </h4>
         </div>
 
         {{--        <h4 class="d-inline theme_green_color">Fresh</h4><h4 class="d-inline theme_red_color">Moe</h4>--}}
@@ -59,7 +59,7 @@
                 </div>
             </div>
             <div class="col-sm-12 col-md-3">
-                <div class="card animate__animated animate__bounceInRight  ">
+                <div class="card animate__animated animate__bounceInRight  overflow-hidden" >
                     <div class="card-header theme_bg text-white">
                         SEARCH FRUITS
                     </div>
