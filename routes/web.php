@@ -25,6 +25,9 @@ Route::get('partnerships', [PagesController::class, 'partnerships']);
 Route::get('target-market', [PagesController::class, 'market']);
 Route::get('coldchain-transport', [PagesController::class, 'coldchain']);
 Route::get('employees/job', [PagesController::class, 'job']);
+Route::get('/register', [PagesController::class, 'register']);
+Route::get('login', [AdminAuthController::class, 'login'])->name('login');
+Route::get('price_list', [PagesController::class, 'priceList']);
 
 
 // User auth
