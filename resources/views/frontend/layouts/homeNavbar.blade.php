@@ -36,7 +36,7 @@
                 <ul>
                     <li>
                         <a href="#it_products">Website & Apps</a>
-                        <a href="#mission">Our Mission</a>
+                        <a href="{{route('priceList')}}">Price List</a>
                         <a href="#contact">Contact</a>
                     </li>
                 </ul>

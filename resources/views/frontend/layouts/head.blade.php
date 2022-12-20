@@ -11,7 +11,7 @@
     <meta name="description" content="For 100% organic fresh fruits and vegetables, remember Fresh Moe!" />
     <meta name="keywords" content="FreshMoe Ecommerce QuickCommerce E-commerce Freshmoe group business https://staging.freshmoe.com/  https://freshmoe.com/">
 
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+{{--    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />--}}
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
