@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('username')->nullable(); // autogenerate name id
-            $table->integer('role')->default(0); // zero is visitor register users
+            $table->integer('role')->default(1);
             $table->string('phone')->unique()->nullable();
             $table->string('email')->unique();
             $table->string('password');

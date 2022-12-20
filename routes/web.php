@@ -26,6 +26,7 @@ Route::get('coldchain-transport', [PagesController::class, 'coldchain']);
 Route::get('employees/job', [PagesController::class, 'job']);
 Route::get('/register', [PagesController::class, 'register']);
 Route::get('login', [AdminAuthController::class, 'login'])->name('login');
+Route::get('price_list', [PagesController::class, 'priceList']);
 
 Route::get('admin/login', [AdminAuthController::class, 'login'])->name('admin.get.login');
 Route::post('admin/login', [AdminAuthController::class, 'post_login'])->name('admin.post.login');
