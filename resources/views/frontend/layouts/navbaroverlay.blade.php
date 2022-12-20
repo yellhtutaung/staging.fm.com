@@ -9,12 +9,17 @@
         <a href="/target-market">Target of Market</a>
         <a href="/coldchain-transport">Cold Chain and Transportation</a>
         @if(auth()->check())
-            <form action="{{ route('logout') }}" method="POST">
+            <a href="javascript:void(0)" id="logout-btn">Logout</a>
+            <form action="{{ route('logout') }}" method="POST" id="logout-form">
                 @csrf
-                <button type="submit" href="">Logout</button>
             </form>
         @else
             <a href="/register">Register</a>
         @endif
     </div>
 </div>
+<script>
+    $('#logout-btn').click(function () {
+        $('#logout-form').submit();
+    })
+</script>

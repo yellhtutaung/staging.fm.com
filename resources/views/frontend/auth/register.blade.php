@@ -39,6 +39,8 @@
     {{--    global css --}}
     <link rel="stylesheet" href="{{asset('frontend-assets/css/global.css')}}">
 
+    <link rel="stylesheet" href="{{asset('frontend-assets/build/css/intlTelInput.min.css')}}">
+
     <link rel="stylesheet" href="{{asset('frontend-assets/css/auth/register.css')}}">
 </head>
 <body>
