@@ -10,7 +10,8 @@
             <li><div class="dropdown-item" >username: johndoe</div></li>
             <li><div class="dropdown-item" >email: johndoe@gmail.com</div></li>
             <li>
-                <form action="#" method="POST">
+                <form action="{{route('admin.logout')}}" method="POST">
+                    @csrf
                     <button class="btn btn-link">Logout</button>
                 </form>
             </li>

@@ -8,7 +8,13 @@
         <a href="/partnerships">About Partnerships</a>
         <a href="/target-market">Target of Market</a>
         <a href="/coldchain-transport">Cold Chain and Transportation</a>
-        <a href="/login">Login</a>
-        <a href="/register">Register</a>
+        @if(auth()->check())
+            <form action="{{ route('logout') }}" method="POST">
+                @csrf
+                <button type="submit" href="">Logout</button>
+            </form>
+        @else
+            <a href="/register">Register</a>
+        @endif
     </div>
 </div>

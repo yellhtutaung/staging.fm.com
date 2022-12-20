@@ -39,37 +39,35 @@
     {{--    global css --}}
     <link rel="stylesheet" href="{{asset('frontend-assets/css/global.css')}}">
 
-    <link rel="stylesheet" href="{{asset('frontend-assets/build/css/intlTelInput.min.css')}}">
-
     <link rel="stylesheet" href="{{asset('frontend-assets/css/auth/register.css')}}">
 </head>
 <body>
     <div class="reg d-flex align-items-center justify-content-center" style="height: 100vh">
         <div class="container d-flex justify-content-center align-items-center" style="height: 100%">
             <div class="row d-flex justify-content-center align-content-stretch " >
-                <div class="col-lg-6 p-3">
+                <div class=" col-lg-6 p-2 ">
 
-                    <form action="" class="register body-fm p-2 " style="background-color: rgba(255, 255, 255, 0.5); border-radius: 20px">
+                    <form action="" class="register body-fm " style="background-color: rgba(255, 255, 255, 0.5); border-radius: 20px">
                         <h1 class="title-fm text-center">Sign Up</h1>
                         <div class="input-wrapper">
                             <label for="name" class="form-label">Full Name</label>
-                            <input type="text" class="input" placeholder="***" id="name" autocomplete="off">
+                            <input type="text" class="input" placeholder="" id="name" autocomplete="off">
                         </div>
                         <div class="input-wrapper">
                             <label for="email" class="form-label">Email</label>
-                            <input type="email" class="input" placeholder="***" id="email" autocomplete="off">
+                            <input type="email" class="input" placeholder="" id="email" autocomplete="off">
                         </div>
                         <div class="input-wrapper">
                             <label for="phone" class="form-label">Phone</label>
-                            <input type="number" class="input" placeholder="***" id="phone" autocomplete="off">
+                            <input type="number" class="input" placeholder="" id="phone" autocomplete="off">
                         </div>
                         <div class="input-wrapper">
                             <label for="password" class="form-label">Password</label>
-                            <input type="password" class="input" placeholder="***" id="password" autocomplete="off">
+                            <input type="password" class="input" placeholder="********" id="password" autocomplete="off">
                         </div>
                         <div class="input-wrapper">
                             <label for="password" class="form-label">Repeat Password</label>
-                            <input type="password" class="input" placeholder="***" id="password" autocomplete="off">
+                            <input type="password" class="input" placeholder="********" id="password" autocomplete="off">
                         </div>
                         <div class="form-check">
                             <input class="form-check-input shadow" type="checkbox" value="" id="flexCheckDefault">
@@ -85,11 +83,14 @@
 
                 </div>
 
-                <div class="col-lg-6 p-3 d-none d-lg-flex flex-column justify-content-center">
+                <div class="col-lg-6 p-3 d-none d-lg-flex flex-column justify-content-center ">
                     <div class="d-flex justify-content-center mb-5">
                         <img height="100px" src="{{asset('/freshmoe_logo.png')}}" alt="">
                     </div>
                     <img width="100%" src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp" alt="">
+{{--                    <div>--}}
+{{--                        <img width="100%" src="{{asset('frontend-assets/images/sign_up.jpg')}}" alt="">--}}
+{{--                    </div>--}}
                     <div class="mt-3 body-fm d-flex justify-content-center">
                         <a href="" class="underline">I am already member</a>
                     </div>

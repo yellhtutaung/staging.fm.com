@@ -5,6 +5,7 @@ use App\Http\Controllers\Backend\AdminAuthController;
 use App\Http\Controllers\Frontend\PagesController;
 use App\Http\Middleware\CheckAdmin;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Auth\AdminLoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,15 +25,23 @@ Route::get('partnerships', [PagesController::class, 'partnerships']);
 Route::get('target-market', [PagesController::class, 'market']);
 Route::get('coldchain-transport', [PagesController::class, 'coldchain']);
 Route::get('employees/job', [PagesController::class, 'job']);
-Route::get('/register', [PagesController::class, 'register']);
-Route::get('login', [AdminAuthController::class, 'login'])->name('login');
 
-Route::get('admin/login', [AdminAuthController::class, 'login'])->name('admin.get.login');
-Route::post('admin/login', [AdminAuthController::class, 'post_login'])->name('admin.post.login');
+
+// User auth
+Auth::routes();
+Route::get('home', function () {
+    return view('home');
+});
+
+//Admin
+
+Route::get('admin/login', [AdminLoginController::class, 'showLoginForm']);
+Route::post('admin/login', [AdminLoginController::class, 'login'])->name('admin.login');
+Route::post('admin/logout', [AdminLoginController::class, 'logout'])->name('admin.logout');
 
 Route::middleware([CheckAdmin::class])->prefix('admin')->name('admin.')->group(function ()
 {
-    Route::get('/', [DashboardController::class, 'home'])->name('home');
+    Route::get('', [DashboardController::class, 'home'])->name('home');
     Route::get('/job', [DashboardController::class, 'job'])->name('job');
 });
 

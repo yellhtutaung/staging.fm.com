@@ -16,8 +16,8 @@ class CheckAdmin
      */
     public function handle(Request $request, Closure $next)
     {
-        if ( !auth()->check() ) {
-            abort(403);
+        if ( !auth()->guard('admin')->check() ) {
+            return  redirect('/');
         }
         return $next($request);
     }
