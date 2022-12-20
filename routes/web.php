@@ -27,20 +27,22 @@ Route::get('coldchain-transport', [PagesController::class, 'coldchain']);
 Route::get('employees/job', [PagesController::class, 'job']);
 Route::get('/register', [PagesController::class, 'register']);
 Route::get('login', [AdminAuthController::class, 'login'])->name('login');
-Route::get('price_list', [PagesController::class, 'priceList']);
 
 
 // User auth
 Auth::routes();
-Route::get('home', function () {
-    return view('home');
-});
 
 //Admin
 
 Route::get('admin/login', [AdminLoginController::class, 'showLoginForm']);
 Route::post('admin/login', [AdminLoginController::class, 'login'])->name('admin.login');
 Route::post('admin/logout', [AdminLoginController::class, 'logout'])->name('admin.logout');
+
+Route::middleware(['auth'])->group(function ()
+{
+
+});
+Route::get('pricelist', [PagesController::class, 'priceList'])->name('priceList');
 
 Route::middleware([CheckAdmin::class])->prefix('admin')->name('admin.')->group(function ()
 {

@@ -7,10 +7,7 @@
 <link rel="stylesheet" href="{{asset('frontend-assets/css/home/carousel.css')}}"/>
 
 <!-- Link Swiper's CSS -->
-<link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
-/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
 
 
 </head>
