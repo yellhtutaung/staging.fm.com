@@ -78,7 +78,6 @@
                                     <option value="Tomato">Tomato</option>
                                     <option value="Zucchini">Zucchini</option>
                                     <option value="Cloudberry">Cloudberry</option>
-
                                 </select>
                             </div>
 

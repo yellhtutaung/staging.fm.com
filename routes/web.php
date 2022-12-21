@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Backend\DashboardController;
 use App\Http\Controllers\Backend\AdminAuthController;
+use App\Http\Controllers\Backend\FruitController;
 use App\Http\Controllers\Frontend\PagesController;
 use App\Http\Middleware\CheckAdmin;
 use Illuminate\Support\Facades\Route;
@@ -46,7 +47,12 @@ Route::get('pricelist', [PagesController::class, 'priceList'])->name('priceList'
 
 Route::middleware([CheckAdmin::class])->prefix('admin')->name('admin.')->group(function ()
 {
-    Route::get('', [DashboardController::class, 'home'])->name('home');
+    Route::get('/', [DashboardController::class, 'home'])->name('home');
     Route::get('/job', [DashboardController::class, 'job'])->name('job');
-});
+    Route::prefix('fruit')->group(function () {
+        Route::get('', [FruitController::class, 'list'])->name('list');
+        Route::get('add', [FruitController::class, 'add'])->name('add');
+    });
+
+}); // For admin only
 
