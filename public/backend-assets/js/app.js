@@ -26,3 +26,15 @@ main.addEventListener("click", () => {
         menu.classList.remove("clicked");
     }
 });
+
+var inputBoxs = document.querySelectorAll(".inputBox");
+var invalidChars = ["-", "+", "e"];
+
+for (let i = 0; i < inputBoxs.length; i++) {
+    let inputBox = inputBoxs[i];
+    inputBox.addEventListener("keydown", function (e) {
+        if (invalidChars.includes(e.key)) {
+            e.preventDefault();
+        }
+    });
+}
