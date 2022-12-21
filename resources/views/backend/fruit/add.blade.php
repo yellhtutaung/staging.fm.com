@@ -4,12 +4,16 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-12 col-md-4">
-                <div class="card animate__animated animate__fadeIn">
+                <div class="animate__animated animate__fadeIn">
                     <div class="card-header form-header-border theme_bg ">
-                        <h4 class="card-title text-white">ADD FRUIT</h4>
+                        <h5 class="card-title text-white">ADD FRUITS </h5>
                     </div>
-                    <div class="card-body">
-                        <div class="row">
+                    <div class=" card card-body">
+{{--                        <small class="text-center">click to upload the photo</small>--}}
+                        <a href="javascript:void(0)" class="border-dashed text-black m-0 p-0 text-center">
+                            <span class="upload-img-icon material-symbols-outlined">add_photo_alternate</span>
+                        </a>
+                        <div class="row ">
                             <div class="form-group my-1">
                                 <label class="my-1" for="">Fruit Name</label>
                                 <input type="text" class="form-control" value="" />
@@ -37,10 +41,10 @@
                                 </div>
                             </div>
                             <div class="form-group mt-3">
-                                <textarea name="" id="" class="form-control" placeholder="Description" rows="4"></textarea>
+                                <textarea name="" id="" class="form-control" placeholder="Description" rows="2"></textarea>
                             </div>
                             <div class="form-group mt-3">
-                                <textarea name="" id="" class="form-control" placeholder="Notes" rows="4"></textarea>
+                                <textarea name="" id="" class="form-control" placeholder="Notes" rows="2"></textarea>
                             </div>
 
                             <div class="form-group mt-4">
@@ -54,7 +58,33 @@
                 </div>
             </div>
             <div class="col-sm-12 col-md-8">
-
+                <div class="animate__animated animate__fadeIn">
+                    <div class="card-header form-header-border theme_bg ">
+                        <h5 class="card-title text-white">RECENT FRUITS</h5>
+                    </div>
+                    <div class="card card-body">
+                        <table class="table table-responsive table-hover">
+                            <thead>
+                                <th>No</th>
+                                <th>Name</th>
+                                <th>Picture</th>
+                                <th>Price</th>
+                                <th>Depend Count</th>
+                                <th>Unit</th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Apple</td>
+                                    <td><img class="avator-rounded" src="https://testing-admin.freshmoe.shop/storage/images/W2askzfNzXxw8BERNFmT39ljCRvXenkDpsW41oOU.png" alt=""></td>
+                                    <td>4500</td>
+                                    <td>100</td>
+                                    <td>Box</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
     </div>
 @endsection

@@ -6,6 +6,21 @@
     scroll-behavior: smooth;
 }
 
+.avator-rounded
+{
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+}
+
+.upload-img-icon{
+    font-size: 150px !important;
+}
+
+.border-dashed{
+    border: dashed 4px #000;
+}
+
 .theme_bg{
     background-color: #5BBA47 !important;
 }

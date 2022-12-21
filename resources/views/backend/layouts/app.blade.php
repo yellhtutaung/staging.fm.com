@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="{{asset('backend-assets/css/app.css')}}">
     <link rel="stylesheet" href="{{asset('frontend-assets/css/global.css')}}">
     <link rel="stylesheet" href="{{asset('frontend-assets/css/animated.min.css')}}"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.2/jquery.min.js" integrity="sha512-tWHlutFnuG0C6nQRlpvrEhE4QpkG1nn2MOUMWmUeRePl4e3Aki0VB6W1v3oLjFtd0hVOtRQ9PHpSfN6u6/QXkQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
