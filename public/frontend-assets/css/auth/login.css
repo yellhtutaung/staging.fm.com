@@ -16,17 +16,27 @@ input[type=number] {
     box-shadow: none!important;
 }
 
+.login-container {
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("/../../../heart_bg.png");
+    background-origin: border-box;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center top;
+    background-size: 100% 105%;
+    color: white;
+}
+
 .input-wrapper{
     display: flex;
     flex-direction: column;
-    margin: 15px 0;
+    margin: 20px 0;
 }
 
 .form-check {
-    margin: 15px 0;
+    margin: 20px 0;
 }
 
-.register .input {
+.login .input {
     background-color: transparent;
     width: 100%;
     padding: 0.4rem 1rem;
@@ -34,22 +44,22 @@ input[type=number] {
     border-radius: 10px;
     outline: none;
 }
-.register label {
+.login label {
     margin-bottom: 5px;
 }
-.register .input:focus {
+.login .input:focus {
     border-color: #5bba47;
 }
-.register textarea {
+.login textarea {
     width: 100%;
     padding: 1rem;
     border: 1px solid #ccc;
     border-radius: 10px;
 }
-.register textarea:focus {
+.login textarea:focus {
     outline-color: #5BBA47;
 }
-.register button {
+.login button {
     float: right;
     padding: 0.4rem 1.5rem;
     margin-right: 0;
@@ -59,21 +69,22 @@ input[type=number] {
     background-color: #5bba47;
     color: white;
 }
-.register button:hover {
+.login button:hover {
     background-color: transparent;
     color: #ED1C24;
     border: 2px solid #ED1C24;
 }
 
 .form-check-input{
-    border: 2px solid #858282 !important;
+    border: 2px solid #ffffff;
     background-color: transparent;
 }
 .form-check-input:focus{
-    border: 2px solid #858282 !important;
+    border-color: rgb(217, 209, 209);
 }
 .form-check-input:checked {
-    border: 2px solid #5bba47 !important;
+    background-color: #5bba47 !important;
+    border-color: rgb(217, 209, 209);
 }
 
 
@@ -104,10 +115,6 @@ input[type=number] {
     left: 0;
     right: auto;
     width: 100%;
-}
-
-.reg .row {
-    /*background-color: rgba(0, 0, 0, .6)*/
 }
 
 @media screen and (max-width: 992px) {

@@ -26,7 +26,7 @@
                                     </div>
                                     <div class="col-6">
                                         <label class="my-2" for="">Unit</label>
-                                        <select  class="form-control js-example-basic-single" style="height: 1000px!important;" >
+                                        <select  class="form-control js-example-basic-single" style="height: 70px!important;" >
                                             <option value="Kg">Kg</option>
                                             <option value="Kyat Thar">Kyat Thar</option>
                                             <option value="Lbs">Lbs</option>
@@ -36,6 +36,7 @@
                                     </div>
                                 </div>
                             </div>
+                            
                             <div class="form-group my-3">
                                 <input type="text" class="btn col-12 theme_bg_red text-white" value="ADD">
                             </div>

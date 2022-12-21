@@ -18,22 +18,7 @@
         background-repeat: no-repeat;
         background-position: center;
     }
-    .select2-selection__choice__display
-    {
-        background: #5BBA47;
-        color: white;
-        padding: 20px;
-        box-shadow: #1F2D3D;
-    }
-    .select2-selection__choice__remove
-    {
-        background: #ED1C24 !important;
-        color: white !important;
-    }
-    .js-example-basic-multiple{
-        border-color: #5BBA47;
-        border: 2px solid #5BBA47;
-    }
+
 </style>
 
 </head>

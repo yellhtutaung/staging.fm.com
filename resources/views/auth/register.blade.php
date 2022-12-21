@@ -2,10 +2,10 @@
 
 @section('content')
 
-<div class="reg d-flex align-items-center justify-content-center" style="height: 100vh">
-    <div class="container d-flex justify-content-center align-items-center" style="height: 100%">
-        <div class="row d-flex justify-content-center align-content-stretch shadow-lg">
-            <div class=" col-lg-5 p-2 ">
+<div class="container d-flex align-items-center justify-content-center" style="height: 100vh">
+    <div class=" d-flex justify-content-center align-items-center" style="height: 100%">
+        <div class="row  ">
+            <div class=" col-lg-5 ">
 
                 <div class="px-3">
                     <form method="POST" action="{{ route('register') }}" class="register body-fm ">
@@ -52,7 +52,7 @@
                             <input type="password" class="input @error('password') is-invalid @enderror" name="password_confirmation" placeholder="" id="confirm-password" autocomplete="off">
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input shadow" type="checkbox" value="" id="flexCheckDefault">
+                            <input class="form-check-input " type="checkbox" value="" id="flexCheckDefault">
                             <label class="form-check-label" for="flexCheckDefault">
                                 I agree to the terms of service.
                             </label>
@@ -69,13 +69,10 @@
 
             </div>
 
-            <div class="col-lg-7 p-3 d-none d-lg-flex flex-column justify-content-center " style="background-color: white">
-                <div class="d-flex justify-content-center mb-5">
-                    <img height="100px" src="{{asset('/freshmoe_logo.png')}}" alt="">
-                </div>
-                <img width="100%" src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp" alt="">
-                <div class="mt-3 body-fm d-flex justify-content-center">
-                    <a href="{{route('login')}}" class="underline">I am already member</a>
+            <div class="col-lg-7 d-none d-lg-flex flex-column justify-content-between">
+                <img src="{{asset('frontend-assets/images/auth.jpg')}}" width="100%" alt="">
+                <div class="mt-3 body-fm d-flex justify-content-center ">
+                    <a href="{{route('login')}}" class="underline input-wrapper">I am already member</a>
                 </div>
             </div>
 
