@@ -111,5 +111,5 @@
 
 
 .select2-container--default .select2-results__option--highlighted.select2-results__option--selectable{
-    background-color: #5bba47;
+    background-color: #5bba47 !important;
 }
