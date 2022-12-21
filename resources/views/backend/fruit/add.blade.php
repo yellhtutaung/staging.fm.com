@@ -26,7 +26,7 @@
                                     </div>
                                     <div class="col-6">
                                         <label class="my-2" for="">Unit</label>
-                                        <select  class="form-control js-example-basic-single" style="height: 70px!important;" >
+                                        <select  class="form-control js-example-basic-single"  >
                                             <option value="Kg">Kg</option>
                                             <option value="Kyat Thar">Kyat Thar</option>
                                             <option value="Lbs">Lbs</option>
