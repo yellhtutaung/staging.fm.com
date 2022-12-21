@@ -3,10 +3,10 @@
 @section('content')
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-sm-12 col-md-4">
                 <div class="card animate__animated animate__fadeIn">
-                    <div class="card-header theme_bg ">
-                        <h4 class="card-title text-white">Add Fruit</h4>
+                    <div class="card-header form-header-border theme_bg ">
+                        <h4 class="card-title text-white">ADD FRUIT</h4>
                     </div>
                     <div class="card-body">
                         <div class="row">
@@ -18,7 +18,7 @@
                                 <label class="my-1" for="">Price</label>
                                 <input type="text" class="form-control" value="" />
                             </div>
-                            <div class="form-group my-2">
+                            <div class="form-group my-1">
                                 <div class="row">
                                     <div class="col-6">
                                         <label class="my-2" for="">Count</label>
@@ -36,15 +36,26 @@
                                     </div>
                                 </div>
                             </div>
-                            
-                            <div class="form-group my-3">
-                                <input type="text" class="btn col-12 theme_bg_red text-white" value="ADD">
+                            <div class="form-group mt-3">
+                                <textarea name="" id="" class="form-control" placeholder="Description" rows="4"></textarea>
+                            </div>
+                            <div class="form-group mt-3">
+                                <textarea name="" id="" class="form-control" placeholder="Notes" rows="4"></textarea>
+                            </div>
+
+                            <div class="form-group mt-4">
+                                <input type="text" class="btn col-12 theme_bg text-white" value="ADD">
                             </div>
                         </div>
                     </div>
+                    <div class="linear-activity d-none">
+                        <div class="indeterminate"></div>
+                    </div>
                 </div>
             </div>
-        </div>
+            <div class="col-sm-12 col-md-8">
+
+            </div>
     </div>
 @endsection
 

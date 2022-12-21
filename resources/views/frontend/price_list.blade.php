@@ -52,7 +52,7 @@
                         <div class="row">
                             <div class="form-group">
                                 <label for="Choose">Choose Fruit</label>
-                                <select class="form-control js-example-basic-multiple border-success" style="height: 70px!important;" name="fruits[]" multiple="multiple">
+                                <select class="form-control js-example-basic-multiple border-success" name="fruits[]" multiple="multiple">
                                     <option value="Watermelons">Watermelons</option>
                                     <option value="Pomegranates">Pomegranates</option>
                                     <option value="Tangerines">Tangerines</option>

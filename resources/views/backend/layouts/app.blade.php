@@ -52,7 +52,7 @@
 
         </div>
         <footer class="shadow-lg">
-            Copyright © 2022 FreshMoe. All rights reserved.
+            Copyright © 2023 FreshMoe. All rights reserved.
         </footer>
     </div>
 </div>
