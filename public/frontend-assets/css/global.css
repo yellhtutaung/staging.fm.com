@@ -144,3 +144,14 @@ input[type=number] {
     border-color: #5BBA47;
     border: 2px solid #5BBA47;
 }
+
+
+.form-control:focus {border: 2px solid #5bba47!important;
+    -webkit-box-shadow: none!important;
+    -moz-box-shadow: none!important;
+    box-shadow: none!important;
+}
+.form-control {
+    border-width: 2px !important;
+    /*height: 40px !important;*/
+}
