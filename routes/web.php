@@ -45,13 +45,14 @@ Route::middleware(['auth'])->group(function ()
 });
 Route::get('pricelist', [PagesController::class, 'priceList'])->name('priceList');
 
-Route::middleware([CheckAdmin::class])->prefix('admin')->name('admin.')->group(function ()
+Route::middleware([CheckAdmin::class])->prefix('admin')->group(function ()
 {
     Route::get('/', [DashboardController::class, 'home'])->name('home');
     Route::get('/job', [DashboardController::class, 'job'])->name('job');
     Route::prefix('fruit')->group(function () {
-        Route::get('', [FruitController::class, 'list'])->name('list');
-        Route::get('add', [FruitController::class, 'add'])->name('add');
+        Route::get('', [FruitController::class, 'fruitList'])->name('fruitList');
+        Route::get('add', [FruitController::class, 'addFruit'])->name('addFruit');
+        Route::post('createFruit', [FruitController::class, 'createFruit'])->name('createFruit');
     });
 
 }); // For admin only
