@@ -26,7 +26,7 @@ return new class extends Migration
             $table->integer('reg_id');
             $table->integer('upd_id')->nullable();
             $table->integer('status')->default(1);
-            $table->integer('hide_show')->nullable(1); // zero is hidden
+            $table->integer('hide_show')->default(1); // zero is hidden
             $table->string('token')->nullable();
             $table->timestamps();
         });

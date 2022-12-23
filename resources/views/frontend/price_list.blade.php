@@ -28,27 +28,45 @@
 <?php echo View::make ('frontend.layouts.navbar'); ?>
 {{--navbar layout end--}}
 
-{{--feature plans start--}}
-<div class="container-fluid p-lg-5">
-    <section style="margin-top: 160px" >
-        <div class="d-flex justify-content-between">
-            <h4 class="text-bold title-fm"> REALTIME PRICE LIST </h4>
-            <h4 class="text-bold title-fm "> MORE ITEM </h4>
-        </div>
+{{--price list --}}
 
-        {{--        <h4 class="d-inline theme_green_color">Fresh</h4><h4 class="d-inline theme_red_color">Moe</h4>--}}
-        <div class="row my-2">
+    <div class="container-fluid" style="margin-top: 190px !important;" >
+        <div class="row">
             <div class="col-sm-12 col-md-9">
-                <div class="card shadow-sm">
-                    <div id="chart"></div>
+                <div class="animate__animated animate__fadeIn">
+                    <div class="card-header form-header-border theme_bg ">
+                        <h5 class="card-title text-white">RECENT FRUITS</h5>
+                    </div>
+                    <div class="card card-body">
+                        <table class="table table-responsive table-hover">
+                            <thead>
+                            <th>No</th>
+                            <th>Name</th>
+                            <th>Picture</th>
+                            <th>Price</th>
+                            <th>Depend Count</th>
+                            <th>Unit</th>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Apple</td>
+                                <td><img class="avator-rounded" src="https://testing-admin.freshmoe.shop/storage/images/W2askzfNzXxw8BERNFmT39ljCRvXenkDpsW41oOU.png" alt=""></td>
+                                <td>4500</td>
+                                <td>100</td>
+                                <td>Box</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
             <div class="col-sm-12 col-md-3">
-                <div class="card animate__animated animate__bounceInRight  overflow-hidden" >
-                    <div class="card-header theme_bg text-white">
-                        SEARCH FRUITS
+                <div class="animate__animated animate__bounceInRight  overflow-hidden" >
+                    <div class="card-header form-header-border theme_bg text-white">
+                        <h5 class="card-title text-white">SEARCH FRUITS</h5>
                     </div>
-                    <div class="card-body">
+                    <div class="card card-body">
                         <div class="row">
                             <div class="form-group">
                                 <label for="Choose">Choose Fruit</label>
@@ -75,6 +93,58 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+
+{{--price list --}}
+
+{{--feature plans start--}}
+<div class="container-fluid p-lg-5 "  style="display: none !important;">
+    <section style="margin-top: 160px" >
+        <div class="d-flex justify-content-between">
+            <h4 class="text-bold title-fm"> REALTIME PRICE LIST </h4>
+            <h4 class="text-bold title-fm "> MORE ITEM </h4>
+        </div>
+        {{--        <h4 class="d-inline theme_green_color">Fresh</h4><h4 class="d-inline theme_red_color">Moe</h4>--}}
+        <div class="row my-2">
+            <div class="col-sm-12 col-md-9">
+                <div class="card shadow-sm">
+                    <div id="chart"></div>
+                </div>
+            </div>
+{{--            <div class="col-sm-12 col-md-3">--}}
+{{--                <div class="card animate__animated animate__bounceInRight  overflow-hidden" >--}}
+{{--                    <div class="card-header theme_bg text-white">--}}
+{{--                        SEARCH FRUITS--}}
+{{--                    </div>--}}
+{{--                    <div class="card-body">--}}
+{{--                        <div class="row">--}}
+{{--                            <div class="form-group">--}}
+{{--                                <label for="Choose">Choose Fruit</label>--}}
+{{--                                <select class="form-control js-example-basic-multiple border-success" name="fruits[]" multiple="multiple">--}}
+{{--                                    <option value="Watermelons">Watermelons</option>--}}
+{{--                                    <option value="Pomegranates">Pomegranates</option>--}}
+{{--                                    <option value="Tangerines">Tangerines</option>--}}
+{{--                                    <option value="Papayas">Papayas</option>--}}
+{{--                                    <option value="Citrus ">Citrus</option>--}}
+{{--                                    <option value="Coconut">Coconut</option>--}}
+{{--                                    <option value="Cranberry">Cranberry</option>--}}
+{{--                                    <option value="Tomato">Tomato</option>--}}
+{{--                                    <option value="Zucchini">Zucchini</option>--}}
+{{--                                    <option value="Cloudberry">Cloudberry</option>--}}
+{{--                                </select>--}}
+{{--                            </div>--}}
+
+{{--                            <div class="form-group mt-4">--}}
+{{--                                <input type="button" class="btn theme_bg text-white w-100" value="CHECK">--}}
+{{--                            </div>--}}
+
+{{--                        </div>--}}
+
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+        </div>
     </section>
     <hr class="my-5">
 </div>
