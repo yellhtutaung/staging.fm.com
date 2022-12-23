@@ -69,10 +69,10 @@ class RegisterController extends Controller
         $user->name = $data['name'];
         $user->email = $data['email'];
         $user->phone = $data['phone'];
-        $user->shop = $data['shop'];
-        $user->country = $data['country'];
-        $user->city = $data['city'];
-        $user->township = $data['township'];
+//        $user->shop = $data['shop'];
+//        $user->country = $data['country'];
+//        $user->city = $data['city'];
+//        $user->township = $data['township'];
         $user->password = Hash::make($data['password']);
         $user->save();
 

@@ -27,6 +27,7 @@
 .preview-img {
     width: 150px;
     height: 150px;
+    cursor: pointer;
 }
 
 .theme_bg{
