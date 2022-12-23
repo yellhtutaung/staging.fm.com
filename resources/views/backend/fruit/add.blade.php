@@ -83,22 +83,30 @@
                     <div class="card card-body">
                         <table class="table table-responsive table-hover">
                             <thead>
-                                <th>No</th>
+                                <th>Fruit ID</th>
                                 <th>Name</th>
                                 <th>Picture</th>
-                                <th>Price</th>
-                                <th>Depend Count</th>
                                 <th>Unit</th>
+                                <th>Price</th>
+                                <th>Time</th>
+                                <th>Edit</th>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Apple</td>
-                                    <td><img class="avator-rounded" src="https://testing-admin.freshmoe.shop/storage/images/W2askzfNzXxw8BERNFmT39ljCRvXenkDpsW41oOU.png" alt=""></td>
-                                    <td>4500</td>
-                                    <td>100</td>
-                                    <td>Box</td>
-                                </tr>
+                                @foreach($fruitPriceList as $Index => $fruits)
+                                    <tr>
+                                        <td><span class="badge bg-primary shadow-lg">{{$fruits->name_id}}</span></td>
+                                        <td>{{$fruits->name}}</td>
+                                        <td><img class="avator-rounded" src="{{asset("backend-assets/uploads/fruits/$fruits->id/$fruits->images")}}" alt="{{$fruits->name}}"></td>
+                                        <td><span class="badge bg-danger shadow-lg">{{$fruits->depend_count ." ".$fruits->unit}}</span></td>
+                                        <td><span class="badge bg-success shadow-lg">{{$fruits->price}} MMK</span></td>
+                                        <td>{{$fruits->updated_at->diffForHumans()}}</td>
+                                        <td>
+                                            <a href="{{route('editFruit',$fruits->id)}}" class="rounded btn btn-primary">
+                                                <span class="material-symbols-outlined">edit</span>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                @endforeach
                             </tbody>
                         </table>
                     </div>

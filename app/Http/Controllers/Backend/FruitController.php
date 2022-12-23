@@ -20,7 +20,8 @@ class FruitController extends Controller
 
     public function addFruit()
     {
-        return view('backend.fruit.add');
+        $fruitPriceList = FruitPriceList::where('hide_show',1)->where('status',1)->orderBy('id','DESC')->limit(5)->get();
+        return view('backend.fruit.add',compact('fruitPriceList'));
     }
 
     public function imgValidate($images,$whichOne,$uptToken)
