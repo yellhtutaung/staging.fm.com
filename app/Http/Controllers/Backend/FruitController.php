@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
+use App\Models\FruitPriceList;
 use Illuminate\Http\Request;
 
 class FruitController extends Controller
@@ -15,11 +16,6 @@ class FruitController extends Controller
     public function addFruit()
     {
         return view('backend.fruit.add');
-    }
-
-    public function createFruit(Request $In)
-    {
-        return $In;
     }
 
     public function imgValidate($images,$whichOne,$uptToken)
@@ -60,28 +56,24 @@ class FruitController extends Controller
 
     }
 
-    public function saveMaterialData($In)
+    public function saveFruitData($In)
     {
         $formData = $In->validate([
-            'code' => ['required', Rule::unique('materials', 'code')],
-            'barcode' => ['nullable', Rule::unique('materials', 'barcode')],
-            'rate' => ['required','max:9',''],
             'name' => ['required'],
-            'pre_description1' => ['nullable'],
-            'pre_description2' => ['nullable'],
-            'detail_description1' => ['nullable'],
-//            'detail_description2' => ['nullable'],
-            'note' => ['nullable'],
+            'price' => ['required','max:9',''],
+            'depend_count' => ['required'],
+            'unit' => ['required'],
+            'description' => ['nullable'],
+            'notes' => ['nullable'],
         ]);
 
-        $formData['user_id'] = auth()->id();
         $formData['reg_id'] = auth()->id();
         $formData['token'] = str_shuffle(md5(date("ymdhis")));
-        $materialCreate = Material::create($formData);
+        $fruitCreate = FruitPriceList::create($formData);
 
-        if ($materialCreate->save())
+        if ($fruitCreate->save())
         {
-            return $materialCreate->id;
+            return $fruitCreate->id;
         }else{
             return false;
         }
@@ -89,10 +81,10 @@ class FruitController extends Controller
 
     public function createFruit(Request $In)
     {
-        $images = request()->file('images');
+        $images = $In->file('images');
         if ($images)
         {
-            $materialCreate = $this->saveMaterialData(request());
+            $materialCreate = $this->saveFruitData($In);
             if ($materialCreate)
             {
                 $imgValidate = $this->imgValidate($images,'add',$materialCreate);
@@ -100,12 +92,12 @@ class FruitController extends Controller
                 {
                     return back()->with('warning', $imgValidate); // validate and upload img to dynamic folder
                 }
-                return redirect()->route('createFruit')->with('success', 'Material created successfully!');
+                return redirect()->route('createFruit')->with('success', 'Fruit created successfully!');
             }else{
                 return redirect()->route('createFruit')->with('warning', 'Server error occurred .');
             }
         }else{
-            return redirect()->route('createFruit')->with('warning', 'Image must be upload .');
+            return redirect()->route('createFruit')->with('warning', 'Image must be upload.');
         }
     }
 }
