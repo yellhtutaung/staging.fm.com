@@ -42,7 +42,7 @@ for (let i = 0; i < inputBoxs.length; i++) {
 
 
 let fileInput = document.getElementById("file-input");
-let imageContainer = document.getElementById("imagesContainer");
+let imageContainer = document.getElementsByClassName("preview-img-container")[0];
 
 function preview(){
     imageContainer.innerHTML = "";
@@ -51,11 +51,11 @@ function preview(){
         let reader = new FileReader();
         let figure = document.createElement("figure");
         let figCap = document.createElement("figcaption");
-        figCap.innerText = i.name;
+        // figCap.innerText = i.name;
         figure.appendChild(figCap);
         reader.onload=()=>{
             let img = document.createElement("img");
-            img.classList.add('w-75')
+            img.classList.add('preview-img')
             img.setAttribute("src",reader.result);
             figure.insertBefore(img,figCap);
         }
