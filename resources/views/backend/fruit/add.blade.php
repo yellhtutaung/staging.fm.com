@@ -16,7 +16,7 @@
                                 <a href="javascript:void(0)" class="border-dashed text-black text-center" id="file-action">
                                     <span class="upload-img-icon material-symbols-outlined">add_photo_alternate</span>
                                 </a>
-                                <input type="file" class="form-control" name="images[]" hidden id="file-input"/>
+                                <input type="file" class="form-control" name="images" hidden id="file-input"/>
                                 <div class="form-group my-1">
                                     <label class="my-1" for="">Fruit Name</label>
                                     <input type="text" class="form-control" name="name" value="{{old('name')}}" />
