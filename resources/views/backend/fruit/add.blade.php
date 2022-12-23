@@ -1,8 +1,8 @@
 @extends('backend.layouts.app')
 @section('title', 'Fruits')
 @section('content')
-    <div class="container-fluid">
-        <div class="row">
+    <div class="container-fluid ">
+        <div class="row ">
             <div class="col-sm-12 col-md-4">
                 <div class="animate__animated animate__fadeIn">
                     <div class="card-header form-header-border theme_bg ">
@@ -86,6 +86,7 @@
                     </div>
                 </div>
             </div>
+        </div>
     </div>
 @endsection
 

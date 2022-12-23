@@ -16,4 +16,9 @@ class FruitController extends Controller
     {
         return view('backend.fruit.add');
     }
+
+    public function createFruit(Request $In)
+    {
+        return $In;
+    }
 }
