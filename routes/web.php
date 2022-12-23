@@ -53,6 +53,8 @@ Route::middleware([CheckAdmin::class])->prefix('admin')->group(function ()
         Route::get('', [FruitController::class, 'fruitList'])->name('fruitList');
         Route::get('add', [FruitController::class, 'addFruit'])->name('addFruit');
         Route::post('createFruit', [FruitController::class, 'createFruit'])->name('createFruit');
+        Route::get('{id}/edit', [FruitController::class, 'editFruit'])->name('editFruit');
+        Route::post('{id}/update', [FruitController::class, 'updateFruit'])->name('updateFruit');
     });
 
 }); // For admin only

@@ -27,6 +27,9 @@
 
     <script src="https://kit.fontawesome.com/7c0ec42130.js" crossorigin="anonymous"></script>
 
+    {{--    google material icons--}}
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+
     @yield('extra-css')
 
 </head>

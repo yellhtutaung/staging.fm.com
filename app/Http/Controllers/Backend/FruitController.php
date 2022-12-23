@@ -33,8 +33,14 @@ class FruitController extends Controller
         if ( $images->getSize() > 800000 ) {
             return 'Your file size is too large! | We only accept 500KB';
         }
-
         $fruitDb = FruitPriceList::find($uptToken);
+
+        if ($whichOne=='update')
+        {
+            $originalPath = asset("backend-assets/uploads/fruits/$fruitDb->id/",$fruitDb->images);
+            unlink($originalPath);
+        }
+
         $folderId = $fruitDb->id;
         $imgName = date('is').General::strGenerator(8).'.'.$images->getClientOriginalExtension();
         $images->move("backend-assets/uploads/fruits/$folderId/",$imgName);
@@ -98,6 +104,53 @@ class FruitController extends Controller
             }
         }else{
             return redirect()->back()->with('warning', 'Image must be upload.');
+        }
+    }
+
+    public  function  editFruit ($id) {
+        try {
+            $fruit = FruitPriceList::where('id', $id)->first();
+            if (!$fruit) {
+                return back()->with('warning', 'Fruit not found!');
+            }
+            return view('backend.fruit.edit', compact('fruit'));
+        }catch (\Exception $e) {
+            return back()->with('warning', 'Server Error!');
+        }
+    }
+
+    public function updateFruit (Request $In, $id) {
+        try {
+            $fruit = FruitPriceList::find($id);
+            if (!$fruit) {
+                return back()->with('warning', 'Fruit not found!');
+            }
+
+            $validator = Validator::make($In->all(), [
+                'name' => ['required'],
+                'price' => ['required','max:9',''],
+                'depend_count' => ['required'],
+                'unit' => ['required'],
+                'description' => ['nullable'],
+                'notes' => ['nullable'],
+            ]);
+
+            if ( $validator->fails() ) {
+                return redirect()->back()->with('warning',  $validator->errors()->first());
+            }
+
+            $fruit->name = $In->name;
+            $fruit->price = $In->price;
+            $fruit->depend_count = $In->depend_count;
+            $fruit->unit = $In->unit;
+            $fruit->description = $In->description;
+            $fruit->notes = $In->notes;
+            $fruit->upd_id = Auth::guard('admin')->user()->id;
+            $fruit->update();
+            return back()->with('success', 'Fruit update successfully.');
+
+        }catch (\Exception $e) {
+            return back()->with('warning', $e->getMessage());
         }
     }
 }
