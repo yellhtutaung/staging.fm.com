@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\FruitPriceList;
 use Illuminate\Http\Request;
 
 class PagesController extends Controller
@@ -49,6 +50,7 @@ class PagesController extends Controller
 
     public function priceList()
     {
-        return view('frontend.price_list');
+        $fruitPriceList = FruitPriceList::where('hide_show',1)->where('status',1)->orderBy('id','DESC')->get();
+        return view('frontend.price_list',compact('fruitPriceList'));
     }
 }
