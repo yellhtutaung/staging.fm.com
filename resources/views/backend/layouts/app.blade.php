@@ -98,6 +98,7 @@
         title: "{{ session('delete') }}"
     })
     @endif
+
 </script>
 
 </body>

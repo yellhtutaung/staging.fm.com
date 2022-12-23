@@ -5,9 +5,20 @@ namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 use App\Models\FruitPriceList;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
+
 
 class FruitController extends Controller
 {
+
+    public function chrGenerator($prefix)
+    {
+        $UpperCase = chr(rand(65,90));
+        $NewCase = chr(rand(65,90));
+        $LowerCase = chr(rand(97,122));
+        return $prefix.$UpperCase.$NewCase.$LowerCase;
+    }
+
     public function fruitList()
     {
         return 'list';
@@ -67,6 +78,7 @@ class FruitController extends Controller
             'notes' => ['nullable'],
         ]);
 
+        $formData['name_id'] = $this->chrGenerator('FR-');
         $formData['reg_id'] = auth()->id();
         $formData['token'] = str_shuffle(md5(date("ymdhis")));
         $fruitCreate = FruitPriceList::create($formData);
@@ -81,13 +93,28 @@ class FruitController extends Controller
 
     public function createFruit(Request $In)
     {
-        return $In;
-        $images = $In->file('images');
-        if ($images)
+
+        if ($In->hasFile('images'))
         {
-            $materialCreate = $this->saveFruitData($In);
+
+            $validator = Validator::make($In->all(), [
+                'name' => ['required'],
+                'price' => ['required','max:9',''],
+                'depend_count' => ['required'],
+                'unit' => ['required'],
+                'description' => ['nullable'],
+                'notes' => ['nullable'],
+            ]);
+
+            if ( $validator->fails() ) {
+                redirect()->back()->with('warning',  $validator->errors()->first());
+            }
+
+            return $materialCreate = $this->saveFruitData($In);
+
             if ($materialCreate)
             {
+                $images = $In->file('images');
                 $imgValidate = $this->imgValidate($images,'add',$materialCreate);
                 if (is_string($imgValidate))
                 {
@@ -98,7 +125,7 @@ class FruitController extends Controller
                 return redirect()->route('createFruit')->with('warning', 'Server error occurred .');
             }
         }else{
-            return redirect()->route('createFruit')->with('warning', 'Image must be upload.');
+            return redirect()->back()->with('warning', 'Image must be upload.');
         }
     }
 }

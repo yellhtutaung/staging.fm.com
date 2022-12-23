@@ -9,19 +9,19 @@
                         <h5 class="card-title text-white">ADD FRUITS </h5>
                     </div>
                     <div class=" card card-body">
-                        @if(session()->get('warning'))
+                        @if(session('warning'))
                             <div class="alert alert-warning alert-dismissible" role="alert">
                                 <button type="button" class="close" data-dismiss="alert">×</button>
-                                <div class="alert-icon">
-                                    <i class="material-icons">warning</i>
-                                </div>
+{{--                                <div class="alert-icon">--}}
+{{--                                    <span class="material-symbols-outlined">warning</span>--}}
+{{--                                </div>--}}
                                 <div class="alert-message">
                                     <span><strong>Warning !</strong>  {{session('warning')}}</span>
                                 </div>
                             </div>
                         @endif
 
-                        @if(session()->get('success'))
+                        @if(session('success'))
                             <div class="alert alert-success alert-dismissible" role="alert">
                                 <button type="button" class="close" data-dismiss="alert">×</button>
                                 <div class="alert-icon">
@@ -32,7 +32,7 @@
                                 </div>
                             </div>
                         @endif
-                        <form method="POST" action="{{route('createFruit')}}" enctype="multipart/form-data">
+                        <form  action="{{route('createFruit')}}" method="POST" enctype="multipart/form-data">
                             {{--                        <small class="text-center">click to upload the photo</small>--}}
                             @csrf
                             <div class="row ">
@@ -44,17 +44,17 @@
                                 <input type="file" class="form-control" name="images" hidden id="file-input" onchange="preview()"/>
                                 <div class="form-group my-1">
                                     <label class="my-1" for="">Fruit Name</label>
-                                    <input type="text" class="form-control" name="name" value="{{old('name')}}" />
+                                    <input type="text" class="form-control" name="name" value="Apple {{old('name')}}" />
                                 </div>
                                 <div class="form-group my-1">
                                     <label class="my-1" for="">Price</label>
-                                    <input type="text" class="form-control" name="price" value="{{old('price')}}" />
+                                    <input type="text" class="form-control" name="price" value="500 {{old('price')}}" />
                                 </div>
                                 <div class="form-group my-1">
                                     <div class="row">
                                         <div class="col-6">
                                             <label class="my-2" for="">Count</label>
-                                            <input type="number" class="form-control" name="depend_count" value="{{old('depend_count')}}" />
+                                            <input type="number" class="form-control" name="depend_count" value="5 {{old('depend_count')}}" />
                                         </div>
                                         <div class="col-6">
                                             <label class="my-2" for="">Unit</label>
@@ -69,10 +69,10 @@
                                     </div>
                                 </div>
                                 <div class="form-group mt-3">
-                                    <textarea class="form-control" placeholder="Description" rows="2" name="description" value="{{old('description')}}"></textarea>
+                                    <textarea class="form-control" placeholder="Description" rows="2" name="description" value="{{old('description')}}">Material Symbols are our newest icons consolidating over 2,500 glyphs in a single font file with a wide range of design variants.</textarea>
                                 </div>
                                 <div class="form-group mt-3">
-                                    <textarea class="form-control" placeholder="Notes" rows="2" name="notes" value="{{old('notes')}}"></textarea>
+                                    <textarea class="form-control" placeholder="Notes" rows="2" name="notes" value="{{old('notes')}}">Wide range of design variants.</textarea>
                                 </div>
                                 <div class="form-group mt-4">
                                     <input type="submit" class="btn col-12 theme_bg text-white" value="ADD">
