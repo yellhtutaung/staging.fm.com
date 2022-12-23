@@ -13,9 +13,11 @@
                             {{--                        <small class="text-center">click to upload the photo</small>--}}
                             @csrf
                             <div class="row ">
-                                <a href="javascript:void(0)" class="border-dashed text-black text-center" id="file-action">
-                                    <span class="upload-img-icon material-symbols-outlined">add_photo_alternate</span>
-                                </a>
+                                <div class="d-flex w-100">
+                                    <a href="javascript:void(0)" class="border-dashed text-black text-center w-100" id="file-action">
+                                        <span class="upload-img-icon material-symbols-outlined">add_photo_alternate</span>
+                                    </a>
+                                </div>
                                 <input type="file" class="form-control" name="images" hidden id="file-input"/>
                                 <div class="form-group my-1">
                                     <label class="my-1" for="">Fruit Name</label>
