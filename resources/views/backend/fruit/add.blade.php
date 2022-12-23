@@ -10,14 +10,9 @@
                     </div>
                     <div class=" card card-body">
                         @if(session('warning'))
-                            <div class="alert alert-warning alert-dismissible" role="alert">
-                                <button type="button" class="close" data-dismiss="alert">×</button>
-{{--                                <div class="alert-icon">--}}
-{{--                                    <span class="material-symbols-outlined">warning</span>--}}
-{{--                                </div>--}}
-                                <div class="alert-message">
-                                    <span><strong>Warning !</strong>  {{session('warning')}}</span>
-                                </div>
+                            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                <span><strong>Warning !</strong>  {{session('warning')}}</span>
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                             </div>
                         @endif
 

@@ -45,21 +45,29 @@ let fileInput = document.getElementById("file-input");
 let imageContainer = document.getElementsByClassName("preview-img-container")[0];
 
 function preview(){
-    imageContainer.innerHTML = "";
+    console.log(fileInput.files.length )
+    if(fileInput.files.length > 0) {
+        imageContainer.innerHTML = "";
 
-    for(i of fileInput.files){
-        let reader = new FileReader();
-        let figure = document.createElement("figure");
-        let figCap = document.createElement("figcaption");
-        // figCap.innerText = i.name;
-        figure.appendChild(figCap);
-        reader.onload=()=>{
-            let img = document.createElement("img");
-            img.classList.add('preview-img')
-            img.setAttribute("src",reader.result);
-            figure.insertBefore(img,figCap);
+        for(i of fileInput.files){
+            let reader = new FileReader();
+            let figure = document.createElement("figure");
+            let figCap = document.createElement("figcaption");
+            // figCap.innerText = i.name;
+            figure.appendChild(figCap);
+            reader.onload=()=>{
+                let img = document.createElement("img");
+                img.addEventListener('click', function () { document.getElementById('file-input').click() })
+                img.classList.add('preview-img')
+                img.setAttribute("src",reader.result);
+                figure.insertBefore(img,figCap);
+            }
+            imageContainer.appendChild(figure);
+            reader.readAsDataURL(i);
         }
-        imageContainer.appendChild(figure);
-        reader.readAsDataURL(i);
     }
+
+    return;
+
 }
+
