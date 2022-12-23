@@ -16,20 +16,32 @@ input[type=number] {
     box-shadow: none!important;
 }
 
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+}
+
+.custom-option {
+    background-color: #5BBA47 !important;
+}
+
 .input-wrapper{
     display: flex;
     flex-direction: column;
-    margin: 15px 0;
+    margin: 12px 0;
+    /* background-color: #0074d9; */
 }
 
-.form-check {
-    margin: 15px 0;
+.register {
+    height: 100vh;
 }
 
 .register .input {
     background-color: transparent;
     width: 100%;
-    padding: 0.4rem 1rem;
+    padding: 0.6rem 1rem;
     border: 2px solid #858282;
     border-radius: 10px;
     outline: none;
@@ -65,18 +77,6 @@ input[type=number] {
     border: 2px solid #ED1C24;
 }
 
-.form-check-input{
-    border: 2px solid #858282 !important;
-    background-color: transparent;
-}
-.form-check-input:focus{
-    border: 2px solid #858282 !important;
-}
-.form-check-input:checked {
-    border: 2px solid #5bba47 !important;
-}
-
-
 .underline {
     text-decoration: none;
     color: #0074d9;
@@ -106,11 +106,92 @@ input[type=number] {
     width: 100%;
 }
 
-.reg .row {
-    /*background-color: rgba(0, 0, 0, .6)*/
-}
+/* --------------------custom select option ---------------------------- */
+.custom-select {
+    position: relative;
+    font-family: Arial;
+  }
+
+  .custom-select select {
+    display: none; /*hide original SELECT element:*/
+  }
+
+  .select-selected {
+    /* background-color: DodgerBlue; */
+    color: black !important;
+    width: 100%;
+    padding: 0.6rem 1rem;
+    border: 2px solid #858282;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+  }
+
+
+
+  /*style the arrow inside the select element:*/
+  /* .select-selected:after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: black transparent transparent transparent;
+  } */
+
+  /*point the arrow upwards when the select box is open (active):*/
+  /* .select-selected.select-arrow-active:after {
+    border-color: transparent transparent #fff transparent;
+    top: 7px;
+  }
+   */
+  /*style the items (options), including the selected item:*/
+  .select-items div {
+    padding: 8px 10px;
+    border: 1px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  /*style items (options):*/
+  .select-items {
+    position: absolute;
+    background-color: white;
+    border-radius: 10px;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+  }
+
+  /*hide the items when the select box is closed:*/
+  .select-hide {
+    display: none;
+  }
+
+  .select-items div:hover, .same-as-selected {
+    background-color: #5BBA47;
+    color: white;
+  }
+
+  .first {
+      border-top-left-radius: 10px !important;
+      border-top-right-radius: 10px !important;
+  }
+
+/* --------------------custom select option ---------------------------- */
+
 
 @media screen and (max-width: 992px) {
+    .register {
+        height: 100%;
+        padding: 20px 10px;
+    }
+
     .input-wrapper{
         margin: 15px 0;
     }

@@ -9,4 +9,6 @@ class FruitPriceList extends Model
 {
     use HasFactory;
     protected $table = 'fruit_price_lists';
+
+    protected $guarded = ['id'];
 }

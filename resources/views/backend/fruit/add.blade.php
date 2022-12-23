@@ -13,26 +13,27 @@
                             {{--                        <small class="text-center">click to upload the photo</small>--}}
                             @csrf
                             <div class="row ">
-                                <a href="javascript:void(0)" class="border-dashed text-black text-center">
+                                <a href="javascript:void(0)" class="border-dashed text-black text-center" id="file-action">
                                     <span class="upload-img-icon material-symbols-outlined">add_photo_alternate</span>
                                 </a>
+                                <input type="file" class="form-control" name="images[]" hidden id="file-input"/>
                                 <div class="form-group my-1">
                                     <label class="my-1" for="">Fruit Name</label>
-                                    <input type="text" class="form-control" value="" />
+                                    <input type="text" class="form-control" name="name" value="{{old('name')}}" />
                                 </div>
                                 <div class="form-group my-1">
                                     <label class="my-1" for="">Price</label>
-                                    <input type="text" class="form-control" value="" />
+                                    <input type="text" class="form-control" name="price" value="{{old('price')}}" />
                                 </div>
                                 <div class="form-group my-1">
                                     <div class="row">
                                         <div class="col-6">
                                             <label class="my-2" for="">Count</label>
-                                            <input type="number" class="form-control" value="" />
+                                            <input type="number" class="form-control" name="depend_count" value="{{old('depend_count')}}" />
                                         </div>
                                         <div class="col-6">
                                             <label class="my-2" for="">Unit</label>
-                                            <select  class="form-control js-example-basic-single"  >
+                                            <select  class="form-control js-example-basic-single" name="unit" value="{{old('unit')}}" >
                                                 <option value="Kg">Kg</option>
                                                 <option value="Kyat Thar">Kyat Thar</option>
                                                 <option value="Lbs">Lbs</option>
@@ -43,10 +44,10 @@
                                     </div>
                                 </div>
                                 <div class="form-group mt-3">
-                                    <textarea name="" id="" class="form-control" placeholder="Description" rows="2"></textarea>
+                                    <textarea class="form-control" placeholder="Description" rows="2" name="description" value="{{old('description')}}"></textarea>
                                 </div>
                                 <div class="form-group mt-3">
-                                    <textarea name="" id="" class="form-control" placeholder="Notes" rows="2"></textarea>
+                                    <textarea class="form-control" placeholder="Notes" rows="2" name="notes" value="{{old('notes')}}"></textarea>
                                 </div>
                                 <div class="form-group mt-4">
                                     <input type="submit" class="btn col-12 theme_bg text-white" value="ADD">
@@ -97,5 +98,8 @@
         $(document).ready(function() {
             $('.js-example-basic-single').select2();
         });
+        $('#file-action').click(function () {
+            $('#file-input').click()
+        })
     </script>
 @endsection
