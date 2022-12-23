@@ -136,12 +136,39 @@ footer {
     border-bottom: 1px solid lightgray;
 }
 
+/* ------------- header dropdown ------------- */
+
+.dropdown-menu{
+    border: none;
+    margin: 0;
+    padding: 0;
+    min-width: 220px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+.dropdown-menu > li{
+    padding: 10px;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+/*.dropdown-menu > li > :first-child{*/
+/*    color: var(--primary);*/
+/*}*/
+.dropdown-menu > li:hover {
+    background-color: #5bba47;
+    color: white;
+}
+
+/* ------------- header dropdown ------------- */
+
+
 
 /*aside start */
 
 
 
 /*aside end*/
+
+
 
 @media screen and (max-width: 992px) {
     .sidebar{

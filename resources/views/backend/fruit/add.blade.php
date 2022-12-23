@@ -17,15 +17,10 @@
                         @endif
 
                         @if(session('success'))
-                            <div class="alert alert-success alert-dismissible" role="alert">
-                                <button type="button" class="close" data-dismiss="alert">×</button>
-                                <div class="alert-icon">
-                                    <i class="material-icons">check_circle</i>
+                                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                    <span><strong>Warning !</strong>  {{session('success')}}</span>
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                                 </div>
-                                <div class="alert-message">
-                                    <span><strong>Success !</strong>  {{session('success')}}</span>
-                                </div>
-                            </div>
                         @endif
                         <form  action="{{route('createFruit')}}" method="POST" enctype="multipart/form-data">
                             {{--                        <small class="text-center">click to upload the photo</small>--}}
@@ -39,17 +34,17 @@
                                 <input type="file" class="form-control" name="images" hidden id="file-input" onchange="preview()"/>
                                 <div class="form-group my-1">
                                     <label class="my-1" for="">Fruit Name</label>
-                                    <input type="text" class="form-control" name="name" value="Apple {{old('name')}}" />
+                                    <input type="text" class="form-control" name="name" value="{{old('name')}}" />
                                 </div>
                                 <div class="form-group my-1">
                                     <label class="my-1" for="">Price</label>
-                                    <input type="text" class="form-control" name="price" value="500 {{old('price')}}" />
+                                    <input type="text" class="form-control" name="price" value="{{old('price')}}" />
                                 </div>
                                 <div class="form-group my-1">
                                     <div class="row">
                                         <div class="col-6">
                                             <label class="my-2" for="">Count</label>
-                                            <input type="number" class="form-control" name="depend_count" value="5 {{old('depend_count')}}" />
+                                            <input type="number" class="form-control" name="depend_count" value="{{old('depend_count')}}" />
                                         </div>
                                         <div class="col-6">
                                             <label class="my-2" for="">Unit</label>
