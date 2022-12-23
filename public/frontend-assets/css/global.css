@@ -255,3 +255,7 @@ input[type=number] {
 .select2-selection__arrow {
     height: 40px !important;
 }
+
+.card .table tbody td {
+    vertical-align: middle;
+}

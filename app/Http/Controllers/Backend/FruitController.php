@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Controllers\Helpers\General;
 use App\Models\FruitPriceList;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Auth;
 
@@ -38,7 +39,7 @@ class FruitController extends Controller
 
         if ($whichOne=='update')
         {
-            $originalPath = asset("backend-assets/uploads/fruits/$fruitDb->id/",$fruitDb->images);
+            $originalPath = public_path("backend-assets/uploads/fruits/$fruitDb->id/$fruitDb->images");
             unlink($originalPath);
         }
 
@@ -79,7 +80,7 @@ class FruitController extends Controller
         {
             $validator = Validator::make($In->all(), [
                 'name' => ['required'],
-                'price' => ['required','max:9',''],
+                'price' => ['required'],
                 'depend_count' => ['required'],
                 'unit' => ['required'],
                 'description' => ['nullable'],
@@ -129,7 +130,7 @@ class FruitController extends Controller
 
             $validator = Validator::make($In->all(), [
                 'name' => ['required'],
-                'price' => ['required','max:9',''],
+                'price' => ['required'],
                 'depend_count' => ['required'],
                 'unit' => ['required'],
                 'description' => ['nullable'],
@@ -148,7 +149,14 @@ class FruitController extends Controller
             $fruit->notes = $In->notes;
             $fruit->upd_id = Auth::guard('admin')->user()->id;
             $fruit->update();
-            return back()->with('success', 'Fruit update successfully.');
+            if ($In->hasFile('images')){
+                $imgValidate = $this->imgValidate($In->file('images'),'update', $id);
+                if (is_string($imgValidate))
+                {
+                    return redirect()->back()->with('warning', $imgValidate); // validate and upload img to dynamic folder
+                }
+            }
+            return redirect()->back()->with('success', 'Fruit updated successfully!');
 
         }catch (\Exception $e) {
             return back()->with('warning', $e->getMessage());
