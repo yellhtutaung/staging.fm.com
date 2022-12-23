@@ -13,12 +13,12 @@
                             {{--                        <small class="text-center">click to upload the photo</small>--}}
                             @csrf
                             <div class="row ">
-                                <div class="d-flex w-100">
+                                <div class="w-100 d-flex justify-content-center" id="imagesContainer">
                                     <a href="javascript:void(0)" class="border-dashed text-black text-center w-100" id="file-action">
                                         <span class="upload-img-icon material-symbols-outlined">add_photo_alternate</span>
                                     </a>
                                 </div>
-                                <input type="file" class="form-control" name="images" hidden id="file-input"/>
+                                <input type="file" class="form-control" name="images" hidden id="file-input" onchange="preview()"/>
                                 <div class="form-group my-1">
                                     <label class="my-1" for="">Fruit Name</label>
                                     <input type="text" class="form-control" name="name" value="{{old('name')}}" />

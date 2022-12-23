@@ -38,3 +38,28 @@ for (let i = 0; i < inputBoxs.length; i++) {
         }
     });
 }
+
+
+
+let fileInput = document.getElementById("file-input");
+let imageContainer = document.getElementById("imagesContainer");
+
+function preview(){
+    imageContainer.innerHTML = "";
+
+    for(i of fileInput.files){
+        let reader = new FileReader();
+        let figure = document.createElement("figure");
+        let figCap = document.createElement("figcaption");
+        figCap.innerText = i.name;
+        figure.appendChild(figCap);
+        reader.onload=()=>{
+            let img = document.createElement("img");
+            img.classList.add('w-75')
+            img.setAttribute("src",reader.result);
+            figure.insertBefore(img,figCap);
+        }
+        imageContainer.appendChild(figure);
+        reader.readAsDataURL(i);
+    }
+}
