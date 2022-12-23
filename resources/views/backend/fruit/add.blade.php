@@ -9,6 +9,29 @@
                         <h5 class="card-title text-white">ADD FRUITS </h5>
                     </div>
                     <div class=" card card-body">
+                        @if(session()->get('warning'))
+                            <div class="alert alert-warning alert-dismissible" role="alert">
+                                <button type="button" class="close" data-dismiss="alert">×</button>
+                                <div class="alert-icon">
+                                    <i class="material-icons">warning</i>
+                                </div>
+                                <div class="alert-message">
+                                    <span><strong>Warning !</strong>  {{session('warning')}}</span>
+                                </div>
+                            </div>
+                        @endif
+
+                        @if(session()->get('success'))
+                            <div class="alert alert-success alert-dismissible" role="alert">
+                                <button type="button" class="close" data-dismiss="alert">×</button>
+                                <div class="alert-icon">
+                                    <i class="material-icons">check_circle</i>
+                                </div>
+                                <div class="alert-message">
+                                    <span><strong>Success !</strong>  {{session('success')}}</span>
+                                </div>
+                            </div>
+                        @endif
                         <form method="POST" action="{{route('createFruit')}}" enctype="multipart/form-data">
                             {{--                        <small class="text-center">click to upload the photo</small>--}}
                             @csrf

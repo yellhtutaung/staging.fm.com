@@ -81,6 +81,7 @@ class FruitController extends Controller
 
     public function createFruit(Request $In)
     {
+        return $In;
         $images = $In->file('images');
         if ($images)
         {
