@@ -3,7 +3,14 @@
 <link rel="stylesheet" href="{{asset('frontend-assets/css/client/featureplans.css')}}"/>
 <link rel="stylesheet" href="{{asset('frontend-assets/css/animated.min.css')}}"/>
 
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.1/css/dataTables.bootstrap5.min.css"/>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.2/jquery.min.js" integrity="sha512-tWHlutFnuG0C6nQRlpvrEhE4QpkG1nn2MOUMWmUeRePl4e3Aki0VB6W1v3oLjFtd0hVOtRQ9PHpSfN6u6/QXkQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/v/bs5/dt-1.13.1/b-2.3.3/date-1.2.0/fc-4.2.1/r-2.4.0/sb-1.4.0/sl-1.5.0/datatables.min.js"></script>
+
 <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 <style>
@@ -34,41 +41,44 @@
         <div class="row">
             <div class="col-sm-12 col-md-9">
                 <div class="animate__animated animate__fadeIn">
-                    <div class="card-header form-header-border theme_bg ">
+                    <div class="card-header form-header-border border-0 theme_bg ">
                         <h5 class="card-title text-white">RECENT FRUITS</h5>
                     </div>
-                    <div class="card card-body">
-                        <table class="table table-responsive table-hover">
+                    <div class="card border-0 shadow-sm card-body">
+                        <table id="example" class="table table-responsive table-hover table-striped" style="width:100%">
                             <thead>
+                            <tr>
                                 <th>Fruit ID</th>
                                 <th>Name</th>
                                 <th>Picture</th>
                                 <th>Unit</th>
                                 <th>Price</th>
                                 <th>Updated Time</th>
+                            </tr>
                             </thead>
                             <tbody>
-                            @foreach($fruitPriceList as $Index => $fruits)
-                                <tr>
-                                    <td><span class="badge bg-primary shadow-lg">{{$fruits->name_id}}</span></td>
-                                    <td>{{$fruits->name}}</td>
-                                    <td><img class="avator-rounded" src="{{asset("backend-assets/uploads/fruits/$fruits->id/$fruits->images")}}" alt="{{$fruits->name}}"></td>
-                                    <td><span class="badge bg-danger shadow-lg">{{$fruits->depend_count ." ".$fruits->unit}}</span></td>
-                                    <td><span class="badge bg-success shadow-lg">{{$fruits->price}} MMK</span></td>
-                                    <td>{{$fruits->updated_at->toTimeString()}}</td>
-                                </tr>
-                             @endforeach
+                                @foreach($fruitPriceList as $Index => $fruits)
+                                    <tr>
+                                        <td><span class="badge bg-primary shadow-lg">{{$fruits->name_id}}</span></td>
+                                        <td>{{$fruits->name}}</td>
+                                        <td><img class="avator-rounded" src="{{asset("backend-assets/uploads/fruits/$fruits->id/$fruits->images")}}" alt="{{$fruits->name}}"></td>
+                                        <td><span class="badge bg-danger shadow-lg">{{$fruits->depend_count ." ".$fruits->unit}}</span></td>
+                                        <td><span class="badge bg-success shadow-lg">{{$fruits->price}} MMK</span></td>
+                                        <td>{{$fruits->updated_at->toTimeString()}}</td>
+                                    </tr>
+                                @endforeach
                             </tbody>
                         </table>
+
                     </div>
                 </div>
             </div>
             <div class="col-sm-12 col-md-3">
                 <div class="animate__animated animate__bounceInRight  overflow-hidden" >
-                    <div class="card-header form-header-border theme_bg text-white">
+                    <div class="card-header form-header-border theme_bg text-white border-0">
                         <h5 class="card-title text-white">SEARCH FRUITS</h5>
                     </div>
-                    <div class="card card-body">
+                    <div class="card card-body ">
                         <div class="row">
                             <div class="form-group">
                                 <label for="Choose">Choose Fruit</label>
@@ -162,6 +172,12 @@
 <?php echo View::make ('frontend.layouts.aos'); ?>
 <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 <script>
+
+    $(document).ready(function () {
+        $('#example').DataTable();
+        $('.form-control-sm').addClass("input-data-search")
+        $('.input-data-search').focus(); // input auto focus
+    });
 
     // options docs link --> https://apexcharts.com/docs/options
     // original chart --> https://apexcharts.com/javascript-chart-demos/area-charts/spline/

@@ -5,10 +5,10 @@
         <div class="row ">
             <div class="col-sm-12 col-md-4">
                 <div class="animate__animated animate__fadeIn">
-                    <div class="card-header form-header-border theme_bg ">
+                    <div class="card-header form-header-border theme_bg border-0">
                         <h5 class="card-title text-white">ADD FRUITS </h5>
                     </div>
-                    <div class=" card card-body">
+                    <div class="card card-body border-0" >
                         @if(session('warning'))
                             <div class="alert alert-warning alert-dismissible fade show" role="alert">
                                 <span><strong>Warning !</strong>  {{session('warning')}}</span>
@@ -77,10 +77,10 @@
             </div>
             <div class="col-sm-12 col-md-8">
                 <div class="animate__animated animate__fadeIn">
-                    <div class="card-header form-header-border theme_bg ">
+                    <div class="card-header border-0 form-header-border theme_bg ">
                         <h5 class="card-title text-white">RECENT FRUITS</h5>
                     </div>
-                    <div class="card card-body">
+                    <div class="card card-body border-0">
                         <table class="table table-responsive table-hover">
                             <thead>
                                 <th>Fruit ID</th>
