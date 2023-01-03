@@ -53,23 +53,23 @@
                         <h1 class="title-fm text-center">Sign Up</h1>
                         <div class="input-wrapper">
                             <label for="name" class="form-label">Full Name</label>
-                            <input type="text" class="input" placeholder="" id="name" autocomplete="off">
+                            <input type="text" class="input" placeholder="" id="name" >
                         </div>
                         <div class="input-wrapper">
                             <label for="email" class="form-label">Email</label>
-                            <input type="email" class="input" placeholder="" id="email" autocomplete="off">
+                            <input type="email" class="input" placeholder="" id="email" >
                         </div>
                         <div class="input-wrapper">
                             <label for="phone" class="form-label">Phone</label>
-                            <input type="number" class="input" placeholder="" id="phone" autocomplete="off">
+                            <input type="number" class="input" placeholder="" id="phone" >
                         </div>
                         <div class="input-wrapper">
                             <label for="password" class="form-label">Password</label>
-                            <input type="password" class="input" placeholder="********" id="password" autocomplete="off">
+                            <input type="password" class="input" placeholder="********" id="password" >
                         </div>
                         <div class="input-wrapper">
                             <label for="password" class="form-label">Repeat Password</label>
-                            <input type="password" class="input" placeholder="********" id="password" autocomplete="off">
+                            <input type="password" class="input" placeholder="********" id="password" >
                         </div>
                         <div class="form-check">
                             <input class="form-check-input shadow" type="checkbox" value="" id="flexCheckDefault">
