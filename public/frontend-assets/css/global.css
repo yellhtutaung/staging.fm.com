@@ -27,6 +27,8 @@
 
 .border-0{
     border: 0px !important;
+    border-top-right-radius: 0 !important;
+    border-top-left-radius: 0 !important;
 }
 
 .border-dashed{

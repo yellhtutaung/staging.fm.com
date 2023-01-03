@@ -20,7 +20,7 @@
                                 {{-- <label for="name" class="form-label">Full Name</label> --}}
                                 <input type="text" class="input @error('name') is-invalid @enderror" name="name"
                                     value="{{ old('name') }}" id="name" placeholder="Enter your name"
-                                    autocomplete="off" autofocus>
+                                     autofocus>
                                 @error('name')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -31,7 +31,7 @@
                                 {{-- <label for="email" class="form-label">Email</label> --}}
                                 <input type="email" class="input @error('email') is-invalid @enderror"
                                     name="email" value="{{ old('email') }}" placeholder="Enter your email"
-                                    id="email" autocomplete="off">
+                                    id="email" >
                                 @error('email')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -42,7 +42,7 @@
                                 {{-- <label for="phone" class="form-label">Phone</label> --}}
                                 <input type="number" class="input @error('phone') is-invalid @enderror"
                                     name="phone" value="{{ old('phone') }}" placeholder="Enter your phone number"
-                                    id="phone" autocomplete="off">
+                                    id="phone" >
                                 @error('phone')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -53,7 +53,7 @@
                                 {{-- <label for="shop" class="form-label">Shop Name</label> --}}
                                 <input type="text" class="input @error('shop_name') is-invalid @enderror"
                                     name="shop_name" value="{{ old('shop_name') }}" placeholder="Enter your shop name"
-                                    id="shop" autocomplete="off">
+                                    id="shop" >
                                 @error('shop_name')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -64,7 +64,7 @@
                                 {{-- <label for="country" class="form-label">Country</label> --}}
 {{--                                 <input type="text" class="input @error('country') is-invalid @enderror"--}}
 {{--                                    name="country" value="{{ old('country') }}" placeholder="Enter your country"--}}
-{{--                                    id="country" autocomplete="off">--}}
+{{--                                    id="country" >--}}
                                 <div class="custom-select">
                                     <select class="js-example-basic-single @error('country') is-invalid @enderror" name="country" value="{{ old('country') }}" id="country" >
                                         <option disabled  hidden>Select country</option>
@@ -79,25 +79,18 @@
                             </div>
                             <div class="col-lg-6 input-wrapper">
 {{--                                    <label for="Choose">Choose City</label>--}}
+                                <div class="custom-select">
                                     <select class="js-example-basic-single @error('country') is-invalid @enderror" name="city" >
                                         <option value="1">Yangon</option>
                                         <option value="2">Mandalay</option>
                                     </select>
+                                </div>
 
-                                {{-- <label for="city" class="form-label">City</label> --}}
-{{--                                <input type="text" class="input @error('city') is-invalid @enderror"--}}
-{{--                                    name="city" value="{{ old('city') }}" placeholder="Enter your city"--}}
-{{--                                    id="city" autocomplete="off">--}}
-{{--                                @error('city')--}}
-{{--                                <span class="invalid-feedback" role="alert">--}}
-{{--                                    <strong>{{ $message }}</strong>--}}
-{{--                                </span>--}}
-{{--                                @enderror--}}
                             </div>
                             <div class="col-lg-12 input-wrapper">
                                 <input type="text" class="input @error('postal_code') is-invalid @enderror"
                                        name="postal_code" value="{{ old('postal_code') }}" placeholder="Enter your postal code"
-                                       id="postal_code" autocomplete="off">
+                                       id="postal_code" >
                                 @error('postal_code')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -107,7 +100,7 @@
                             <div class="col-lg-12 input-wrapper">
                                 <input type="text" class="input @error('zip_code') is-invalid @enderror"
                                     name="zip_code" value="{{ old('zip_code') }}" placeholder="Enter your zip code"
-                                    id="zip_code" autocomplete="off">
+                                    id="zip_code" >
                                 @error('zip_code')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -118,7 +111,7 @@
                                 {{-- <label for="address" class="form-label">Address</label> --}}
                                 <textarea type="number" class="input @error('address') is-invalid @enderror"
                                     name="address" value="{{ old('address') }}" placeholder="Enter your address"
-                                    id="address" rows="3" autocomplete="off"></textarea>
+                                    id="address" rows="3" ></textarea>
                                 @error('phone')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -129,7 +122,7 @@
                                 {{-- <label for="password" class="form-label">Password</label> --}}
                                 <input type="password" class="input @error('password') is-invalid @enderror"
                                     name="password" placeholder="Enter your password"
-                                    id="password" autocomplete="off">
+                                    id="password" >
                                 @error('password')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -140,7 +133,7 @@
                                 {{-- <label for="confirm-password" class="form-label">Confirm Password</label> --}}
                                 <input type="password" class="input @error('password') is-invalid @enderror"
                                     name="password_confirmation" placeholder="Enter confirm password"
-                                    id="confirm-password" autocomplete="off">
+                                    id="confirm-password" >
                             </div>
                             <div  class="col-lg-12 input-wrapper">
                                 <button>Register</button>
