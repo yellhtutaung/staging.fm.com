@@ -35,7 +35,11 @@
             <div class="right_navigation_bar">
                 <ul>
                     <li>
-                        <a href="#it_products">Website & Apps</a>
+                        @if(auth()->check())
+                            <a href='/pricelist' >Price List</a>
+                        @else
+                            <a href="#it_products">Website & Apps</a>
+                        @endif
                         <a href="#mission">Mission</a>
                         <a href="#contact">Contact</a>
                     </li>
