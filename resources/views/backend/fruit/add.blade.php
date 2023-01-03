@@ -2,7 +2,7 @@
 @section('title', 'Fruits')
 @section('content')
     <div class="container-fluid ">
-        <div class="row ">
+        <div class="row mt-4">
             <div class="col-sm-12 col-md-4">
                 <div class="animate__animated animate__fadeIn">
                     <div class="card-header form-header-border theme_bg border-0">
@@ -77,13 +77,14 @@
                 </div>
             </div>
             <div class="col-sm-12 col-md-8">
-                <div class="animate__animated animate__fadeIn">
-                    <div class="card-header border-0 form-header-border theme_bg ">
-                        <h5 class="card-title text-white">RECENT FRUITS</h5>
-                    </div>
-                    <div class="card shadow-lg card-body border-0">
-                        <table class="table table-responsive table-hover">
-                            <thead>
+                @if(count($fruitPriceList) >= 1)
+                    <div class="animate__animated animate__fadeIn">
+                        <div class="card-header border-0 form-header-border theme_bg ">
+                            <h5 class="card-title text-white">RECENT FRUITS</h5>
+                        </div>
+                        <div class="card shadow-lg card-body border-0">
+                            <table class="table table-responsive table-hover">
+                                <thead>
                                 <th>Fruit ID</th>
                                 <th>Name</th>
                                 <th>Picture</th>
@@ -91,8 +92,8 @@
                                 <th>Price</th>
                                 <th>Time</th>
                                 <th>Edit</th>
-                            </thead>
-                            <tbody>
+                                </thead>
+                                <tbody>
                                 @foreach($fruitPriceList as $Index => $fruits)
                                     <tr>
                                         <td><span class="badge bg-primary shadow-lg">{{$fruits->name_id}}</span></td>
@@ -103,15 +104,16 @@
                                         <td>{{$fruits->updated_at->diffForHumans()}}</td>
                                         <td>
                                             <a href="{{route('editFruit',$fruits->id)}}" class="rounded btn btn-info">
-                                                <span class="material-symbols-outlined">edit</span>
+                                                <span class="material-symbols-outlined mt-2 text-white">edit</span>
                                             </a>
                                         </td>
                                     </tr>
                                 @endforeach
-                            </tbody>
-                        </table>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
-                </div>
+                @endif
             </div>
         </div>
     </div>

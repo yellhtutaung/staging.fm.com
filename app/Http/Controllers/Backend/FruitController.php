@@ -24,7 +24,7 @@ class FruitController extends Controller
 
     public function addFruit()
     {
-        $fruitPriceList = FruitPriceList::where('hide_show',1)->where('status',1)->orderBy('id','DESC')->limit(5)->get();
+        $fruitPriceList = FruitPriceList::where('hide_show',1)->where('status',1)->orderBy('id','DESC')->limit(7)->get();
         return view('backend.fruit.add',compact('fruitPriceList'));
     }
 
