@@ -19,7 +19,7 @@ use App\Http\Controllers\Auth\AdminLoginController;
 |
 */
 
-Route::get('/', [PagesController::class, 'home']);
+Route::get('/', [PagesController::class, 'home'])->name('mainPage');
 Route::get('employees', [PagesController::class, 'employees']);
 Route::get('client', [PagesController::class, 'client']);
 Route::get('partnerships', [PagesController::class, 'partnerships']);

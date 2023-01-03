@@ -14,9 +14,9 @@
                     <i class="fa-sharp fa-solid fa-bars"></i>
                 </a>
             </div>
-            <div>
+            <a href="{{route('mainPage')}}"  >
                 <img src="{{asset('frontend-assets/images/freshmoe_logo.png')}}" alt="Freshmoe Logo" class="main_logo img-fluid" />
-            </div>
+            </a>
         </nav>
         <nav class="navigation_bar web">
             <div class="left_navigation_bar">
@@ -31,7 +31,7 @@
                     </li>
                 </ul>
             </div>
-            <img src="{{asset('frontend-assets/images/freshmoe_logo.png')}}" alt="Freshmoe Logo" class="main_logo img-fluid" />
+            <img href="{{route('mainPage')}}" src="{{asset('frontend-assets/images/freshmoe_logo.png')}}" alt="Freshmoe Logo" class="main_logo img-fluid" />
             <div class="right_navigation_bar">
                 <ul>
                     <li>

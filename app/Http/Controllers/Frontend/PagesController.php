@@ -5,10 +5,12 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use App\Models\FruitPriceList;
 use App\Models\FruitPriceListTransition;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Http\Request;
 
 class PagesController extends Controller
 {
+    use HasFactory;
     public function home ()
     {
         return view('frontend.pages.home');
@@ -55,13 +57,20 @@ class PagesController extends Controller
         return view('frontend.price_list',compact('fruitPriceList'));
     }
 
-    public function priceListHistory($id)
+    public function priceListHistory($id,$limit=8)
     {
         $priceList = FruitPriceList::where('token',$id)->first();
         if ($priceList)
         {
-            $priceListHistory = FruitPriceListTransition::where('f_id',$priceList->id)->orderBy('id','DESC')->get();
-            return $priceListHistory;
+            $priceListHistory = FruitPriceListTransition::select('depend_count','token','unit','created_at','price')
+                ->where('f_id',$priceList->id)->orderBy('id','DESC')->take($limit)->get();
+            foreach ($priceListHistory as $Index => $History)
+            {
+                $created_at = explode(' ',$History->created_at);
+                $History->date = $created_at[0];
+                $History->time = $created_at[1];
+            }
+            return view('frontend.price_logs',compact('priceListHistory','priceList'));
         }else{
             return abort(404);
         }

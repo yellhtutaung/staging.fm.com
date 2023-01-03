@@ -13,7 +13,7 @@
                 </a>
             </div>
             <div>
-                <img src="{{asset('frontend-assets/images/freshmoe_logo.png')}}" alt="Freshmoe Logo" class="main_logo img-fluid" />
+                <img href="{{route('mainPage')}}" src="{{asset('frontend-assets/images/freshmoe_logo.png')}}" alt="Freshmoe Logo" class="main_logo img-fluid" />
             </div>
         </nav>
         <nav class="navigation_bar web">
@@ -27,7 +27,7 @@
                     </li>
                 </ul>
             </div>
-            <img src="{{asset('frontend-assets/images/freshmoe_logo.png')}}" alt="Freshmoe Logo" class="main_logo img-fluid" />
+            <img href="{{route('mainPage')}}" src="{{asset('frontend-assets/images/freshmoe_logo.png')}}" alt="Freshmoe Logo" class="main_logo img-fluid" />
             <div class="right_navigation_bar">
 
             </div>
