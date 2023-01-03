@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\Helpers\General;
 use App\Models\FruitPriceList;
+use App\Models\FruitPriceListTransition;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
@@ -16,7 +18,8 @@ class FruitController extends Controller
 
     public function fruitList()
     {
-        return 'list';
+        $fruitPriceList = FruitPriceList::where('status',1)->orderBy('id','DESC')->get();
+        return view('backend.fruit.list',compact('fruitPriceList'));
     }
 
     public function addFruit()
@@ -141,6 +144,15 @@ class FruitController extends Controller
                 return redirect()->back()->with('warning',  $validator->errors()->first());
             }
 
+            if ($In->hasFile('images'))
+            {
+                $imgValidate = $this->imgValidate($In->file('images'),'update', $id);
+                if (is_string($imgValidate))
+                {
+                    return redirect()->back()->with('warning', $imgValidate); // validate and upload img to dynamic folder
+                }
+            }
+
             $fruit->name = $In->name;
             $fruit->price = $In->price;
             $fruit->depend_count = $In->depend_count;
@@ -148,18 +160,32 @@ class FruitController extends Controller
             $fruit->description = $In->description;
             $fruit->notes = $In->notes;
             $fruit->upd_id = Auth::guard('admin')->user()->id;
-            $fruit->update();
-            if ($In->hasFile('images')){
-                $imgValidate = $this->imgValidate($In->file('images'),'update', $id);
-                if (is_string($imgValidate))
-                {
-                    return redirect()->back()->with('warning', $imgValidate); // validate and upload img to dynamic folder
-                }
+            if($this->recordLogUpdate($In,$fruit->id))
+            {
+                $fruit->update();
+                return redirect()->back()->with('success', 'Fruit updated successfully!');
             }
-            return redirect()->back()->with('success', 'Fruit updated successfully!');
 
         }catch (\Exception $e) {
             return back()->with('warning', $e->getMessage());
         }
     }
+
+    public function recordLogUpdate($In,$f_id)
+    {
+        $FruitTransition = new FruitPriceListTransition();
+        $FruitTransition->f_id = $f_id;
+        $FruitTransition->price = $In->price;
+        $FruitTransition->depend_count = $In->depend_count;
+        $FruitTransition->unit = $In->unit;
+        $FruitTransition->edit_id = Auth::guard('admin')->user()->id;
+        $FruitTransition->token = str_shuffle(md5(date("ymdhis")));
+        if($FruitTransition->save())
+        {
+            return true;
+        }else{
+            return false;
+        }
+    }
+
 }

@@ -37,12 +37,16 @@
 
 {{--price list --}}
 
-    <div class="container-fluid" style="margin-top: 190px !important;" >
+    <div class="container" style="margin-top: 190px !important;" >
+        <div class="main_title">
+            <h3 class="text-black title-fm">Realtime price list of FreshMoe</h3>
+            <span class="main_title_underline bg-dark"></span>
+        </div>
         <div class="row">
-            <div class="col-sm-12 col-md-9">
+            <div class="col-sm-12 col-md-12">
                 <div class="animate__animated animate__fadeIn">
                     <div class="card-header form-header-border border-0 theme_bg ">
-                        <h5 class="card-title text-white">RECENT FRUITS</h5>
+                        <h5 class="card-title text-white"> Fruits</h5>
                     </div>
                     <div class="card border-0 shadow-sm card-body">
                         <table id="example" class="table table-responsive table-hover table-striped" style="width:100%">
@@ -54,6 +58,7 @@
                                 <th>Unit</th>
                                 <th>Price</th>
                                 <th>Updated Time</th>
+                                <th>History</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -64,7 +69,12 @@
                                         <td><img class="avator-rounded" src="{{asset("backend-assets/uploads/fruits/$fruits->id/$fruits->images")}}" alt="{{$fruits->name}}"></td>
                                         <td><span class="badge bg-danger shadow-lg">{{$fruits->depend_count ." ".$fruits->unit}}</span></td>
                                         <td><span class="badge bg-success shadow-lg">{{$fruits->price}} MMK</span></td>
-                                        <td>{{$fruits->updated_at->toTimeString()}}</td>
+                                        <td>{{$fruits->updated_at->diffForHumans()}}</td>
+                                        <td>
+                                            <a href="{{route('priceListHistory',$fruits->token)}}" class="rounded btn theme_bg text-white">
+                                                <span class="material-symbols-outlined">history</span>
+                                            </a>
+                                        </td>
                                     </tr>
                                 @endforeach
                             </tbody>
@@ -73,63 +83,12 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-12 col-md-3">
-                <div class="animate__animated animate__bounceInRight  overflow-hidden" >
-                    <div class="card-header form-header-border theme_bg text-white border-0">
-                        <h5 class="card-title text-white">SEARCH FRUITS</h5>
-                    </div>
-                    <div class="card card-body ">
-                        <div class="row">
-                            <div class="form-group">
-                                <label for="Choose">Choose Fruit</label>
-                                <select class="form-control js-example-basic-multiple border-success" name="fruits[]" multiple="multiple">
-                                    <option value="Watermelons">Watermelons</option>
-                                    <option value="Pomegranates">Pomegranates</option>
-                                    <option value="Tangerines">Tangerines</option>
-                                    <option value="Papayas">Papayas</option>
-                                    <option value="Citrus ">Citrus</option>
-                                    <option value="Coconut">Coconut</option>
-                                    <option value="Cranberry">Cranberry</option>
-                                    <option value="Tomato">Tomato</option>
-                                    <option value="Zucchini">Zucchini</option>
-                                    <option value="Cloudberry">Cloudberry</option>
-                                </select>
-                            </div>
-
-                            <div class="form-group mt-4">
-                                <input type="button" class="btn theme_bg text-white w-100" value="CHECK">
-                            </div>
-
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-{{--price list --}}
-
-{{--feature plans start--}}
-<div class="container-fluid p-lg-5 "  style="display: none !important;">
-    <section style="margin-top: 160px" >
-        <div class="d-flex justify-content-between">
-            <h4 class="text-bold title-fm"> REALTIME PRICE LIST </h4>
-            <h4 class="text-bold title-fm "> MORE ITEM </h4>
-        </div>
-        {{--        <h4 class="d-inline theme_green_color">Fresh</h4><h4 class="d-inline theme_red_color">Moe</h4>--}}
-        <div class="row my-2">
-            <div class="col-sm-12 col-md-9">
-                <div class="card shadow-sm">
-                    <div id="chart"></div>
-                </div>
-            </div>
 {{--            <div class="col-sm-12 col-md-3">--}}
-{{--                <div class="card animate__animated animate__bounceInRight  overflow-hidden" >--}}
-{{--                    <div class="card-header theme_bg text-white">--}}
-{{--                        SEARCH FRUITS--}}
+{{--                <div class="animate__animated animate__bounceInRight  overflow-hidden" >--}}
+{{--                    <div class="card-header form-header-border theme_bg text-white border-0">--}}
+{{--                        <h5 class="card-title text-white">SEARCH FRUITS</h5>--}}
 {{--                    </div>--}}
-{{--                    <div class="card-body">--}}
+{{--                    <div class="card card-body ">--}}
 {{--                        <div class="row">--}}
 {{--                            <div class="form-group">--}}
 {{--                                <label for="Choose">Choose Fruit</label>--}}
@@ -157,6 +116,25 @@
 {{--                </div>--}}
 {{--            </div>--}}
         </div>
+    </div>
+
+{{--price list --}}
+
+{{--feature plans start--}}
+<div class="container-fluid p-lg-5 "  style="display: none !important;">
+    <section style="margin-top: 160px" >
+        <div class="d-flex justify-content-between">
+            <h4 class="text-bold title-fm"> REALTIME PRICE LIST </h4>
+            <h4 class="text-bold title-fm "> MORE ITEM </h4>
+        </div>
+        {{--        <h4 class="d-inline theme_green_color">Fresh</h4><h4 class="d-inline theme_red_color">Moe</h4>--}}
+        <div class="row my-2">
+            <div class="col-sm-12 col-md-9">
+                <div class="card shadow-sm">
+                    <div id="chart"></div>
+                </div>
+            </div>
+        </div>
     </section>
     <hr class="my-5">
 </div>
@@ -174,17 +152,18 @@
 <script>
 
     $(document).ready(function () {
-        $('#example').DataTable();
+        $('#example').DataTable({
+            "pageLength": 100,
+        });
         $('.form-control-sm').addClass("input-data-search")
         $('.input-data-search').focus(); // input auto focus
+
+        $('.js-example-basic-multiple').select2();
+
     });
 
     // options docs link --> https://apexcharts.com/docs/options
     // original chart --> https://apexcharts.com/javascript-chart-demos/area-charts/spline/
-
-    $(document).ready(function() {
-        $('.js-example-basic-multiple').select2();
-    });
 
     const options = {
         colors: ['#ED1C24','#5BBA47'],

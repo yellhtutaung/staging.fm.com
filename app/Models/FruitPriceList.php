@@ -11,4 +11,15 @@ class FruitPriceList extends Model
     protected $table = 'fruit_price_lists';
 
     protected $guarded = ['id'];
+
+    public function userInformation()
+    {
+        return $this->belongsTo(User::class,'reg_id');
+    }
+
+    public function updaterInformation()
+    {
+        return $this->belongsTo(User::class,'upd_id');
+    }
+
 }

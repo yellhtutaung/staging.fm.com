@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
 use App\Models\FruitPriceList;
+use App\Models\FruitPriceListTransition;
 use Illuminate\Http\Request;
 
 class PagesController extends Controller
@@ -52,5 +53,17 @@ class PagesController extends Controller
     {
         $fruitPriceList = FruitPriceList::where('hide_show',1)->where('status',1)->orderBy('id','DESC')->get();
         return view('frontend.price_list',compact('fruitPriceList'));
+    }
+
+    public function priceListHistory($id)
+    {
+        $priceList = FruitPriceList::where('token',$id)->first();
+        if ($priceList)
+        {
+            $priceListHistory = FruitPriceListTransition::where('f_id',$priceList->id)->orderBy('id','DESC')->get();
+            return $priceListHistory;
+        }else{
+            return abort(404);
+        }
     }
 }

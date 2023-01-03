@@ -10,7 +10,10 @@
                 <div class="p-2">
                     <form method="POST" action="{{ route('register') }}" class=" body-fm ">
                         @csrf
-                        <h3 class="title-fm text-lg-center mb-2">Sign Up For Price List</h3>
+                        <div class="main_title">
+                            <h3 class="title-fm text-black mb-2">Sign Up For Price List</h3>
+                            <span class="main_title_underline bg-dark"></span>
+                        </div>
 
                         <div class="row">
                             <div class="col-lg-6 input-wrapper">
@@ -48,10 +51,10 @@
                             </div>
                             <div class="col-lg-6 input-wrapper">
                                 {{-- <label for="shop" class="form-label">Shop Name</label> --}}
-                                <input type="text" class="input @error('shop') is-invalid @enderror"
-                                    name="shop" value="{{ old('shop') }}" placeholder="Enter your shop name"
+                                <input type="text" class="input @error('shop_name') is-invalid @enderror"
+                                    name="shop_name" value="{{ old('shop_name') }}" placeholder="Enter your shop name"
                                     id="shop" autocomplete="off">
-                                @error('shop')
+                                @error('shop_name')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
@@ -59,20 +62,15 @@
                             </div>
                             <div class="col-lg-6 input-wrapper ">
                                 {{-- <label for="country" class="form-label">Country</label> --}}
-                                 <input type="text" class="input @error('country') is-invalid @enderror"
-                                    name="country" value="{{ old('country') }}" placeholder="Enter your country"
-                                    id="country" autocomplete="off">
-{{--                                <div class="custom-select">--}}
-{{--                                    <select class="input @error('country') is-invalid @enderror"--}}
-{{--                                        name="country" value="{{ old('country') }}" placeholder="Enter your country"--}}
-{{--                                        id="country" autocomplete="off">--}}
-{{--                                        <option disabled selected hidden>Select country</option>--}}
-{{--                                        <option class="first" value="Myanmar">Myanmar</option>--}}
-{{--                                        <option value="Thai">Thai</option>--}}
-{{--                                        <option value="Singapore">Singapore</option>--}}
-{{--                                        <option class="last" value="Malaysia">Malaysia</option>--}}
-{{--                                    </select>--}}
-{{--                                </div>--}}
+{{--                                 <input type="text" class="input @error('country') is-invalid @enderror"--}}
+{{--                                    name="country" value="{{ old('country') }}" placeholder="Enter your country"--}}
+{{--                                    id="country" autocomplete="off">--}}
+                                <div class="custom-select">
+                                    <select class="js-example-basic-single @error('country') is-invalid @enderror" name="country" value="{{ old('country') }}" id="country" >
+                                        <option disabled  hidden>Select country</option>
+                                        <option class="first" selected value="1">Myanmar</option>
+                                    </select>
+                                </div>
                                 @error('country')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -80,22 +78,37 @@
                                 @enderror
                             </div>
                             <div class="col-lg-6 input-wrapper">
+{{--                                    <label for="Choose">Choose City</label>--}}
+                                    <select class="js-example-basic-single @error('country') is-invalid @enderror" name="city" >
+                                        <option value="1">Yangon</option>
+                                        <option value="2">Mandalay</option>
+                                    </select>
+
                                 {{-- <label for="city" class="form-label">City</label> --}}
-                                <input type="text" class="input @error('city') is-invalid @enderror"
-                                    name="city" value="{{ old('city') }}" placeholder="Enter your city"
-                                    id="city" autocomplete="off">
-                                @error('city')
+{{--                                <input type="text" class="input @error('city') is-invalid @enderror"--}}
+{{--                                    name="city" value="{{ old('city') }}" placeholder="Enter your city"--}}
+{{--                                    id="city" autocomplete="off">--}}
+{{--                                @error('city')--}}
+{{--                                <span class="invalid-feedback" role="alert">--}}
+{{--                                    <strong>{{ $message }}</strong>--}}
+{{--                                </span>--}}
+{{--                                @enderror--}}
+                            </div>
+                            <div class="col-lg-12 input-wrapper">
+                                <input type="text" class="input @error('postal_code') is-invalid @enderror"
+                                       name="postal_code" value="{{ old('postal_code') }}" placeholder="Enter your postal code"
+                                       id="postal_code" autocomplete="off">
+                                @error('postal_code')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
                                 @enderror
                             </div>
                             <div class="col-lg-12 input-wrapper">
-                                {{-- <label for="township" class="form-label">Township</label> --}}
-                                <input type="text" class="input @error('township') is-invalid @enderror"
-                                    name="township" value="{{ old('township') }}" placeholder="Enter your township"
-                                    id="township" autocomplete="off">
-                                @error('township')
+                                <input type="text" class="input @error('zip_code') is-invalid @enderror"
+                                    name="zip_code" value="{{ old('zip_code') }}" placeholder="Enter your zip code"
+                                    id="zip_code" autocomplete="off">
+                                @error('zip_code')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
@@ -153,6 +166,10 @@
         </div>
     </div>
 </div>
-
+<script>
+    $(document).ready(function () {
+       $('.js-example-basic-single').select2();
+    });
+</script>
 
 @endsection

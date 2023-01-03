@@ -69,9 +69,12 @@ class RegisterController extends Controller
         $user->name = $data['name'];
         $user->email = $data['email'];
         $user->phone = $data['phone'];
-//        $user->shop = $data['shop'];
-//        $user->country = $data['country'];
-//        $user->city = $data['city'];
+        $user->shop_name = $data['shop_name'];
+        $user->country_id = $data['country'];
+        $user->city_id = $data['city'];
+        $user->zip_code = $data['zip_code'];
+        $user->postal_code = $data['postal_code'];
+        $user->address = $data['address'];
 //        $user->township = $data['township'];
         $user->password = Hash::make($data['password']);
         $user->save();

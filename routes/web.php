@@ -44,6 +44,7 @@ Route::middleware(['auth'])->group(function ()
 
 });
 Route::get('pricelist', [PagesController::class, 'priceList'])->name('priceList');
+Route::get('pricelist/{token}/history', [PagesController::class, 'priceListHistory'])->name('priceListHistory');
 
 Route::middleware([CheckAdmin::class])->prefix('admin')->group(function ()
 {

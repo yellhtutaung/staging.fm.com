@@ -8,7 +8,7 @@
                     <div class="card-header form-header-border theme_bg border-0">
                         <h5 class="card-title text-white">ADD FRUITS </h5>
                     </div>
-                    <div class="card card-body border-0" >
+                    <div class="card shadow-lg card-body border-0" >
                         @if(session('warning'))
                             <div class="alert alert-warning alert-dismissible fade show" role="alert">
                                 <span><strong>Warning !</strong>  {{session('warning')}}</span>
@@ -54,6 +54,7 @@
                                                 <option value="Lbs">Lbs</option>
                                                 <option value="Box">Box</option>
                                                 <option value="Pcs">Pcs</option>
+                                                <option value="Ton">Ton</option>
                                             </select>
                                         </div>
                                     </div>
@@ -80,7 +81,7 @@
                     <div class="card-header border-0 form-header-border theme_bg ">
                         <h5 class="card-title text-white">RECENT FRUITS</h5>
                     </div>
-                    <div class="card card-body border-0">
+                    <div class="card shadow-lg card-body border-0">
                         <table class="table table-responsive table-hover">
                             <thead>
                                 <th>Fruit ID</th>
@@ -101,7 +102,7 @@
                                         <td><span class="badge bg-success shadow-lg">{{$fruits->price}} MMK</span></td>
                                         <td>{{$fruits->updated_at->diffForHumans()}}</td>
                                         <td>
-                                            <a href="{{route('editFruit',$fruits->id)}}" class="rounded btn btn-primary">
+                                            <a href="{{route('editFruit',$fruits->id)}}" class="rounded btn btn-info">
                                                 <span class="material-symbols-outlined">edit</span>
                                             </a>
                                         </td>

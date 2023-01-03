@@ -9,6 +9,7 @@
         <a href="/target-market">Target of Market</a>
         <a href="/coldchain-transport">Cold Chain and Transportation</a>
         @if(auth()->check())
+            <a href="{{route('pricelist')}}" >Price List</a>
             <a href="javascript:void(0)" id="logout-btn">Logout</a>
             <form action="{{ route('logout') }}" method="POST" id="logout-form">
                 @csrf
