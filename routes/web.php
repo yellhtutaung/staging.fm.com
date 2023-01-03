@@ -30,8 +30,7 @@ Route::get('/register', [PagesController::class, 'register']);
 Route::get('login', [AdminAuthController::class, 'login'])->name('login');
 
 
-// User auth
-Auth::routes();
+
 
 //Admin
 
@@ -60,3 +59,5 @@ Route::middleware([CheckAdmin::class])->prefix('admin')->group(function ()
 
 }); // For admin only
 
+// User auth
+Auth::routes();
