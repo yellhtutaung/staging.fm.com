@@ -37,13 +37,13 @@
 
 {{--price list --}}
 
-    <div class="container" style="margin-top: 190px !important;" >
-        <div class="main_title">
-            <h3 class="text-black title-fm">Realtime price list of FreshMoe</h3>
-            <span class="main_title_underline bg-dark"></span>
-        </div>
+    <div class="container-fluid" style="margin-top: 190px !important;" >
         <div class="row">
-            <div class="col-sm-12 col-md-12">
+            <div class="col-sm-12 col-md-10 offset-md-1">
+                <div class="main_title">
+                    <h3 class="text-black title-fm">Realtime price list of FreshMoe</h3>
+                    <span class="main_title_underline bg-dark"></span>
+                </div>
                 <div class="animate__animated animate__fadeIn">
                     <div class="card-header form-header-border border-0 theme_bg ">
                         <h5 class="card-title text-white"> Fruits</h5>

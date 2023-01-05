@@ -44,15 +44,15 @@
 {{--price list --}}
 
 <div class="container-fluid" style="margin-top: 190px !important;" >
-    <div class="main_title d-inline-block ">
-        <h3 class="text-black title-fm animate__animated animate__slideInLeft ">Previous price list of {{$priceList->name}}</h3>
-        <span class="main_title_underline w-75 bg-dark"></span>
-    </div>
-    <div class="d-inline-block ">
-        <img class="product-img animate__animated animate__bounce" src="{{asset("backend-assets/uploads/fruits/$priceList->id/$priceList->images")}}" alt="{{$priceList->name}}" />
-    </div>
     <div class="row">
-        <div class="col-sm-12 col-md-12">
+        <div class="col-sm-12 col-md-10 offset-md-1">
+            <div class="main_title d-inline-block ">
+                <h3 class="text-black title-fm animate__animated animate__slideInLeft ">Previous price list of {{$priceList->name}}</h3>
+                <span class="main_title_underline w-75 bg-dark"></span>
+            </div>
+            <div class="d-inline-block ">
+                <img class="product-img animate__animated animate__bounce" src="{{asset("backend-assets/uploads/fruits/$priceList->id/$priceList->images")}}" alt="{{$priceList->name}}" />
+            </div>
             <div class="card animate__animated animate__fadeIn shadow-sm">
                 <div id="chart"></div>
             </div>
