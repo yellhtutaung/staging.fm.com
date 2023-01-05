@@ -14,30 +14,27 @@
                 <li id="comp" class="dropNav" >
                     <a href="javascript:void(0)" onclick="dropTagAction('comp')">
                         <i class="fa fa-diamond"></i>
-                        <span>Ads Management</span>
+                        <span>Fruits</span>
                         <i class="fa fa-angle-right aside-icon " id="comp-icon"></i>
                     </a>
                     <ul>
-                        <li><p>Ads</p></li>
-                        <li><p>Panels</p></li>
-                        <li><p>Generals</p></li>
-                        <li><p>Generals</p></li>
-                        <li><p>Generals</p></li>
+                        <li><a href="">List</a></li>
+                        <li><a href="">Add</a></li>
                     </ul>
                 </li>
-                <li id="chart"  class="dropNav">
-                    <a href="javascript:void(0)" onclick="dropTagAction('chart')">
-                        <i class="fa-solid fa-shield-halved"></i>
-                        <span>Privacy Management</span>
-                        <i class="fa fa-angle-right aside-icon " id="chart-icon"></i>
-                    </a>
-                    <ul>
-                        <li><p>Users Info</p></li>
-                        <li><p>Posts guard</p></li>
-                        <li><p>Bar chart</p></li>
-                        <li><p>Histogram chart</p></li>
-                    </ul>
-                </li>
+{{--                <li id="chart"  class="dropNav">--}}
+{{--                    <a href="javascript:void(0)" onclick="dropTagAction('chart')">--}}
+{{--                        <i class="fa-solid fa-shield-halved"></i>--}}
+{{--                        <span>Privacy Management</span>--}}
+{{--                        <i class="fa fa-angle-right aside-icon " id="chart-icon"></i>--}}
+{{--                    </a>--}}
+{{--                    <ul>--}}
+{{--                        <li><p>Users Info</p></li>--}}
+{{--                        <li><p>Posts guard</p></li>--}}
+{{--                        <li><p>Bar chart</p></li>--}}
+{{--                        <li><p>Histogram chart</p></li>--}}
+{{--                    </ul>--}}
+{{--                </li>--}}
             </ul>
         </aside>
     </div>
