@@ -4,6 +4,8 @@ use App\Http\Controllers\Backend\DashboardController;
 use App\Http\Controllers\Backend\AdminAuthController;
 use App\Http\Controllers\Backend\FruitController;
 use App\Http\Controllers\Frontend\PagesController;
+use App\Http\Controllers\Frontend\ProfileController;
+use App\Http\Controllers\Frontend\PasswordController;
 use App\Http\Middleware\CheckAdmin;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\AdminLoginController;
@@ -44,6 +46,11 @@ Route::middleware(['auth'])->group(function ()
     Route::get('pricelist/{token}/history', [PagesController::class, 'priceListHistory'])->name('priceListHistory');
 
 });
+
+
+Route::get('/profile', [ProfileController::class, 'profile'])->name('profile');
+Route::get('/change-password', [PasswordController::class, 'changePassword'])->name('change-password');
+
 
 Route::middleware([CheckAdmin::class])->prefix('admin')->group(function ()
 {
