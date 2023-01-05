@@ -2,6 +2,7 @@
 <link rel="stylesheet" href="{{asset('frontend-assets/css/client/ourclients.css')}}"/>
 <link rel="stylesheet" href="{{asset('frontend-assets/css/client/featureplans.css')}}"/>
 <link rel="stylesheet" href="{{asset('frontend-assets/css/animated.min.css')}}"/>
+<link rel="stylesheet" href="{{asset('frontend-assets/css/profile.css')}}"/>
 
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css"/>
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.1/css/dataTables.bootstrap5.min.css"/>
@@ -14,47 +15,7 @@
 <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 <style>
-    .client_banner {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("{{asset('frontend-assets/images/client_banner.jpg')}}");
-        margin-top: 140px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-    }
-    .nav-pills-primary-soft.flex-column .nav-item {
-        margin-bottom: 3px;
-        margin-right: 0;
-    }
 
-    .nav-pills-primary-soft .nav-item {
-        padding: 0 !important;
-        margin-right: 2px;
-        margin-left: 2px;
-        border-bottom: 0 !important;
-    }
-
-    .nav-pills-primary-soft .nav-link.active, .nav-pills-primary-soft .nav-link:hover {
-        color: green;
-        background-color: rgba(81, 67, 217, 0.1)
-    }
-
-    .nav-pills-primary-soft .nav-link {
-        padding: 0.5rem 0.8rem !important;
-        font-weight: 500;
-        border-radius: 0.5rem;
-        color: black;
-    }
-    a {
-        text-decoration: none;
-    }
-    .profile-card {
-        background-color: #f5f5f6;
-        border-radius: 15px !important;
-    }
 
 </style>
 
@@ -67,7 +28,7 @@
 
 {{--profile --}}
 
-<div class="container" style="margin-top: 190px !important;" >
+<div class="container py-5" style="margin-top: 190px !important;" >
 {{--    <div class="main_title">--}}
 {{--        <h3 class="text-black title-fm">Realtime price list of FreshMoe</h3>--}}
 {{--        <span class="main_title_underline bg-dark"></span>--}}
@@ -82,10 +43,11 @@
                     <div class="text-center">
                         <!-- Avatar -->
                         <div class="avatar avatar-xl mb-2">
-                            <img class="avatar-img rounded-circle border border-2 border-white" width="80" height="80" src="{{asset("frontend-assets/images/employee_profile_1.jpg")}}" alt="">
+{{--                            <img class="avatar-img rounded-circle border border-2 border-white" width="80" height="80" src="{{asset("frontend-assets/images/employee_profile_1.jpg")}}" alt="">--}}
+                            <i class="fa-solid fa-circle-user"></i>
                         </div>
-                        <h6 class="mb-0">Jacqueline Miller</h6>
-                        <a href="#" class="text-reset text-primary-hover small">hello@gmail.com</a>
+                        <h6 class="mb-0">{{$user->name}}</h6>
+                        <a href="#" class="text-reset text-primary-hover small">{{$user->email}}</a>
                         <hr>
                     </div>
                     <ul class="nav nav-pills-primary-soft flex-column">
@@ -93,9 +55,11 @@
                             <a class="nav-link {{ Request::is('profile') ? 'active' : '' }}" href="{{route('profile')}}"><i class="fa fa-user me-2"></i>My Profile</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {{Request::is('change-password') ? 'active': ''}}" href="{{route('change-password')}}"><i class="fa fa-eye-slash me-2"></i>Change Password</a>
+                            <a class="nav-link {{ Request::is('edit-profile') ? 'active' : '' }}" href="{{route('edit-profile')}}"><i class="fa-solid fa-pen-to-square me-2"></i>Edit Profile</a>
                         </li>
-
+                        <li class="nav-item">
+                            <a class="nav-link {{Request::is('change-password') ? 'active': ''}}" href="{{route('change-password')}}"><i class="fa-solid fa-lock me-2"></i>Change Password</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -105,8 +69,50 @@
                 <div class="card-header form-header-border border-0 theme_bg ">
                     <h5 class="card-title text-white"> Personal Information</h5>
                 </div>
-                <div class="card border-0 shadow-sm card-body">
+                <div class="card border-0 shadow-sm card-body profile-info">
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <tbody>
+                                <tr class="">
+                                    <td class="py-3">Full Name</td>
+                                    <td class="py-3">{{$user->name}}</td>
+                                </tr>
+                                <tr class="">
+                                    <td class="py-3">Email</td>
+                                    <td class="py-3">{{$user->email}}</td>
+                                </tr>
+                                <tr class="">
+                                    <td class="py-3">Phone Number</td>
+                                    <td class="py-3">{{$user->phone}}</td>
+                                </tr>
+                                <tr class="">
+                                    <td class="py-3">Shop Name</td>
+                                    <td class="py-3">{{$user->shop_name}}</td>
+                                </tr>
+                                <tr class="">
+                                    <td class="py-3">Country</td>
+                                    <td class="py-3">Myanmar</td>
+                                </tr>
+                                <tr class="">
+                                    <td class="py-3">City</td>
+                                    <td class="py-3">Yangon</td>
+                                </tr>
+                                <tr class="">
+                                    <td class="py-3">Postal Code</td>
+                                    <td class="py-3">{{$user->postal_code ? $user->postal_code : '-'}}</td>
+                                </tr>
+                                <tr class="">
+                                    <td class="py-3">Zip Code</td>
+                                    <td class="py-3">{{$user->zip_code ? $user->zip_code : '-'}}</td>
+                                </tr>
+                                <tr class="">
+                                    <td class="py-3">Address</td>
+                                    <td class="py-3">{{$user->address ? $user->address : '-'}}</td>
+                                </tr>
 
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
@@ -143,7 +149,45 @@
 
 <?php echo View::make ('frontend.layouts.aos'); ?>
 <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+{{-- sweetalert --}}
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+<script src="{{asset('backend-assets/js/app.js')}}"></script>
+
 <script>
+    const Toast = Swal.mixin({
+        toast: true,
+        position: 'bottom-end',
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+            toast.addEventListener('mouseenter', Swal.stopTimer)
+            toast.addEventListener('mouseleave', Swal.resumeTimer)
+        }
+    })
+
+    @if (session('create'))
+    Toast.fire({
+        icon: 'success',
+        title: "{{ session('create') }}"
+    })
+    @endif
+
+    @if (session('update'))
+    Toast.fire({
+        icon: 'success',
+        title: "{{ session('update') }}"
+    })
+    @endif
+
+    @if (session('delete'))
+    Toast.fire({
+        icon: 'success',
+        title: "{{ session('delete') }}"
+    })
+    @endif
 
 </script>
 

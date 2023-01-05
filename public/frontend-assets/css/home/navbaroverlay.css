@@ -3,7 +3,6 @@
     height: 0;
     width: 100%;
     position: fixed;
-    z-index: 100;
     top: 0;
     left: 0;
     background-color: #ffffff;
@@ -28,7 +27,7 @@
 }
 
 .overlay a {
-    padding: 20px;
+    padding: 15px 20px;
     text-align: right;
     text-decoration: none;
     font-size: 1.3rem;
@@ -47,7 +46,7 @@
 .overlay .closebtn {
     text-decoration: none !important;
     position: absolute;
-    top: 0;
+    top: -20px;
     right: 0;
     font-size: 3rem;
     z-index: 100;
@@ -70,7 +69,7 @@
     }
 
     .overlay a {
-        font-size: 2rem;
+        font-size: 1.7rem;
     }
 
     .overlay a:hover,
