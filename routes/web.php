@@ -49,7 +49,10 @@ Route::middleware(['auth'])->group(function ()
 
 
 Route::get('/profile', [ProfileController::class, 'profile'])->name('profile');
-Route::get('/change-password', [PasswordController::class, 'changePassword'])->name('change-password');
+Route::get('/edit-profile', [ProfileController::class, 'editProfile'])->name('edit-profile');
+Route::post('/update-profile', [ProfileController::class, 'updateProfile'])->name('update-profile');
+Route::get('/change-password', [ProfileController::class, 'changePassword'])->name('change-password');
+Route::post('update-password', [ProfileController::class, 'updatePassword'])->name('updatePassword');
 
 
 Route::middleware([CheckAdmin::class])->prefix('admin')->group(function ()
