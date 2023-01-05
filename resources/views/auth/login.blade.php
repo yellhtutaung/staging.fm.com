@@ -27,18 +27,14 @@
                             </span>
                         @enderror
                     </div>
-{{--                    <div class="form-check">--}}
-{{--                        <input class="form-check-input shadow" type="checkbox" value="" id="flexCheckDefault">--}}
-{{--                        <label class="form-check-label" for="flexCheckDefault">--}}
-{{--                            I agree to the terms of service.--}}
-{{--                        </label>--}}
-{{--                    </div>--}}
                     <div  class="input-wrapper">
                         <button>Sign in</button>
                     </div>
                 </form>
-                <div class="body-fm">
+                <div class="body-fm d-flex justify-content-between">
                     <a href="{{route('register')}}" class="underline">I am not already member</a>
+                    <a href="{{route('password.request')}}" class="underline">Forgot your password?</a>
+
                 </div>
             </div>
         </div>
