@@ -64,6 +64,7 @@
         $(document).ready(function () {
             $('#example').DataTable({
                 "pageLength": 100,
+                responsive: true,
             });
             $('.form-control-sm').addClass("input-data-search")
             $('.input-data-search').focus(); // input auto focus
