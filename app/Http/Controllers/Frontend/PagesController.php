@@ -95,7 +95,6 @@ class PagesController extends Controller
         $contact_mail = "freshmoe2021@gmail.com";
 
         Mail::to($contact_mail)->send(new ContactUs($details));
-
-        return response()->json(['success'=>true], 200);
+        return redirect()->back()->with('success', 'Send Contact Form Successfully!');
     }
 }

@@ -13,7 +13,7 @@ class ContactUs extends Mailable
 {
     use Queueable, SerializesModels;
 
-    private $details;
+    public $details;
     /**
      * Create a new message instance.
      *
@@ -43,10 +43,10 @@ class ContactUs extends Mailable
      */
     public function content()
     {
-        return $this->view('frontend.emails.contact',['data' => $this->details]);
-//        return new Content(
-//            view: 'view.name',
-//        );
+//        return $this->view('frontend.emails.contact',['data' => $this->details]);
+        return new Content(
+            view: 'frontend.emails.contact',
+        );
     }
 
     /**
