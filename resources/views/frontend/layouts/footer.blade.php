@@ -53,37 +53,61 @@
                                         </p>
                                     </div>
                                     <div class="row p-3">
+                                        @if (session('success'))
+                                            <div class="alert alert-success" role="alert">
+                                                {{ session('success') }}
+                                            </div>
+                                        @endif
                                         <div class="contact_form">
+
                                             <form
-                                                action="https://formsubmit.co/aungchanoo.promail@gmail.com"
+                                                action="{{route('contact')}}"
                                                 method="POST"
                                                 class="body-fm"
                                             >
+                                                @csrf
+
                                                 <input type="hidden" name="_next" value="https://www.freshmoe.com/" />
                                                 <input
                                                     type="text"
                                                     name="name"
-                                                    class="mb-3"
+                                                    class="mb-3 @error('name') is-invalid @enderror"
                                                     placeholder="Enter Your Name"
                                                     autocomplete="off"
                                                 />
+                                                @error('name')
+                                                <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                                @enderror
+
                                                 <input
                                                     type="email"
                                                     name="email"
-                                                    class="mb-3"
+                                                    class="mb-3 @error('email') is-invalid @enderror"
                                                     placeholder="Enter Your Email"
                                                     autocomplete="off"
                                                 />
+                                                @error('email')
+                                                <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                                @enderror
                                                 <textarea
-                                                    name=""
+                                                    name="message"
                                                     id=""
                                                     cols="30"
                                                     rows="3"
-                                                    class="mb-3"
+                                                    class="mb-3 @error('$message') is-invalid @enderror"
                                                     placeholder="Enter Your Message"
                                                     autocomplete="off"
                                                 ></textarea>
-                                                <button>Send</button>
+                                                @error('message')
+                                                <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                                @enderror
+                                                <button type="submit">Send</button>
                                             </form>
                                         </div>
                                     </div>
