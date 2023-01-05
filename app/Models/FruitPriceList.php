@@ -14,12 +14,12 @@ class FruitPriceList extends Model
 
     public function userInformation()
     {
-        return $this->belongsTo(User::class,'reg_id');
+        return $this->belongsTo(Admin::class,'reg_id');
     }
 
     public function updaterInformation()
     {
-        return $this->belongsTo(User::class,'upd_id');
+        return $this->belongsTo(Admin::class,'upd_id');
     }
 
 }

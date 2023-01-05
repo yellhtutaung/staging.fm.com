@@ -3,6 +3,7 @@
 use App\Http\Controllers\Backend\DashboardController;
 use App\Http\Controllers\Backend\AdminAuthController;
 use App\Http\Controllers\Backend\FruitController;
+use App\Http\Controllers\Backend\UserController;
 use App\Http\Controllers\Frontend\PagesController;
 use App\Http\Controllers\Frontend\ProfileController;
 use App\Http\Controllers\Frontend\PasswordController;
@@ -67,8 +68,11 @@ Route::middleware([CheckAdmin::class])->prefix('admin')->group(function ()
         Route::get('{id}/edit', [FruitController::class, 'editFruit'])->name('editFruit');
         Route::post('{id}/update', [FruitController::class, 'updateFruit'])->name('updateFruit');
     });
+    Route::prefix('user')->group(function () {
+        Route::get('/', [UserController::class, 'userList'])->name('userList');
+    });
 
-}); // For admin only
+    }); // For admin only
 
 // User auth
 Auth::routes();
