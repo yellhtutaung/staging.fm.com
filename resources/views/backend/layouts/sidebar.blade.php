@@ -18,8 +18,8 @@
                         <i class="fa fa-angle-right aside-icon " id="comp-icon"></i>
                     </a>
                     <ul>
-                        <li><a href="">List</a></li>
-                        <li><a href="">Add</a></li>
+                        <li><a class="w-100" href="{{route('fruitList')}}">List</a></li>
+                        <li><a class="w-100" href="{{route('addFruit')}}">Add</a></li>
                     </ul>
                 </li>
 {{--                <li id="chart"  class="dropNav">--}}
