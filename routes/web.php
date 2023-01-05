@@ -50,6 +50,7 @@ Route::middleware(['auth'])->group(function ()
 Route::get('/profile', [ProfileController::class, 'profile'])->name('profile');
 Route::get('/change-password', [PasswordController::class, 'changePassword'])->name('change-password');
 
+Route::post('/contact', [PagesController::class, 'contact'])->name('contact');
 
 Route::middleware([CheckAdmin::class])->prefix('admin')->group(function ()
 {

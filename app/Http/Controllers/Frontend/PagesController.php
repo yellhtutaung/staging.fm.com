@@ -3,10 +3,12 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Mail\ContactUs;
 use App\Models\FruitPriceList;
 use App\Models\FruitPriceListTransition;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class PagesController extends Controller
 {
@@ -74,5 +76,26 @@ class PagesController extends Controller
         }else{
             return abort(404);
         }
+    }
+
+    public function contact(Request $request)
+    {
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required|email',
+            'message' => 'required',
+        ]);
+
+        $details = [
+            'name' => 'Fullname: '.$request->name,
+            'email' => 'Email: '.$request->email,
+            'message' => 'Message: '.$request->message
+        ];
+
+        $contact_mail = "freshmoe2021@gmail.com";
+
+        Mail::to($contact_mail)->send(new ContactUs($details));
+
+        return response()->json(['success'=>true], 200);
     }
 }
