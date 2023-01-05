@@ -44,7 +44,7 @@
                                     <div class="row">
                                         <div class="col-6">
                                             <label class="my-2" for="">Count</label>
-                                            <input type="number" class="form-control" name="depend_count" value="5{{old('depend_count')}}" />
+                                            <input type="number" class="form-control" name="depend_count" value="{{old('depend_count')}}" />
                                         </div>
                                         <div class="col-6">
                                             <label class="my-2" for="">Unit</label>
