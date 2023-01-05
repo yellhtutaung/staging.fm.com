@@ -2,25 +2,11 @@
     <div class="menuContainer">
         <span class="menu" ><i class="fa-solid fa-bars fs-4"></i></span>
     </div>
-{{--    <div class="dropdown">--}}
-{{--        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">--}}
-{{--            <i class="fa-solid fa-user"></i>--}}
-{{--        </button>--}}
-{{--        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">--}}
-{{--            <li><div class="dropdown-item" >username: johndoe</div></li>--}}
-{{--            <li><div class="dropdown-item" >email: johndoe@gmail.com</div></li>--}}
-{{--            <li>--}}
-{{--                <form action="{{route('admin.logout')}}" method="POST">--}}
-{{--                    @csrf--}}
-{{--                    <button class="btn btn-link">Logout</button>--}}
-{{--                </form>--}}
-{{--            </li>--}}
-{{--        </ul>--}}
-{{--    </div>--}}
+
 
     <div class="dropdown">
         <a class="text-decoration-none text-dark" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-            {{-- <img style="width: 40px;" src="{{ asset('images/red_setting_icon.png') }}" alt=""> <span class="fs-6 ms-2">Aung Zaw Phyo</span> --}}
+{{--             <img style="width: 40px;" src="{{ asset('images/red_setting_icon.png') }}" alt=""> <span class="fs-6 ms-2">Aung Zaw Phyo</span>--}}
             <span class="material-symbols-rounded p-2" style="font-size: 25px">
                         account_circle
                     </span>

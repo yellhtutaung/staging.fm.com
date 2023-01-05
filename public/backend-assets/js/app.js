@@ -15,6 +15,7 @@ menu.addEventListener("click", () => {
             menu.classList.add("clicked");
         }
     } else {
+        console.log(sidebar)
         sidebar.classList.add("sidebar-change-2");
         menu.classList.add("clicked");
     }
@@ -22,8 +23,8 @@ menu.addEventListener("click", () => {
 
 main.addEventListener("click", () => {
     if (window.screen.width < 992) {
-        sidebar.classList.remove("sidebar-change-2");
-        menu.classList.remove("clicked");
+            sidebar.classList.remove("sidebar-change-2");
+            menu.classList.remove("clicked");
     }
 });
 
@@ -70,4 +71,30 @@ function preview(){
     return;
 
 }
+
+
+// sidebar inner data
+
+let dropTags = document.getElementsByClassName('dropNav')
+let asideIconTags = document.getElementsByClassName('aside-icon')
+
+let dropTagAction = (dropId) => {
+    let dropIdTag = document.getElementById(`${dropId}`)
+    let asideIconTag = document.getElementById(`${dropId}`+'-icon')
+
+    if (dropIdTag.classList.contains('open-drop')){
+        asideIconTag.classList.remove('aside-icon-action')
+        dropIdTag.classList.remove('open-drop')
+    }else {
+        for(let i = 0; i < dropTags.length ; i++) {
+            dropTags[i].classList.remove('open-drop')
+            asideIconTags[i].classList.remove('aside-icon-action')
+        }
+        setTimeout(()=>{
+            dropIdTag.classList.add('open-drop')
+            asideIconTag.classList.add('aside-icon-action')
+        }, 100)
+    }
+}
+
 
