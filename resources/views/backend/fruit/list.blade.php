@@ -4,7 +4,7 @@
 @section('content')
     <div class="container-fluid ">
 
-        <input type="button" class="btn theme_bg text-white my-3" value="ADD +" />
+        <a href="{{route('addFruit')}}" class="btn theme_bg text-white my-3" >ADD +</a>
 
         <div class="card-header form-header-border border-0 theme_bg ">
             <h5 class="card-title text-white"> Fruits</h5>
@@ -24,6 +24,7 @@
                     <th>Updater</th>
                     <th>Updated Time</th>
                     <th>History</th>
+                    <th>Edit</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -41,7 +42,12 @@
                         <td>{{$fruits->updated_at->diffForHumans()}}</td>
                         <td>
                             <a href="{{route('priceListHistory',$fruits->token)}}" class="rounded btn theme_bg text-white">
-                                <span class="material-symbols-outlined">history</span>
+                                <span class="material-symbols-outlined p-1">history</span>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="{{route('editFruit',$fruits->id)}}" class="rounded btn btn-info">
+                                <span class="material-symbols-outlined mt-2 text-white">edit</span>
                             </a>
                         </td>
                     </tr>
