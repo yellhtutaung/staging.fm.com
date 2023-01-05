@@ -276,7 +276,7 @@
 {{--footer start--}}
 <div>
     <section id="footer">
-        <div class="container-fluid">
+        <div class="container">
             <div class="d-flex flex-wrap footer_section_1">
                 <div class="col-md-6 border_right">
 
@@ -344,8 +344,9 @@
                             </div>
                             <div class="row p-3">
                                 <div class="contact_form">
+                                    @csrf
                                     <form
-                                        action="https://formsubmit.co/aungchanoo.promail@gmail.com"
+                                        action="{{route('contact')}}"
                                         method="POST"
                                         class="body-fm"
                                     >
@@ -353,21 +354,20 @@
                                         <input
                                             type="text"
                                             name="name"
-                                            required
-                                            class="mb-3"
+                                            class="mb-3 @error('name') is-invalid @enderror"
                                             placeholder="Enter Your Name"
                                             autocomplete="off"
                                         />
+
                                         <input
                                             type="email"
                                             name="email"
-                                            required
                                             class="mb-3"
                                             placeholder="Enter Your Email"
                                             autocomplete="off"
                                         />
                                         <textarea
-                                            name=""
+                                            name="message"
                                             id=""
                                             cols="30"
                                             rows="3"

@@ -54,6 +54,7 @@ Route::post('/update-profile', [ProfileController::class, 'updateProfile'])->nam
 Route::get('/change-password', [ProfileController::class, 'changePassword'])->name('change-password');
 Route::post('update-password', [ProfileController::class, 'updatePassword'])->name('updatePassword');
 
+Route::post('/contact', [PagesController::class, 'contact'])->name('contact');
 
 Route::middleware([CheckAdmin::class])->prefix('admin')->group(function ()
 {
