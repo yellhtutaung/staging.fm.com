@@ -1,6 +1,6 @@
 <nav class="d-flex justify-content-between align-items-center header p-3">
     <div class="menuContainer">
-        <span class="menu" ><i class="fa-solid fa-bars fs-4"></i></span>
+        <span  style="margin-left: 10px"  class="menu" ><i class="fa-solid fa-bars fs-4 "></i></span>
     </div>
 
 
@@ -16,7 +16,7 @@
                 <span class="material-symbols-rounded me-3">admin_panel_settings</span> <span>{{auth()->guard('admin')->user()->name}}</span>
             </li >
             <li class="list-item d-flex align-items-center">
-                <span class="material-symbols-rounded me-3">task_alt</span> <span>User Analyst</span>
+                <span class="material-symbols-rounded me-3">public</span> <span>Public Site</span>
             </li>
             <li class="list-item d-flex align-items-center">
                 <span class="material-symbols-rounded me-3">settings_suggest</span> <span>Profile Setting</span>

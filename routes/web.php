@@ -46,6 +46,7 @@ Route::middleware(['auth'])->group(function ()
     Route::get('pricelist', [PagesController::class, 'priceList'])->name('priceList');
     Route::get('pricelist/{token}/history', [PagesController::class, 'priceListHistory'])->name('priceListHistory');
     Route::get('/profile', [ProfileController::class, 'profile'])->name('profile');
+    Route::get('/sample', [ProfileController::class, 'userSamplePage'])->name('userSamplePage');
     Route::get('/edit-profile', [ProfileController::class, 'editProfile'])->name('edit-profile');
     Route::post('/update-profile', [ProfileController::class, 'updateProfile'])->name('update-profile');
     Route::get('/change-password', [ProfileController::class, 'changePassword'])->name('change-password');

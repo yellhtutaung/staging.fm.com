@@ -47,7 +47,8 @@ class ProfileController extends Controller
 
     public function changePassword()
     {
-        return view('frontend.pages.change-password');
+        $user = Auth::guard('web')->user();
+        return view('frontend.pages.change-password',compact('user'));
     }
 
     public function updatePassword (Request $request)
@@ -66,6 +67,12 @@ class ProfileController extends Controller
         }
 
         return  back()->withErrors(['old_password' => 'Your password is incorrect.']);
+    }
+
+    public function userSamplePage()
+    {
+        $user = Auth::guard('web')->user();
+        return view('frontend.pages.sample',compact('user'));
     }
 
 }
