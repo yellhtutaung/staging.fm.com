@@ -24,6 +24,7 @@
                     <th>Timestamp</th>
                     <th>Updater</th>
                     <th>Updated Time</th>
+                    <th>Hide | Show</th>
                     <th>History</th>
                     <th>Edit</th>
                 </tr>
@@ -41,6 +42,12 @@
                         <td>{{$fruits->created_at}}</td>
                         <td>{{!is_null($fruits->upd_id)?$fruits->updaterInformation->name:''}}</td>
                         <td>{{$fruits->updated_at->diffForHumans()}}</td>
+                        <td>
+                            <div class="form-check form-switch p-0 m-0">
+                                <input data-id="1" class="toggle-class" type="checkbox"  data-onstyle="success" data-offstyle="danger" data-toggle="toggle"
+                                       data-on="Show"  data-off="Hide" {{$fruits->hide_show==1?"checked":""}}>
+                            </div>
+                        </td>
                         <td>
                             <a href="{{route('priceListHistory',$fruits->token)}}" class="rounded btn theme_bg text-white">
                                 <span class="material-symbols-outlined p-1">history</span>

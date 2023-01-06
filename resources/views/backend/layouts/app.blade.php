@@ -38,10 +38,14 @@
     {{--    google material icons--}}
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
 
+    {{--    Bootstrap Toggle--}}
+    <link rel="stylesheet" href="{{asset('backend-assets/css/bootstrap-toggle.min.css')}}" />
+
     <link rel="stylesheet" href="{{asset('frontend-assets/css/animated.min.css')}}"/>
     <link rel="stylesheet" href="{{asset('frontend-assets/css/global.css')}}">
     <link rel="stylesheet" href="{{asset('backend-assets/css/app.css')}}">
     <link rel="stylesheet" href="{{asset('backend-assets/css/layout.css')}}">
+    <script type="text/javascript" src="{{asset('backend-assets/js/bootstrap-toggle.min.js')}}"></script>
 
     @yield('extra-css')
 

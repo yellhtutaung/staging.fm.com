@@ -17,13 +17,16 @@
                     <th>Name</th>
                     <th>Email</th>
                     <th>Phone</th>
-                    <th>Shop Name</th>
+{{--                    <th>Shop Name</th>--}}
                     <th>Country</th>
                     <th>City</th>
-                    <th>Postal Code</th>
-                    <th>Zip Code</th>
+                    <th>Postal</th>
+                    <th>Zip</th>
+                    <th>Reg Date</th>
+                    <th>Last Active</th>
                     <th>Edit</th>
-                    <th>Delete</th>
+                    <th>Ban</th>
+                    <th>Details</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -33,11 +36,12 @@
                         <td>{{$user->name}}</td>
                         <td>{{$user->email}}</td>
                         <td>{{$user->phone}}</td>
-                        <td>{{$user->shop_name}}</td>
+{{--                        <td>{{$user->shop_name}}</td>--}}
                         <td>Myanmar</td>
                         <td>Yangon</td>
-
-                        <td>{{$user->created_at}}</td>
+                        <td>{{$user->zip_code}}</td>
+                        <td>{{$user->postal_code}}</td>
+                        <td>{{$user->created_at->toDateString()}}</td>
                         <td>{{$user->updated_at->diffForHumans()}}</td>
                         <td>
                             <a href="" class="rounded btn btn-info">
@@ -47,6 +51,11 @@
                         <td>
                             <a href="" class="rounded btn btn-danger">
                                 <span class="material-symbols-outlined mt-2 text-white">delete</span>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="" class="rounded btn btn-dark">
+                                <span class="material-symbols-outlined mt-2 text-white">visibility</span>
                             </a>
                         </td>
                     </tr>
