@@ -151,9 +151,10 @@ aside ul {
 }
 aside > ul > li > a {
     border-radius: 8px;
-    font-size: 19px;
-    transition: all 0 ;
+    font-size: px;
+    font-weight: 600;
     padding-left: 5px;
+    font-family: sans-serif;
 }
 
 aside ul li a{
@@ -181,17 +182,33 @@ aside ul .dropNav > a:hover{
 
 aside > ul > li > ul > li:hover{
     background-color: #d1d1d173;
+    border-color: #5bba47;
 }
 
 /* ----- active route start ------------- */
 .active-link{
-    background-color: #5BBA47 !important;
-    color: white !important;
+    /*background-color: #5BBA47 !important;*/
+    /*color: white !important;*/
 }
 
 .active-route{
     background-color: #d1d1d173;
+    position: relative;
 }
+
+.active-route::after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: auto;
+    left: 0;
+    height: 100%;
+    width: 2px;
+    background-color: #5bba47;
+    transform: scaleY(1);
+}
+
+
 
 /* ----- active route end ------------- */
 
@@ -221,22 +238,37 @@ aside ul li a i.fa-angle-right {
 aside ul li > ul {
     padding: 5px;
     margin: 0 0 0 20px;
+    /*border-bottom: 1px solid rgba(211, 211, 211, 0.32);*/
 }
 aside ul li > ul li {
     width: 100%;
     height: 40px;
     line-height: 30px;
-    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
     padding: 5px 5px 0px 20px;
-    border-radius: 8px;
+    /*border-radius: 8px;*/
     font-weight: normal;
-    border-left: 1px solid #fff0f0;
     margin: 5px;
     cursor: pointer;
-    position: relative;
 }
 
+aside ul li > ul li::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: auto;
+    height: 100%;
+    width: 2px;
+    transform: scaleY(0);
+    background-color: #5bba47;
+    transition: all .3s ease-in-out;
+}
 
+aside ul li > ul li:hover::after {
+    transform: scaleY(1);
+}
 
 /* ------------ */
 
