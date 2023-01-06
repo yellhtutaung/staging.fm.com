@@ -14,21 +14,21 @@
                 <thead>
                 <tr>
                     <th>ID</th>
-                    <th>Fruit ID</th>
                     <th>Name</th>
-                    <th>Picture</th>
-                    <th>Unit</th>
-                    <th>Price</th>
-                    <th>Uploader</th>
-                    <th>Timestamp</th>
-                    <th>Updater</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Shop Name</th>
+                    <th>Country</th>
+                    <th>City</th>
+                    <th>Postal Code</th>
+                    <th>Zip Code</th>
                     <th>Updated Time</th>
                     <th>History</th>
                     <th>Edit</th>
                 </tr>
                 </thead>
                 <tbody>
-                @foreach($fruitPriceList as $Index => $fruits)
+                @foreach($users as $Index => $user)
                     <tr>
                         <td>{{$Index+1}}</td>
                         <td><span class="badge bg-primary shadow-lg">{{$fruits->name_id}}</span></td>

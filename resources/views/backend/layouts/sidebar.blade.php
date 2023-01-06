@@ -1,4 +1,4 @@
-<div class="sidebar shadow">
+<div class="sidebar shadow bg-light">
 
     <div class="logo-container">
         <a href="/admin">
@@ -7,36 +7,37 @@
     </div>
     <div class="aside-cover h-100">
         <aside class="p-2 pt-0 content-fm">
+
             <ul class=" m-0 p-0 pt-2">
-                <li class="mt-0 "><a href="/admin"><i class="fa fa-home"></i> Dashboard</a></li>
+                <li class="mt-0 ">
+                    <a class=" {{ Route::currentRouteName() == 'home' ? 'active-link' : null}}" href="/admin">
+                        <i class="fa fa-home"></i> Dashboard
+                    </a>
+                </li>
             </ul>
+
             <ul class="m-0 p-0">
-                <li id="comp" class="dropNav" >
-                    <a href="javascript:void(0)" onclick="dropTagAction('comp')">
+                <li id="user" class="dropNav" >
+                    <a class="{{ Route::currentRouteName() == 'userList' ? 'active-link' : null}}" href="" onclick="dropTagAction('user')">
                         <i class="fa fa-diamond"></i>
-                        <span>Fruits</span>
-                        <i class="fa fa-angle-right aside-icon " id="comp-icon"></i>
+                        <span>Users Management</span>
+                    </a>
+                </li>
+
+                <li id="fruit" class="dropNav {{ Request::segment(2) == 'fruit'  ?  'open-drop' : null }}" >
+                    <a class="{{ Request::segment(2) == 'fruit' ? 'active-link' : null}}" href="javascript:void(0)" onclick="dropTagAction('fruit')">
+                        <i class="fa fa-diamond"></i>
+                        <span>Fruits Management</span>
+                        <i class="fa fa-angle-right aside-icon " id="fruit-icon"></i>
                     </a>
                     <ul>
-                        <li><a class="w-100" href="{{route('fruitList')}}">List</a></li>
-                        <li><a class="w-100" href="{{route('addFruit')}}">Add</a></li>
+                        <li class="{{ Route::currentRouteName() == 'fruitList' ? 'active-route' : null}}"><a class="w-100 " href="{{route('fruitList')}}">List</a></li>
+                        <li class="{{ Route::currentRouteName() == 'addFruit' ? 'active-route' : null}}"><a class="w-100 " href="{{route('addFruit')}}">Add</a></li>
                     </ul>
-
                 </li>
-{{--                <li id="chart"  class="dropNav">--}}
-{{--                    <a href="javascript:void(0)" onclick="dropTagAction('chart')">--}}
-{{--                        <i class="fa-solid fa-shield-halved"></i>--}}
-{{--                        <span>Privacy Management</span>--}}
-{{--                        <i class="fa fa-angle-right aside-icon " id="chart-icon"></i>--}}
-{{--                    </a>--}}
-{{--                    <ul>--}}
-{{--                        <li><p>Users Info</p></li>--}}
-{{--                        <li><p>Posts guard</p></li>--}}
-{{--                        <li><p>Bar chart</p></li>--}}
-{{--                        <li><p>Histogram chart</p></li>--}}
-{{--                    </ul>--}}
-{{--                </li>--}}
+
             </ul>
+
         </aside>
     </div>
 

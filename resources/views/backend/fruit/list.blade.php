@@ -1,6 +1,7 @@
 @extends('backend.layouts.app')
 @section('title', 'Fruits')
-
+@section('extra-css')
+@endsection
 @section('content')
     <div class="container-fluid ">
 
@@ -9,7 +10,7 @@
         <div class="card-header form-header-border border-0 theme_bg ">
             <h5 class="card-title text-white"> Fruits</h5>
         </div>
-        <div class="card border-0 shadow-sm card-body animate__animated animate__fadeIn">
+        <div class="card table-responsive border-0 shadow-sm card-body animate__animated animate__fadeIn">
             <table id="example" class="table table-responsive table-hover table-striped" >
                 <thead>
                 <tr>
@@ -30,7 +31,7 @@
                 <tbody>
                 @foreach($fruitPriceList as $Index => $fruits)
                     <tr>
-                        <td>{{$Index+1}}</td>
+                        <td>{{$Index+1}}4</td>
                         <td><span class="badge bg-primary shadow-lg">{{$fruits->name_id}}</span></td>
                         <td>{{$fruits->name}}</td>
                         <td><img class="avator-rounded" src="{{asset("backend-assets/uploads/fruits/$fruits->id/$fruits->images")}}" alt="{{$fruits->name}}"></td>
@@ -60,11 +61,11 @@
 @endsection
 
 @section('extra-script')
+
     <script>
         $(document).ready(function () {
             $('#example').DataTable({
                 "pageLength": 100,
-                responsive: true,
             });
             $('.form-control-sm').addClass("input-data-search")
             $('.input-data-search').focus(); // input auto focus

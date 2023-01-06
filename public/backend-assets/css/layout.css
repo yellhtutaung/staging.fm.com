@@ -34,29 +34,13 @@ body {
 .sidebar {
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
+    transition: all .3s ease-in-out;
 }
 
-
-.main-container {
-    min-height: 100vh;
-    position: relative;
-}
-
-.sidebar{
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    width: 300px;
-    z-index: 1000;
-    transition: all .3s;
-    height: inherit;
-    min-height: 100%;
-}
 
 .main {
     margin-left: 300px;
-    transition: margin-left .3s;
+    transition: margin-left .3s ease-in-out;
     z-index: 1;
     display: flex;
     flex-direction: column;
@@ -71,7 +55,8 @@ footer {
 }
 
 .sidebar-change-1 {
-    left: -300px;
+    transition: all .3s ease-in-out !important;
+    left: -300px !important;
 }
 
 .main-change-1 {
@@ -87,23 +72,6 @@ footer {
     font-size: 19px;
     font-weight: 500;
 }
-
-/*.link {*/
-/*    display: inline-block;*/
-/*    text-decoration: none;*/
-/*    color: black;*/
-/*    font-size: 18px;*/
-/*    padding: 6px;*/
-/*    width: 100%;*/
-/*    transition: all .2s;*/
-/*}*/
-
-
-/*.link:hover {*/
-/*    background-color: #5bba47 ;*/
-/*    color: white;*/
-/*    border-radius: 10px;*/
-/*}*/
 
 .green_block {
     background-color: #5BBA47;
@@ -138,13 +106,33 @@ footer {
     border-bottom: 1px solid lightgray;
 }
 
+.main-container {
+    min-height: 100vh;
+    position: relative;
+    transition: all .3s ease-in-out !important;
 
+}
 
-
-
+.sidebar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    z-index: 1000;
+    height: inherit;
+    min-height: 100%;
+    transition: all .3s ease-in-out !important;
+}
 
 /* sidebar inner data start */
 
+.aside-cover{
+    /*overflow-y: auto;*/
+    /*padding: 0;*/
+    transition: all 5s ease-in-out !important;
+    height: calc(100% - (3.5rem + 1px));
+    overflow-y: auto;
+}
 
 .sidebar .logo-container {
     height: 68px;
@@ -157,11 +145,6 @@ footer {
     width:100px;
 }
 
-.aside-cover{
-    /* height: calc(100% - (3.5rem + 1px)); */
-    overflow-y: auto;
-    padding: 0;
-}
 
 aside ul {
     padding: 5px 0;
@@ -189,11 +172,8 @@ aside ul li {
     line-height: 45px;
     transition: all .3s ease;
     text-transform: capitalize;
-
 }
-/* aside ul:first-child li{
-    max-height: 50px;
-}  */
+
 aside ul .dropNav > a:hover{
     background-color: #5BBA47;
     color: white !important;
@@ -202,9 +182,19 @@ aside ul .dropNav > a:hover{
 aside > ul > li > ul > li:hover{
     background-color: #d1d1d173;
 }
+
+/* ----- active route start ------------- */
 .active-link{
-    background-color: #d1d1d173 !important;
+    background-color: #5BBA47 !important;
+    color: white !important;
 }
+
+.active-route{
+    background-color: #d1d1d173;
+}
+
+/* ----- active route end ------------- */
+
 
 aside ul:first-child li:hover a{
     background-color: #5BBA47;
@@ -250,21 +240,11 @@ aside ul li > ul li {
 
 /* ------------ */
 
-/* aside ul li > ul li a,
-aside ul li:target>ul li a{
-    background: transparent;
-} */
 
 .open-drop {
     max-height: 500px;
     border-radius: 5px 0px 0px 5px;
 }
-
-/* aside ul li:target a {
-    color: #444;
-    display: inherit;
-    background: white;
-} */
 
 .drop-link-hover {
     color: #444;
@@ -272,12 +252,6 @@ aside ul li:target>ul li a{
     background: white;
 }
 
-
-/*
-aside ul li:target a i.fa-angle-right {
-    transform: rotate(90deg);
-    top: 10px;
-} */
 
 .aside-icon-action {
     transform: translateX(-5px) rotate(90deg);
@@ -315,9 +289,7 @@ aside ul li:target:hover {
     transition: all .3s ease;
     cursor: pointer;
 }
-/*.dropdown-menu > li > :first-child{*/
-/*    color: var(--primary);*/
-/*}*/
+
 .dropdown-menu > li:hover {
     background-color: #5bba47;
     color: white;
@@ -332,6 +304,7 @@ aside ul li:target:hover {
         position: absolute !important;
         top: 0;
         left: -320px;
+        transition: all .3s ease-in-out;
     }
     .main {
         margin-left: 0;
