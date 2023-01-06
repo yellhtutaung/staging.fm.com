@@ -82,13 +82,14 @@ let asideIconTags = document.getElementsByClassName('aside-icon')
 let dropTagAction = (dropId) => {
     let dropIdTag = document.getElementById(`${dropId}`)
     let asideIconTag = document.getElementById(`${dropId}`+'-icon')
-
     if (dropIdTag.classList.contains('open-drop')){
         asideIconTag.classList.remove('aside-icon-action')
         dropIdTag.classList.remove('open-drop')
     }else {
         for(let i = 0; i < dropTags.length ; i++) {
             dropTags[i].classList.remove('open-drop')
+        }
+        for(let i = 0; i < asideIconTags.length ; i++) {
             asideIconTags[i].classList.remove('aside-icon-action')
         }
         setTimeout(()=>{
