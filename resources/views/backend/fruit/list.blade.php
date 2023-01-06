@@ -70,7 +70,6 @@
             $('.input-data-search').focus(); // input auto focus
 
             $('.js-example-basic-multiple').select2();
-
         });
     </script>
 @endsection

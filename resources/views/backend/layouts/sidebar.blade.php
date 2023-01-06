@@ -21,6 +21,7 @@
                         <li><a class="w-100" href="{{route('fruitList')}}">List</a></li>
                         <li><a class="w-100" href="{{route('addFruit')}}">Add</a></li>
                     </ul>
+
                 </li>
 {{--                <li id="chart"  class="dropNav">--}}
 {{--                    <a href="javascript:void(0)" onclick="dropTagAction('chart')">--}}
