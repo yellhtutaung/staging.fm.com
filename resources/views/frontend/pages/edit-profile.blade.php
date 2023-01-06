@@ -57,7 +57,7 @@
                         <div class="form-group mb-3">
                             <label for="" class="form-label text-secondary">Country</label>
                             {{--                                    <input type="text" class="form-control" name="country" value="Myanmar">--}}
-                            <select  class="form-control js-example-basic-single @error('country_id') is-invalid @enderror" name="country_id" >
+                            <select  class="form-control js-example-disabled-results @error('country_id') is-invalid @enderror" name="country_id" >
                                 <option value="1">Myanmar</option>
                             </select>
                             @error('country_id')
@@ -71,7 +71,7 @@
                         <div class="form-group mb-3">
                             <label for="" class="form-label text-secondary">City</label>
                             {{--                                    <input type="text" class="form-control" name="city" value="Yangon">--}}
-                            <select  class="form-control js-example-basic-single @error('city_id') is-invalid @enderror" name="city_id" >
+                            <select  class="form-control js-example-disabled-results @error('city_id') is-invalid @enderror" name="city_id" >
                                 <option value="1">Yangon</option>
                             </select>
                             @error('city_id')

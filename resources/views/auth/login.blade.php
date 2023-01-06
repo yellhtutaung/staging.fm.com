@@ -32,7 +32,10 @@
                     </div>
                 </form>
                 <div class="body-fm d-flex justify-content-between">
-                    <a href="{{route('register')}}" class="underline">I am not already member</a>
+                    <span class=''>
+                        You don't have an account.
+                        <a href="{{route('register')}}" class="text-decoration-none underline ms-1">Sign Up</a>
+                    </span>
                     <a href="{{route('password.request')}}" class="underline">Forgot your password?</a>
 
                 </div>
