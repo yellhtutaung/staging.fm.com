@@ -10,7 +10,7 @@ class UserController extends Controller
 {
     public function userList()
     {
-        $UserDb = User::where('status',1)->where('is_ban',1)->orderBy('id','DESC')->get();
-        return view('backend.user.list',compact('UserDb'));
+        $users = User::where('status',1)->where('is_ban',1)->orderBy('id','DESC')->get();
+        return view('backend.user.list',compact('users'));
     }
 }

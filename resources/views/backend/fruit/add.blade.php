@@ -2,7 +2,7 @@
 @section('title', 'Fruits')
 @section('content')
     <div class="container-fluid ">
-        <div class="row mt-4">
+        <div class="row mt-4 g-2">
             <div class="col-sm-12 col-md-4">
                 <div class="animate__animated animate__fadeIn">
                     <div class="card-header form-header-border theme_bg border-0">
@@ -82,7 +82,7 @@
                         <div class="card-header border-0 form-header-border theme_bg ">
                             <h5 class="card-title text-white">RECENT FRUITS</h5>
                         </div>
-                        <div class="card shadow-lg card-body border-0">
+                        <div class="card table-responsive shadow-lg card-body border-0">
                             <table class="table table-responsive table-hover">
                                 <thead>
                                 <th>Fruit ID</th>

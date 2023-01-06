@@ -1,6 +1,7 @@
 const menu = document.querySelector(".menu");
 const sidebar = document.querySelector(".sidebar");
 const main = document.querySelector(".main");
+const content =document.querySelector(".content-section")
 // const body = document.querySelector(".body");
 
 menu.addEventListener("click", () => {
@@ -21,7 +22,7 @@ menu.addEventListener("click", () => {
     }
 });
 
-main.addEventListener("click", () => {
+content.addEventListener("click", () => {
     if (window.screen.width < 992) {
             sidebar.classList.remove("sidebar-change-2");
             menu.classList.remove("clicked");
