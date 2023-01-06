@@ -106,7 +106,7 @@
                     <div class="col-lg-12">
                         <div class="form-group mb-3">
                             <label for="" class="form-label text-secondary">Address</label>
-                            <textarea class="form-control @error('address') is-invalid @enderror" name="address" cols="30" rows="5">{{old('address', $user->address)}}</textarea>
+                            <textarea class="form-control @error('address') is-invalid @enderror" name="address" cols="30" rows="3">{{old('address', $user->address)}}</textarea>
                             @error('address')
                             <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>

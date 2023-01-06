@@ -45,7 +45,7 @@
                             </a>
                         </td>
                         <td>
-                            <a href="" class="rounded btn btn-info">
+                            <a href="" class="rounded btn btn-danger">
                                 <span class="material-symbols-outlined mt-2 text-white">delete</span>
                             </a>
                         </td>

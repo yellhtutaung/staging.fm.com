@@ -60,6 +60,11 @@
                         <li class="nav-item">
                             <a class="nav-link {{Request::is('change-password') ? 'active': ''}}" href="{{route('change-password')}}"><i class="fa-solid fa-lock me-2"></i>Change Password</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:void(0)" id="logout">
+                                <i class="fa-solid fa-right-from-bracket me-2"></i>Logout
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -81,7 +86,7 @@
 {{-- sweetalert --}}
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-<script src="{{asset('backend-assets/js/app.js')}}"></script>
+{{--<script src="{{asset('backend-assets/js/app.js')}}"></script>--}}
 
 <script>
     const Toast = Swal.mixin({
@@ -116,6 +121,38 @@
         title: "{{ session('delete') }}"
     })
     @endif
+
+
+
+    {{-------------------  logout -----------------}}
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+    $(document).on('click', '#logout', function (e){
+        e.preventDefault();
+        let id = $(this).data('id');
+        Swal.fire({
+            title: 'Are you sure, you want to logout?',
+            showCancelButton: true,
+            confirmButtonText: 'Confirm',
+            denyButtonText: `Don't save`,
+            reverseButtons: true
+        }).then((result) => {
+            if (result.isConfirmed) {
+                console.log('hello')
+                $.ajax({
+                    url: "{{ route('logout') }}",
+                    type: "POST",
+                    success: function () {
+                        window.location.reload()
+                    }
+                })
+            }
+        })
+
+    })
 
 </script>
 

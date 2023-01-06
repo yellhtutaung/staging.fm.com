@@ -48,7 +48,7 @@
                     <div class="card-header form-header-border border-0 theme_bg ">
                         <h5 class="card-title text-white"> Fruits</h5>
                     </div>
-                    <div class="card border-0 shadow-sm card-body">
+                    <div class="card table-responsive border-0 shadow-sm card-body">
                         <table id="example" class="table table-responsive table-hover table-striped" style="width:100%">
                             <thead>
                             <tr>
