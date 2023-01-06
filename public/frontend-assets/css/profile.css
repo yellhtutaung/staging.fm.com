@@ -21,9 +21,11 @@
     border-bottom: 0 !important;
 }
 
-.nav-pills-primary-soft .nav-link.active, .nav-pills-primary-soft .nav-link:hover {
-    color: green;
-    background-color: rgba(81, 67, 217, 0.1)
+.nav-pills-primary-soft .nav-link.active:after, .nav-pills-primary-soft .nav-link:hover:after{
+    /*color: green;*/
+    /*background-color: rgba(81, 67, 217, 0.1)*/
+    transform: scaleY(1);
+    color: #5bba47 !important;
 }
 
 .nav-pills-primary-soft .nav-link {
@@ -31,9 +33,27 @@
     font-weight: 500;
     border-radius: 0.5rem;
     color: black;
+    position: relative;
+}
+.nav-pills-primary-soft .nav-link::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: auto;
+    left: 0;
+    height: 100%;
+    width: 3px;
+    background-color: #5bba47;
+    transform: scaleY(0);
+    transition: all .3s ease-in-out;
 }
 a {
     text-decoration: none;
+    color: black;
+}
+a:hover {
+    color: #5bba47 !important;
 }
 .profile-card {
     background-color: #f5f5f6;
@@ -77,23 +97,24 @@ a {
 
 /* ------------ Select 2 -------------------- */
 
-.js-example-basic-single {
+.select2-container--default .select2-selection--single {
+    width: 100% !important;
     padding: .5rem !important;
-    border: 1px solid #ccc;
+    border: 2px solid #ccc !important;
     border-radius: 10px !important;
 }
 
-.select2-container--default .select2-results>.select2-results__options {
-    max-height: 200px !important;
-    overflow-y: auto;
+.select2-container--default .select2-selection--single:focus {
+    outline-color: #5BBA47;
 }
 
-option {
-    height: 50px;
-    line-height: 50px;
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    line-height: 19px !important;
+    overflow: auto !important;
+    height: 100% !important;
 }
 
-/* ------------------- avatar profile ------------------ */
+    /* ------------------- avatar profile ------------------ */
 
 .avatar i {
     font-size: 100px;

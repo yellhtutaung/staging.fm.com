@@ -142,7 +142,10 @@
 
                     </form>
                     <div class="mt-3 body-fm d-lg-none">
-                        <a href="{{route('login')}}" class="underline ">I am already member</a>
+                        Already have an account.
+                        <span class="underline ms-2">
+                            <a href="{{route('login')}}" class="text-decoration-none">Sign In</a>
+                     </span>
                     </div>
                 </div>
 
@@ -152,8 +155,11 @@
             <div class="col-lg-6 p-2 d-none d-lg-flex flex-column justify-content-between">
                 <img src="{{asset('frontend-assets/images/auth_chart_head.jpg')}}" width="100%" alt="">
                 <img src="{{asset('frontend-assets/images/auth_chart.jpg')}}" width="100%" alt="">
-                <div class="body-fm d-flex justify-content-center">
-                    <a href="{{route('login')}}" class="underline input-wrapper">I am already member</a>
+                <div class="body-fm d-flex justify-content-center align-items-center">
+                            Already have an account.
+                     <span class="underline ms-2">
+                            <a href="{{route('login')}}" class="text-decoration-none">Sign In</a>
+                     </span>
                 </div>
             </div>
         </div>
