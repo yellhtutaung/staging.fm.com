@@ -5,6 +5,9 @@
     <link rel="icon" href="{{ asset('favicon.ico') }}" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
     <link rel="icon" href="{{ asset('favicon.ico') }}" />
     <meta itemprop="image" content="{{ asset('meta/social-image.jpg') }}">
     <meta name="theme-color" content="#000000" />
