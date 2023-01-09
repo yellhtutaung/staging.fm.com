@@ -11,7 +11,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="form-group mb-3">
-                            <label for="" class="form-label text-secondary">Old Password</label>
+                            <label for="" class="form-label">Old Password</label>
                             <input type="password" class="form-control  @error('old_password') is-invalid @enderror" name="old_password">
                             @error('old_password')
                             <span class="invalid-feedback" role="alert">
@@ -22,7 +22,7 @@
                     </div>
                     <div class="col-lg-12">
                         <div class="form-group mb-3">
-                            <label for="" class="form-label text-secondary">New Password</label>
+                            <label for="" class="form-label">New Password</label>
                             <input type="password" class="form-control @error('password') is-invalid @enderror" name="password">
                             @error('password')
                             <span class="invalid-feedback" role="alert">
@@ -33,7 +33,7 @@
                     </div>
                     <div class="col-lg-12">
                         <div class="form-group mb-3">
-                            <label for="" class="form-label text-secondary">Confirm Password</label>
+                            <label for="" class="form-label">Confirm Password</label>
                             <input type="password" class="form-control @error('password_confirmation') is-invalid @enderror" name="password_confirmation">
                             @error('password_confirmation')
                             <span class="invalid-feedback" role="alert">

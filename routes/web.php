@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Auth\ResetPasswordController;
 use App\Http\Controllers\Backend\DashboardController;
 use App\Http\Controllers\Backend\AdminAuthController;
 use App\Http\Controllers\Backend\FruitController;
@@ -31,6 +32,7 @@ Route::get('coldchain-transport', [PagesController::class, 'coldchain']);
 Route::get('employees/job', [PagesController::class, 'job']);
 Route::get('/register', [PagesController::class, 'register']);
 Route::get('login', [AdminAuthController::class, 'login'])->name('login');
+Route::get('password/forgot', [ResetPasswordController::class, 'customForgotPassword'])->name('customForgotPassword');
 
 
 

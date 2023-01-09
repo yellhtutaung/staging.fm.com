@@ -189,6 +189,11 @@
     font-family: 'Zilla Slab', serif;
 }
 
+.form-label
+{
+    font-weight: bold;
+}
+
 .title-fm{
     font-family: 'Merriweather', serif;
 }

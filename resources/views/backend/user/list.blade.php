@@ -15,13 +15,10 @@
                 <tr>
                     <th>ID</th>
                     <th>Name</th>
-                    <th>Email</th>
                     <th>Phone</th>
 {{--                    <th>Shop Name</th>--}}
                     <th>Country</th>
                     <th>City</th>
-                    <th>Postal</th>
-                    <th>Zip</th>
                     <th>Reg Date</th>
                     <th>Last Active</th>
                     <th>Edit</th>
@@ -34,13 +31,10 @@
                     <tr>
                         <td>{{$Index+1}}</td>
                         <td>{{$user->name}}</td>
-                        <td>{{$user->email}}</td>
                         <td>{{$user->phone}}</td>
 {{--                        <td>{{$user->shop_name}}</td>--}}
                         <td>Myanmar</td>
                         <td>Yangon</td>
-                        <td>{{$user->zip_code}}</td>
-                        <td>{{$user->postal_code}}</td>
                         <td>{{$user->created_at->toDateString()}}</td>
                         <td>{{$user->updated_at->diffForHumans()}}</td>
                         <td>
