@@ -40,7 +40,21 @@
                     </ul>
                 </li>
 
-{{--                <li id="test" class="dropNav {{ Request::segment(2) == 'fruit'  ?  'open-drop' : null }}" >--}}
+                <small class="text-muted mr-3">Country Management</small>
+                <li id="country" class="dropNav {{ Request::segment(2) == 'country'  ?  'open-drop' : null }}" >
+                    <a class="{{ Request::segment(2) == 'country' ? 'active-link' : null}}" href="javascript:void(0)" onclick="dropTagAction('country')">
+                        <i class="fa-solid fa-list"></i>
+                        <span>Country Management</span>
+                        <i class="fa fa-angle-right aside-icon " id="country-icon"></i>
+                    </a>
+                    <ul>
+                        <li class="{{ Route::currentRouteName() == 'countryList' ? 'active-route' : null}}"><a class="w-100 " href="{{route('countryList')}}">List</a></li>
+                        <li class="{{ Route::currentRouteName() == 'addCountry' ? 'active-route' : null}}"><a class="w-100 " href="{{route('addCountry')}}">Add</a></li>
+                    </ul>
+                </li>
+
+
+                {{--                <li id="test" class="dropNav {{ Request::segment(2) == 'fruit'  ?  'open-drop' : null }}" >--}}
 {{--                    <a class="{{ Request::segment(2) == 'fruit' ? 'active-link' : null}}" href="javascript:void(0)" onclick="dropTagAction('test')">--}}
 {{--                        <i class="fa fa-diamond"></i>--}}
 {{--                        <span>Fruits Management</span>--}}

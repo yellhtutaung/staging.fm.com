@@ -3,6 +3,7 @@
 use App\Http\Controllers\Backend\DashboardController;
 use App\Http\Controllers\Backend\AdminAuthController;
 use App\Http\Controllers\Backend\FruitController;
+use App\Http\Controllers\Backend\CountryController;
 use App\Http\Controllers\Backend\UserController;
 use App\Http\Controllers\Frontend\PagesController;
 use App\Http\Controllers\Frontend\ProfileController;
@@ -71,8 +72,13 @@ Route::middleware([CheckAdmin::class])->prefix('admin')->group(function ()
     Route::prefix('user')->group(function () {
         Route::get('/', [UserController::class, 'userList'])->name('userList');
     });
+    Route::prefix('country')->group(function () {
+        Route::get('/', [CountryController::class, 'countryList'])->name('countryList');
+        Route::get('add', [CountryController::class, 'addCountry'])->name('addCountry');
+        Route::post('createCountry', [CountryController::class, 'createCountry'])->name('createCountry');
+    });
 
-    }); // For admin only
+}); // For admin only
 
 // User auth
 Auth::routes();
