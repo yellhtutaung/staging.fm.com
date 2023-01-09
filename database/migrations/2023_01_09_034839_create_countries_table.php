@@ -16,12 +16,12 @@ return new class extends Migration
         Schema::create('countries', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->integer('parent_id')->nullable();
+            $table->integer('parent_id')->nullable(); // the id which u want to connect in this table
             $table->integer('level'); // ( country=1 , city=2 and state=3 )
-            $table->string('lat');
-            $table->string('long');
-            $table->string('note');
-            $table->string('description');
+            $table->string('lat')->nullable();
+            $table->string('long')->nullable();
+            $table->string('note')->nullable();
+            $table->string('description')->nullable();
             $table->integer('status')->default(1);
             $table->integer('hide_show')->default(1); // 1 is show
             $table->integer('reg_id');
