@@ -24,10 +24,10 @@
                         <i class="fa fa-angle-right aside-icon " id="user-icon"></i>
                     </a>
                     <ul>
-                        <li class="{{ Route::currentRouteName() == 'userList' ? 'active-route' : null}}"><a class="w-100 " href="{{route('userList')}}">Users List</a></li>
+                        <li class="{{ Route::currentRouteName() == 'userList' ? 'active-route' : null}}"><a class="w-100 " href="{{route('userList')}}">List</a></li>
                     </ul>
                 </li>
-
+                <small class="text-muted mr-3">Fruits Management</small>
                 <li id="fruit" class="dropNav {{ Request::segment(2) == 'fruit'  ?  'open-drop' : null }}" >
                     <a class="{{ Request::segment(2) == 'fruit' ? 'active-link' : null}}" href="javascript:void(0)" onclick="dropTagAction('fruit')">
                         <i class="fa-solid fa-list"></i>
@@ -35,8 +35,8 @@
                         <i class="fa fa-angle-right aside-icon " id="fruit-icon"></i>
                     </a>
                     <ul>
-                        <li class="{{ Route::currentRouteName() == 'fruitList' ? 'active-route' : null}}"><a class="w-100 " href="{{route('fruitList')}}">Fruits List</a></li>
-                        <li class="{{ Route::currentRouteName() == 'addFruit' ? 'active-route' : null}}"><a class="w-100 " href="{{route('addFruit')}}">Fruits Add</a></li>
+                        <li class="{{ Route::currentRouteName() == 'fruitList' ? 'active-route' : null}}"><a class="w-100 " href="{{route('fruitList')}}">List</a></li>
+                        <li class="{{ Route::currentRouteName() == 'addFruit' ? 'active-route' : null}}"><a class="w-100 " href="{{route('addFruit')}}">Add</a></li>
                     </ul>
                 </li>
 
