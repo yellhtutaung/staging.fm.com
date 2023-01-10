@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Models\Country;
 use App\Providers\RouteServiceProvider;
 use App\Models\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -41,6 +42,13 @@ class RegisterController extends Controller
         $this->middleware('guest');
     }
 
+    public function showRegistrationForm()
+    {
+        $countries = Country::where('status',1)->where('level', 1)->get();
+        $cities = Country::where('status', 1)->where('level', 2)->get();
+        return view('auth.register', compact('countries', 'cities'));
+    }
+
     /**
      * Get a validator for an incoming registration request.
      *
@@ -49,12 +57,14 @@ class RegisterController extends Controller
      */
     protected function validator(array $data)
     {
-        return Validator::make($data, [
+        $validator = Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'phone' => ['required', 'unique:users'],
             'password' => ['required', 'string', 'min:6', 'confirmed'],
         ]);
+
+        return $validator;
     }
 
     /**
@@ -65,25 +75,30 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        dd($data);
         $user = new User();
         $user->name = $data['name'];
         $user->email = $data['email'];
         $user->phone = $data['phone'];
         $user->shop_name = $data['shop_name'];
-        $user->country_id = $data['country'];
-        $user->city_id = $data['city'];
+        $user->country_id = $data['country_id'];
+        $user->city_id = $data['city_id'];
         $user->zip_code = $data['zip_code'];
         $user->postal_code = $data['postal_code'];
         $user->address = $data['address'];
-//        $user->township = $data['township'];
         $user->password = Hash::make($data['password']);
+
         $user->save();
         return $user;
+<<<<<<< HEAD
 //        return User::create([
 //            'name' => $data['name'],
 //            'email' => $data['email'],
 //            'password' => Hash::make($data['password']),
 //        ]);
+=======
+
+>>>>>>> fccb91390d299d343bc62425538afc95fbb4af92
     }
 
 }
