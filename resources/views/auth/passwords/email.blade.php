@@ -32,7 +32,7 @@
                         <div class="input-wrapper my-4">
                             <label for="phone" class="form-label">Phone</label>
                             <input type="phone" placeholder="09..." class="input @error('phone') is-invalid @enderror" name="phone"
-                                   value="09975611358{{old('phone')}}" id="phone" autocomplete="off" autofocus >
+                                   value="{{old('phone')}}" id="phone" autocomplete="off" autofocus >
                             @error('phone')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
