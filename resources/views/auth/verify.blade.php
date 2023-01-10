@@ -1,13 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Verify Your Email Address') }}</div>
-
-                <div class="card-body">
+    <div class="container d-flex justify-content-center align-items-center" style="height: 100vh">
+        <div class="row">
+            <div class="col-lg-5 p-2 ">
+                <div class="d-flex flex-column justify-content-center h-100">
+                    <h3 class="title-fm text-lg-center">{{ __('Verify Your Email Address') }}</h3>
                     @if (session('resent'))
                         <div class="alert alert-success" role="alert">
                             {{ __('A fresh verification link has been sent to your email address.') }}
@@ -15,14 +13,20 @@
                     @endif
 
                     {{ __('Before proceeding, please check your email for a verification link.') }}
-                    {{ __('If you did not receive the email') }},
-                    <form class="d-inline" method="POST" action="{{ route('verification.resend') }}">
+                    {{ __('If you did not receive the email') }}
+                    <form class="login body-fm input-wrapper" method="POST" action="{{ route('verification.resend') }}">
                         @csrf
-                        <button type="submit" class="btn btn-link p-0 m-0 align-baseline">{{ __('click here to request another') }}</button>.
+                        <div  class="input-wrapper">
+                            <button type="submit">{{ __('Resend email') }}</button>
+                        </div>
                     </form>
+                </div>
+            </div>
+            <div class="col-lg-7 d-none d-lg-block p-2">
+                <div>
+                    <img src="{{asset('frontend-assets/images/auth.jpg')}}" width="100%" alt="">
                 </div>
             </div>
         </div>
     </div>
-</div>
 @endsection
