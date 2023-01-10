@@ -17,7 +17,6 @@
 
                         <div class="row">
                             <div class="col-lg-6 input-wrapper">
-                                {{-- <label for="name" class="form-label">Full Name</label> --}}
                                 <input type="text" class="input @error('name') is-invalid @enderror" name="name"
                                     value="{{ old('name') }}" id="name" placeholder="Enter your name"
                                      autofocus>
@@ -28,7 +27,6 @@
                                 @enderror
                             </div>
                             <div class="col-lg-6 input-wrapper">
-                                {{-- <label for="email" class="form-label">Email</label> --}}
                                 <input type="email" class="input @error('email') is-invalid @enderror"
                                     name="email" value="{{ old('email') }}" placeholder="Enter your email"
                                     id="email" >
@@ -39,7 +37,6 @@
                                 @enderror
                             </div>
                             <div class="col-lg-6 input-wrapper">
-                                {{-- <label for="phone" class="form-label">Phone</label> --}}
                                 <input type="number" class="input @error('phone') is-invalid @enderror"
                                     name="phone" value="{{ old('phone') }}" placeholder="Enter your phone number"
                                     id="phone" >
@@ -50,7 +47,6 @@
                                 @enderror
                             </div>
                             <div class="col-lg-6 input-wrapper">
-                                {{-- <label for="shop" class="form-label">Shop Name</label> --}}
                                 <input type="text" class="input @error('shop_name') is-invalid @enderror"
                                     name="shop_name" value="{{ old('shop_name') }}" placeholder="Enter your shop name"
                                     id="shop" >
@@ -61,30 +57,23 @@
                                 @enderror
                             </div>
                             <div class="col-lg-6 input-wrapper ">
-                                {{-- <label for="country" class="form-label">Country</label> --}}
-{{--                                 <input type="text" class="input @error('country') is-invalid @enderror"--}}
-{{--                                    name="country" value="{{ old('country') }}" placeholder="Enter your country"--}}
-{{--                                    id="country" >--}}
-                                <div class="custom-select">
-                                    <select class="js-example-basic-single @error('country') is-invalid @enderror" name="country" value="{{ old('country') }}" id="country" >
-                                        <option disabled  hidden>Select country</option>
-                                        <option class="first" selected value="1">Myanmar</option>
-                                    </select>
-                                </div>
-                                @error('country')
+                                <select id="country" onchange="takeCitiesByCountryId()"  class="form-control js-example-placeholder-single js-example-disabled-results @error('country_id') is-invalid @enderror" name="country_id" >
+                                    <option value="">Select Country</option>
+                                    @foreach($countries as $country)
+                                        <option value="{{$country->id}}">{{$country->name}}</option>
+                                    @endforeach
+                                </select>
+
+                                @error('country_id')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
                                 @enderror
                             </div>
                             <div class="col-lg-6 input-wrapper">
-{{--                                    <label for="Choose">Choose City</label>--}}
-                                <div class="custom-select">
-                                    <select class="js-example-basic-single @error('country') is-invalid @enderror" name="city" >
-                                        <option value="1">Yangon</option>
-                                        <option value="2">Mandalay</option>
-                                    </select>
-                                </div>
+                                <select id="city" class="form-control js-example-disabled-results" name="city_id" >
+                                    <option value="">Select Country</option>
+                                </select>
 
                             </div>
                             <div class="col-lg-12 input-wrapper">
@@ -108,7 +97,6 @@
                                 @enderror
                             </div>
                             <div class="col-lg-12 input-wrapper">
-                                {{-- <label for="address" class="form-label">Address</label> --}}
                                 <textarea type="number" class="input @error('address') is-invalid @enderror"
                                     name="address" value="{{ old('address') }}" placeholder="Enter your address"
                                     id="address" rows="3" ></textarea>
@@ -119,7 +107,6 @@
                                 @enderror
                             </div>
                             <div class="col-lg-6 input-wrapper">
-                                {{-- <label for="password" class="form-label">Password</label> --}}
                                 <input type="password" class="input @error('password') is-invalid @enderror"
                                     name="password" placeholder="Enter your password"
                                     id="password" >
@@ -130,7 +117,6 @@
                                 @enderror
                             </div>
                             <div class="col-lg-6 input-wrapper">
-                                {{-- <label for="confirm-password" class="form-label">Confirm Password</label> --}}
                                 <input type="password" class="input @error('password') is-invalid @enderror"
                                     name="password_confirmation" placeholder="Enter confirm password"
                                     id="confirm-password" >
@@ -168,7 +154,29 @@
 <script>
     $(document).ready(function () {
        $('.js-example-basic-single').select2();
+
+        $(".js-example-placeholder-single").select2({
+            placeholder: "Select Country",
+            allowClear: false
+        });
+
     });
+    const outCities = <?php echo json_encode($cities,true); ?>;
+    function takeCitiesByCountryId () {
+        $('#city').empty()
+        let country_id = parseInt($('#country').val());
+        console.log(outCities[0].parent_id === country_id)
+
+        let cities = outCities.filter( city => {
+            return city.parent_id === country_id
+        })
+
+        for (let i = 0; i < cities.length; i++) {
+            let data = `<option value="${cities[i].id}">${cities[i].name}</option>`;
+            $('#city').append(data)
+        }
+    }
+
 </script>
 
 @endsection
