@@ -18,6 +18,10 @@
                         <td class="py-3 form-label">{{$user->email}}</td>
                     </tr>
                     <tr class="">
+                        <td class="py-3 form-label">Username</td>
+                        <td class="py-3 form-label">{{$user->username}}</td>
+                    </tr>
+                    <tr class="">
                         <td class="py-3 form-label">Phone Number</td>
                         <td class="py-3 form-label">{{$user->phone}}</td>
                     </tr>
@@ -27,11 +31,11 @@
                     </tr>
                     <tr class="">
                         <td class="py-3 form-label">Country</td>
-                        <td class="py-3 form-label">Myanmar</td>
+                        <td class="py-3 form-label">{{ $currentCountry ? $currentCountry->name : "-" }}</td>
                     </tr>
                     <tr class="">
                         <td class="py-3 form-label">City</td>
-                        <td class="py-3 form-label">Yangon</td>
+                        <td class="py-3 form-label">{{ $currentCity ? $currentCity->name: "-" }}</td>
                     </tr>
                     <tr class="">
                         <td class="py-3 form-label">Postal Code</td>

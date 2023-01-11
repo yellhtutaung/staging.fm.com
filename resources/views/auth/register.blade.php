@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+@section('title', 'Register')
 @section('content')
 
 <div class="container" >
@@ -168,7 +168,6 @@
     });
     const outCities = <?php echo json_encode($cities,true); ?>;
     function takeCitiesByCountryId () {
-        $('#city').empty()
         let country_id = parseInt($('#country').val());
         console.log(outCities[0].parent_id === country_id)
 
@@ -176,9 +175,12 @@
             return city.parent_id === country_id
         })
 
-        for (let i = 0; i < cities.length; i++) {
-            let data = `<option value="${cities[i].id}">${cities[i].name}</option>`;
-            $('#city').append(data)
+        if(cities.length > 0) {
+            $('#city').empty()
+            for (let i = 0; i < cities.length; i++) {
+                let data = `<option value="${cities[i].id}">${cities[i].name}</option>`;
+                $('#city').append(data)
+            }
         }
     }
 

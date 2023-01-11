@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Country;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\Rule;
@@ -13,17 +14,22 @@ class ProfileController extends Controller
     public function profile()
     {
         $user = Auth::guard('web')->user();
-        return view('frontend.pages.profile' , compact('user'));
+        $currentCountry = Country::where('status', 1)->where('level', 1)->where('id', $user->country_id)->first();
+        $currentCity = Country::where('status', 1)->where('level', 2)->where('id', $user->city_id)->first();
+        return view('frontend.pages.profile' , compact('user', 'currentCountry', 'currentCity'));
     }
 
     public function editProfile ()
     {
         $user = Auth::guard('web')->user();
-        return view('frontend.pages.edit-profile', compact('user'));
+        $currentCountry = Country::where('status', 1)->where('level', 1)->where('id', $user->country_id)->first();
+        $currentCity = Country::where('status', 1)->where('level', 2)->where('id', $user->city_id)->first();
+        $countries = Country::where('status',1)->where('level', 1)->get();
+        $cities = Country::where('status', 1)->where('level', 2)->get();
+        return view('frontend.pages.edit-profile', compact('user', 'countries', 'cities', 'currentCountry', 'currentCity'));
     }
 
     public function updateProfile (Request $request) {
-
         $user = Auth::guard('web')->user();
 
         $formData = $request->validate([
@@ -53,20 +59,31 @@ class ProfileController extends Controller
 
     public function updatePassword (Request $request)
     {
-        $formData = $request->validate([
-            'old_password' => ['required', 'min:6', 'max:20'],
-            'password' => ['required', 'min:6', 'max:20' , 'confirmed'],
-        ]);
-
-        $user = Auth::guard('web')->user();
-
-        if (Hash::check($request->old_password, $user->password)) {
+        if($request->forgot_bot){
+            $formData = $request->validate([
+                'password' => ['required', 'min:6', 'max:20' , 'confirmed'],
+            ]);
+            $user = Auth::guard('web')->user();
             $user->password = Hash::make($request->password);
             $user->update();
             return redirect()->route('profile')->with('update', 'Password Updated Successfully.');
+        }else{
+            $formData = $request->validate([
+                'old_password' => ['required', 'min:6', 'max:20'],
+                'password' => ['required', 'min:6', 'max:20' , 'confirmed'],
+            ]);
+
+            $user = Auth::guard('web')->user();
+
+            if (Hash::check($request->old_password, $user->password)) {
+                $user->password = Hash::make($request->password);
+                $user->update();
+                return redirect()->route('profile')->with('update', 'Password Updated Successfully.');
+            }else {
+                return  back()->withErrors(['old_password' => 'Your password is incorrect.']);
+            }
         }
 
-        return  back()->withErrors(['old_password' => 'Your password is incorrect.']);
     }
 
     public function userSamplePage()
