@@ -77,6 +77,7 @@ class RegisterController extends Controller
     {
         $user = new User();
         $user->name = $data['name'];
+        $user->username = str_shuffle(md5(date("dhis")));
         $user->email = $data['email'];
         $user->phone = $data['phone'];
         $user->shop_name = $data['shop_name'];
@@ -86,6 +87,7 @@ class RegisterController extends Controller
         $user->postal_code = $data['postal_code'];
         $user->address = $data['address'];
         $user->password = Hash::make($data['password']);
+        $user->token = str_shuffle(md5(date("ymdhis")));
 
         $user->save();
         return $user;

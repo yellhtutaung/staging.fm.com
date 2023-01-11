@@ -29,9 +29,10 @@ class CountryController extends Controller
     }
 
     public function countryList () {
+        $configLevel = config('app.country_arr');
         $records = Country::where('status',1)->where('level', 2)->orderBy('id','DESC')->get();
         $cities = $this->transferCity($records);
-        return view('backend.country.list', compact('cities'));
+        return view('backend.country.list', compact('cities','configLevel'));
     }
 
     public function addCountry () {

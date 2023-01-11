@@ -212,4 +212,11 @@ return [
         // 'ExampleClass' => App\Example\ExampleClass::class,
     ])->toArray(),
 
+    'country_arr' =>
+    [
+        'country',
+        'city',
+        'state'
+    ]
+
 ];

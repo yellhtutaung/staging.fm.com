@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('username')->nullable(); // autogenerate name id
+            $table->string('username')->unique()->nullable(); // autogenerate name id
             $table->integer('role')->default(0); // zero is visitor register users
             $table->string('phone')->unique()->nullable();
             $table->string('email')->unique();
