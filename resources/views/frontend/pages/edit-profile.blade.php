@@ -55,10 +55,12 @@
                     </div>
                     <div class="col-lg-6 ">
                         <div class="form-group mb-3">
-                            <label for="" class="form-label">Country</label>
-                            {{--                                    <input type="text" class="form-control" name="country" value="Myanmar">--}}
-                            <select  class="form-control js-example-disabled-results @error('country_id') is-invalid @enderror" name="country_id" >
-                                <option value="1">Myanmar</option>
+                            <label for="" class="form-label">Country <span class="text-secondary"> {{$currentCountry ? "( $currentCountry->name )" : null}} </span></label>
+                            <select id="country" onchange="takeCitiesByCountryId()" class="form-control js-example-disabled-results @error('country_id') is-invalid @enderror" name="country_id" >
+                                <option value="">Select Country</option>
+                                @foreach($countries as $country)
+                                    <option value="{{$country->id}}">{{$country->name}}</option>
+                                @endforeach
                             </select>
                             @error('country_id')
                             <span class="invalid-feedback" role="alert">
@@ -69,10 +71,9 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="form-group mb-3">
-                            <label for="" class="form-label">City</label>
-                            {{--                                    <input type="text" class="form-control" name="city" value="Yangon">--}}
-                            <select  class="form-control js-example-disabled-results @error('city_id') is-invalid @enderror" name="city_id" >
-                                <option value="1">Yangon</option>
+                            <label for="" class="form-label">City <span class="text-secondary"> {{$currentCity ? "( $currentCity->name )" : null}} </span></label>
+                            <select id="city"  class="form-control js-example-disabled-results @error('city_id') is-invalid @enderror" name="city_id" >
+                                <option value="">Select City</option>
                             </select>
                             @error('city_id')
                             <span class="invalid-feedback" role="alert">
@@ -121,4 +122,41 @@
             </form>
         </div>
     </div>
+@endsection
+
+@section('extra_scripts')
+    <script>
+        $(document).ready(function () {
+            $('.js-example-basic-single').select2();
+
+            $("#country").select2({
+                placeholder: "Select Country",
+                allowClear: false
+            });
+
+            $("#city").select2({
+                placeholder: "Select City",
+                allowClear: false
+            });
+
+        });
+        const outCities = <?php echo json_encode($cities,true); ?>;
+        function takeCitiesByCountryId () {
+
+            let country_id = parseInt($('#country').val());
+
+            let cities = outCities.filter( city => {
+                return city.parent_id === country_id
+            })
+
+            if(cities.length > 0) {
+                $('#city').empty()
+                for (let i = 0; i < cities.length; i++) {
+                    let data = `<option value="${cities[i].id}">${cities[i].name}</option>`;
+                    $('#city').append(data)
+                }
+            }
+        }
+
+    </script>
 @endsection

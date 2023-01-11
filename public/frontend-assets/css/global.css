@@ -6,6 +6,10 @@
     scroll-behavior: smooth;
 }
 
+:root{
+    --theme-color: #5BBA47;
+}
+
 .avator-rounded
 {
     width: 65px;

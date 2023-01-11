@@ -9,17 +9,21 @@
             <form action="{{route('updatePassword')}}" method="POST">
                 @csrf
                 <div class="row">
-                    <div class="col-lg-12">
-                        <div class="form-group mb-3">
-                            <label for="" class="form-label">Old Password</label>
-                            <input type="password" class="form-control  @error('old_password') is-invalid @enderror" name="old_password">
-                            @error('old_password')
-                            <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                            @enderror
+                    @if(isset($_GET['forgot_bot']) && $_GET['forgot_bot'] == 1)
+                        <input type="hidden" name="forgot_bot" value="1">
+                    @else
+                        <div class="col-lg-12">
+                            <div class="form-group mb-3">
+                                <label for="" class="form-label">Old Password</label>
+                                <input type="password" class="form-control  @error('old_password') is-invalid @enderror" name="old_password">
+                                @error('old_password')
+                                <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                @enderror
+                            </div>
                         </div>
-                    </div>
+                    @endif
                     <div class="col-lg-12">
                         <div class="form-group mb-3">
                             <label for="" class="form-label">New Password</label>

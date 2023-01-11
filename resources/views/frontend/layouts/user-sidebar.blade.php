@@ -87,6 +87,8 @@
 {{-- sweetalert --}}
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
+@yield('extra_scripts')
+
 <script>
 
     var $disabledResults = $(".js-example-disabled-results");
