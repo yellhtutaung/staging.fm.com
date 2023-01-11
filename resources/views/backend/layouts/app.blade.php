@@ -8,7 +8,7 @@
     <meta name="theme-color" content="#000000" />
     <meta name="description" content="For 100% organic fresh fruits and vegetables, remember Fresh Moe!" />
     <meta name="keywords" content="FreshMoe Ecommerce QuickCommerce E-commerce Freshmoe group business https://staging.freshmoe.com/  https://freshmoe.com/">
-
+    <meta name="csrf-token" content="{{csrf_token()}}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>@yield('title')</title>
@@ -46,6 +46,14 @@
     <link rel="stylesheet" href="{{asset('backend-assets/css/app.css')}}">
     <link rel="stylesheet" href="{{asset('backend-assets/css/layout.css')}}">
     <script type="text/javascript" src="{{asset('backend-assets/js/bootstrap-toggle.min.js')}}"></script>
+    <script>
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+        const csrf_token = $('meta[name="csrf-token"]').attr('content');
+    </script>
 
     @yield('extra-css')
 

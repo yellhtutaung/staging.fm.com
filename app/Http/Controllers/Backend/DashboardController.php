@@ -17,7 +17,7 @@ class DashboardController extends Controller
 
     public function home () {
         $user_count = User::all()->count();
-        return view('backend.home', compact('user_count'));
+        return view('backend.dashboard.home', compact('user_count'));
     }
 
     public function job () {

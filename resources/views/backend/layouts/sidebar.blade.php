@@ -15,7 +15,7 @@
                     </a>
                 </li>
             </ul>
-
+            <hr>
             <ul class="m-0 p-0">
                 <li id="user" class="dropNav {{ Route::currentRouteName() == 'userList'  ?  'open-drop' : null }}" >
                     <a class="{{ Route::currentRouteName() == 'userList' ? 'active-link' : null}}" href="javascript:void(0)" onclick="dropTagAction('user')">
@@ -27,7 +27,8 @@
                         <li class="{{ Route::currentRouteName() == 'userList' ? 'active-route' : null}}"><a class="w-100 " href="{{route('userList')}}">List</a></li>
                     </ul>
                 </li>
-                <small class="text-muted mr-3">Fruits Management</small>
+                <hr>
+                <small class="text-muted " style="margin-left: 10px">Fruits Management</small>
                 <li id="fruit" class="dropNav {{ Request::segment(2) == 'fruit'  ?  'open-drop' : null }}" >
                     <a class="{{ Request::segment(2) == 'fruit' ? 'active-link' : null}}" href="javascript:void(0)" onclick="dropTagAction('fruit')">
                         <i class="fa-solid fa-list"></i>
@@ -39,11 +40,11 @@
                         <li class="{{ Route::currentRouteName() == 'addFruit' ? 'active-route' : null}}"><a class="w-100 " href="{{route('addFruit')}}">Add</a></li>
                     </ul>
                 </li>
-
-                <small class="text-muted mr-3">Country Management</small>
+                <hr>
+                <small class="text-muted " style="margin-left: 10px">Country Management</small>
                 <li id="country" class="dropNav {{ Request::segment(2) == 'country'  ?  'open-drop' : null }}" >
                     <a class="{{ Request::segment(2) == 'country' ? 'active-link' : null}}" href="javascript:void(0)" onclick="dropTagAction('country')">
-                        <i class="fa-solid fa-list"></i>
+                        <i class="fa-solid fa-flag"></i>
                         <span>Country Management</span>
                         <i class="fa fa-angle-right aside-icon " id="country-icon"></i>
                     </a>
@@ -52,20 +53,6 @@
                         <li class="{{ Route::currentRouteName() == 'addCountry' ? 'active-route' : null}}"><a class="w-100 " href="{{route('addCountry')}}">Add</a></li>
                     </ul>
                 </li>
-
-
-                {{--                <li id="test" class="dropNav {{ Request::segment(2) == 'fruit'  ?  'open-drop' : null }}" >--}}
-{{--                    <a class="{{ Request::segment(2) == 'fruit' ? 'active-link' : null}}" href="javascript:void(0)" onclick="dropTagAction('test')">--}}
-{{--                        <i class="fa fa-diamond"></i>--}}
-{{--                        <span>Fruits Management</span>--}}
-{{--                        <i class="fa fa-angle-right aside-icon " id="test-icon"></i>--}}
-{{--                    </a>--}}
-{{--                    <ul>--}}
-{{--                        <li class="{{ Route::currentRouteName() == 'fruitList' ? 'active-route' : null}}"><a class="w-100 " href="{{route('fruitList')}}">List</a></li>--}}
-{{--                        <li class="{{ Route::currentRouteName() == 'addFruit' ? 'active-route' : null}}"><a class="w-100 " href="{{route('addFruit')}}">Add</a></li>--}}
-{{--                    </ul>--}}
-{{--                </li>--}}
-
             </ul>
 
         </aside>

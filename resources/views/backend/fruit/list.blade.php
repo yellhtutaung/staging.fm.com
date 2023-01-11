@@ -44,7 +44,7 @@
                         <td>{{$fruits->updated_at->diffForHumans()}}</td>
                         <td>
                             <div class="form-check form-switch p-0 m-0">
-                                <input data-id="1" class="toggle-class" type="checkbox"  data-onstyle="success" data-offstyle="danger" data-toggle="toggle"
+                                <input data-id="{{$fruits->id}}" onchange="universalSwitch(2,{{$fruits->id}},'hide_show',{{$fruits->hide_show}});" class="toggle-class" type="checkbox"  data-onstyle="success" data-offstyle="danger" data-toggle="toggle"
                                        data-on="Show"  data-off="Hide" {{$fruits->hide_show==1?"checked":""}}>
                             </div>
                         </td>
@@ -79,5 +79,23 @@
 
             $('.js-example-basic-multiple').select2();
         });
+
+        let universalSwitch = (Index,findId,field,on_off) =>
+        {
+            let data_obj = {Index:Index,findId:findId,field:field,on_off:on_off}
+            $.post("{{route("adminUniversalSwitch")}}",
+                {
+                    "_token":csrf_token,
+                    "data_obj": data_obj,
+                },
+                function(data){
+                    if(data.status == 200)
+                    {
+                        $('.get-tr'+id).fadeOut("slow");
+                    }
+                    console.log(data);
+                });
+        }
+
     </script>
 @endsection

@@ -15,12 +15,12 @@
                 <thead>
                 <tr>
                     <th>ID</th>
-                    <th>Country</th>
-                    <th>City</th>
+                    <th>Name</th>
+                    <th>Level</th>
                     <th>Latitude</th>
                     <th>Longitude</th>
-                    <th>Created Time</th>
-                    <th>Updated Time</th>
+                    <th>Reg Date</th>
+                    <th>Updated</th>
                     <th>Hide | Show</th>
                     <th>Edit</th>
                     <th>Delete</th>
@@ -30,12 +30,12 @@
                 @foreach($cities as $Index => $city)
                     <tr>
                         <td>{{$Index+1}}</td>
-                        <td>{{$city->country}}</td>
-                        <td>{{$city->city}}</td>
+                        <td>{{$city->name}}</td>
+                        <td><span class="badge bg-{{$city->level==1?"dark":" theme_bg"}} shadow-lg p-2">{{$configLevel[$city->level - 1 ]}}</span></td>
                         <td>{{$city->latitude}}</td>
                         <td>{{$city->longitude}}</td>
-                        <td>{{$city->created_at}}</td>
-                        <td>{{$city->updated_at}}</td>
+                        <td>{{$city->created_at->toDateString()}}</td>
+                        <td>{{$city->updated_at->diffForHumans()}}</td>
                         <td>
                             <div class="form-check form-switch p-0 m-0">
                                 <input data-id="1" class="toggle-class" type="checkbox"  data-onstyle="success" data-offstyle="danger" data-toggle="toggle"

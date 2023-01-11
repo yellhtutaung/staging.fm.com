@@ -14,7 +14,7 @@ class CountryController extends Controller
         $cities = [];
         foreach ($records as $record) {
             $record['id'] = $record->id;
-            $record['country'] = Country::where('id', $record->parent_id)->first()->name;
+            $record['country'] = !is_null($record->parent_id)?Country::where('id', $record->parent_id)->first()->name:"";
             $record['city'] = $record->name;
             $record['latitude'] = $record->lat;
             $record['longitude'] = $record->long;
@@ -30,7 +30,7 @@ class CountryController extends Controller
 
     public function countryList () {
         $configLevel = config('app.country_arr');
-        $records = Country::where('status',1)->where('level', 2)->orderBy('id','DESC')->get();
+        $records = Country::where('status',1)->orderBy('id','DESC')->get();
         $cities = $this->transferCity($records);
         return view('backend.country.list', compact('cities','configLevel'));
     }

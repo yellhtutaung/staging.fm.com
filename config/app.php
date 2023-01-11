@@ -214,9 +214,9 @@ return [
 
     'country_arr' =>
     [
-        'country',
-        'city',
-        'state'
+        'Country',
+        'City',
+        'State'
     ]
 
 ];

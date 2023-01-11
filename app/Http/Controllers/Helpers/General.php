@@ -52,4 +52,21 @@ trait General
         }
     }
 
+    public static function findIdWithModelIndex($Index=0,$findId,$field,$on_off)
+    {
+        $modelArr = [
+            \App\Models\Admin::find($findId),
+            \App\Models\User::find($findId),
+            \App\Models\FruitPriceList::find($findId),
+            \App\Models\FruitPriceListTransition::find($findId),
+        ];
+        $fetchOne = $modelArr[$Index];
+        $fetchOne->$field = $on_off;
+        if($fetchOne->save())
+        {
+            return true;
+        }
+    }
+
+
 }

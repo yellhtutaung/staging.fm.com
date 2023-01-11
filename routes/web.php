@@ -8,7 +8,9 @@ use App\Http\Controllers\Backend\CountryController;
 use App\Http\Controllers\Backend\UserController;
 use App\Http\Controllers\Frontend\PagesController;
 use App\Http\Controllers\Frontend\ProfileController;
+use \App\Http\Controllers\TestController;
 use App\Http\Controllers\Frontend\PasswordController;
+use App\Http\Controllers\UniversalController;
 use App\Http\Middleware\CheckAdmin;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\AdminLoginController;
@@ -36,6 +38,9 @@ Route::get('login', [AdminAuthController::class, 'login'])->name('login');
 Route::post('password/forgot', [ResetPasswordController::class, 'customForgotPassword'])->name('customForgotPassword');
 Route::get('otp/check', [ResetPasswordController::class, 'checkOtp'])->name('checkOtp');
 Route::post('checkForgetOtp', [ResetPasswordController::class, 'checkForgetOtp'])->name('checkForgetOtp');
+
+//Test Route
+Route::get('test', [TestController::class, 'test'])->name('test');
 
 
 
@@ -65,6 +70,7 @@ Route::post('/contact', [PagesController::class, 'contact'])->name('contact');
 Route::middleware([CheckAdmin::class])->prefix('admin')->group(function ()
 {
     Route::get('/', [DashboardController::class, 'home'])->name('home');
+    Route::post('adminUniversalSwitch', [UniversalController::class, 'adminUniversalSwitch'])->name('adminUniversalSwitch');
     Route::get('/job', [DashboardController::class, 'job'])->name('job');
     Route::prefix('fruit')->group(function () {
         Route::get('/', [FruitController::class, 'fruitList'])->name('fruitList');
