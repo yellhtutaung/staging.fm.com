@@ -46,7 +46,7 @@ Route::get('admin/login', [AdminLoginController::class, 'showLoginForm']);
 Route::post('admin/login', [AdminLoginController::class, 'login'])->name('admin.login');
 Route::post('admin/logout', [AdminLoginController::class, 'logout'])->name('admin.logout');
 
-Route::middleware(['auth', 'verified'])->group(function ()
+Route::middleware(['auth'])->group(function ()
 {
     Route::get('pricelist', [PagesController::class, 'priceList'])->name('priceList');
     Route::get('pricelist/{token}/history', [PagesController::class, 'priceListHistory'])->name('priceListHistory');
@@ -85,4 +85,4 @@ Route::middleware([CheckAdmin::class])->prefix('admin')->group(function ()
 }); // For admin only
 
 // User auth
-Auth::routes(['verify' => true]);
+Auth::routes();

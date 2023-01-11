@@ -72,7 +72,7 @@
                             </div>
                             <div class="col-lg-6 input-wrapper">
                                 <select id="city" class="form-control js-example-disabled-results" name="city_id" >
-                                    <option value="">Select Country</option>
+                                    <option value="">Select City</option>
                                 </select>
 
                             </div>
@@ -98,8 +98,8 @@
                             </div>
                             <div class="col-lg-12 input-wrapper">
                                 <textarea type="number" class="input @error('address') is-invalid @enderror"
-                                    name="address" value="{{ old('address') }}" placeholder="Enter your address"
-                                    id="address" rows="3" ></textarea>
+                                    name="address"  placeholder="Enter your address"
+                                    id="address" rows="3" >{{ old('address') }}</textarea>
                                 @error('phone')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -155,8 +155,13 @@
     $(document).ready(function () {
        $('.js-example-basic-single').select2();
 
-        $(".js-example-placeholder-single").select2({
+        $("#country").select2({
             placeholder: "Select Country",
+            allowClear: false
+        });
+
+        $("#city").select2({
+            placeholder: "Select City",
             allowClear: false
         });
 

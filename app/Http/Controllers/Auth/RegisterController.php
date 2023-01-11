@@ -75,7 +75,6 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        dd($data);
         $user = new User();
         $user->name = $data['name'];
         $user->email = $data['email'];
@@ -90,15 +89,6 @@ class RegisterController extends Controller
 
         $user->save();
         return $user;
-<<<<<<< HEAD
-//        return User::create([
-//            'name' => $data['name'],
-//            'email' => $data['email'],
-//            'password' => Hash::make($data['password']),
-//        ]);
-=======
-
->>>>>>> fccb91390d299d343bc62425538afc95fbb4af92
     }
 
 }
