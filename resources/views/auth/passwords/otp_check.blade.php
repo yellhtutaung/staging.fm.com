@@ -15,7 +15,7 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    @php dd($_GET); @endphp
+                    @php print_r($_GET); @endphp
                     @php $userPhone = $_GET['phone']; @endphp
                     <form method="POST" action="{{ route('checkForgetOtp') }}" class="login body-fm">
                         @csrf
