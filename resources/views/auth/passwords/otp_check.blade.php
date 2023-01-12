@@ -16,6 +16,7 @@
                         </div>
                     @endif
                     @php $userPhone = $_GET['phone']; @endphp
+                    @php print_r($_GET); @endphp
                     <form method="POST" action="{{ route('checkForgetOtp') }}" class="login body-fm">
                         @csrf
 

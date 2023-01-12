@@ -36,7 +36,7 @@ Route::get('employees/job', [PagesController::class, 'job']);
 Route::get('/register', [PagesController::class, 'register']);
 Route::get('login', [AdminAuthController::class, 'login'])->name('login');
 Route::post('password/forgot', [ResetPasswordController::class, 'customForgotPassword'])->name('customForgotPassword');
-Route::get('otp/check', [ResetPasswordController::class, 'checkOtp'])->name('checkOtp');
+Route::get('otp/check/', [ResetPasswordController::class, 'checkOtp'])->name('checkOtp');
 Route::post('checkForgetOtp', [ResetPasswordController::class, 'checkForgetOtp'])->name('checkForgetOtp');
 
 //Test Route
