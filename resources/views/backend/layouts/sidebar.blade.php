@@ -36,7 +36,9 @@
                         <i class="fa fa-angle-right aside-icon " id="fruit-icon"></i>
                     </a>
                     <ul>
-                        <li class="{{ Route::currentRouteName() == 'fruitList' ? 'active-route' : null}}"><a class="w-100 " href="{{route('fruitList')}}">List</a></li>
+                        <li class="{{ Route::currentRouteName() == 'fruitList' || Route::currentRouteName() == 'fruitHistory' || Route::currentRouteName() == 'editFruit' ? 'active-route' : null}}">
+                            <a class="w-100 " href="{{route('fruitList')}}">List</a>
+                        </li>
                         <li class="{{ Route::currentRouteName() == 'addFruit' ? 'active-route' : null}}"><a class="w-100 " href="{{route('addFruit')}}">Add</a></li>
                     </ul>
                 </li>

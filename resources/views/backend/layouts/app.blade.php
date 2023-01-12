@@ -128,6 +128,13 @@
     })
     @endif
 
+    @if (session('error'))
+    Toast.fire({
+        icon: 'warning',
+        title: "{{ session('error') }}"
+    })
+    @endif
+
 </script>
 
 </body>

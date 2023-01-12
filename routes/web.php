@@ -78,6 +78,7 @@ Route::middleware([CheckAdmin::class])->prefix('admin')->group(function ()
         Route::post('createFruit', [FruitController::class, 'createFruit'])->name('createFruit');
         Route::get('{id}/edit', [FruitController::class, 'editFruit'])->name('editFruit');
         Route::post('{id}/update', [FruitController::class, 'updateFruit'])->name('updateFruit');
+        Route::get('{token}/history', [FruitController::class, 'history'])->name('fruitHistory');
     });
     Route::prefix('user')->group(function () {
         Route::get('/', [UserController::class, 'userList'])->name('userList');

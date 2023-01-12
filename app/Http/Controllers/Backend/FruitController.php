@@ -171,6 +171,19 @@ class FruitController extends Controller
         }
     }
 
+    public function history ($token) {
+        $fruit = FruitPriceList::where('status', 1)->where('token', $token)->first();
+
+        if (!$fruit) {
+            return redirect()->route('fruitList')->with('error', 'Fruit Not Found.');
+        }
+
+        $fruit_transitions = $fruit->priceListTransitions;
+
+
+        return view('backend.fruit.history', compact('fruit_transitions'));
+    }
+
     public function recordLogUpdate($In,$f_id)
     {
         $FruitTransition = new FruitPriceListTransition();
