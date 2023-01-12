@@ -53,6 +53,7 @@
             }
         });
         const csrf_token = $('meta[name="csrf-token"]').attr('content');
+        const universalSwitchRoute = "{{route("adminUniversalSwitch")}}";
     </script>
 
     @yield('extra-css')

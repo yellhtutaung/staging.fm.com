@@ -16,7 +16,7 @@ class UniversalController extends Controller
             if ($updStatus)
             {
                 $switchStatus = $requestField['on_off']==1?"On":"Off";
-                return response()->json(['status'=>200,'message'=>"Switch $switchStatus "  ]);
+                return response()->json(['status'=>200,'message'=>"Switch $switchStatus "]);
             }
         }catch (\Exception $e) {
             return response()->json(['status'=>500,'message'=>$e->getMessage()]);
