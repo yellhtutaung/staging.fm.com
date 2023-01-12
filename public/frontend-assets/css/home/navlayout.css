@@ -130,3 +130,55 @@ nav li.router-link-active {
         display: flex;
     }
 }
+
+
+/* --------------- Language Dropdown ------------------- */
+
+.lan-dropdown {
+    position: relative;
+}
+
+#lan_action {
+    z-index: 999;
+}
+
+.lan-dropdown > ul {
+    top: 150%;
+    right: 0;
+    width: 200%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 5px;
+}
+
+.lan-dropdown > ul > .first {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.lan-dropdown > ul > .last {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.lan-dropdown > ul > li {
+    width: 100%;
+}
+
+.lan-dropdown > ul > li > a {
+    width: 100%;
+    cursor: pointer;
+}
+
+.lan-dropdown > ul > li:hover {
+    background-color: #5bba47;
+    color: white !important;
+
+}
+
+.lan-dropdown > ul > li:hover > a {
+    color: white !important;
+}

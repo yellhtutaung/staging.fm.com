@@ -55,11 +55,11 @@
                     </div>
                     <div class="col-lg-6 ">
                         <div class="form-group mb-3">
-                            <label for="" class="form-label">Country <span class="text-secondary"> {{$currentCountry ? "( $currentCountry->name )" : null}} </span></label>
+                            <label for="" class="form-label">Current Country</label>
                             <select id="country" onchange="takeCitiesByCountryId()" class="form-control js-example-disabled-results @error('country_id') is-invalid @enderror" name="country_id" >
                                 <option value="">Select Country</option>
                                 @foreach($countries as $country)
-                                    <option value="{{$country->id}}">{{$country->name}}</option>
+                                    <option value="{{$country->id}}" {{ $user->country_id === $country->id ? 'selected' : null }}>{{$country->name}}</option>
                                 @endforeach
                             </select>
                             @error('country_id')
@@ -71,9 +71,12 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="form-group mb-3">
-                            <label for="" class="form-label">City <span class="text-secondary"> {{$currentCity ? "( $currentCity->name )" : null}} </span></label>
+                            <label for="" class="form-label">Current City</label>
                             <select id="city"  class="form-control js-example-disabled-results @error('city_id') is-invalid @enderror" name="city_id" >
                                 <option value="">Select City</option>
+                                @foreach($currentCities as $currentCity)
+                                    <option value="{{$currentCity->id}}" {{$currentCity->id === $user->city_id ? 'selected' : null}}>{{$currentCity->name}}</option>
+                                @endforeach
                             </select>
                             @error('city_id')
                             <span class="invalid-feedback" role="alert">
@@ -149,12 +152,16 @@
                 return city.parent_id === country_id
             })
 
+            $('#city').empty()
+
             if(cities.length > 0) {
-                $('#city').empty()
                 for (let i = 0; i < cities.length; i++) {
                     let data = `<option value="${cities[i].id}">${cities[i].name}</option>`;
                     $('#city').append(data)
                 }
+            }else{
+                let data = `<option value=""></option>`;
+                $('#city').append(data)
             }
         }
 
