@@ -61,7 +61,7 @@ class ResetPasswordController extends Controller
                         if($this->sendSMS($In->phone,$generateOtp,' is you are forget password OTP number .'))
                         {
                             $phone = $In->phone;
-                            return redirect()->route('checkOtp',compact('phone'));
+                            return redirect()->route('checkOtp',$phone);
                         }
                     }else{
                         return redirect()->back()->withErrors(['phone'=>'Otp code creating error ...']);
@@ -93,9 +93,9 @@ class ResetPasswordController extends Controller
     }
 
 
-    public function checkOtp()
+    public function checkOtp($phone)
     {
-        return view('auth.passwords.otp_check');
+        return view('auth.passwords.otp_check',compact('phone'));
     }
 
 
