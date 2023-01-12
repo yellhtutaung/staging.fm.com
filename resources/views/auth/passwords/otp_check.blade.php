@@ -15,7 +15,7 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    @php $userPhone = request()->input('phone'); @endphp
+                    <?php $userPhone = request()->input('phone'); ?>
                     <form method="POST" action="{{ route('checkForgetOtp') }}" class="login body-fm">
                         @csrf
 
