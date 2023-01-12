@@ -82,6 +82,8 @@ Route::middleware([CheckAdmin::class])->prefix('admin')->group(function ()
     });
     Route::prefix('user')->group(function () {
         Route::get('/', [UserController::class, 'userList'])->name('userList');
+        Route::get('{id}/edit', [UserController::class, 'editUser'])->name('editUser');
+        Route::post('update', [UserController::class, 'updateUser'])->name('updateUser');
     });
     Route::prefix('country')->group(function () {
         Route::get('/', [CountryController::class, 'countryList'])->name('countryList');
