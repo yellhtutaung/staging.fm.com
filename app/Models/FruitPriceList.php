@@ -22,4 +22,9 @@ class FruitPriceList extends Model
         return $this->belongsTo(Admin::class,'upd_id');
     }
 
+    public function priceListTransitions ()
+    {
+        return $this->hasMany(FruitPriceListTransition::class, 'f_id');
+    }
+
 }

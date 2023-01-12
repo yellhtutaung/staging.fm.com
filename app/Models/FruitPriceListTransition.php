@@ -20,4 +20,7 @@ class FruitPriceListTransition extends Model
         return $this->hasMany(Admin::class,'edit_id');
     }
 
+    public function fruit () {
+        return $this->belongsTo(FruitPriceList::class, 'f_id', 'id');
+    }
 }

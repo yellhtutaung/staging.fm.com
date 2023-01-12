@@ -49,7 +49,7 @@
                             </div>
                         </td>
                         <td>
-                            <a href="{{route('priceListHistory',$fruits->token)}}" class="rounded btn theme_bg text-white">
+                            <a href="{{route('fruitHistory',$fruits->token)}}" class="rounded btn theme_bg text-white">
                                 <span class="material-symbols-outlined p-1">history</span>
                             </a>
                         </td>
