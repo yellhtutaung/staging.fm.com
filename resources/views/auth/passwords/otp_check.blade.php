@@ -15,8 +15,32 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    @php print_r($_GET); @endphp
-                   
+                    @php $userPhone = request()->input('phone'); @endphp
+                    <form method="POST" action="{{ route('checkForgetOtp') }}" class="login body-fm">
+                        @csrf
+
+                        <input type="hidden" class="user-phone" name="phone" value="{{$userPhone}}" />
+                        <input type="hidden" name="password" value="123456" />
+                        <div class="input-wrapper my-4">
+                            <label for="phone" data-user-phone="{{$userPhone}}" class="form-label">OTP Code</label>
+                            <input type="number" placeholder="" class="input @error('otp') is-invalid @enderror @error('phone') is-invalid @enderror " name="otp" value="{{old('otp')}}" id="otp" autocomplete="off" autofocus >
+                            @error('otp')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                            @endif
+                            @error('phone')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                            @enderror
+                        </div>
+                        <div  class="input-wrapper">
+                            <button type="submit" class="text-center">
+                                {{ __('Submit') }}
+                            </button>
+                        </div>
+                    </form>
                     <span class="mt-3">Already have an account ? <a href="{{route('login')}}" class="text-decoration-none "> Sign In.</a></span>
                 </div>
             </div>
