@@ -22,14 +22,15 @@ class ProfileController extends Controller
     public function editProfile ()
     {
         $user = Auth::guard('web')->user();
-        $currentCountry = Country::where('status', 1)->where('level', 1)->where('id', $user->country_id)->first();
-        $currentCity = Country::where('status', 1)->where('level', 2)->where('id', $user->city_id)->first();
+        $currentCities = Country::where('status', 1)->where('level', 2)->where('parent_id', $user->country_id)->get();
         $countries = Country::where('status',1)->where('level', 1)->get();
         $cities = Country::where('status', 1)->where('level', 2)->get();
-        return view('frontend.pages.edit-profile', compact('user', 'countries', 'cities', 'currentCountry', 'currentCity'));
+
+        return view('frontend.pages.edit-profile', compact('user', 'countries', 'cities', 'currentCities'));
     }
 
     public function updateProfile (Request $request) {
+
         $user = Auth::guard('web')->user();
 
         $formData = $request->validate([

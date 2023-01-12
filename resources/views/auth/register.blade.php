@@ -11,7 +11,7 @@
                     <form method="POST" action="{{ route('register') }}" class=" body-fm ">
                         @csrf
                         <div class="main_title">
-                            <h3 class="title-fm text-black mb-2">Sign Up For Price List</h3>
+                            <h3 class="title-fm text-black mb-2">Sign Up</h3>
                             <span class="main_title_underline bg-dark"></span>
                         </div>
 
@@ -175,12 +175,11 @@
             return city.parent_id === country_id
         })
 
-        if(cities.length > 0) {
-            $('#city').empty()
-            for (let i = 0; i < cities.length; i++) {
-                let data = `<option value="${cities[i].id}">${cities[i].name}</option>`;
-                $('#city').append(data)
-            }
+        $('#city').empty()
+
+        for (let i = 0; i < cities.length; i++) {
+            let data = `<option value="${cities[i].id}">${cities[i].name}</option>`;
+            $('#city').append(data)
         }
     }
 

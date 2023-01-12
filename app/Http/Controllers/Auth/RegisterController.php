@@ -82,7 +82,7 @@ class RegisterController extends Controller
         $user->phone = $data['phone'];
         $user->shop_name = $data['shop_name'];
         $user->country_id = $data['country_id'];
-        $user->city_id = $data['city_id'];
+        $user->city_id = isset($data['city_id']) ? $data['city_id'] : null;
         $user->zip_code = $data['zip_code'];
         $user->postal_code = $data['postal_code'];
         $user->address = $data['address'];

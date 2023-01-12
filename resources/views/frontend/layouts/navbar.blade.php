@@ -43,6 +43,15 @@
                         <a href="{{route('mainPage')}}#mission">Mission</a>
                         <a href="{{route('mainPage')}}#contact">Contact</a>
                     </li>
+                    <li>
+                        <div class="lan-dropdown">
+                            <a href="javascript:void(0);" id="lan_action">English</a>
+                            <ul class="lan-dropdown-menu">
+                                <li class="first"><a class="" href="#">Myanmar</a></li>
+                                <li class="last"><a class="" href="#">English</a></li>
+                            </ul>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </nav>
@@ -50,6 +59,15 @@
 </div>
 
 <script>
+    $('document').ready(function () {
+        $('.lan-dropdown-menu').hide()
+    })
+
+    $('#lan_action').on('click', function (e) {
+        $('.lan-dropdown-menu').slideToggle()
+    })
+
+
     const overlayOpen = () => {
         document.getElementById("navbar_overlay").style.height = "100%";
         console.log('click')

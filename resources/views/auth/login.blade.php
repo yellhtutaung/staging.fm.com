@@ -6,7 +6,7 @@
     <div class="row">
         <div class="col-lg-5 p-2 ">
             <div class="d-flex flex-column justify-content-center h-100">
-                <h3 class="title-fm text-lg-center">Sign In For Price List</h3>
+                <h3 class="title-fm text-lg-center">Sign In</h3>
                 <form method="POST" action="{{ route('login') }}" class="login body-fm ">
                     @csrf
                     <div class="input-wrapper">
