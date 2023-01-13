@@ -1,5 +1,6 @@
-<?php //echo View::make ('frontend.layouts.head'); ?>
-<link rel="stylesheet" href="{--><!--{asset('frontend-assets/css/client/ourclients.css')}}"/>
+@section('title', $priceList->name )
+<?php echo View::make ('frontend.layouts.head'); ?>
+<link rel="stylesheet" href="{{asset('frontend-assets/css/client/ourclients.css')}}"/>
 <link rel="stylesheet" href="{{asset('frontend-assets/css/client/featureplans.css')}}"/>
 <link rel="stylesheet" href="{{asset('frontend-assets/css/animated.min.css')}}"/>
 
@@ -43,7 +44,7 @@
 
 {{--price list --}}
 
-<div class="container-fluid" style="margin-top: 190px !important;" >
+<div class="container-fluid mb-5" style="margin-top: 190px !important;" >
     <div class="row">
         <div class="col-sm-12 col-md-10 offset-md-1">
             <div class="main_title d-inline-block ">
@@ -63,7 +64,7 @@
 {{--price list --}}
 
 {{--feature plans start--}}
-<div class="container-fluid p-lg-5 "  style="display: none !important;">
+<div class="container-fluid p-lg-5"  style="display: none !important;">
     <section style="margin-top: 160px" >
         <div class="d-flex justify-content-between">
             <h4 class="text-bold title-fm"> REALTIME PRICE LIST </h4>
