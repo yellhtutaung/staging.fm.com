@@ -176,11 +176,16 @@
         })
 
         $('#city').empty()
-
-        for (let i = 0; i < cities.length; i++) {
-            let data = `<option value="${cities[i].id}">${cities[i].name}</option>`;
+        if(cities.length > 0) {
+            for (let i = 0; i < cities.length; i++) {
+                let data = `<option value="${cities[i].id}">${cities[i].name}</option>`;
+                $('#city').append(data)
+            }
+        }else{
+            let data = `<option value=""></option>`;
             $('#city').append(data)
         }
+
     }
 
 </script>
