@@ -9,7 +9,7 @@
             <form action="{{route('updatePassword')}}" method="POST">
                 @csrf
                 <div class="row">
-                    @if(isset($_GET['forgot_bot']) && $_GET['forgot_bot'] == 1)
+                    @if(session('forgot_bot') || old('forgot_bot'))
                         <input type="hidden" name="forgot_bot" value="1">
                     @else
                         <div class="col-lg-12">

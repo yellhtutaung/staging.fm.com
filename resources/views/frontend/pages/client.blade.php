@@ -25,6 +25,8 @@
 <?php echo View::make ('frontend.layouts.navbar'); ?>
 {{--navbar layout end--}}
 
+<?php echo View::make('frontend.layouts.go_to_shop') ?>
+
 {{--client banner start--}}
 <div class="client_banner">
     <h1 class="text-white title-fm">Clients and Future Plans</h1>

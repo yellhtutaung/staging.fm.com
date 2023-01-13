@@ -13,6 +13,8 @@
 <?php echo View::make ('frontend.layouts.navbar'); ?>
 {{--navbar layout end--}}
 
+<?php echo View::make('frontend.layouts.go_to_shop') ?>
+
 {{--our partnerships start--}}
 <div class="container-fluid" id="partners">
     <div class="about_parntner_ships_card shadow">

@@ -1,5 +1,5 @@
-<?php echo View::make ('frontend.layouts.head'); ?>
-<link rel="stylesheet" href="{{asset('frontend-assets/css/client/ourclients.css')}}"/>
+<?php //echo View::make ('frontend.layouts.head'); ?>
+<link rel="stylesheet" href="{--><!--{asset('frontend-assets/css/client/ourclients.css')}}"/>
 <link rel="stylesheet" href="{{asset('frontend-assets/css/client/featureplans.css')}}"/>
 <link rel="stylesheet" href="{{asset('frontend-assets/css/animated.min.css')}}"/>
 
@@ -82,10 +82,9 @@
 </div>
 {{--feature plans end --}}
 
-<?php echo View::make ('frontend.layouts.footer'); ?>
 
 {{--footer start--}}
-<?php //echo View::make ('frontend.layouts.footer'); ?>
+<?php echo View::make ('frontend.layouts.bottom_footer'); ?>
 {{--footer end--}}
 
 

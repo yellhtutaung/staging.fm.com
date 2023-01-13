@@ -77,7 +77,7 @@
 </div>
 
 {{--footer --}}
-<?php echo View::make ('frontend.layouts.footer'); ?>
+<?php echo View::make ('frontend.layouts.bottom_footer'); ?>
 {{--footer end--}}
 
 

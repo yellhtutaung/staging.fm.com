@@ -44,6 +44,9 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.2/jquery.min.js"></script>
 
+    {{-- Go To Shop --}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" referrerpolicy="no-referrer"></script>
+
     {{--    global css --}}
     <link rel="stylesheet" href="{{asset('frontend-assets/css/global.css')}}">
 

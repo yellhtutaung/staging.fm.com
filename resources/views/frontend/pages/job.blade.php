@@ -25,6 +25,8 @@
 <?php echo View::make ('frontend.layouts.navbar'); ?>
 {{--navbar layout end--}}
 
+<?php echo View::make('frontend.layouts.go_to_shop') ?>
+
 {{--employees_banner start--}}
 <div>
     <div

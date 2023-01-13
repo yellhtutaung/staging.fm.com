@@ -17,6 +17,8 @@
 <?php echo View::make ('frontend.layouts.homeNavbar'); ?>
 {{--navbar layout end--}}
 
+<?php echo View::make('frontend.layouts.go_to_shop') ?>
+
 {{--carousel start --}}
 <!-- Swiper -->
 <div class="swiper mySwiper">
@@ -276,7 +278,7 @@
 {{--footer start--}}
 <div>
     <section id="footer">
-        <div class="container">
+        <div class="container-fluid">
             <div class="d-flex flex-wrap footer_section_1">
                 <div class="col-md-6 border_right">
 
@@ -343,60 +345,38 @@
                                 </p>
                             </div>
                             <div class="row p-3">
-                                @if (session('success'))
-                                    <div class="alert alert-success" role="alert">
-                                        {{ session('success') }}
-                                    </div>
-                                @endif
                                 <div class="contact_form">
-
                                     <form
-                                        action="{{route('contact')}}"
+                                        action="https://formsubmit.co/aungchanoo.promail@gmail.com"
                                         method="POST"
                                         class="body-fm"
                                     >
-                                        @csrf
-
                                         <input type="hidden" name="_next" value="https://www.freshmoe.com/" />
                                         <input
                                             type="text"
                                             name="name"
-                                            class="mb-3 @error('name') is-invalid @enderror"
+                                            required
+                                            class="mb-3"
                                             placeholder="Enter Your Name"
                                             autocomplete="off"
                                         />
-                                        @error('name')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                        @enderror
-
                                         <input
                                             type="email"
                                             name="email"
-                                            class="mb-3 @error('email') is-invalid @enderror"
+                                            required
+                                            class="mb-3"
                                             placeholder="Enter Your Email"
                                             autocomplete="off"
                                         />
-                                        @error('email')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                        @enderror
                                         <textarea
-                                            name="message"
+                                            name=""
                                             id=""
                                             cols="30"
                                             rows="3"
-                                            class="mb-3 @error('$message') is-invalid @enderror"
+                                            class="mb-3"
                                             placeholder="Enter Your Message"
                                             autocomplete="off"
                                         ></textarea>
-                                        @error('message')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                        @enderror
                                         <button type="submit">Send</button>
                                     </form>
                                 </div>
@@ -435,6 +415,7 @@
 </div>
 {{--footer end--}}
 
+<script src="{{asset('frontend-assets/js/app.js')}}"></script>
 
 <?php echo View::make ('frontend.layouts.aos'); ?>
 

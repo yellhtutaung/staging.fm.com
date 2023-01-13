@@ -38,7 +38,7 @@
 {{--price list --}}
 
     <div class="container-fluid" style="margin-top: 190px !important;" >
-        <div class="row">
+        <div class="row mb-5">
             <div class="col-sm-12 col-md-10 offset-md-1">
                 <div class="main_title">
                     <h3 class="text-black title-fm">Realtime price list of FreshMoe</h3>
@@ -128,7 +128,7 @@
             <h4 class="text-bold title-fm "> MORE ITEM </h4>
         </div>
         {{--        <h4 class="d-inline theme_green_color">Fresh</h4><h4 class="d-inline theme_red_color">Moe</h4>--}}
-        <div class="row my-2">
+        <div class="row my-2 ">
             <div class="col-sm-12 col-md-9">
                 <div class="card shadow-sm">
                     <div id="chart"></div>
@@ -140,10 +140,9 @@
 </div>
 {{--feature plans end --}}
 
-<?php echo View::make ('frontend.layouts.footer'); ?>
 
 {{--footer start--}}
-<?php //echo View::make ('frontend.layouts.footer'); ?>
+<?php echo View::make ('frontend.layouts.bottom_footer'); ?>
 {{--footer end--}}
 
 

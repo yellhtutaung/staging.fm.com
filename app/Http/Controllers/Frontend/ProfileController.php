@@ -63,6 +63,7 @@ class ProfileController extends Controller
         if($request->forgot_bot){
             $formData = $request->validate([
                 'password' => ['required', 'min:6', 'max:20' , 'confirmed'],
+                'forgot_bot' => ['required']
             ]);
             $user = Auth::guard('web')->user();
             $user->password = Hash::make($request->password);

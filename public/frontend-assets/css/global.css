@@ -270,3 +270,109 @@ input[type=number] {
 .card .table tbody td {
     vertical-align: middle;
 }
+
+
+
+/* ------------ Go To Shop -------------------- */
+
+
+#open_go_to_shop {
+    position: fixed;
+    top: 25%;
+    right: 0;
+    z-index: 1;
+    width: 3rem;
+    padding: 1rem;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    transform: translateX(105%);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+    background: #ffffff;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+#open_go_to_shop button {
+    border: none;
+    background-color: transparent;
+}
+
+#go_to_shop {
+    position: fixed;
+    top: auto;
+    right: auto;
+    bottom: 0;
+    left: 20%;
+    z-index: 1;
+    width: 15rem;
+    z-index: 1000;
+}
+
+#go_to_shop .shop_redirect_card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 20px;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+    box-shadow: 0 2px 4px -1px rgb(0 0 0 / 20%), 0 4px 5px 0 rgb(0 0 0 / 14%),
+    0 1px 10px 0 rgb(0 0 0 / 12%);
+    gap: 0.5rem;
+}
+
+#go_to_shop .shop_redirect_card .header {
+    font-weight: bold;
+    text-align: center;
+}
+
+#go_to_shop .shop_redirect_card .redirect_btn {
+    display: inline-block;
+    text-decoration: none;
+    min-width: max-content;
+    margin: 10px 0 0 0;
+    padding: 0.5em 1.5em;
+    background-color: #ED1C24;
+    color: #ffffff;
+    border: 2px solid;
+    border-radius: 45px;
+    cursor: pointer;
+
+}
+
+#go_to_shop .shop_redirect_card .redirect_btn:hover {
+    background-color: #ffffff;
+    color: #ED1C24;
+    border-color: #ED1C24;
+}
+
+#go_to_shop .shop_redirect_card .close_card {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#go_to_shop .shop_redirect_card .close_card:hover {
+    color: gray;
+}
+
+@media screen and (min-width: 768px) {
+    #go_to_shop {
+        bottom: auto;
+        left: auto;
+        top: 25%;
+        right: 0;
+    }
+    #go_to_shop .shop_redirect_card {
+        border-top-left-radius: 25px;
+        border-bottom-left-radius: 25px;
+        border-top-right-radius: 0;
+    }
+}
