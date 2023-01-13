@@ -1,3 +1,4 @@
+@section('title', 'Price List')
 <?php echo View::make ('frontend.layouts.head'); ?>
 <link rel="stylesheet" href="{{asset('frontend-assets/css/client/ourclients.css')}}"/>
 <link rel="stylesheet" href="{{asset('frontend-assets/css/client/featureplans.css')}}"/>

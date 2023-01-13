@@ -1,5 +1,5 @@
 @extends('backend.layouts.app')
-@section('title', 'Fruits')
+@section('title', 'User List')
 
 @section('content')
     <div class="container-fluid ">
