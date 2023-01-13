@@ -225,6 +225,18 @@
         chart.render();
     }, 110000);
 
+    let language = {
+        mm: [
+            'Home ',
+            'About ',
+        ],
+        en: [
+            'မူရင်းစာမျက်နှာ ',
+            'အကြောင်း ',
+        ]
+    }
+    let lenStr = 'mm';
+    console.log(language[lenStr][0])
 </script>
 
 

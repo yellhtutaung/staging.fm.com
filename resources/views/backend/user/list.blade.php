@@ -38,7 +38,7 @@
                         <td>{{$user->created_at->toDateString()}}</td>
                         <td>{{$user->updated_at->diffForHumans()}}</td>
                         <td>
-                            <a href="" class="rounded btn btn-info">
+                            <a href="{{route('editUser',$user->id)}}" class="rounded btn btn-info">
                                 <span class="material-symbols-outlined mt-2 text-white">edit</span>
                             </a>
                         </td>

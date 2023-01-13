@@ -36,7 +36,7 @@ Route::get('employees/job', [PagesController::class, 'job']);
 Route::get('/register', [PagesController::class, 'register']);
 Route::get('login', [AdminAuthController::class, 'login'])->name('login');
 Route::post('password/forgot', [ResetPasswordController::class, 'customForgotPassword'])->name('customForgotPassword');
-Route::get('otp/check', [ResetPasswordController::class, 'checkOtp'])->name('checkOtp');
+Route::get('otp/check/{phone}', [ResetPasswordController::class, 'checkOtp'])->name('checkOtp');
 Route::post('checkForgetOtp', [ResetPasswordController::class, 'checkForgetOtp'])->name('checkForgetOtp');
 
 //Test Route
@@ -82,6 +82,8 @@ Route::middleware([CheckAdmin::class])->prefix('admin')->group(function ()
     });
     Route::prefix('user')->group(function () {
         Route::get('/', [UserController::class, 'userList'])->name('userList');
+        Route::get('{id}/edit', [UserController::class, 'editUser'])->name('editUser');
+        Route::post('update', [UserController::class, 'updateUser'])->name('updateUser');
     });
     Route::prefix('country')->group(function () {
         Route::get('/', [CountryController::class, 'countryList'])->name('countryList');
