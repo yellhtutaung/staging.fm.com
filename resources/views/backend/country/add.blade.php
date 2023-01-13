@@ -56,11 +56,11 @@
                                     <div class="row">
                                         <div class="col-6">
                                             <label class="my-2" for="">Latitude</label>
-                                            <input type="number" class="form-control" name="lat" value="{{old('lat')}}" />
+                                            <input type="text" class="form-control" name="lat" value="{{old('lat')}}" />
                                         </div>
                                         <div class="col-6">
                                             <label class="my-2" for="">Longitude</label>
-                                            <input type="number" class="form-control" name="long" value="{{old('long')}}" />
+                                            <input type="text" class="form-control" name="long" value="{{old('long')}}" />
                                         </div>
                                     </div>
                                 </div>
