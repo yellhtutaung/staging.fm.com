@@ -17,11 +17,12 @@
                     @endif
                     <form method="POST" action="{{ route('checkForgetOtp') }}" class="login body-fm">
                         @csrf
+                        @php $phone = session('phone'); @endphp
 
-                        <input type="hidden" class="user-phone" name="phone" value="{{$phone}}" />
+                        <input type="hidden" data-user-phone="{{$phone}}" class="user-phone" name="phone" value="{{$phone}}" />
                         <input type="hidden" name="password" value="123456" />
                         <div class="input-wrapper my-4">
-                            <label for="phone" data-user-phone="{{$phone}}" class="form-label">OTP Code</label>
+                            <label for="phone" class="form-label">OTP Code</label>
                             <input type="number" placeholder="" class="input @error('otp') is-invalid @enderror @error('phone') is-invalid @enderror " name="otp" value="{{old('otp')}}" id="otp" autocomplete="off" autofocus >
                             @error('otp')
                             <span class="invalid-feedback" role="alert">
@@ -51,12 +52,12 @@
         </div>
     </div>
     <script>
-        {{--let resetPasswordRoute = "{{route('password.request')}}";--}}
-        {{--let userPhone = $('.user-phone').attr('data-user-phone');--}}
-        {{--if(userPhone.length == 0)--}}
-        {{--{--}}
-        {{--    window.location.href = resetPasswordRoute;--}}
-        {{--}--}}
+        let resetPasswordRoute = "{{route('password.request')}}";
+        let userPhone = $('.user-phone').attr('data-user-phone');
+        if(userPhone.length == 0)
+        {
+            window.location.href = resetPasswordRoute;
+        }
     </script>
 @endsection
 

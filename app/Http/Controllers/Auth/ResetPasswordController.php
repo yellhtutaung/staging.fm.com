@@ -61,7 +61,7 @@ class ResetPasswordController extends Controller
                         if($this->sendSMS($In->phone,$generateOtp,' is you are forget password OTP number .'))
                         {
                             $phone = $In->phone;
-                            return redirect()->route('checkOtp',$phone);
+                            return redirect()->route('checkOtp')->with('phone',$phone );
                         }
                     }else{
                         return redirect()->back()->withErrors(['phone'=>'Otp code creating error ...']);
@@ -93,15 +93,19 @@ class ResetPasswordController extends Controller
     }
 
 
-    public function checkOtp($phone)
+    public function checkOtp()
     {
-        return view('auth.passwords.otp_check',compact('phone'));
+        return view('auth.passwords.otp_check');
     }
 
 
     public function checkForgetOtp(Request $In)
     {
         try {
+            if (!$In->phone)
+            {
+                return redirect()->route('password.request');
+            }
             $validator = Validator::make(
                 $In->all(),
                 [
@@ -128,7 +132,7 @@ class ResetPasswordController extends Controller
                             'password' => ['required']
                         ]);
                         Auth::attempt($formData);
-                        return redirect('change-password?forgot_bot=1');
+                        return redirect()->route('change-password')->with('forgot_bot',1);
                     }
                 } else {
                     return  redirect()->back()->withErrors(['otp'=>'Your OTP is Wrong']);
