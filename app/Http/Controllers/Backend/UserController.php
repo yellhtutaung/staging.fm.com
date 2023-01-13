@@ -27,7 +27,7 @@ class UserController extends Controller
             $fetchUser->username = $In->username;
             if ($fetchUser->save())
             {
-                return redirect()->back()->with('success', 'Username successfully updated !');;
+                return redirect()->back()->with('success', 'Username successfully updated !');
             }
         }catch (\Exception $e) {
             return back()->with('warning', $e->getMessage());
