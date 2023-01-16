@@ -91,6 +91,7 @@ Route::middleware([CheckAdmin::class])->prefix('admin')->group(function ()
         Route::get('add', [CountryController::class, 'addCountry'])->name('addCountry');
         Route::post('create', [CountryController::class, 'createCountry'])->name('createCountry');
         Route::get('{token}/edit', [CountryController::class, 'editCountry'])->name('editCountry');
+        Route::post('{token}/update', [CountryController::class, 'updateCountry'])->name('updateCountry');
     });
 
 }); // For admin only

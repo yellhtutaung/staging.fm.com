@@ -51,7 +51,7 @@
                         <i class="fa fa-angle-right aside-icon " id="country-icon"></i>
                     </a>
                     <ul>
-                        <li class="{{ Route::currentRouteName() == 'countryList' ? 'active-route' : null}}"><a class="w-100 " href="{{route('countryList')}}">List</a></li>
+                        <li class="{{ Route::currentRouteName() == 'countryList' || Route::currentRouteName() == 'editCountry' ? 'active-route' : null}}"><a class="w-100 " href="{{route('countryList')}}">List</a></li>
                         <li class="{{ Route::currentRouteName() == 'addCountry' ? 'active-route' : null}}"><a class="w-100 " href="{{route('addCountry')}}">Add</a></li>
                     </ul>
                 </li>
