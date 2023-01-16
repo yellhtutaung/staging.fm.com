@@ -1,3 +1,4 @@
+@section('title', 'Fresh Moe')
 <?php echo View::make ('frontend.layouts.head'); ?>
 
 <link rel="stylesheet" href="{{asset('frontend-assets/css/home/service.css')}}"/>
@@ -27,7 +28,7 @@
             <div class="home-slide-container home-carousel-1">
                 <div class="container py-5">
                     <div class="carousel-content col-md-10 col-lg-8 col-xl-7 p-2 py-5 ">
-                        "Eat fresh food for your health! For fresh fruits and vegetables, remember <b>Fresh Moe</b>! ",
+                        {{ __('message.slider1') }}
                     </div>
                 </div>
             </div>
@@ -36,7 +37,7 @@
             <div class="home-slide-container home-carousel-2">
                 <div class="container py-5">
                     <div class="carousel-content col-md-10 col-lg-8 col-xl-7 p-2 py-5 ">
-                        "100% organic Fruits & Vegetables"
+                        {{ __('message.slider2') }}
                     </div>
                 </div>
             </div>
@@ -45,7 +46,7 @@
             <div class="home-slide-container home-carousel-3">
                 <div class="container py-5">
                     <div class="carousel-content col-md-10 col-lg-8 col-xl-7 p-2 py-5 ">
-                        We will always serve you with quick delivery system!
+                        {{ __('message.slider3') }}
                     </div>
                 </div>
             </div>
@@ -54,7 +55,7 @@
             <div class="home-slide-container home-carousel-4">
                 <div class="container py-5">
                     <div class="carousel-content col-md-10 col-lg-8 col-xl-7 p-2 py-5 ">
-                        "Eat fresh food for your health! For fresh fruits and vegetables, remember <b>Fresh Moe</b>! ",
+                        {{ __('message.slider1') }}
                     </div>
                 </div>
             </div>
@@ -69,7 +70,7 @@
     <section id="services"  data-aos="fade-up">
         <div class="container-fluid">
             <div class="center_title p-0 m-0">
-                <h3 class="text-center text-dark title-fm">Our Services</h3>
+                <h3 class="text-center text-dark title-fm">{{ __('message.our_services') }}</h3>
                 <span class="center_title_underline"></span>
                 <p class="text-dark body-fm p-3 col-md-10 col-lg-8 mx-auto text-center">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, assumenda
@@ -86,7 +87,7 @@
                             <img src="{{asset('frontend-assets/images/service_img_1.f6724c41.jpg')}}" alt="" class="img-fluid" />
                         </div>
                         <div class="service_card_title">
-                            <h5>Easy To Use Application</h5>
+                            <h5>{{ __('message.our_services') }}</h5>
                             <div class='service_underline'></div>
                         </div>
                         <div class="service_card_body">
@@ -105,7 +106,7 @@
                             <img src="{{asset('frontend-assets/images/service_img_2.a0c01eb8.jpg')}}" alt="" class="img-fluid" />
                         </div>
                         <div class="service_card_title">
-                            <h5>Fresh Fruits and Vegetables</h5>
+                            <h5>{{ __('message.easy_to_use_app') }}</h5>
                             <div class='service_underline'></div>
                         </div>
                         <div class="service_card_body">
@@ -124,7 +125,7 @@
                             <img src="{{asset('frontend-assets/images/service_img_3.ea841d04.jpg')}}" alt="" class="img-fluid" />
                         </div>
                         <div class="service_card_title">
-                            <h5 class="title-fm">Quick Delivery System</h5>
+                            <h5 class="title-fm">{{ __('message.fresh_fruits_and_vegetables') }}</h5>
                             <div class='service_underline'></div>
                         </div>
                         <div class="service_card_body body-fm">
@@ -151,7 +152,7 @@
                 <div class="col-md-6 about_bg"></div>
                 <div class="col-md-6 about_text my-3">
                     <div class="main_title">
-                        <h3 class="text-center text-black title-fm">About Us</h3>
+                        <h3 class="text-center text-black title-fm">{{ __('message.about_us') }}</h3>
                         <span class="main_title_underline bg-dark"></span>
                     </div>
                     <p class="body-fm">
@@ -180,7 +181,7 @@
     <section id="it_products" data-aos="fade-up">
         <div class="container">
             <div class="center_title">
-                <h3 class="text-center text-dark title-fm">Our Website & Apps</h3>
+                <h3 class="text-center text-dark title-fm">{{ __('message.our_web_app') }}</h3>
                 <span class="center_title_underline"></span>
             </div>
 
@@ -195,7 +196,7 @@
                             class="it_product_img laptop_img"
                         />
                         <p class="text-center mt-3 body-fm">
-                            You can find the webiste on<br />
+                            {{ __('message.u_can_find_in_web') }}<br />
                             <a href="https://www.freshmoe.shop" class="underline"
                             >www.freshmoe.shop</a
                             >
@@ -248,7 +249,7 @@
             <div class="d-flex flex-wrap" >
                 <div class="col-md-6 mission_text my-3">
                     <div class="main_title">
-                        <h3 class="text-center text-black title-fm">Our Mission</h3>
+                        <h3 class="text-center text-black title-fm">{{ __('message.our_mission') }}</h3>
                         <span class="main_title_underline bg-dark" ></span>
                     </div>
                     <p class="body-fm">
@@ -288,7 +289,7 @@
                             <div class="row justify-content-center">
                                 <div class="col-md-12 mb-4" data-aos="fade-up">
                                     <div class="center_title mb-1">
-                                        <h3 class="text-center text-dark title-fm">Quick Links</h3>
+                                        <h3 class="text-center text-dark title-fm">{{ __('message.quick_link') }}</h3>
                                         <span class="center_title_underline mt-1"></span>
                                     </div>
                                     <p class="short_text body-fm">
@@ -296,16 +297,16 @@
                                         excepturi quos?
                                     </p>
                                     <div class="footer_links body-fm">
-                                        <a href="#services">Services</a>
-                                        <a href="#aboutus">About Us</a>
-                                        <a href="#it_products">Website and Apps</a>
-                                        <a href="#mission">Our Mission</a>
+                                        <a href="#services">{{ __('message.services') }}</a>
+                                        <a href="#aboutus">{{ __('message.about') }}</a>
+                                        <a href="#it_products">{{ __('message.web_and_app') }}</a>
+                                        <a href="#mission">{{ __('message.mission') }}</a>
                                     </div>
                                 </div>
                                 <span class="green_hr_line"></span>
                                 <div class="col-md-12" data-aos="fade-up">
                                     <div class="center_title mb-1">
-                                        <h3 class="text-center text-dark title-fm">Other Information</h3>
+                                        <h3 class="text-center text-dark title-fm">{{ __('message.our_info') }}</h3>
                                         <span class="center_title_underline mt-1"></span>
                                     </div>
                                     <p class="short_text body-fm">
@@ -313,11 +314,11 @@
                                         excepturi quos?
                                     </p>
                                     <div class="footer_links2 body-fm">
-                                        <a href="/employees" onClick={gotop}>Employees</a>
-                                        <a href="/client" onClick={gotop}>Client and Future Plans</a>
-                                        <a href="/partnerships" onClick={gotop}>About Partnerships</a>
-                                        <a href="/target-market" onClick={gotop}>Target of Market</a>
-                                        <a href="/coldchain-transport" onClick={gotop}>Cold Chain and Transportation</a>
+                                        <a href="/employees" onClick={gotop}>{{ __('message.employees') }}</a>
+                                        <a href="/client" onClick={gotop}>{{ __('message.client_future_plan') }}</a>
+                                        <a href="/partnerships" onClick={gotop}>{{ __('message.about_partners') }}</a>
+                                        <a href="/target-market" onClick={gotop}>{{ __('message.target_of_market') }}</a>
+                                        <a href="/coldchain-transport" onClick={gotop}>{{ __('message.cold_chain_transportation') }}</a>
                                     </div>
                                 </div>
                             </div>
@@ -336,7 +337,7 @@
                             id="contact"
                         >
                             <div class="contact_center_title px-3">
-                                <h3 class="text-dark title-fm">Contact Us</h3>
+                                <h3 class="text-dark title-fm">{{ __('message.contact_us_form') }}</h3>
                                 <span class="contact_center_title_underline"></span>
                                 <p class="body-fm">
                                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse vel nemo
@@ -357,7 +358,7 @@
                                             name="name"
                                             required
                                             class="mb-3"
-                                            placeholder="Enter Your Name"
+                                            placeholder="{{ __('message.enter_ur_name') }}"
                                             autocomplete="off"
                                         />
                                         <input
@@ -365,7 +366,7 @@
                                             name="email"
                                             required
                                             class="mb-3"
-                                            placeholder="Enter Your Email"
+                                            placeholder="{{ __('message.enter_ur_email') }}"
                                             autocomplete="off"
                                         />
                                         <textarea
@@ -374,10 +375,10 @@
                                             cols="30"
                                             rows="3"
                                             class="mb-3"
-                                            placeholder="Enter Your Message"
+                                            placeholder="{{ __('message.enter_ur_sms') }}"
                                             autocomplete="off"
                                         ></textarea>
-                                        <button type="submit">Send</button>
+                                        <button type="submit">{{ __('message.send') }}</button>
                                     </form>
                                 </div>
                             </div>
@@ -390,8 +391,8 @@
         </div>
         <hr />
         <div class="socials body-fm">
-            <p class="text-center">Phone: 09123456798</p>
-            <h5 class="text-center my-1">Follow Us</h5>
+            <p class="text-center">{{ __('message.phone') }}: {{ __('message.phone_no') }}</p>
+            <h5 class="text-center my-1">{{ __('message.follow_us') }}</h5>
             <div class="d-flex justify-content-center my-1 mt-3">
                 <a href="/" class="social_icon">
                     <i class="fa-brands fa-square-facebook"></i>
