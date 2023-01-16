@@ -31,7 +31,7 @@ return [
     'enter_ur_email'=>'Enter Your Email',
     'enter_ur_sms'=>'Enter Your Message',
     'send'=>'Send',
-    'phone'=>'ဖုန်း',
+    'phone'=>'Phone',
     '09123456798'=>'၀၉၁၂၃၄၅၆၇၉၈',
-    'follow_us'=>'ဖောလိုး လုပ်မည်',
+    'follow_us'=>'Follow Us',
 ];
