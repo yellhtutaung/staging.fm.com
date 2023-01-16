@@ -25,9 +25,9 @@
                         <a href="javascript:void(0)" onclick="overlayOpen()" class="menu_button ">
                             <i class="fa-sharp fa-solid fa-bars"></i>
                         </a>
-                        <a href="/"> Home</a>
-                        <a href="#services">Services</a>
-                        <a href="#aboutus">About Us</a>
+                        <a href="/">{{ __('messages.home') }}</a>
+                        <a href="#services">{{ __('messages.service') }}</a>
+                        <a href="#aboutus">{{ __('messages.about') }}</a>
                     </li>
                 </ul>
             </div>
@@ -44,13 +44,17 @@
                         <a href="#contact">Contact</a>
                     </li>
                     <li>
-                        <div class="lan-dropdown">
-                            <a href="javascript:void(0);" id="lan_action">English</a>
-                            <ul class="lan-dropdown-menu">
-                                <li class="first"><a class="" href="#">Myanmar</a></li>
-                                <li class="last"><a class="" href="#">English</a></li>
-                            </ul>
-                        </div>
+                        <select class="form-control changeLang">
+                            <option value="en" {{ session()->get('locale') == 'en' ? 'selected' : '' }}>English</option>
+                            <option value="mm" {{ session()->get('locale') == 'mm' ? 'selected' : '' }}>Myanmar</option>
+                        </select>
+{{--                        <div class="lan-dropdown">--}}
+{{--                            <a href="javascript:void(0);" id="lan_action">English</a>--}}
+{{--                            <ul class="lan-dropdown-menu">--}}
+{{--                                <li class="first"><a class="" href="#">Myanmar</a></li>--}}
+{{--                                <li class="last"><a class="" href="#">English</a></li>--}}
+{{--                            </ul>--}}
+{{--                        </div>--}}
                     </li>
                 </ul>
             </div>
@@ -76,6 +80,12 @@
         document.getElementById("navbar_overlay").style.height = "0%";
     }
 
+    var url = "{{ route('changeLang') }}";
+
+    $(".changeLang").change(function(){
+        console.log($(this).val());
+        window.location.href = url + "?lang="+ $(this).val();
+    });
 
 
 </script>
