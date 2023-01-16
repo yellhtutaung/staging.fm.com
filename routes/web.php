@@ -8,6 +8,7 @@ use App\Http\Controllers\Backend\CountryController;
 use App\Http\Controllers\Backend\UserController;
 use App\Http\Controllers\Frontend\PagesController;
 use App\Http\Controllers\Frontend\ProfileController;
+use App\Http\Controllers\LangController;
 use \App\Http\Controllers\TestController;
 use App\Http\Controllers\Frontend\PasswordController;
 use App\Http\Controllers\UniversalController;
@@ -42,7 +43,7 @@ Route::post('checkForgetOtp', [ResetPasswordController::class, 'checkForgetOtp']
 //Test Route
 Route::get('test', [TestController::class, 'test'])->name('test');
 
-
+Route::get('lang/change', [LangController::class, 'change'])->name('changeLang');
 
 
 //Admin

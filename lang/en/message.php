@@ -2,6 +2,8 @@
 
 return [
 
-    'title' => 'This is English Language Title.',
+    'home' => 'Home',
+    'service' => 'Services',
+    'about' => 'About Us',
 
 ];
