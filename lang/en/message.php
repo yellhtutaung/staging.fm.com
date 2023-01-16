@@ -32,6 +32,6 @@ return [
     'enter_ur_sms'=>'Enter Your Message',
     'send'=>'Send',
     'phone'=>'Phone',
-    '09123456798'=>'၀၉၁၂၃၄၅၆၇၉၈',
+    'phone_no'=>'09123456798',
     'follow_us'=>'Follow Us',
 ];

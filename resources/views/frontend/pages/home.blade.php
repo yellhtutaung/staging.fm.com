@@ -390,7 +390,7 @@
         </div>
         <hr />
         <div class="socials body-fm">
-            <p class="text-center">{{ __('message.phone') }}: {{ __('message.09123456798') }}</p>
+            <p class="text-center">{{ __('message.phone') }}: {{ __('message.phone_no') }}</p>
             <h5 class="text-center my-1">{{ __('message.follow_us') }}</h5>
             <div class="d-flex justify-content-center my-1 mt-3">
                 <a href="/" class="social_icon">
