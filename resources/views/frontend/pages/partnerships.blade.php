@@ -19,7 +19,7 @@
 <div class="container-fluid" id="partners">
     <div class="about_parntner_ships_card shadow">
         <div class="title title-fm">
-            <h3>About Our Partnerships</h3>
+            <h3>{{ __('message.partnerships') }}</h3>
         </div>
         <div class="content body-fm">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere quaerat cum nemo
@@ -54,7 +54,7 @@
 
 <?php echo View::make ('frontend.layouts.aos'); ?>
 
-
+<script src="{{asset('frontend-assets/js/app.js')}}"></script>
 
 <body/>
 <html/>

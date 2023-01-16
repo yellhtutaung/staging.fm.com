@@ -314,11 +314,11 @@
                                         excepturi quos?
                                     </p>
                                     <div class="footer_links2 body-fm">
-                                        <a href="/employees" onClick={gotop}>{{ __('message.employees') }}</a>
-                                        <a href="/client" onClick={gotop}>{{ __('message.client_future_plan') }}</a>
-                                        <a href="/partnerships" onClick={gotop}>{{ __('message.about_partners') }}</a>
-                                        <a href="/target-market" onClick={gotop}>{{ __('message.target_of_market') }}</a>
-                                        <a href="/coldchain-transport" onClick={gotop}>{{ __('message.cold_chain_transportation') }}</a>
+                                        <a href="/employees" >{{ __('message.employees') }}</a>
+                                        <a href="/client" >{{ __('message.client_future_plan') }}</a>
+                                        <a href="/partnerships" >{{ __('message.about_partners') }}</a>
+                                        <a href="/target-market" >{{ __('message.target_of_market') }}</a>
+                                        <a href="/coldchain-transport" >{{ __('message.cold_chain_transportation') }}</a>
                                     </div>
                                 </div>
                             </div>

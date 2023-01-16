@@ -25,9 +25,9 @@
                         <a href="javascript:void(0)" onclick="overlayOpen()" class="menu_button ">
                             <i class="fa-sharp fa-solid fa-bars"></i>
                         </a>
-                        <a href="/"> Home</a>
-                        <a href="{{route('mainPage')}}#services">Services</a>
-                        <a href="{{route('mainPage')}}#aboutus">About Us</a>
+                        <a href="/">{{ __('message.home') }}</a>
+                        <a href="{{route('mainPage')}}#services">{{ __('message.services') }}</a>
+                        <a href="{{route('mainPage')}}#aboutus">{{ __('message.about') }}</a>
                     </li>
                 </ul>
             </div>
@@ -38,19 +38,23 @@
                         @if(auth()->check())
                             <a href='/pricelist' >Price List</a>
                         @else
-                            <a href="#it_products">Website & Apps</a>
+                            <a href="#it_products">{{ __('message.web_and_app') }}</a>
                         @endif
-                        <a href="{{route('mainPage')}}#mission">Mission</a>
-                        <a href="{{route('mainPage')}}#contact">Contact</a>
+                        <a href="{{route('mainPage')}}#mission">{{ __('message.mission') }}</a>
+                        <a href="{{route('mainPage')}}#contact">{{ __('message.contact') }}</a>
                     </li>
                     <li>
-                        <div class="lan-dropdown">
-                            <a href="javascript:void(0);" id="lan_action">English</a>
-                            <ul class="lan-dropdown-menu">
-                                <li class="first"><a class="" href="#">Myanmar</a></li>
-                                <li class="last"><a class="" href="#">English</a></li>
-                            </ul>
-                        </div>
+                        <select class="form-control changeLang">
+                            <option value="en" {{ session()->get('locale') == 'en' ? 'selected' : '' }}>English</option>
+                            <option value="mm" {{ session()->get('locale') == 'mm' ? 'selected' : '' }}>မြန်မာ</option>
+                        </select>
+{{--                        <div class="lan-dropdown">--}}
+{{--                            <a href="javascript:void(0);" id="lan_action">English</a>--}}
+{{--                            <ul class="lan-dropdown-menu">--}}
+{{--                                <li class="first"><a class="" href="#">Myanmar</a></li>--}}
+{{--                                <li class="last"><a class="" href="#">English</a></li>--}}
+{{--                            </ul>--}}
+{{--                        </div>--}}
                     </li>
                 </ul>
             </div>
@@ -75,4 +79,11 @@
     const overlayClose = () => {
         document.getElementById("navbar_overlay").style.height = "0%";
     }
+
+    var url = "{{ route('changeLang') }}";
+
+    $(".changeLang").change(function(){
+        console.log($(this).val());
+        window.location.href = url + "?lang="+ $(this).val();
+    });
 </script>
