@@ -5,9 +5,6 @@
 <div class="user-login">
     <div class="row">
         <div class="col-lg-5 d-none d-lg-block p-2">
-{{--            <div>--}}
-{{--                <img src="{{asset('frontend-assets/images/auth.jpg')}}" width="100%" alt="">--}}
-{{--            </div>--}}
             <div class="left">
                 <div class="logo">
                     <img src="{{asset('freshmoe_logo_white.png')}}" alt="">

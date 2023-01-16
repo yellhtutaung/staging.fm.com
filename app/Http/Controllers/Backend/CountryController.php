@@ -7,6 +7,7 @@ use App\Models\Country;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Validation\Rule;
 
 class CountryController extends Controller
 {
@@ -36,7 +37,7 @@ class CountryController extends Controller
     }
 
     public function addCountry () {
-        $countries = Country::where('level', 1)->get();
+        $countries = Country::where('status', 1)->where('level', 1)->get();
         return view('backend.country.add', compact('countries'));
     }
 
@@ -86,6 +87,57 @@ class CountryController extends Controller
     }
 
     public function editCountry ($token) {
-        dd($token);
+        $record = Country::where('status',1)->where('token', $token)->first();
+        if (!$record) {
+            return redirect()->route('countryList')->with('error', 'Your data is invalid.');
+        }
+        $countries = Country::where('status', 1)->where('level', 1)->get();
+        $cities = Country::where('status', 1)->where('level', 2)->get();
+        return view('backend.country.edit', compact('record', 'countries', 'cities'));
+    }
+
+    public function updateCountry (Request $request, $token) {
+        try {
+                $record = Country::where('status',1)->where('token', $token)->first();
+                if (!$record) {
+                    return redirect()->route('countryList')->with('error', 'Your data is invalid.');
+                }
+
+                $validator = Validator::make($request->all(), [
+                    'name' => ['required'],
+                    'level' => ['required'],
+                    'lat' => ['nullable'],
+                    'long' => ['nullable'],
+                    'description' => ['nullable'],
+                    'note' => ['nullable'],
+                ]);
+
+                if ( $validator->fails() ) {
+                    return redirect()->back()->with('warning', $validator->errors()->first())->withInput();
+                }
+
+                if( $request->level != 1 && $request->level != 2 ){
+                    return  redirect()->back()->with('warning', 'Level is incorrect.')->withInput();
+                }
+
+                if ($request->level == 2 ) {
+                    $checkCountry = Country::find($request->parent_id);
+                    if(!$checkCountry){
+                        return redirect()->back()->with('warning', 'You need to select Country.')->withInput();
+                    }
+                }
+
+                $record->name = $request->name;
+                $record->level = $request->level;
+                $record->parent_id = $request->level == 2 ? $request->parent_id : null;
+                $record->lat = $request->lat;
+                $record->long = $request->long;
+                $record->description = $request->description;
+                $record->note = $request->note;
+                $record->update();
+                return redirect()->back()->with('success', 'Updated Successfully.');
+        }catch (\Exception $e){
+            return back()->with('warning', $e->getMessage());
+        }
     }
 }

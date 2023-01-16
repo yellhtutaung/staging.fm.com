@@ -127,6 +127,7 @@ input[type=number] {
 .user-login {
     height: 100vh;
     background-image: -webkit-linear-gradient(155deg,#fff 55%,#5bba47 0);
+    padding: 0 50px;
 }
 
 .user-login > .row {
@@ -179,6 +180,10 @@ input[type=number] {
 }
 
 @media screen and (max-width: 768px) {
+    .user-login {
+        padding: 0;
+    }
+
     .user-login .bottom-text {
         font-size: 15px;
     }
