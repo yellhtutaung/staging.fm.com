@@ -30,7 +30,7 @@
 <div
     class="cct_banner"
 >
-    <h1 class="text-white title-fm">Cold Chain and Transport</h1>
+    <h1 class="text-white title-fm">{{ __('message.cold_chain_and_transport') }}</h1>
 </div>
 {{--CCTBanner end --}}
 
@@ -40,7 +40,7 @@
         <div class="d-flex flex-wrap">
             <div class="col-md-6 mission_text">
                 <div class="main_title">
-                    <h3 class="text-center title-fm">Our Cold Chain</h3>
+                    <h3 class="text-center title-fm">{{ __('message.cold_chain') }}</h3>
                     <span class="main_title_underline bg-black"></span>
                 </div>
                 <p class="body-fm">
@@ -71,7 +71,7 @@
             <div class="col-md-6 transport_bg"></div>
             <div class="col-md-6 transport_text">
                 <div class="main_title text-dark">
-                    <h3 class="text-center title-fm">Transportation</h3>
+                    <h3 class="text-center title-fm">{{ __('message.transportation') }}</h3>
                     <span class="main_title_underline bg-dark"></span>
                 </div>
                 <p class="body-fm">
@@ -102,7 +102,7 @@
 
 <?php echo View::make ('frontend.layouts.aos'); ?>
 
-
+<script src="{{asset('frontend-assets/js/app.js')}}"></script>
 
 <body/>
 <html/>

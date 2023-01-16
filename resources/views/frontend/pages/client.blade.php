@@ -29,7 +29,7 @@
 
 {{--client banner start--}}
 <div class="client_banner">
-    <h1 class="text-white title-fm">Clients and Future Plans</h1>
+    <h1 class="text-white title-fm">{{ __('message.client_hero') }}</h1>
 </div>
 {{--client banner end--}}
 
@@ -37,7 +37,7 @@
 <div class="container-fluid py-3" id="clients">
     <div class="our_clients_card">
         <div class="title title-fm">
-            <h3>Our Clients</h3>
+            <h3>{{ __('message.clients') }}</h3>
         </div>
         <div class="content body-fm">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere quaerat cum nemo
@@ -71,7 +71,7 @@
                     <img src="{{asset('frontend-assets/images/thailand.jpg')}}" alt="" class="img-fluid" />
                 </div>
                 <div class="future_card_title title-fm">
-                    <h5>Thailand</h5>
+                    <h5>{{ __('message.thailand') }}</h5>
                 </div>
                 <div class="future_card_body body-fm">
                     <p>
@@ -89,7 +89,7 @@
                     <img src="{{asset('frontend-assets/images/singapore.jpg')}}" alt="" class="img-fluid" />
                 </div>
                 <div class="future_card_title title-fm">
-                    <h5>Singapore</h5>
+                    <h5>{{ __('message.singapore') }}</h5>
                 </div>
                 <div class="future_card_body body-fm">
                     <p>
@@ -107,7 +107,7 @@
                     <img src="{{asset('frontend-assets/images/malaysia.jpg')}}" alt="" class="img-fluid" />
                 </div>
                 <div class="future_card_title title-fm">
-                    <h5>Malaysia</h5>
+                    <h5>{{ __('message.malaysia') }}</h5>
                 </div>
                 <div class="future_card_body body-fm">
                     <p>
@@ -127,7 +127,7 @@
 
 <?php echo View::make ('frontend.layouts.aos'); ?>
 
-
+<script src="{{asset('frontend-assets/js/app.js')}}"></script>
 
 <body/>
 <html/>

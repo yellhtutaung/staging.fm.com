@@ -13,7 +13,7 @@ return [
     'go_shoping' => 'Go to Shopping',
     'slider1'=>'"Eat fresh food for your health! For fresh fruits and vegetables, remember Fresh Moe ! ",',
     'slider2'=>'"100% organic Fruits & Vegetables"',
-    'slider3'=>'ကျွန်ုပ်တို့သည် သင့်အား အမြန်ပို့ဆောင်မှုစနစ်ဖြင့် အမြဲဝန်ဆောင်မှုပေးပါမည်။',
+    'slider3'=>'We serve you with quick delivery system.',
     'our_services' => 'Our Services',
     'easy_to_use_app' => 'Easy To Use Application',
     'fresh_fruits_and_vegetables' => 'Fresh Fruits and Vegetables',
@@ -37,4 +37,52 @@ return [
     'phone'=>'Phone',
     'phone_no'=>'09123456798',
     'follow_us'=>'Follow Us',
+
+
+    // ------------------------ Employees -------------------------
+
+    'employees_hero' => 'Our Employees',
+    'chief_executive_officer' => 'Chief Executive Officer',
+    'web_developer' => 'Web Developer',
+    'android_developer' => 'Android Developer',
+    'graphic_designer' => 'Graphic Designer',
+    'thuramoe' => 'Thura Moe',
+    'kyawthetnaing' => 'Kyaw Thet Naing',
+    'aungchanoo' => 'Aung Chan Oo',
+    'zawmyataung' => 'Zaw Myat Aung',
+
+
+
+    // ------------------------ Client --------------------------
+
+    'client_hero' => 'Clients and Future Plans',
+    'clients' => 'Our Clients',
+    'thailand' => 'Thailand',
+    'singapore' => 'Singapore',
+    'malaysia' => 'Malaysia',
+
+
+
+     // ------------------------ Client --------------------------
+
+    'partnerships' => 'About Our Partnerships',
+
+
+
+    // ------------------------ Target Market --------------------------
+
+    'target_market' => 'Target Market',
+
+
+
+    // ------------------------ Target Market --------------------------
+
+    'cold_chain_and_transport' => 'Cold Chain and Transport',
+    'cold_chain' => 'Our Cold Chain',
+    'transportation' => 'Transportation',
+
+
+
+
+
 ];

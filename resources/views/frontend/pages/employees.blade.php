@@ -50,7 +50,7 @@
     <div
         class="employees_banner"
     >
-        <h1 class="text-white title-fm">Our Employees</h1>
+        <h1 class="text-white title-fm">{{ __('message.employees_hero') }}</h1>
     </div>
 </div>
 {{--employees_banner end --}}
@@ -70,14 +70,14 @@
                         </div>
                         <div class="employee_info p-2 mt-3">
                             <div class="name title-fm">
-                                <h5 class=" title-fm text-center fw-bold">Chief Executive Officer</h5>
+                                <h5 class=" title-fm text-center fw-bold">{{ __('message.chief_executive_officer') }}</h5>
                             </div>
                             <div class="description body-fm text-center mt-3">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut beatae dicta dolorem est iste quisquam ratione rerum tenetur? Alias assumenda cum deserunt, distinctio ducimus eum nesciunt nihil quas quasi sunt.
                             </div>
                             <div class="footer title-fm text-center mt-4">
-                                Thura Moe
-                                <div class="title title-fm mt-2">Chief Executive Officer</div>
+                                {{ __('message.thuramoe') }}
+                                <div class="title title-fm mt-2">{{ __('message.chief_executive_officer') }}</div>
                             </div>
                         </div>
                     </div>
@@ -91,14 +91,14 @@
                         </div>
                         <div class="employee_info p-2 mt-3">
                             <div class="name title-fm">
-                                <h5 class=" title-fm text-center fw-bold">Web developer</h5>
+                                <h5 class=" title-fm text-center fw-bold">{{ __('message.web_developer') }}</h5>
                             </div>
                             <div class="description body-fm text-center mt-3">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut beatae dicta dolorem est iste quisquam ratione rerum tenetur? Alias assumenda cum deserunt, distinctio ducimus eum nesciunt nihil quas quasi sunt.
                             </div>
                             <div class="footer title-fm text-center mt-4">
-                                Aung Chan Oo
-                                <div class="title title-fm mt-2">Web developer</div>
+                                {{ __('message.aungchanoo') }}
+                                <div class="title title-fm mt-2">{{ __('message.web_developer') }}</div>
                             </div>
                         </div>
                     </div>
@@ -112,14 +112,14 @@
                         </div>
                         <div class="employee_info p-2 mt-3">
                             <div class="name title-fm">
-                                <h5 class=" title-fm text-center fw-bold">Android developer</h5>
+                                <h5 class=" title-fm text-center fw-bold">{{ __('message.android_developer') }}</h5>
                             </div>
                             <div class="description body-fm text-center mt-3">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut beatae dicta dolorem est iste quisquam ratione rerum tenetur? Alias assumenda cum deserunt, distinctio ducimus eum nesciunt nihil quas quasi sunt.
                             </div>
                             <div class="footer title-fm text-center mt-4">
-                                Kyaw Thet Naing
-                                <div class="title title-fm mt-2">Android developer</div>
+                                {{ __('message.kyawthetnaing') }}
+                                <div class="title title-fm mt-2">{{ __('message.android_developer') }}</div>
                             </div>
                         </div>
                     </div>
@@ -133,14 +133,14 @@
                         </div>
                         <div class="employee_info p-2 mt-3">
                             <div class="name title-fm">
-                                <h5 class=" title-fm text-center fw-bold">Graphic Designer</h5>
+                                <h5 class=" title-fm text-center fw-bold">{{ __('message.graphic_designer') }}</h5>
                             </div>
                             <div class="description body-fm text-center mt-3">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut beatae dicta dolorem est iste quisquam ratione rerum tenetur? Alias assumenda cum deserunt, distinctio ducimus eum nesciunt nihil quas quasi sunt.
                             </div>
                             <div class="footer title-fm text-center mt-4">
-                                Zaw Myat Aung
-                                <div class="title title-fm mt-2">Graphic Designer</div>
+                                {{ __('message.zawmyataung') }}
+                                <div class="title title-fm mt-2">{{ __('message.graphic_designer') }}</div>
                             </div>
                         </div>
                     </div>
@@ -181,6 +181,8 @@
 
 
 <?php echo View::make ('frontend.layouts.aos'); ?>
+
+<script src="{{asset('frontend-assets/js/app.js')}}"></script>
 
     <!-- Swiper JS -->
 <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>

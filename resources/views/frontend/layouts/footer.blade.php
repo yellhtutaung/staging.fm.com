@@ -10,7 +10,7 @@
                             <div class="row justify-content-center">
                                 <div class="col-md-12" data-aos="fade-up">
                                     <div class="center_title mb-1">
-                                        <h3 class="text-center text-dark title-fm">Other Information</h3>
+                                        <h3 class="text-center text-dark title-fm">{{ __('message.our_info') }}</h3>
                                         <span class="center_title_underline mt-1"></span>
                                     </div>
                                     <p class="short_text body-fm">
@@ -18,12 +18,12 @@
                                         excepturi quos?
                                     </p>
                                     <div class="footer_links2 body-fm">
-                                        <a href="/" onClick={gotop}>Home</a>
-                                        <a href="/employees" onClick={gotop}>Employees</a>
-                                        <a href="/client" onClick={gotop}>Client and Future Plans</a>
-                                        <a href="/partnerships" onClick={gotop}>About Partnerships</a>
-                                        <a href="/target-market" onClick={gotop}>Target of Market</a>
-                                        <a href="/coldchain-transport" onClick={gotop}>Cold Chain and Transportation</a>
+                                        <a href="/" >{{ __('message.home') }}</a>
+                                        <a href="/employees" >{{ __('message.employees') }}</a>
+                                        <a href="/client" >{{ __('message.client_future_plan') }}</a>
+                                        <a href="/partnerships" >{{ __('message.about_partners') }}</a>
+                                        <a href="/target-market" >{{ __('message.target_of_market') }}</a>
+                                        <a href="/coldchain-transport" >{{ __('message.cold_chain_transportation') }}</a>
                                     </div>
                                 </div>
                             </div>
@@ -42,7 +42,7 @@
                             id="contact"
                         >
                             <div class="contact_center_title px-3">
-                                <h3 class="text-dark title-fm">Contact Us</h3>
+                                <h3 class="text-dark title-fm">{{ __('message.contact_us_form') }}</h3>
                                 <span class="contact_center_title_underline"></span>
                                 <p class="body-fm">
                                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse vel nemo
@@ -62,14 +62,14 @@
                                             type="text"
                                             name="name"
                                             class="mb-3"
-                                            placeholder="Enter Your Name"
+                                            placeholder="{{ __('message.enter_ur_name') }}"
                                             autocomplete="off"
                                         />
                                         <input
                                             type="email"
                                             name="email"
                                             class="mb-3"
-                                            placeholder="Enter Your Email"
+                                            placeholder="{{ __('message.enter_ur_email') }}"
                                             autocomplete="off"
                                         />
                                         <textarea
@@ -78,10 +78,10 @@
                                             cols="30"
                                             rows="3"
                                             class="mb-3"
-                                            placeholder="Enter Your Message"
+                                            placeholder="{{ __('message.enter_ur_sms') }}"
                                             autocomplete="off"
                                         ></textarea>
-                                        <button>Send</button>
+                                        <button>{{ __('message.send') }}</button>
                                     </form>
                                 </div>
                             </div>

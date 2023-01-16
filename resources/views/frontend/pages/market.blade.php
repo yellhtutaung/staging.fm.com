@@ -29,7 +29,7 @@
 <div
     class="target_banner"
 >
-    <h1 class="text-white title-fm">Target Market</h1>
+    <h1 class="text-white title-fm">{{ __('message.target_market') }}</h1>
 </div>
 {{--target market banner end--}}
 
@@ -46,7 +46,7 @@
                         <img src="{{asset('frontend-assets/images/thailand.jpg')}}" alt="" class="img-fluid" />
                     </div>
                     <div class="market_card_title title-fm">
-                        <h5>Thailand</h5>
+                        <h5>{{ __('message.thailand') }}</h5>
                     </div>
                     <div class="market_card_body body-fm">
                         <p>
@@ -64,7 +64,7 @@
                         <img src="{{asset('frontend-assets/images/singapore.jpg')}}" alt="" class="img-fluid" />
                     </div>
                     <div class="market_card_title title-fm">
-                        <h5>Singapore</h5>
+                        <h5>{{ __('message.singapore') }}</h5>
                     </div>
                     <div class="market_card_body body-fm">
                         <p>
@@ -82,7 +82,7 @@
                         <img src="{{asset('frontend-assets/images/malaysia.jpg')}}" alt="" class="img-fluid" />
                     </div>
                     <div class="market_card_title title-fm">
-                        <h5>Malaysia</h5>
+                        <h5>{{ __('message.malaysia') }}</h5>
                     </div>
                     <div class="market_card_body body-fm">
                         <p>
@@ -104,7 +104,7 @@
 
 <?php echo View::make ('frontend.layouts.aos'); ?>
 
-
+<script src="{{asset('frontend-assets/js/app.js')}}"></script>
 
 <body/>
 <html/>
