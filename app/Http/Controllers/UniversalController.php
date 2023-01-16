@@ -12,7 +12,7 @@ class UniversalController extends Controller
     {
         try{
             $requestField = $In->data_obj;
-            $updStatus = $this->findIdWithModelIndex($requestField['Index'],$requestField['findId'],$requestField['field'],$requestField['on_off']);
+            return $updStatus = $this->findIdWithModelIndex($requestField['Index'],$requestField['findId'],$requestField['field'],$requestField['on_off']);
             if ($updStatus)
             {
                 $switchStatus = $requestField['on_off']==1?"On":"Off";

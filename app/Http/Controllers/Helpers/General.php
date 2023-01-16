@@ -52,7 +52,7 @@ trait General
         }
     }
 
-    public static function findIdWithModelIndex($Index=0,$findId,$field,$on_off)
+    public static function findIdWithModelIndex($Index,$findId,$field,$on_off)
     {
         $modelArr = [
             \App\Models\Admin::find($findId),
@@ -60,7 +60,7 @@ trait General
             \App\Models\FruitPriceList::find($findId),
             \App\Models\FruitPriceListTransition::find($findId),
         ];
-        $fetchOne = $modelArr[$Index];
+        return $fetchOne = $modelArr[$Index];
         $fetchOne->$field = $on_off;
         if($fetchOne->save())
         {
