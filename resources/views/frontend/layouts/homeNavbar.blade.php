@@ -25,9 +25,9 @@
                         <a href="javascript:void(0)" onclick="overlayOpen()" class="menu_button ">
                             <i class="fa-sharp fa-solid fa-bars"></i>
                         </a>
-                        <a href="/">{{ __('messages.home') }}</a>
-                        <a href="#services">{{ __('messages.service') }}</a>
-                        <a href="#aboutus">{{ __('messages.about') }}</a>
+                        <a href="/">{{ __('message.home') }}</a>
+                        <a href="#services">{{ __('message.services') }}</a>
+                        <a href="#aboutus">{{ __('message.about') }}</a>
                     </li>
                 </ul>
             </div>
@@ -38,15 +38,15 @@
                         @if(auth()->check())
                             <a href='/pricelist' >Price List</a>
                         @else
-                            <a href="#it_products">Website & Apps</a>
+                            <a href="#it_products">{{ __('message.web_and_app') }}</a>
                         @endif
-                        <a href="#mission">Mission</a>
-                        <a href="#contact">Contact</a>
+                        <a href="#mission">{{ __('message.mission') }}</a>
+                        <a href="#contact">{{ __('message.contact') }}</a>
                     </li>
                     <li>
                         <select class="form-control changeLang">
                             <option value="en" {{ session()->get('locale') == 'en' ? 'selected' : '' }}>English</option>
-                            <option value="mm" {{ session()->get('locale') == 'mm' ? 'selected' : '' }}>Myanmar</option>
+                            <option value="mm" {{ session()->get('locale') == 'mm' ? 'selected' : '' }}>မြန်မာ</option>
                         </select>
 {{--                        <div class="lan-dropdown">--}}
 {{--                            <a href="javascript:void(0);" id="lan_action">English</a>--}}
