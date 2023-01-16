@@ -29,7 +29,7 @@ input[type=number] {
 .input-wrapper{
     display: flex;
     flex-direction: column;
-    /* margin: 20px 0; */
+     margin: 25px 0;
 }
 
 .form-check {
@@ -68,6 +68,7 @@ input[type=number] {
     border-radius: 10px;
     background-color: #5bba47;
     color: white;
+    margin-top: 10px;
 }
 .login button:hover {
     background-color: transparent;
@@ -117,9 +118,74 @@ input[type=number] {
     width: 100%;
 }
 
+.main_title_underline {
+    background-color: black !important;
+}
+
+/* --------------------- User Login -------------------- */
+
+.user-login {
+    height: 100vh;
+    background-image: -webkit-linear-gradient(155deg,#fff 55%,#5bba47 0);
+}
+
+.user-login > .row {
+    height: 100%;
+    margin: auto 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.user-login .left {
+    padding-left: 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.user-login .logo img{
+    width: 180px;
+    margin-bottom: 20px;
+}
+
+.user-login .shopping_app_img {
+    margin-top: 30px;
+}
+
+.user-login .shopping_app_img img{
+    width: 300px;
+}
+
+.user-login .left .text {
+    font-size: 20px;
+    color: white;
+}
+
+.user-login .right {
+    padding: 30px;
+}
+
 @media screen and (max-width: 992px) {
-    .input-wrapper{
-        margin: 15px 0;
+
+    .user-login {
+        background-image: -webkit-linear-gradient(150deg,#fff 0%,#fff 0);
+    }
+
+    .user-login .logo img{
+        width: 160px;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .user-login .bottom-text {
+        font-size: 15px;
+    }
+
+    .user-login a {
+        font-size: 15px;
+    }
+}
+
 

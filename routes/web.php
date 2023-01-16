@@ -88,7 +88,8 @@ Route::middleware([CheckAdmin::class])->prefix('admin')->group(function ()
     Route::prefix('country')->group(function () {
         Route::get('/', [CountryController::class, 'countryList'])->name('countryList');
         Route::get('add', [CountryController::class, 'addCountry'])->name('addCountry');
-        Route::post('createCountry', [CountryController::class, 'createCountry'])->name('createCountry');
+        Route::post('create', [CountryController::class, 'createCountry'])->name('createCountry');
+        Route::get('{token}/edit', [CountryController::class, 'editCountry'])->name('editCountry');
     });
 
 }); // For admin only

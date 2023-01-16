@@ -43,7 +43,7 @@
                             </div>
                         </td>
                         <td>
-                            <a href="" class="rounded btn btn-info">
+                            <a href="{{route('editCountry', $city->token)}}" class="rounded btn btn-info">
                                 <span class="material-symbols-outlined mt-2 text-white">edit</span>
                             </a>
                         </td>

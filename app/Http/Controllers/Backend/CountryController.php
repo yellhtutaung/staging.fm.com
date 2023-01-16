@@ -84,4 +84,8 @@ class CountryController extends Controller
             return back()->with('warning', $e->getMessage());
         }
     }
+
+    public function editCountry ($token) {
+        dd($token);
+    }
 }
