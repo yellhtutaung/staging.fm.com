@@ -1,3 +1,4 @@
+@section('title', 'Fresh Moe')
 <?php echo View::make ('frontend.layouts.head'); ?>
 
 <link rel="stylesheet" href="{{asset('frontend-assets/css/home/service.css')}}"/>
