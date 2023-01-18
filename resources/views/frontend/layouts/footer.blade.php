@@ -74,7 +74,6 @@
                                         <input
                                             type="text"
                                             name="name"
-                                            value="Yell Htut Aung"
                                             class="mb-3"
                                             placeholder="{{ __('message.enter_ur_name') }}"
                                             autocomplete="off"
@@ -82,7 +81,6 @@
                                         <input
                                             type="email"
                                             name="email"
-                                            value="yellhtut4@gmail.com"
                                             class="mb-3"
                                             placeholder="{{ __('message.enter_ur_email') }}"
                                             autocomplete="off"
@@ -95,7 +93,7 @@
                                             class="mb-3"
                                             placeholder="{{ __('message.enter_ur_sms') }}"
                                             autocomplete="off"
-                                        >dfksjfkdflj</textarea>
+                                        ></textarea>
                                         <button>{{ __('message.send') }}</button>
                                     </form>
                                 </div>
