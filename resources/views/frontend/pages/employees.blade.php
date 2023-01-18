@@ -1,4 +1,7 @@
+@section('title', 'Employees')
 <?php echo View::make ('frontend.layouts.head'); ?>
+
+
     <!-- Link Swiper's CSS -->
 <link
     rel="stylesheet"
@@ -47,9 +50,7 @@
 
 {{--employees_banner start--}}
 <div>
-    <div
-        class="employees_banner"
-    >
+    <div class="employees_banner">
         <h1 class="text-white title-fm">{{ __('message.employees_hero') }}</h1>
     </div>
 </div>

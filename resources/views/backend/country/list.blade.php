@@ -38,7 +38,7 @@
                         <td>{{$city->updated_at->diffForHumans()}}</td>
                         <td>
                             <div class="form-check form-switch p-0 m-0">
-                                <input data-id="{{$city->id}}" data-status-val="{{$city->hide_show}}" onchange="universalSwitch(1,{{$city->id}},'hide_show',{{$city->hide_show}});"
+                                <input data-id="{{$city->id}}" data-status-val="{{$city->hide_show}}" onchange="universalSwitch(4,{{$city->id}},'hide_show',{{$city->hide_show}});"
                                        class="toggle-class toggle-id{{$city->id}}" type="checkbox"
                                        data-onstyle="success" data-offstyle="danger" data-toggle="toggle"
                                        data-on="Show"  data-off="Hide" {{$city->hide_show==1?"checked":""}}>

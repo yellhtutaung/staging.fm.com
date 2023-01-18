@@ -3,8 +3,10 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Country;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
@@ -30,7 +32,24 @@ class UserController extends Controller
                 return redirect()->back()->with('success', 'Username successfully updated !');
             }
         }catch (\Exception $e) {
-            return back()->with('warning', $e->getMessage());
+            return redirect()->back()->with('warning', $e->getMessage());
+        }
+    }
+
+    public function userDetails($token)
+    {
+        try{
+            $fetchUser = User::where('token',$token)->first();
+            $currentCountry = Country::where('status', 1)->where('level', 1)->where('id', $fetchUser->country_id)->first();
+            $currentCity = Country::where('status', 1)->where('level', 2)->where('id', $fetchUser->city_id)->first();
+            if ($fetchUser)
+            {
+                return view('backend.user.details',compact('fetchUser','currentCity','currentCountry'));
+            }else{
+                return redirect()->back()->with('warning', 'Route not found ');
+            }
+        }catch (\Exception $e) {
+            return redirect()->back()->with('warning', $e->getMessage());
         }
     }
 

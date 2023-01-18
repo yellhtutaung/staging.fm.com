@@ -59,8 +59,9 @@ trait General
             \App\Models\User::find($findId),
             \App\Models\FruitPriceList::find($findId),
             \App\Models\FruitPriceListTransition::find($findId),
+            \App\Models\Country::find($findId),
         ];
-        return $fetchOne = $modelArr[$Index];
+        $fetchOne = $modelArr[$Index];
         $fetchOne->$field = $on_off;
         if($fetchOne->save())
         {

@@ -48,7 +48,7 @@
                             </a>
                         </td>
                         <td>
-                            <a href="" class="rounded btn btn-dark">
+                            <a href="{{route('userDetails',$user->token)}}" class="rounded btn btn-dark">
                                 <span class="material-symbols-outlined mt-2 text-white">visibility</span>
                             </a>
                         </td>

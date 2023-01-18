@@ -33,21 +33,21 @@
                                 </div>
                                 <input type="file" class="form-control" name="images" hidden id="file-input" onchange="preview()"/>
                                 <div class="form-group my-1">
-                                    <label class="my-1" for="">Fruit Name</label>
+                                    <label class="form-label my-1" for="">Fruit Name</label>
                                     <input type="text" class="form-control" name="name" value="{{old('name')}}" />
                                 </div>
                                 <div class="form-group my-1">
-                                    <label class="my-1" for="">Price</label>
+                                    <label class="form-label my-1" for="">Price</label>
                                     <input type="text" class="form-control" name="price" value="{{old('price')}}" />
                                 </div>
                                 <div class="form-group my-1">
                                     <div class="row">
                                         <div class="col-6">
-                                            <label class="my-2" for="">Count</label>
+                                            <label class="form-label my-2" for="">Count</label>
                                             <input type="number" class="form-control" name="depend_count" value="{{old('depend_count')}}" />
                                         </div>
                                         <div class="col-6">
-                                            <label class="my-2" for="">Unit</label>
+                                            <label class="form-label my-2" for="">Unit</label>
                                             <select  class="form-control js-example-basic-single" name="unit" value="{{old('unit')}}" >
                                                 <option value="Kg">Kg</option>
                                                 <option value="Kyat Thar">Kyat Thar</option>

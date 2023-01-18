@@ -44,8 +44,8 @@ class RegisterController extends Controller
 
     public function showRegistrationForm()
     {
-        $countries = Country::where('status',1)->where('level', 1)->get();
-        $cities = Country::where('status', 1)->where('level', 2)->get();
+        $countries = Country::where('hide_show',1)->where('status',1)->where('level', 1)->get();
+        $cities = Country::where('hide_show',1)->where('status', 1)->where('level', 2)->get();
         return view('auth.register', compact('countries', 'cities'));
     }
 

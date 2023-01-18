@@ -1,3 +1,4 @@
+@section('title', 'Client')
 <?php echo View::make ('frontend.layouts.head'); ?>
 
 

@@ -31,6 +31,7 @@ Route::get('/', [PagesController::class, 'home'])->name('mainPage');
 Route::get('employees', [PagesController::class, 'employees']);
 Route::get('client', [PagesController::class, 'client']);
 Route::get('partnerships', [PagesController::class, 'partnerships']);
+Route::post('contactToFm', [PagesController::class, 'contactToFm'])->name('contactToFm');
 Route::get('target-market', [PagesController::class, 'market']);
 Route::get('coldchain-transport', [PagesController::class, 'coldchain']);
 Route::get('employees/job', [PagesController::class, 'job']);
@@ -84,6 +85,7 @@ Route::middleware([CheckAdmin::class])->prefix('admin')->group(function ()
     Route::prefix('user')->group(function () {
         Route::get('/', [UserController::class, 'userList'])->name('userList');
         Route::get('{id}/edit', [UserController::class, 'editUser'])->name('editUser');
+        Route::get('{token}/details', [UserController::class, 'userDetails'])->name('userDetails');
         Route::post('update', [UserController::class, 'updateUser'])->name('updateUser');
     });
     Route::prefix('country')->group(function () {

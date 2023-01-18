@@ -1,3 +1,4 @@
+@section('title', 'Cold Chain and Transport')
 <?php echo View::make ('frontend.layouts.head'); ?>
 
 <link rel="stylesheet" href="{{asset('frontend-assets/css/coldchain/coldchain.css')}}"/>

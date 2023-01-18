@@ -27,13 +27,13 @@
                             @csrf
                             <div class="row ">
                                 <div class="form-group my-1">
-                                    <label class="my-1" for="">Name</label>
+                                    <label class="my-1 form-label" for="">Name</label>
                                     <input type="text" class="form-control" name="name" value="{{old('name')}}" />
                                 </div>
 
                                 <div  id="countryInput">
                                     <div class="form-group my-1" >
-                                        <label class="my-2" for="">Country</label>
+                                        <label class="my-2 form-label" for="">Country</label>
                                         <select  class="form-control js-example-basic-single" name="parent_id" value="{{old('parent_id')}}" >
                                             <option selected >Choose Country</option>
                                             @foreach($countries as $country)
@@ -44,7 +44,7 @@
                                 </div>
 
                                 <div class="form-group my-1">
-                                    <label class="my-2" for="">Level</label>
+                                    <label class="my-2 form-label" for="">Level</label>
                                     <select  class="form-control js-example-basic-single" name="level" id="level" value="{{old('level')}}" >
                                         <option value="1">Country</option>
                                         @if($countries->count() > 0)
@@ -55,11 +55,11 @@
                                 <div class="form-group my-1">
                                     <div class="row">
                                         <div class="col-6">
-                                            <label class="my-2" for="">Latitude</label>
+                                            <label class="my-2 form-label" for="">Latitude</label>
                                             <input type="text" class="form-control" name="lat" value="{{old('lat')}}" />
                                         </div>
                                         <div class="col-6">
-                                            <label class="my-2" for="">Longitude</label>
+                                            <label class="my-2 form-label" for="">Longitude</label>
                                             <input type="text" class="form-control" name="long" value="{{old('long')}}" />
                                         </div>
                                     </div>

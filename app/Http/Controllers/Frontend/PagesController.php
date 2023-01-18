@@ -9,6 +9,7 @@ use App\Models\FruitPriceListTransition;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Validator;
 
 class PagesController extends Controller
 {
@@ -96,5 +97,18 @@ class PagesController extends Controller
 
         Mail::to($contact_mail)->send(new ContactUs($details));
         return redirect()->back()->with('success', 'Send Contact Form Successfully!');
+    }
+
+    public function contactToFm(Request $In)
+    {
+        $validator = Validator::make($In->all(), [
+            'name' => ['required','min:4','max:6'],
+            'email' => ['required','email'],
+            'message' => ['required','min:10'],
+        ]);
+
+        if ( $validator->fails() ) {
+            return redirect()->route('mainPage','#contact')->with('warning',  $validator->errors()->first());
+        }
     }
 }

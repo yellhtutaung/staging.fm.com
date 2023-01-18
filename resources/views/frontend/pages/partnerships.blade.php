@@ -1,3 +1,4 @@
+@section('title', 'Partnerships')
 <?php echo View::make ('frontend.layouts.head'); ?>
 
 <link rel="stylesheet" href="{{asset('frontend-assets/css/partnerships/ourpartnerships.css')}}"/>

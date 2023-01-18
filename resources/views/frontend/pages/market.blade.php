@@ -1,3 +1,4 @@
+@section('title', 'Target Market')
 <?php echo View::make ('frontend.layouts.head'); ?>
 
 <link rel="stylesheet" href="{{asset('frontend-assets/css/markets/targetMarkets.css')}}"/>
