@@ -4,6 +4,7 @@ use App\Http\Controllers\Auth\ResetPasswordController;
 use App\Http\Controllers\Backend\DashboardController;
 use App\Http\Controllers\Backend\AdminAuthController;
 use App\Http\Controllers\Backend\FruitController;
+use App\Http\Controllers\Backend\ContactController;
 use App\Http\Controllers\Backend\CountryController;
 use App\Http\Controllers\Backend\UserController;
 use App\Http\Controllers\Frontend\PagesController;
@@ -94,6 +95,10 @@ Route::middleware([CheckAdmin::class])->prefix('admin')->group(function ()
         Route::post('create', [CountryController::class, 'createCountry'])->name('createCountry');
         Route::get('{token}/edit', [CountryController::class, 'editCountry'])->name('editCountry');
         Route::post('{token}/update', [CountryController::class, 'updateCountry'])->name('updateCountry');
+    });
+
+    Route::prefix('contact')->group(function () {
+        Route::get('/', [ContactController::class, 'contactMessageList'])->name('contactMessageList');
     });
 
 }); // For admin only

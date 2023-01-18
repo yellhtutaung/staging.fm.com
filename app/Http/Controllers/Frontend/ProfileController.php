@@ -67,12 +67,6 @@ class ProfileController extends Controller
                 'forgot_bot' => ['required']
             ]);
             $user = Auth::guard('web')->user();
-            if (Hash::check($request->password, $user->password)){
-//            dd($request->password);
-                return  back()->withErrors(['password' => 'Your new password should not be same old password.'])->withInput();
-            }
-//            dd('hit');
-
             $user->password = Hash::make($request->password);
             $user->update();
             return redirect()->route('profile')->with('update', 'Password Updated Successfully.');

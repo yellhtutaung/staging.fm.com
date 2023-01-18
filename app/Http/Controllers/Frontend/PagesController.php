@@ -109,7 +109,7 @@ class PagesController extends Controller
         ]);
 
         if ( $validator->fails() ) {
-            return redirect()->route('mainPage','#contact')->with('warning',  $validator->errors()->first());
+            return redirect()->route('mainPage','#contact')->with('warning',  $validator->errors()->first())->withInput();
         }
 
         $contactDb = new ContactForm();

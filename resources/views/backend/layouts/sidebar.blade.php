@@ -28,6 +28,7 @@
                     </ul>
                 </li>
                 <hr>
+
                 <small class="text-muted " style="margin-left: 10px">Fruits Management</small>
                 <li id="fruit" class="dropNav {{ Request::segment(2) == 'fruit'  ?  'open-drop' : null }}" >
                     <a class="{{ Request::segment(2) == 'fruit' ? 'active-link' : null}}" href="javascript:void(0)" onclick="dropTagAction('fruit')">
@@ -43,6 +44,7 @@
                     </ul>
                 </li>
                 <hr>
+
                 <small class="text-muted " style="margin-left: 10px">Country Management</small>
                 <li id="country" class="dropNav {{ Request::segment(2) == 'country'  ?  'open-drop' : null }}" >
                     <a class="{{ Request::segment(2) == 'country' ? 'active-link' : null}}" href="javascript:void(0)" onclick="dropTagAction('country')">
@@ -53,6 +55,19 @@
                     <ul>
                         <li class="{{ Route::currentRouteName() == 'countryList' || Route::currentRouteName() == 'editCountry' ? 'active-route' : null}}"><a class="w-100 " href="{{route('countryList')}}">List</a></li>
                         <li class="{{ Route::currentRouteName() == 'addCountry' ? 'active-route' : null}}"><a class="w-100 " href="{{route('addCountry')}}">Add</a></li>
+                    </ul>
+                </li>
+                <hr>
+
+                <small class="text-muted " style="margin-left: 10px">Contact Management</small>
+                <li id="contact" class="dropNav {{ Request::segment(2) == 'contact'  ?  'open-drop' : null }}" >
+                    <a class="{{ Request::segment(2) == 'contact' ? 'active-link' : null}}" href="javascript:void(0)" onclick="dropTagAction('contact')">
+                        <i class="fa-solid fa-flag"></i>
+                        <span>Contact Management</span>
+                        <i class="fa fa-angle-right aside-icon " id="contact-icon"></i>
+                    </a>
+                    <ul>
+                        <li class="{{ Route::currentRouteName() == 'contactMessageList' ? 'active-route' : null}}"><a class="w-100 " href="{{route('contactMessageList')}}">List</a></li>
                     </ul>
                 </li>
             </ul>

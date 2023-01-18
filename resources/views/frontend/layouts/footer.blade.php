@@ -74,6 +74,7 @@
                                         <input
                                             type="text"
                                             name="name"
+                                            value="{{old('name')}}"
                                             class="mb-3"
                                             placeholder="{{ __('message.enter_ur_name') }}"
                                             autocomplete="off"
@@ -81,6 +82,7 @@
                                         <input
                                             type="email"
                                             name="email"
+                                            value="{{old('email')}}"
                                             class="mb-3"
                                             placeholder="{{ __('message.enter_ur_email') }}"
                                             autocomplete="off"
@@ -93,7 +95,7 @@
                                             class="mb-3"
                                             placeholder="{{ __('message.enter_ur_sms') }}"
                                             autocomplete="off"
-                                        ></textarea>
+                                        >{{old('message')}}</textarea>
                                         <button>{{ __('message.send') }}</button>
                                     </form>
                                 </div>
