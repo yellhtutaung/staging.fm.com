@@ -120,7 +120,8 @@ class PagesController extends Controller
 
         if ($contactDb->save())
         {
-            return redirect()->route('mainPage','#contact')->with('success',  'We received your message , will get in touch asap .');
+            return 'ok';
+            return response()->json(['status'=>200,'message'=>'We received your message , will get in touch asap .']);
         }
 
     }

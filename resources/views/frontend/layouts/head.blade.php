@@ -57,3 +57,12 @@
     <link rel="stylesheet" href="{{asset('frontend-assets/css/home/navbaroverlay.css')}}"/>
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <script>
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+        const csrf_token = $('meta[name="csrf-token"]').attr('content');
+    </script>
