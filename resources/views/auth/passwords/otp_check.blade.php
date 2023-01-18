@@ -2,7 +2,7 @@
 @section('title', 'OTP Check')
 @section('content')
 
-    <div class="container d-flex justify-content-center align-items-center" style="height: 100vh">
+    <div class="container otp_check d-flex justify-content-center align-items-center" style="height: 100vh">
         <div class="row">
             <div class="col-lg-5 p-2 ">
                 <div class="d-flex flex-column justify-content-center h-100">

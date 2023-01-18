@@ -27,41 +27,37 @@ select {
     background-color: #5BBA47 !important;
 }
 
-.input-wrapper{
+.user-register .input-wrapper{
     display: flex;
     flex-direction: column;
     margin: 12px 0;
-    /* background-color: #0074d9; */
+    /*padding: 0;*/
 }
 
-.register {
-    height: 100vh;
-}
-
-.register .input {
+.user-register .input {
     background-color: transparent;
     width: 100%;
-    padding: 0.6rem 1rem;
-    border: 2px solid #858282;
+    padding: 0.4rem 1rem;
+    border: 2px solid rgba(133, 130, 130, 0.89);
     border-radius: 10px;
     outline: none;
 }
-.register label {
+.user-register label {
     margin-bottom: 5px;
 }
-.register .input:focus {
+.user-register .input:focus {
     border-color: #5bba47;
 }
-.register textarea {
+.user-register textarea {
     width: 100%;
     padding: 1rem;
     border: 1px solid #ccc;
     border-radius: 10px;
 }
-.register textarea:focus {
+.user-register textarea:focus {
     outline-color: #5BBA47;
 }
-.register button {
+.user-register button {
     float: right;
     padding: 0.4rem 1.5rem;
     margin-right: 0;
@@ -71,7 +67,7 @@ select {
     background-color: #5bba47;
     color: white;
 }
-.register button:hover {
+.user-register button:hover {
     background-color: transparent;
     color: #ED1C24;
     border: 2px solid #ED1C24;
@@ -121,7 +117,7 @@ select {
     width: 100% !important;
     height: 100% !important;
     padding: 0.7rem 1rem !important;
-    border: 2px solid #858282 !important;
+    border: 2px solid rgba(133, 130, 130, 0.89) !important;
     border-radius: 10px !important;
     outline: none !important;
 }
@@ -141,16 +137,72 @@ select {
     height: 100% !important;
 }
 
+/* ------------------------- User Register ---------------------------*/
+.user-register {
+    height: 100vh;
+    background-image: -webkit-linear-gradient(180deg,#fff 55%,#5bba47 0);
+    padding: 0 50px;
+}
+
+.user-register > .row {
+    height: 100%;
+    margin: auto 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.user-register .left {
+    padding-left: 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.user-register .logo img{
+    width: 180px;
+    margin-bottom: 20px;
+}
+
+.user-register .shopping_app_img {
+    margin-top: 30px;
+}
+
+.user-register .shopping_app_img img{
+    width: 300px;
+}
+
+.user-register .left .text {
+    font-size: 20px;
+    color: white;
+}
+
+
 
 
 @media screen and (max-width: 992px) {
-    .register {
-        height: 100%;
-        padding: 20px 10px;
+
+    .user-register {
+        background-image: -webkit-linear-gradient(150deg,#fff 55%,#fff 0);
     }
 
-    .input-wrapper{
-        margin: 15px 0;
+    .user-register .logo img{
+        width: 160px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .user-register {
+        padding: 0;
+    }
+
+    .user-register .bottom-text {
+        font-size: 15px;
+    }
+
+    .user-register a {
+        font-size: 15px;
     }
 }
 

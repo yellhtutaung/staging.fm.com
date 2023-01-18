@@ -26,40 +26,36 @@ input[type=number] {
     color: white;
 }
 
-.input-wrapper{
+.user-login .input-wrapper{
     display: flex;
     flex-direction: column;
      margin: 25px 0;
 }
 
-.form-check {
-    margin: 20px 0;
-}
-
-.login .input {
+.user-login .input {
     background-color: transparent;
     width: 100%;
     padding: 0.4rem 1rem;
-    border: 2px solid #858282;
+    border: 2px solid rgba(133, 130, 130, 0.89);
     border-radius: 10px;
     outline: none;
 }
-.login label {
+.user-login label {
     margin-bottom: 5px;
 }
-.login .input:focus {
+.user-login .input:focus {
     border-color: #5bba47;
 }
-.login textarea {
+.user-login textarea {
     width: 100%;
     padding: 1rem;
     border: 1px solid #ccc;
     border-radius: 10px;
 }
-.login textarea:focus {
+.user-login textarea:focus {
     outline-color: #5BBA47;
 }
-.login button {
+.user-login button {
     float: right;
     padding: 0.4rem 1.5rem;
     margin-right: 0;
@@ -70,24 +66,11 @@ input[type=number] {
     color: white;
     margin-top: 10px;
 }
-.login button:hover {
+.user-login button:hover {
     background-color: transparent;
     color: #ED1C24;
     border: 2px solid #ED1C24;
 }
-
-.form-check-input{
-    border: 2px solid #ffffff;
-    background-color: transparent;
-}
-.form-check-input:focus{
-    border-color: rgb(217, 209, 209);
-}
-.form-check-input:checked {
-    background-color: #5bba47 !important;
-    border-color: rgb(217, 209, 209);
-}
-
 
 .underline {
     text-decoration: none;
@@ -126,7 +109,7 @@ input[type=number] {
 
 .user-login {
     height: 100vh;
-    background-image: -webkit-linear-gradient(155deg,#fff 55%,#5bba47 0);
+    background-image: -webkit-linear-gradient(180deg,#fff 55%,#5bba47 0);
     padding: 0 50px;
 }
 
@@ -165,13 +148,13 @@ input[type=number] {
 }
 
 .user-login .right {
-    padding: 30px;
+    padding: 0px;
 }
 
 @media screen and (max-width: 992px) {
 
     .user-login {
-        background-image: -webkit-linear-gradient(150deg,#fff 0%,#fff 0);
+        background-image: -webkit-linear-gradient(180deg,#fff 55%,#fff 0);
     }
 
     .user-login .logo img{
@@ -194,3 +177,84 @@ input[type=number] {
 }
 
 
+
+/* ------------------ Forgot Password --------------------- */
+
+.forgot-password .input-wrapper{
+    display: flex !important;
+    flex-direction: column !important;
+    margin: 25px 0 !important;
+}
+
+.forgot-password .input {
+    background-color: transparent !important;
+    width: 100% !important;
+    padding: 0.4rem 1rem !important;
+    border: 2px solid rgba(133, 130, 130, 0.89) !important;
+    border-radius: 10px !important;
+    outline: none !important;
+}
+.forgot-password label {
+    margin-bottom: 5px !important;
+}
+.forgot-password .input:focus {
+    border-color: #5bba47 !important;
+}
+
+.forgot-password button {
+    float: right;
+    padding: 0.4rem 1.5rem;
+    margin-right: 0;
+    border: 2px solid #5bba47;
+    outline: none;
+    border-radius: 10px;
+    background-color: #5bba47;
+    color: white;
+    margin-top: 10px;
+}
+.forgot-password button:hover {
+    background-color: transparent;
+    color: #ED1C24;
+    border: 2px solid #ED1C24;
+}
+
+
+/* ------------------------- OTP Check ------------------------- */
+
+.otp_check .input-wrapper{
+    display: flex !important;
+    flex-direction: column !important;
+    margin: 25px 0 !important;
+}
+
+.otp_check .input {
+    background-color: transparent !important;
+    width: 100% !important;
+    padding: 0.4rem 1rem !important;
+    border: 2px solid rgba(133, 130, 130, 0.89) !important;
+    border-radius: 10px !important;
+    outline: none !important;
+}
+.otp_check label {
+    margin-bottom: 5px !important;
+}
+.otp_check .input:focus {
+    border-color: #5bba47 !important;
+}
+
+.otp_check button {
+    float: right;
+    padding: 0.4rem 1.5rem;
+    margin-right: 0;
+    border: 2px solid #5bba47;
+    outline: none;
+    border-radius: 10px;
+    background-color: #5bba47;
+    color: white;
+    margin-top: 10px;
+}
+.otp_check button:hover {
+    background-color: transparent;
+    color: #ED1C24;
+    border: 2px solid #ED1C24;
+}

@@ -2,61 +2,78 @@
 @section('title', 'Register')
 @section('content')
 
-<div class="container" >
-    <div class="d-flex justify-content-center align-items-center register">
-        <div class="row justify-content-center align-items-stretch ">
-            <div class="col-lg-6">
+<div class="user-register" >
+        <div class="row">
+            <div class="col-lg-5 p-2 d-none d-lg-block">
+                <div class="left">
+                    <div class="logo">
+                        <img src="{{asset('freshmoe_logo_white.png')}}" alt="">
+                    </div>
 
-                <div class="p-2">
-                    <form method="POST" action="{{ route('register') }}" class=" body-fm ">
+                    <p class="text title-fm">
+                        Eat fresh food for your health! For fresh fruits and vegetables, <br> remember <b>Fresh Moe</b>
+                    </p>
+
+                    <div class="shopping_app_img">
+                        <img src="{{asset('img/shopping_app.svg')}}" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 p-2">
+                <div class="right d-flex flex-column justify-content-center h-100">
+                    <div class="logo d-lg-none d-flex justify-content-center mb-2">
+                        <img src="{{asset('freshmoe_logo.png')}}" alt="">
+                    </div>
+                    <form method="POST" action="{{ route('register') }}" class="body-fm ">
                         @csrf
-                        <div class="main_title">
-                            <h3 class="title-fm text-black mb-2">Sign Up</h3>
+                        <div class="main_title mb-3">
+                            <h5 class="title-fm text-black mb-2">Sign Up</h5>
                             <span class="main_title_underline bg-dark"></span>
                         </div>
 
                         <div class="row">
-                            <div class="col-lg-6 input-wrapper">
+                            <div class="col-md-6 input-wrapper">
                                 <input type="text" class="input @error('name') is-invalid @enderror" name="name"
-                                    value="{{ old('name') }}" id="name" placeholder="Enter your name"
-                                     autofocus>
+                                       value="{{ old('name') }}" id="name" placeholder="Enter your name"
+                                       autofocus>
                                 @error('name')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
                                 @enderror
                             </div>
-                            <div class="col-lg-6 input-wrapper">
+                            <div class="col-md-6 input-wrapper">
                                 <input type="email" class="input @error('email') is-invalid @enderror"
-                                    name="email" value="{{ old('email') }}" placeholder="Enter your email"
-                                    id="email" >
+                                       name="email" value="{{ old('email') }}" placeholder="Enter your email"
+                                       id="email" >
                                 @error('email')
                                 <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
+                                <strong>{{ $message }}</strong>
+                            </span>
                                 @enderror
                             </div>
-                            <div class="col-lg-6 input-wrapper">
+                            <div class="col-md-6 input-wrapper">
                                 <input type="number" class="input @error('phone') is-invalid @enderror"
-                                    name="phone" value="{{ old('phone') }}" placeholder="Enter your phone number"
-                                    id="phone" >
+                                       name="phone" value="{{ old('phone') }}" placeholder="Enter your phone number"
+                                       id="phone" >
                                 @error('phone')
                                 <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
+                                <strong>{{ $message }}</strong>
+                            </span>
                                 @enderror
                             </div>
-                            <div class="col-lg-6 input-wrapper">
+                            <div class="col-md-6 input-wrapper">
                                 <input type="text" class="input @error('shop_name') is-invalid @enderror"
-                                    name="shop_name" value="{{ old('shop_name') }}" placeholder="Enter your shop name"
-                                    id="shop" >
+                                       name="shop_name" value="{{ old('shop_name') }}" placeholder="Enter your shop name"
+                                       id="shop" >
                                 @error('shop_name')
                                 <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
+                                <strong>{{ $message }}</strong>
+                            </span>
                                 @enderror
                             </div>
-                            <div class="col-lg-6 input-wrapper ">
+                            <div class="col-md-6 input-wrapper ">
                                 <select id="country" onchange="takeCitiesByCountryId()"  class="form-control js-example-placeholder-single js-example-disabled-results @error('country_id') is-invalid @enderror" name="country_id" >
                                     <option value="">Select Country</option>
                                     @foreach($countries as $country)
@@ -66,60 +83,60 @@
 
                                 @error('country_id')
                                 <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
+                                <strong>{{ $message }}</strong>
+                            </span>
                                 @enderror
                             </div>
-                            <div class="col-lg-6 input-wrapper">
+                            <div class="col-md-6 input-wrapper">
                                 <select id="city" class="form-control js-example-disabled-results" name="city_id" >
                                     <option value="">Select City</option>
                                 </select>
 
                             </div>
-                            <div class="col-lg-12 input-wrapper">
+                            <div class="col-md-6 input-wrapper">
                                 <input type="text" class="input @error('postal_code') is-invalid @enderror"
                                        name="postal_code" value="{{ old('postal_code') }}" placeholder="Enter your postal code"
                                        id="postal_code" >
                                 @error('postal_code')
                                 <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
+                                <strong>{{ $message }}</strong>
+                            </span>
                                 @enderror
                             </div>
-                            <div class="col-lg-12 input-wrapper">
+                            <div class="col-md-6 input-wrapper">
                                 <input type="text" class="input @error('zip_code') is-invalid @enderror"
-                                    name="zip_code" value="{{ old('zip_code') }}" placeholder="Enter your zip code"
-                                    id="zip_code" >
+                                       name="zip_code" value="{{ old('zip_code') }}" placeholder="Enter your zip code"
+                                       id="zip_code" >
                                 @error('zip_code')
                                 <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
+                                <strong>{{ $message }}</strong>
+                            </span>
                                 @enderror
                             </div>
                             <div class="col-lg-12 input-wrapper">
-                                <textarea type="number" class="input @error('address') is-invalid @enderror"
-                                    name="address"  placeholder="Enter your address"
-                                    id="address" rows="3" >{{ old('address') }}</textarea>
+                            <textarea type="number" class="input @error('address') is-invalid @enderror"
+                                      name="address"  placeholder="Enter your address"
+                                      id="address" rows="3" >{{ old('address') }}</textarea>
                                 @error('phone')
                                 <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
+                                <strong>{{ $message }}</strong>
+                            </span>
                                 @enderror
                             </div>
-                            <div class="col-lg-6 input-wrapper">
+                            <div class="col-md-6 input-wrapper">
                                 <input type="password" class="input @error('password') is-invalid @enderror"
-                                    name="password" placeholder="Enter your password"
-                                    id="password" >
+                                       name="password" placeholder="Enter your password"
+                                       id="password" >
                                 @error('password')
                                 <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
+                                <strong>{{ $message }}</strong>
+                            </span>
                                 @enderror
                             </div>
-                            <div class="col-lg-6 input-wrapper">
+                            <div class="col-md-6 input-wrapper">
                                 <input type="password" class="input @error('password') is-invalid @enderror"
-                                    name="password_confirmation" placeholder="Enter confirm password"
-                                    id="confirm-password" >
+                                       name="password_confirmation" placeholder="Enter confirm password"
+                                       id="confirm-password" >
                             </div>
                             <div  class="col-lg-12 input-wrapper">
                                 <button>Register</button>
@@ -127,28 +144,17 @@
                         </div>
 
                     </form>
-                    <div class="mt-3 body-fm d-lg-none">
+
+                    <div class="mt-2 body-fm bottom-text">
                         Already have an account.
                         <span class="underline ms-2">
-                            <a href="{{route('login')}}" class="text-decoration-none">Sign In</a>
-                     </span>
+                                    <a href="{{route('login')}}" class="text-decoration-none">Sign In</a>
+                                </span>
                     </div>
-                </div>
 
 
-            </div>
-
-            <div class="col-lg-6 p-2 d-none d-lg-flex flex-column justify-content-between">
-                <img src="{{asset('frontend-assets/images/auth_chart_head.jpg')}}" width="100%" alt="">
-                <img src="{{asset('frontend-assets/images/auth_chart.jpg')}}" width="100%" alt="">
-                <div class="body-fm d-flex justify-content-center align-items-center">
-                            Already have an account.
-                     <span class="underline ms-2">
-                            <a href="{{route('login')}}" class="text-decoration-none">Sign In</a>
-                     </span>
                 </div>
             </div>
-        </div>
     </div>
 </div>
 <script>
