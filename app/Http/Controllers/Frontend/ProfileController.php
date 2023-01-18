@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Country;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Testing\Fluent\Concerns\Has;
 use Illuminate\Validation\Rule;
 use Illuminate\Support\Facades\Hash;
 
@@ -66,6 +67,12 @@ class ProfileController extends Controller
                 'forgot_bot' => ['required']
             ]);
             $user = Auth::guard('web')->user();
+            if (Hash::check($request->password, $user->password)){
+//            dd($request->password);
+                return  back()->withErrors(['password' => 'Your new password should not be same old password.'])->withInput();
+            }
+//            dd('hit');
+
             $user->password = Hash::make($request->password);
             $user->update();
             return redirect()->route('profile')->with('update', 'Password Updated Successfully.');
@@ -78,6 +85,9 @@ class ProfileController extends Controller
             $user = Auth::guard('web')->user();
 
             if (Hash::check($request->old_password, $user->password)) {
+                if (Hash::check($request->password, $user->password)){
+                    return  back()->withErrors(['password' => 'Your new password should not be same old password.']);
+                }
                 $user->password = Hash::make($request->password);
                 $user->update();
                 return redirect()->route('profile')->with('update', 'Password Updated Successfully.');

@@ -11,7 +11,7 @@
                 </div>
 
                 <p class="text title-fm">
-                    Eat fresh food for your health! For fresh fruits and vegetables, remember <b>Fresh Moe</b>
+                    Eat fresh food for your health! For fresh fruits and vegetables, <br> remember <b>Fresh Moe</b>
                 </p>
 
                 <div class="shopping_app_img">
@@ -26,10 +26,10 @@
                     <img src="{{asset('freshmoe_logo.png')}}" alt="">
                 </div>
                 <div class="">
-                    <h3 class="title-fm ">Sign In</h3>
+                    <h5 class="title-fm ">Sign In</h5>
                     <span class="main_title_underline"></span>
                 </div>
-                <form method="POST" action="{{ route('login') }}" class="login body-fm ">
+                <form method="POST" action="{{ route('login') }}" class="body-fm ">
                     @csrf
                     <div class="input-wrapper">
                         <label for="email" class="form-label">Email</label>
