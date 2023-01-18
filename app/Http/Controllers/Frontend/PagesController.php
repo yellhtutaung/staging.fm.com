@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
 use App\Mail\ContactUs;
+use App\Models\ContactForm;
 use App\Models\FruitPriceList;
 use App\Models\FruitPriceListTransition;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -102,7 +103,7 @@ class PagesController extends Controller
     public function contactToFm(Request $In)
     {
         $validator = Validator::make($In->all(), [
-            'name' => ['required','min:4','max:6'],
+            'name' => ['required','min:4','max:23'],
             'email' => ['required','email'],
             'message' => ['required','min:10'],
         ]);
@@ -110,5 +111,17 @@ class PagesController extends Controller
         if ( $validator->fails() ) {
             return redirect()->route('mainPage','#contact')->with('warning',  $validator->errors()->first());
         }
+
+        $contactDb = new ContactForm();
+        $contactDb->name = $In->name;
+        $contactDb->email = $In->email;
+        $contactDb->message = $In->message;
+        $contactDb->agent_info = $In->header('User-Agent');
+
+        if ($contactDb->save())
+        {
+            return redirect()->route('mainPage','#contact')->with('success',  'We received your message , will get in touch asap .');
+        }
+
     }
 }

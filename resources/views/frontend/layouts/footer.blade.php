@@ -64,6 +64,12 @@
                                                 <a type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></a>
                                             </div>
                                         @endif
+                                        @if(session('success'))
+                                            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                                <span><strong>Success </strong>  {{session('success')}}</span>
+                                                <a type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></a>
+                                            </div>
+                                        @endif
                                         <input type="hidden" name="_next" value="https://www.freshmoe.com/" />
                                         <input
                                             type="text"
