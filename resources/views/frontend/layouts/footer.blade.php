@@ -58,6 +58,9 @@
                                         class="body-fm"
                                         id="contact-form"
                                     >
+                                        <div id="show-message">
+
+                                        </div>
                                         @csrf
                                         @if(session('warning'))
                                             <div class="alert alert-warning alert-dismissible fade show" role="alert">
@@ -75,7 +78,6 @@
                                         <input
                                             type="text"
                                             name="name"
-                                            value="{{old('name')}}"
                                             class="mb-3"
                                             placeholder="{{ __('message.enter_ur_name') }}"
                                             autocomplete="off"
@@ -83,21 +85,19 @@
                                         <input
                                             type="email"
                                             name="email"
-                                            value="{{old('email')}}"
                                             class="mb-3"
                                             placeholder="{{ __('message.enter_ur_email') }}"
                                             autocomplete="off"
                                         />
                                         <textarea
                                             name="message"
-                                            id=""
                                             cols="30"
                                             rows="3"
                                             class="mb-3"
                                             placeholder="{{ __('message.enter_ur_sms') }}"
                                             autocomplete="off"
-                                        >{{old('message')}}</textarea>
-                                        <button type="submit">
+                                        ></textarea>
+                                        <button type="submit" id="submit-btn">
                                             {{ __('message.send') }}
                                         </button>
                                     </form>
@@ -119,6 +119,15 @@
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
 
+    const alertUi = (conditionClass,innerText) =>
+    {
+        let uiAlert = `<div class="alert alert-${conditionClass} alert-dismissible fade show" role="alert">
+                    <span><strong>${innerText}</strong></span>
+                    <a type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></a>
+                </div>`;
+        $('#show-message').append(uiAlert);
+    }
+
     const Toast = Swal.mixin({
         toast: true,
         position: 'bottom-end',
@@ -135,27 +144,48 @@
         e.preventDefault();
         if(navigator.onLine)
         {
+            $('#submit-btn').attr('disabled', '');
+
+            let formData = new FormData($('#contact-form')[0]);
+            console.log(formData)
+
+            $.ajax({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                type: "POST",
+                url: "{{ route('contactToFm') }}",
+                data: formData,
+                contentType: false,
+                processData: false,
+                success: function (response) {
+                    if (response.status === 'success'){
+                        $('input').val('')
+                        $('textarea').val('')
+                        $('#submit-btn').removeAttr('disabled');
+                        // alertUi('success',response.message);
+                        Toast.fire({
+                            icon: 'success',
+                            title: response.message
+                        });
+                    } else if(response.status == 'fail'){
+                        $('#submit-btn').removeAttr('disabled');
+                        // alertUi('warning',response.message);
+                        Toast.fire({
+                            icon: 'warning',
+                            title: response.message
+                        });
+                    }else {
+                        console.log(response);
+                    }
+
+                },
+            });
+        }else {
             Toast.fire({
                 icon: 'warning',
                 title: "Check you are internet connection"
             });
-            let allFormData = new FormData(this);
-            console.log(allFormData);
-            {{--$.ajax({--}}
-            {{--    type:'POST',--}}
-            {{--    _token: csrf_token,--}}
-            {{--    url: "{{route('contactToFm')}}",--}}
-            {{--    data:new FormData(this),--}}
-            {{--    cache:false,--}}
-            {{--    contentType: false,--}}
-            {{--    processData: false,--}}
-            {{--    success:function(data){--}}
-            {{--        console.log(data);--}}
-
-            {{--    }--}}
-            {{--});--}}
-        }else {
-
         }
     });
 

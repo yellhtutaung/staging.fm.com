@@ -102,6 +102,7 @@ class PagesController extends Controller
 
     public function contactToFm(Request $In)
     {
+
         $validator = Validator::make($In->all(), [
             'name' => ['required','min:4','max:23'],
             'email' => ['required','email'],
@@ -109,7 +110,10 @@ class PagesController extends Controller
         ]);
 
         if ( $validator->fails() ) {
-            return redirect()->route('mainPage','#contact')->with('warning',  $validator->errors()->first())->withInput();
+            return response()->json([
+                'status' => 'fail',
+                'message' =>  $validator->errors()->first()
+            ]);
         }
 
         $contactDb = new ContactForm();
@@ -120,8 +124,10 @@ class PagesController extends Controller
 
         if ($contactDb->save())
         {
-            return 'ok';
-            return response()->json(['status'=>200,'message'=>'We received your message , will get in touch asap .']);
+            return response()->json([
+                'status' => 'success',
+                'message' =>  'We received your message'
+            ]);
         }
 
     }
