@@ -363,6 +363,11 @@ input[type=number] {
     color: gray;
 }
 
+.border-radius-5
+{
+    border-radius: 5px;
+}
+
 @media screen and (min-width: 768px) {
     #go_to_shop {
         bottom: auto;

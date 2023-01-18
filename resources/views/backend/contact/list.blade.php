@@ -19,7 +19,8 @@
                     <th>Email</th>
                     <th>Message</th>
 {{--                    <th>Agent Info</th>--}}
-                    <th>Timestamp</th>
+                    <th>Date</th>
+                    <th>Ago</th>
                     <th>View</th>
                     <th>Delete</th>
                 </tr>
@@ -32,7 +33,8 @@
                         <td>{{$record->email}}</td>
                         <td>{{substr($record->message,0,10)}} ...</td>
 {{--                        <td>{{$record->agent_info}}</td>--}}
-                        <td>{{$record->created_at}}</td>
+                        <td>{{$record->created_at->toDateString()}}</td>
+                        <td>{{$record->created_at->diffForHumans()}}</td>
                         <td>
                             <a href="javascript:void(0)" onclick="viewMessage(`{{$record->message}}`)" class="rounded btn btn-dark">
                                 <span class="material-symbols-outlined mt-2 text-white">visibility</span>

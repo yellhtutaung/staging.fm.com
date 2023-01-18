@@ -59,17 +59,22 @@
                 </li>
                 <hr>
 
-                <small class="text-muted " style="margin-left: 10px">Contact Management</small>
-                <li id="contact" class="dropNav {{ Request::segment(2) == 'contact'  ?  'open-drop' : null }}" >
-                    <a class="{{ Request::segment(2) == 'contact' ? 'active-link' : null}}" href="javascript:void(0)" onclick="dropTagAction('contact')">
-                        <i class="fa-solid fa-flag"></i>
-                        <span>Contact Management</span>
-                        <i class="fa fa-angle-right aside-icon " id="contact-icon"></i>
+                <small class="text-muted " style="margin-left: 10px">Contact SMS</small>
+                <li class="{{ Route::currentRouteName() == 'contactMessageList' ? 'theme_bg text-white border-radius-5' : null}}">
+                    <a class="{{ Request::segment(2) == 'contact' ? 'active-link text-white' : null}} " href="{{route('contactMessageList')}}">
+                        <i class="fa fa-envelope"></i> Contact Message
                     </a>
-                    <ul>
-                        <li class="{{ Route::currentRouteName() == 'contactMessageList' ? 'active-route' : null}}"><a class="w-100 " href="{{route('contactMessageList')}}">List</a></li>
-                    </ul>
                 </li>
+{{--                <li id="contact" class="dropNav {{ Request::segment(2) == 'contact'  ?  'open-drop' : null }}" >--}}
+{{--                    <a class="{{ Request::segment(2) == 'contact' ? 'active-link' : null}}" href="javascript:void(0)" onclick="dropTagAction('contact')">--}}
+{{--                        <i class="fa-solid fa-envelope"></i>--}}
+{{--                        <span>Contact Management</span>--}}
+{{--                        <i class="fa fa-angle-right aside-icon " id="contact-icon"></i>--}}
+{{--                    </a>--}}
+{{--                    <ul>--}}
+{{--                        <li class="{{ Route::currentRouteName() == 'contactMessageList' ? 'active-route' : null}}"><a class="w-100 " href="{{route('contactMessageList')}}">List</a></li>--}}
+{{--                    </ul>--}}
+{{--                </li>--}}
             </ul>
 
         </aside>
