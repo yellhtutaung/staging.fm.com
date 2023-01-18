@@ -56,6 +56,7 @@
                                         action="{{route('contactToFm')}}"
                                         method="POST"
                                         class="body-fm"
+                                        id="contact-form"
                                     >
                                         @csrf
                                         @if(session('warning'))
@@ -94,7 +95,9 @@
                                             placeholder="{{ __('message.enter_ur_sms') }}"
                                             autocomplete="off"
                                         ></textarea>
-                                        <button>{{ __('message.send') }}</button>
+                                        <button type="submit">
+                                            {{ __('message.send') }}
+                                        </button>
                                     </form>
                                 </div>
                             </div>
@@ -110,7 +113,48 @@
     </section>
 </div>
 
-
+{{-- sweetalert --}}
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
+
+    const Toast = Swal.mixin({
+        toast: true,
+        position: 'bottom-end',
+        showConfirmButton: false,
+        timer: 5000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+            toast.addEventListener('mouseenter', Swal.stopTimer)
+            toast.addEventListener('mouseleave', Swal.resumeTimer)
+        }
+    });
+
+    $('#contact-form').on('submit', function(e){
+        e.preventDefault();
+        if(navigator.onLine)
+        {
+            Toast.fire({
+                icon: 'warning',
+                title: "Check you are internet connection"
+            });
+            let allFormData = new FormData(this);
+            console.log(allFormData);
+            {{--$.ajax({--}}
+            {{--    type:'POST',--}}
+            {{--    _token: csrf_token,--}}
+            {{--    url: "{{route('contactToFm')}}",--}}
+            {{--    data:new FormData(this),--}}
+            {{--    cache:false,--}}
+            {{--    contentType: false,--}}
+            {{--    processData: false,--}}
+            {{--    success:function(data){--}}
+            {{--        console.log(data);--}}
+
+            {{--    }--}}
+            {{--});--}}
+        }else {
+
+        }
+    });
 
 </script>
