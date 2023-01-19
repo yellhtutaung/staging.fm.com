@@ -1,46 +1,47 @@
-@section('title', $priceList->name )
-<?php echo View::make ('frontend.layouts.head'); ?>
-<link rel="stylesheet" href="{{asset('frontend-assets/css/client/ourclients.css')}}"/>
-<link rel="stylesheet" href="{{asset('frontend-assets/css/client/featureplans.css')}}"/>
-<link rel="stylesheet" href="{{asset('frontend-assets/css/animated.min.css')}}"/>
+@extends('frontend.layouts.app')
 
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css"/>
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.1/css/dataTables.bootstrap5.min.css"/>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.2/jquery.min.js" integrity="sha512-tWHlutFnuG0C6nQRlpvrEhE4QpkG1nn2MOUMWmUeRePl4e3Aki0VB6W1v3oLjFtd0hVOtRQ9PHpSfN6u6/QXkQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+@section('title', 'Fresh Moe')
+
+@section('extra-css')
+{{--    <link rel="stylesheet" href="{{asset('frontend-assets/css/client/ourclients.css')}}"/>--}}
+{{--    <link rel="stylesheet" href="{{asset('frontend-assets/css/client/featureplans.css')}}"/>--}}
+    <link rel="stylesheet" href="{{asset('frontend-assets/css/animated.min.css')}}"/>
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.1/css/dataTables.bootstrap5.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.2/jquery.min.js" integrity="sha512-tWHlutFnuG0C6nQRlpvrEhE4QpkG1nn2MOUMWmUeRePl4e3Aki0VB6W1v3oLjFtd0hVOtRQ9PHpSfN6u6/QXkQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
-<script type="text/javascript" src="https://cdn.datatables.net/v/bs5/dt-1.13.1/b-2.3.3/date-1.2.0/fc-4.2.1/r-2.4.0/sb-1.4.0/sl-1.5.0/datatables.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/v/bs5/dt-1.13.1/b-2.3.3/date-1.2.0/fc-4.2.1/r-2.4.0/sb-1.4.0/sl-1.5.0/datatables.min.js"></script>
 
-<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-<style>
-    .client_banner {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("{{asset('frontend-assets/images/client_banner.jpg')}}");
-        margin-top: 140px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-    }
-    .product-img
-    {
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-    }
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <style>
+        {{--.client_banner {--}}
+        {{--    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("{{asset('frontend-assets/images/client_banner.jpg')}}");--}}
+        {{--    margin-top: 140px;--}}
+        {{--    display: flex;--}}
+        {{--    justify-content: center;--}}
+        {{--    align-items: center;--}}
+        {{--    min-height: 100vh;--}}
+        {{--    background-size: cover;--}}
+        {{--    background-repeat: no-repeat;--}}
+        {{--    background-position: center;--}}
+        {{--}--}}
+        .product-img
+        {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
 
-</style>
+    </style>
+@endsection
 
-</head>
-<body>
 
-{{--navbar layout start--}}
-<?php echo View::make ('frontend.layouts.navbar'); ?>
-{{--navbar layout end--}}
+
+@section('content')
 
 {{--price list --}}
 
@@ -84,12 +85,9 @@
 {{--feature plans end --}}
 
 
-{{--footer start--}}
-<?php echo View::make ('frontend.layouts.bottom_footer'); ?>
-{{--footer end--}}
+@endsection
 
-
-<?php echo View::make ('frontend.layouts.aos'); ?>
+@section('extra-script')
 <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 <script>
 
@@ -184,5 +182,4 @@
 </script>
 
 
-<body/>
-<html/>
+@endsection
