@@ -1,52 +1,48 @@
-@section('title', 'Employees')
-<?php echo View::make ('frontend.layouts.head'); ?>
+@extends('frontend.layouts.app')
 
+@section('title', 'Fresh Moe')
 
+@section('extra-css')
     <!-- Link Swiper's CSS -->
-<link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
-/>
-<link rel="stylesheet" href="{{asset('frontend-assets/css/employee/employee.css')}}"/>
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="{{asset('frontend-assets/css/employee/employee.css')}}"/>
 
 
-<style>
-    .employees_banner {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../frontend-assets/images/em_banner.jpg");
-        margin-top: 140px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-    }
+    <style>
+        .employees_banner {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../frontend-assets/images/em_banner.jpg");
+            margin-top: 140px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
 
-    .job-btn {
-        padding: 0.7rem 1.5rem;
-        border: 2px solid #ccc;
-        border-radius: 10px;
-        background-color: #ED1C24;
-        color: white;
-    }
+        .job-btn {
+            padding: 0.7rem 1.5rem;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            background-color: #ED1C24;
+            color: white;
+        }
 
-    .job-btn:hover {
-        background-color: white;
-        color: #ED1C24;
-        border: 2px solid #ED1C24;
-    }
+        .job-btn:hover {
+            background-color: white;
+            color: #ED1C24;
+            border: 2px solid #ED1C24;
+        }
 
-</style>
+    </style>
+@endsection
 
-</head>
-<body>
+@section('content')
 
-{{--navbar layout start--}}
-<?php echo View::make ('frontend.layouts.navbar'); ?>
-{{--navbar layout end--}}
-
-<?php echo View::make('frontend.layouts.go_to_shop') ?>
 
 {{--employees_banner start--}}
 <div>
@@ -154,36 +150,14 @@
 </div>
 {{--employees cards end--}}
 
-
-{{--<div class="container-fluid p-5">--}}
-{{--    <div class="row m-0 p-0 ">--}}
-{{--        <div class="col-lg-6 p-3 ">--}}
-{{--            <img class="w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVXSD2Nhis6g-BKTZ_luA-s3hbxtKFC39RoQ&usqp=CAU" alt="">--}}
-{{--        </div>--}}
-{{--        <div class="col-lg-6 p-3">--}}
-{{--            <div class="name title-fm">--}}
-{{--                <h5 class=" title-fm fw-bold">About The Job</h5>--}}
-{{--            </div>--}}
-{{--            <div class=" body-fm mt-3">--}}
-{{--                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aspernatur beatae blanditiis cum cumque et perspiciatis suscipit. Amet consectetur molestiae nostrum officia optio, perspiciatis quaerat quidem. A assumenda dolorem reiciendis.--}}
-{{--                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aspernatur beatae blanditiis cum cumque et perspiciatis suscipit. Amet consectetur molestiae nostrum officia optio, perspiciatis quaerat quidem. A assumenda dolorem reiciendis.--}}
-{{--            </div>--}}
-{{--            <div class="mt-4">--}}
-{{--                <a href="employees/job" class="job-btn text-decoration-none">Job Description</a>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--    </div>--}}
-{{--</div>--}}
-
-
 {{--footer start--}}
 <?php echo View::make ('frontend.layouts.footer'); ?>
 {{--footer end--}}
 
 
-<?php echo View::make ('frontend.layouts.aos'); ?>
+@endsection
 
-<script src="{{asset('frontend-assets/js/app.js')}}"></script>
+@section('extra-script')
 
     <!-- Swiper JS -->
 <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
@@ -228,6 +202,4 @@
         },
     });
 </script>
-
-<body/>
-<html/>
+@endsection

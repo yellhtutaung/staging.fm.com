@@ -18,7 +18,7 @@
                                         excepturi quos?
                                     </p>
                                     <div class="footer_links2 body-fm">
-                                        <a class="{{Request::segment(1) == '/' ? 'footer_links2_active text-white' : null}}" href="/" >{{ __('message.home') }}</a>
+                                        <a class="{{Request::segment(1) == '' ? 'footer_links2_active text-white' : null}}" href="/" >{{ __('message.home') }}</a>
                                         <a class="{{Request::segment(1) == 'employees' ? 'footer_links2_active text-white' : null}}" href="/employees" >{{ __('message.employees') }}</a>
                                         <a class="{{Request::segment(1) == 'client' ? 'footer_links2_active text-white' : null}}" href="/client" >{{ __('message.client_future_plan') }}</a>
                                         <a class="{{Request::segment(1) == 'partnerships' ? 'footer_links2_active text-white' : null}}" href="/partnerships" >{{ __('message.about_partners') }}</a>
@@ -110,7 +110,7 @@
                 </div>
             </div>
         </div>
-        <?php echo View::make ('frontend.layouts.bottom_footer'); ?>
+{{--        <?php echo View::make ('frontend.layouts.bottom_footer'); ?>--}}
 
     </section>
 </div>

@@ -1,32 +1,27 @@
-@section('title', 'Client')
-<?php echo View::make ('frontend.layouts.head'); ?>
+@extends('frontend.layouts.app')
 
+@section('title', 'Fresh Moe')
 
-<link rel="stylesheet" href="{{asset('frontend-assets/css/client/ourclients.css')}}"/>
-<link rel="stylesheet" href="{{asset('frontend-assets/css/client/featureplans.css')}}"/>
+@section('extra-css')
+    <link rel="stylesheet" href="{{asset('frontend-assets/css/client/ourclients.css')}}"/>
+    <link rel="stylesheet" href="{{asset('frontend-assets/css/client/featureplans.css')}}"/>
 
-<style>
-    .client_banner {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("{{asset('frontend-assets/images/client_banner.jpg')}}");
-        margin-top: 140px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-    }
-</style>
+    <style>
+        .client_banner {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("{{asset('frontend-assets/images/client_banner.jpg')}}");
+            margin-top: 140px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    </style>
+@endsection
 
-</head>
-<body>
-
-{{--navbar layout start--}}
-<?php echo View::make ('frontend.layouts.navbar'); ?>
-{{--navbar layout end--}}
-
-<?php echo View::make('frontend.layouts.go_to_shop') ?>
+@section('content')
 
 {{--client banner start--}}
 <div class="client_banner">
@@ -126,9 +121,4 @@
 {{--footer end--}}
 
 
-<?php echo View::make ('frontend.layouts.aos'); ?>
-
-<script src="{{asset('frontend-assets/js/app.js')}}"></script>
-
-<body/>
-<html/>
+@endsection
