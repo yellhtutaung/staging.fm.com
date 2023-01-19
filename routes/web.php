@@ -16,7 +16,7 @@ use App\Http\Controllers\UniversalController;
 use App\Http\Middleware\CheckAdmin;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\AdminLoginController;
-
+use App\Http\Controllers\Auth\RegisterController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -105,3 +105,6 @@ Route::middleware([CheckAdmin::class])->prefix('admin')->group(function ()
 
 // User auth
 Auth::routes();
+
+
+

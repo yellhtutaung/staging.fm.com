@@ -36,7 +36,8 @@
                 <ul>
                     <li>
                         @if(auth()->check())
-                            <a href='/pricelist' >Price List</a>
+                            <a href='{{route('priceList')}}' >{{ __('message.price_list') }}</a>
+                            <a href='{{route('profile')}}' >{{ __('message.profile') }}</a>
                         @else
                             <a href="#it_products">{{ __('message.web_and_app') }}</a>
                         @endif
