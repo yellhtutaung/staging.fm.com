@@ -65,7 +65,7 @@
                             </div>
                             <div class="col-md-6 input-wrapper">
                                 <input type="text" class="input @error('shop_name') is-invalid @enderror"
-                                       name="shop_name" value="Melon Win{{ old('shop_name') }}" placeholder="Enter your shop name"
+                                       name="shop_name" value="{{ old('shop_name') }}" placeholder="Enter your shop name"
                                        id="shop" >
                                 @error('shop_name')
                                 <span class="invalid-feedback" role="alert">
@@ -124,7 +124,7 @@
                                 @enderror
                             </div>
                             <div class="col-md-6 input-wrapper">
-                                <input type="password" value="123456" class="input @error('password') is-invalid @enderror"
+                                <input type="password" value="" class="input @error('password') is-invalid @enderror"
                                        name="password" placeholder="Enter your password"
                                        id="password" >
                                 @error('password')
@@ -134,7 +134,7 @@
                                 @enderror
                             </div>
                             <div class="col-md-6 input-wrapper">
-                                <input type="password" value="123456" class="input @error('password') is-invalid @enderror"
+                                <input type="password" value="" class="input @error('password') is-invalid @enderror"
                                        name="password_confirmation" placeholder="Enter confirm password"
                                        id="confirm-password" >
                             </div>
