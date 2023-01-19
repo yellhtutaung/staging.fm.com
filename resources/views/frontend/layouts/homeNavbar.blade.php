@@ -36,11 +36,12 @@
                 <ul>
                     <li>
                         @if(auth()->check())
-                            <a href='/pricelist' >Price List</a>
+                            <a href='{{route('priceList')}}' >Price List</a>
+                            <a href='{{route('profile')}}' >Price List</a>
                         @else
                             <a href="#it_products">{{ __('message.web_and_app') }}</a>
+                            <a href="#mission">{{ __('message.mission') }}</a>
                         @endif
-                        <a href="#mission">{{ __('message.mission') }}</a>
                         <a href="#contact">{{ __('message.contact') }}</a>
                     </li>
                     <li>

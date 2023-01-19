@@ -67,8 +67,6 @@
             $('.js-example-basic-multiple').select2();
         });
         function viewMessage(message) {
-
-
             Swal.fire({
                 title: 'Message',
                 icon: 'info',
@@ -78,8 +76,6 @@
                 showConfirmButton: false,
                 focusConfirm: false,
             })
-
-
         }
 
     </script>
