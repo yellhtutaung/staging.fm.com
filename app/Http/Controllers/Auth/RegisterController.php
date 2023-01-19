@@ -200,6 +200,4 @@ class RegisterController extends Controller
         return view('frontend.auth.register-otp');
     }
 
-
-
 }

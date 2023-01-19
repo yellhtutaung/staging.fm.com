@@ -3,9 +3,12 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Models\User;
 use App\Providers\RouteServiceProvider;
+use http\Env\Request;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class LoginController extends Controller
 {
@@ -42,5 +45,25 @@ class LoginController extends Controller
     protected function guard()
     {
         return Auth::guard();
+    }
+
+    public function login (\Illuminate\Http\Request $request) {
+        $formData = $request->validate([
+            'key' => 'required',
+            'password' => 'required',
+        ]);
+
+        $key = $request->key;
+        $user = User::where('username', $key)->orWhere('email', $key)->orWhere('phone', $key)->first();
+        if (!$user){
+            return back()->withErrors(['key'=>'Your data is invalid.'])->withInput();
+        }
+
+        if(Hash::check($request->password, $user->password)){
+            Auth::login($user);
+            return redirect()->route('priceList');
+        }else {
+            return back()->withErrors(['password' => 'Your password is incorrect.'])->withInput();
+        }
     }
 }
