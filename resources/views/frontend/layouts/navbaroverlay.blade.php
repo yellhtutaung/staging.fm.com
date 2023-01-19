@@ -2,16 +2,16 @@
     <a href="javascript:void(0)" onclick="overlayClose()"  class="closebtn" >&times;</a>
     <div class="overlay-content">
 
-        <a href="{{route('mainPage')}}">Home</a>
-        <a href="/employees">Employees</a>
-        <a href="/client">Client and Future Plans</a>
-        <a href="/partnerships">About Partnerships</a>
-        <a href="/target-market">Target of Market</a>
-        <a href="/coldchain-transport">Cold Chain and Transportation</a>
+        <a href="{{route('mainPage')}}">{{ __('message.home') }}</a>
+        <a href="/employees">{{ __('message.employees_hero') }}</a>
+        <a href="/client">{{ __('message.client_hero') }}</a>
+        <a href="/partnerships">{{ __('message.partnerships') }}</a>
+        <a href="/target-market">{{ __('message.target_market') }}</a>
+        <a href="/coldchain-transport">{{ __('message.cold_chain_and_transport') }}</a>
         @if(auth()->check())
-            <a href='{{route('priceList')}}' >Price List</a>
-            <a href='{{route('profile')}}' >Profile</a>
-            <a href="javascript:void(0)" id="logout-btn">Logout</a>
+            <a href='{{route('priceList')}}' >{{ __('message.price_list') }}</a>
+            <a href='{{route('profile')}}' >{{ __('message.profile') }}</a>
+            <a href="javascript:void(0)" id="logout-btn">{{ __('message.partnerships') }}</a>
             <form action="{{ route('logout') }}" method="POST" id="logout-form">
                 @csrf
             </form>
