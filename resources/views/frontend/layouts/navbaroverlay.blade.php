@@ -16,8 +16,8 @@
                 @csrf
             </form>
         @else
-            <a href="/register">Register</a>
-            <a href="{{route('login')}}">Login</a>
+            <a href="/register">{{ __('message.register') }}</a>
+            <a href="{{route('login')}}">{{ __('message.login') }}</a>
         @endif
     </div>
 </div>

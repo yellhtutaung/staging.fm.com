@@ -11,6 +11,8 @@ return [
     'profile' => 'Profile',
     'contact' => 'Contact',
     'logout' => 'Logout',
+    'register' => 'Register',
+    'login' => 'Login',
     'cart_question' => 'Are you after fresh fruits and vegetables delivery?',
     'order_click' => 'Please click below to order',
     'go_shoping' => 'Go to Shopping',
