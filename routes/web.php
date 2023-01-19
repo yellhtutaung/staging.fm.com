@@ -17,7 +17,7 @@ use App\Http\Controllers\UniversalController;
 use App\Http\Middleware\CheckAdmin;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\AdminLoginController;
-use App\Http\Controllers\Auth\RegisterController;
+//use App\Http\Controllers\Auth\RegisterController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes

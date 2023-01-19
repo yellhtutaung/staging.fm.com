@@ -35,7 +35,7 @@
                         <div class="row">
                             <div class="col-md-6 input-wrapper">
                                 <input type="text" class="input @error('name') is-invalid @enderror" name="name"
-                                       value="Win Maung{{ old('name') }}" id="name" placeholder="Enter your name"
+                                       value="{{ old('name') }}" id="name" placeholder="Enter your name"
                                        autofocus>
                                 @error('name')
                                 <span class="invalid-feedback" role="alert">
@@ -45,7 +45,7 @@
                             </div>
                             <div class="col-md-6 input-wrapper">
                                 <input type="email" class="input @error('email') is-invalid @enderror"
-                                       name="email" value="winmg4@gmail.com{{ old('email') }}" placeholder="Enter your email"
+                                       name="email" value="{{ old('email') }}" placeholder="Enter your email"
                                        id="email" >
                                 @error('email')
                                 <span class="invalid-feedback" role="alert">
@@ -55,7 +55,7 @@
                             </div>
                             <div class="col-md-6 input-wrapper">
                                 <input type="number" class="input @error('phone') is-invalid @enderror"
-                                       name="phone" value="09975611358{{ old('phone') }}" placeholder="Enter your phone number"
+                                       name="phone" value="{{ old('phone') }}" placeholder="Enter your phone number"
                                        id="phone" >
                                 @error('phone')
                                 <span class="invalid-feedback" role="alert">
