@@ -17,8 +17,13 @@
                     @endif
                     <form method="POST" action="{{ route('checkForgetOtp') }}" class="login body-fm">
                         @csrf
-                        @php $phone = session('phone'); @endphp
-
+                        @php $phone = session('phone');
+//                            if(!isset($phone)){
+//                                    $backRoute = route('password/reset');
+//                                    header("Location: $backRoute");
+//                                    exit();
+//                                }
+                            @endphp
                         <input type="hidden" data-user-phone="{{$phone}}" class="user-phone" name="phone" value="{{$phone}}" />
                         <input type="hidden" name="password" value="123456" />
                         <div class="input-wrapper my-4">

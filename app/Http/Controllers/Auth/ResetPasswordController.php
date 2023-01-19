@@ -115,7 +115,7 @@ class ResetPasswordController extends Controller
             );
             if ($validator->fails()) {
                 $message = $validator->errors();
-                return  redirect()->back()->withErrors($message);
+                return  redirect()->back()->withErrors($message)->with('phone',$In->phone);
             } else {
                 $user=User::where('phone', $In->phone)->first();
                 if (!$user) {
@@ -135,11 +135,11 @@ class ResetPasswordController extends Controller
                         return redirect()->route('change-password')->with('forgot_bot',1);
                     }
                 } else {
-                    return  redirect()->back()->withErrors(['otp'=>'Your OTP is Wrong']);
+                    return  redirect()->back()->withErrors(['otp'=>'Your OTP is Wrong'])->with('phone',$In->phone);
                 }
             }
         }catch (\Exception $errorMessage) {
-            return  redirect()->back()->withErrors($errorMessage);
+            return  redirect()->back()->withErrors($errorMessage)->with('phone',$In->phone);
         }
     }
 
