@@ -1,20 +1,12 @@
-@section('title', 'Partnerships')
-<?php echo View::make ('frontend.layouts.head'); ?>
+@extends('frontend.layouts.app')
 
-<link rel="stylesheet" href="{{asset('frontend-assets/css/partnerships/ourpartnerships.css')}}"/>
+@section('title', 'Fresh Moe')
 
-<style>
+@section('extra-css')
+    <link rel="stylesheet" href="{{asset('frontend-assets/css/partnerships/ourpartnerships.css')}}"/>
+@endsection
 
-</style>
-
-</head>
-<body>
-
-{{--navbar layout start--}}
-<?php echo View::make ('frontend.layouts.navbar'); ?>
-{{--navbar layout end--}}
-
-<?php echo View::make('frontend.layouts.go_to_shop') ?>
+@section('content')
 
 {{--our partnerships start--}}
 <div class="container-fluid" id="partners">
@@ -53,9 +45,4 @@
 {{--footer end--}}
 
 
-<?php echo View::make ('frontend.layouts.aos'); ?>
-
-<script src="{{asset('frontend-assets/js/app.js')}}"></script>
-
-<body/>
-<html/>
+@endsection

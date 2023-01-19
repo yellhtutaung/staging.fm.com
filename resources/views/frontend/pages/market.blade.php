@@ -1,30 +1,27 @@
-@section('title', 'Target Market')
-<?php echo View::make ('frontend.layouts.head'); ?>
+@extends('frontend.layouts.app')
 
-<link rel="stylesheet" href="{{asset('frontend-assets/css/markets/targetMarkets.css')}}"/>
+@section('title', 'Fresh Moe')
 
-<style>
-    .target_banner {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../../frontend-assets/images/target_market.jpg");
-        margin-top: 140px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-    }
-</style>
+@section('extra-css')
+    <link rel="stylesheet" href="{{asset('frontend-assets/css/markets/targetMarkets.css')}}"/>
 
-</head>
-<body>
+    <style>
+        .target_banner {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../../frontend-assets/images/target_market.jpg");
+            margin-top: 140px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    </style>
+@endsection
 
-{{--navbar layout start--}}
-<?php echo View::make ('frontend.layouts.navbar'); ?>
-{{--navbar layout end--}}
+@section('content')
 
-<?php echo View::make('frontend.layouts.go_to_shop') ?>
 
 {{--target market banner start--}}
 <div
@@ -103,9 +100,4 @@
 {{--footer end--}}
 
 
-<?php echo View::make ('frontend.layouts.aos'); ?>
-
-<script src="{{asset('frontend-assets/js/app.js')}}"></script>
-
-<body/>
-<html/>
+@endsection
