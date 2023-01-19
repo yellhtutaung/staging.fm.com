@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\ResetPasswordController;
 use App\Http\Controllers\Backend\DashboardController;
 use App\Http\Controllers\Backend\AdminAuthController;
@@ -28,6 +29,8 @@ use App\Http\Controllers\Auth\AdminLoginController;
 |
 */
 
+
+
 Route::get('/', [PagesController::class, 'home'])->name('mainPage');
 Route::get('employees', [PagesController::class, 'employees']);
 Route::get('client', [PagesController::class, 'client']);
@@ -36,11 +39,14 @@ Route::post('contactToFm', [PagesController::class, 'contactToFm'])->name('conta
 Route::get('target-market', [PagesController::class, 'market']);
 Route::get('coldchain-transport', [PagesController::class, 'coldchain']);
 Route::get('employees/job', [PagesController::class, 'job']);
-Route::get('/register', [PagesController::class, 'register']);
+//Route::get('/register', [PagesController::class, 'register'])->name('userRegister');
 Route::get('login', [AdminAuthController::class, 'login'])->name('login');
 Route::post('password/forgot', [ResetPasswordController::class, 'customForgotPassword'])->name('customForgotPassword');
 Route::get('otp/check', [ResetPasswordController::class, 'checkOtp'])->name('checkOtp');
 Route::post('checkForgetOtp', [ResetPasswordController::class, 'checkForgetOtp'])->name('checkForgetOtp');
+Route::post('saveRegister', [RegisterController::class, 'saveRegister'])->name('saveRegister');
+Route::post('customRegister', [RegisterController::class, 'customRegister'])->name('customRegister');
+Route::get('register/otp/check', [RegisterController::class, 'registerOtpCheck'])->name('registerOtpCheck');
 
 //Test Route
 Route::get('test', [TestController::class, 'test'])->name('test');
@@ -102,6 +108,7 @@ Route::middleware([CheckAdmin::class])->prefix('admin')->group(function ()
     });
 
 }); // For admin only
+
 
 // User auth
 Auth::routes();

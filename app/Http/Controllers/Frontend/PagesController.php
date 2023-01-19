@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use App\Mail\ContactUs;
 use App\Models\ContactForm;
+use App\Models\Country;
 use App\Models\FruitPriceList;
 use App\Models\FruitPriceListTransition;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -50,10 +51,13 @@ class PagesController extends Controller
         return view('frontend.pages.job');
     }
 
-    public function register ()
-    {
-        return view('frontend.auth.register');
-    }
+//    public function register ()
+//    {
+//        $countries = Country::where('hide_show',1)->where('status',1)->where('level', 1)->get();
+//        $cities = Country::where('hide_show',1)->where('status', 1)->where('level', 2)->get();
+//        return view('auth.register',compact('countries','cities'));
+//        return abort(404);
+//    }
 
     public function priceList()
     {

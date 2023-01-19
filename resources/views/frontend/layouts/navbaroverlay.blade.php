@@ -11,7 +11,7 @@
         @if(auth()->check())
             <a href='{{route('priceList')}}' >{{ __('message.price_list') }}</a>
             <a href='{{route('profile')}}' >{{ __('message.profile') }}</a>
-            <a href="javascript:void(0)" id="logout-btn">{{ __('message.partnerships') }}</a>
+            <a href="javascript:void(0)" id="logout-btn">{{ __('message.logout') }}</a>
             <form action="{{ route('logout') }}" method="POST" id="logout-form">
                 @csrf
             </form>

@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('username')->unique()->nullable(); // autogenerate name id
             $table->integer('role')->default(0); // zero is visitor register users
             $table->string('phone')->unique()->nullable();
-            $table->string('email')->unique();
+            $table->string('email')->unique()->nullable();
             $table->string('password');
             $table->timestamp('email_verified_at')->nullable();
             $table->integer('is_ban')->default(1); // zero is banded user

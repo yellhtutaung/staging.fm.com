@@ -25,7 +25,7 @@
                     <div class="logo d-lg-none d-flex justify-content-center mb-2">
                         <img src="{{asset('freshmoe_logo.png')}}" alt="">
                     </div>
-                    <form method="POST" action="{{ route('register') }}" class="body-fm ">
+                    <form method="POST" action="{{ route('customRegister') }}" class="body-fm ">
                         @csrf
                         <div class="main_title mb-3">
                             <h5 class="title-fm text-black mb-2">Sign Up</h5>
@@ -35,7 +35,7 @@
                         <div class="row">
                             <div class="col-md-6 input-wrapper">
                                 <input type="text" class="input @error('name') is-invalid @enderror" name="name"
-                                       value="{{ old('name') }}" id="name" placeholder="Enter your name"
+                                       value="Win Maung{{ old('name') }}" id="name" placeholder="Enter your name"
                                        autofocus>
                                 @error('name')
                                 <span class="invalid-feedback" role="alert">
@@ -45,7 +45,7 @@
                             </div>
                             <div class="col-md-6 input-wrapper">
                                 <input type="email" class="input @error('email') is-invalid @enderror"
-                                       name="email" value="{{ old('email') }}" placeholder="Enter your email"
+                                       name="email" value="winmg4@gmail.com{{ old('email') }}" placeholder="Enter your email"
                                        id="email" >
                                 @error('email')
                                 <span class="invalid-feedback" role="alert">
@@ -55,7 +55,7 @@
                             </div>
                             <div class="col-md-6 input-wrapper">
                                 <input type="number" class="input @error('phone') is-invalid @enderror"
-                                       name="phone" value="{{ old('phone') }}" placeholder="Enter your phone number"
+                                       name="phone" value="09975611358{{ old('phone') }}" placeholder="Enter your phone number"
                                        id="phone" >
                                 @error('phone')
                                 <span class="invalid-feedback" role="alert">
@@ -65,7 +65,7 @@
                             </div>
                             <div class="col-md-6 input-wrapper">
                                 <input type="text" class="input @error('shop_name') is-invalid @enderror"
-                                       name="shop_name" value="{{ old('shop_name') }}" placeholder="Enter your shop name"
+                                       name="shop_name" value="Melon Win{{ old('shop_name') }}" placeholder="Enter your shop name"
                                        id="shop" >
                                 @error('shop_name')
                                 <span class="invalid-feedback" role="alert">
@@ -124,7 +124,7 @@
                                 @enderror
                             </div>
                             <div class="col-md-6 input-wrapper">
-                                <input type="password" class="input @error('password') is-invalid @enderror"
+                                <input type="password" value="123456" class="input @error('password') is-invalid @enderror"
                                        name="password" placeholder="Enter your password"
                                        id="password" >
                                 @error('password')
@@ -134,7 +134,7 @@
                                 @enderror
                             </div>
                             <div class="col-md-6 input-wrapper">
-                                <input type="password" class="input @error('password') is-invalid @enderror"
+                                <input type="password" value="123456" class="input @error('password') is-invalid @enderror"
                                        name="password_confirmation" placeholder="Enter confirm password"
                                        id="confirm-password" >
                             </div>

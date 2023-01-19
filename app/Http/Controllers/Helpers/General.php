@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Helpers;
+use App\Models\OtpVerify;
 use GuzzleHttp\Client;
 use Illuminate\Support\Str;
 trait General
@@ -8,6 +9,21 @@ trait General
     public static function strGenerator($no)
     {
         return   Str::random($no); // how many str do u want to use
+    }
+
+    public function generateOTP($incomingPhone)
+    {
+        $generateOtp = mt_rand(100000,999999);
+        $otpDb = new OtpVerify();
+        $otpDb->phone = $incomingPhone;
+        $otpDb->otp = $generateOtp;
+        $otpDb->is_verify = 0;
+        if ($otpDb->save())
+        {
+            return $generateOtp;
+        }else{
+            return false;
+        }
     }
 
     public static function chrGenerator($prefix)
