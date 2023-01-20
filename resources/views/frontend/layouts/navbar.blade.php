@@ -40,8 +40,8 @@
                             <a href='{{route('profile')}}' >{{ __('message.profile') }}</a>
                         @else
                             <a href="#it_products">{{ __('message.web_and_app') }}</a>
+                            <a href="{{route('mainPage')}}#mission">{{ __('message.mission') }}</a>
                         @endif
-                        <a href="{{route('mainPage')}}#mission">{{ __('message.mission') }}</a>
                         <a href="{{route('mainPage')}}#contact">{{ __('message.contact') }}</a>
                     </li>
                     <li>
