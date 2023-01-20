@@ -2,30 +2,14 @@
 @section('title', 'Register')
 @section('content')
 
-<div class="user-register" >
+    <div class="user-register auth_bg container-fluid" >
         <div class="row">
-            <div class="col-lg-5 p-2 d-none d-lg-block">
-                <div class="left">
-                    <div class="logo">
-                        <img src="{{asset('freshmoe_logo_white.png')}}" alt="">
-                    </div>
-
-                    <p class="text title-fm">
-                        Eat fresh food for your health! For fresh fruits and vegetables, <br> remember <b>Fresh Moe</b>
-                    </p>
-
-                    <div class="shopping_app_img">
-                        <img src="{{asset('img/shopping_app.svg')}}" alt="">
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-6 p-2">
-                <div class="right d-flex flex-column justify-content-center h-100">
+            <div class="col-lg-6 p-3">
+                <div class="form-content  p-3 d-flex flex-column justify-content-center h-100">
                     <div class="logo d-lg-none d-flex justify-content-center mb-2">
                         <img src="{{asset('freshmoe_logo.png')}}" alt="">
                     </div>
-                    <form method="POST" action="{{ route('customRegister') }}" class="body-fm ">
+                    <form method="POST" action="{{ route('register') }}" class="body-fm ">
                         @csrf
                         <div class="main_title mb-3">
                             <h5 class="title-fm text-black mb-2">Sign Up</h5>
@@ -124,7 +108,7 @@
                                 @enderror
                             </div>
                             <div class="col-md-6 input-wrapper">
-                                <input type="password" value="" class="input @error('password') is-invalid @enderror"
+                                <input type="password" class="input @error('password') is-invalid @enderror"
                                        name="password" placeholder="Enter your password"
                                        id="password" >
                                 @error('password')
@@ -134,7 +118,7 @@
                                 @enderror
                             </div>
                             <div class="col-md-6 input-wrapper">
-                                <input type="password" value="" class="input @error('password') is-invalid @enderror"
+                                <input type="password" class="input @error('password') is-invalid @enderror"
                                        name="password_confirmation" placeholder="Enter confirm password"
                                        id="confirm-password" >
                             </div>
@@ -155,8 +139,8 @@
 
                 </div>
             </div>
+        </div>
     </div>
-</div>
 <script>
     $(document).ready(function () {
        $('.js-example-basic-single').select2();
