@@ -62,17 +62,17 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \Illuminate\Contracts\Validation\Validator
      */
-    protected function validator(array $data)
-    {
-        $validator = Validator::make($data, [
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['nullable', 'string', 'email', 'max:255', 'unique:users'],
-            'phone' => ['required', 'unique:users'],
-            'password' => ['required', 'string', 'min:6', 'confirmed'],
-        ]);
-
-        return $validator;
-    }
+//    protected function validator(array $data)
+//    {
+//        $validator = Validator::make($data, [
+//            'name' => ['required', 'string', 'max:255'],
+//            'email' => ['nullable', 'string', 'email', 'max:255', 'unique:users'],
+//            'phone' => ['required', 'unique:users'],
+//            'password' => ['required', 'string', 'min:6', 'confirmed'],
+//        ]);
+//
+//        return $validator;
+//    }
 
     /**
      * Create a new user instance after a valid registration.
@@ -80,26 +80,26 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \App\Models\User
      */
-    protected function create(array $data)
-    {
-        $user = new User();
-        $user->name = $data['name'];
-        $user->username = str_shuffle(md5(date("dhis")));
-        $user->email = $data['email'];
-        $user->phone = $data['phone'];
-        $user->shop_name = $data['shop_name'];
-        $user->country_id = $data['country_id'];
-        $user->city_id = isset($data['city_id']) ? $data['city_id'] : null;
-        $user->zip_code = $data['zip_code'];
-        $user->postal_code = $data['postal_code'];
-        $user->address = $data['address'];
-        $user->password = Hash::make($data['password']);
-        $user->token = str_shuffle(md5(date("ymdhis")));
-
-        $user->save();
-        return $user;
-
-    }
+//    protected function create(array $data)
+//    {
+//        $user = new User();
+//        $user->name = $data['name'];
+//        $user->username = str_shuffle(md5(date("dhis")));
+//        $user->email = $data['email'];
+//        $user->phone = $data['phone'];
+//        $user->shop_name = $data['shop_name'];
+//        $user->country_id = $data['country_id'];
+//        $user->city_id = isset($data['city_id']) ? $data['city_id'] : null;
+//        $user->zip_code = $data['zip_code'];
+//        $user->postal_code = $data['postal_code'];
+//        $user->address = $data['address'];
+//        $user->password = Hash::make($data['password']);
+//        $user->token = str_shuffle(md5(date("ymdhis")));
+//
+//        $user->save();
+//        return $user;
+//
+//    }
 
     public function saveRegister(Request $In)
     {

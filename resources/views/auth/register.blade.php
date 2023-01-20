@@ -9,7 +9,7 @@
                     <div class="logo d-lg-none d-flex justify-content-center mb-2">
                         <img src="{{asset('freshmoe_logo.png')}}" alt="">
                     </div>
-                    <form method="POST" action="{{ route('register') }}" class="body-fm ">
+                    <form method="POST" action="{{ route('customRegister') }}" class="body-fm ">
                         @csrf
                         <div class="main_title mb-3">
                             <h5 class="title-fm text-black mb-2">Sign Up</h5>
