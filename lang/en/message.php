@@ -88,6 +88,48 @@ return [
 
 
 
+    // ----------------------- Price List ---------------------------------
+
+    'realtime_price_list' => 'Realtime price list of FreshMoe',
+    'fruits' => 'Fruits',
+
+
+    // ----------------------- Price logs ------------------------------
+
+    'previous_price_list' => 'Previous price list of',
+
+
+
+    // ----------------------- Profile ---------------------------------
+
+    'my_profile' => 'My Profile',
+    'edit_profile' => 'Edit Profile',
+    'change_password' => 'Change Password',
+
+    'old_password' => 'Old Password',
+    'new_password' =>  'New Password',
+    'confirm_password' => 'Confirm Password',
+    'update' => 'Update',
+
+    'personal_information' => 'Personal Information',
+    'full_name' => 'Full Name',
+    'email' => 'Email',
+    'username' => 'Username',
+    'phone_number' => 'Phone Number',
+    'shop_name' => 'Shop Name',
+    'country' => 'Country',
+    'city' => 'City',
+    'postal_code' => 'Postal Code',
+    'zip_code' => 'Zip Code',
+    'address' => 'Address',
+
+    'update_profile' => 'Update Profile',
+    'current_country' => 'Current Country',
+    'current_city' => 'Current City',
+
+    'logout_confirm' => 'Are you sure, you want to logout?',
+    'cancel_btn' => 'Cancel',
+    'confirm_btn' => 'Confirm',
 
 
 ];

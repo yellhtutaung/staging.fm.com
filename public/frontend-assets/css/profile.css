@@ -114,12 +114,34 @@ a:hover {
     height: 100% !important;
 }
 
-    /* ------------------- avatar profile ------------------ */
+/* ------------------- avatar profile ------------------ */
 
 .avatar i {
     font-size: 100px;
     margin: 10px;
     color: #5bba47;
+}
+
+.profile-card .nav-link span {
+    font-size: 18px;
+}
+
+@media only screen and (max-width: 992px) and (min-width: 768px)  {
+    .avatar i {
+        font-size: 60px;
+    }
+
+    .profile-card .name {
+        font-size: 13px;
+    }
+
+    .profile-card .nav-link i {
+        font-size: 12px;
+    }
+
+    .profile-card .nav-link span {
+        font-size: 14px;
+    }
 }
 
 /* -------------------------- Logout --------------------------------- */

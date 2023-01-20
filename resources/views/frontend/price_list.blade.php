@@ -43,12 +43,12 @@
         <div class="row mb-5">
             <div class="col-sm-12 col-md-10 offset-md-1">
                 <div class="main_title">
-                    <h3 class="text-black title-fm">Realtime price list of FreshMoe</h3>
+                    <h3 class="text-black title-fm">{{ __('message.realtime_price_list') }}</h3>
                     <span class="main_title_underline bg-dark"></span>
                 </div>
                 <div class="animate__animated animate__fadeIn">
                     <div class="card-header form-header-border border-0 theme_bg ">
-                        <h5 class="card-title text-white"> Fruits</h5>
+                        <h5 class="card-title text-white"> {{ __('message.fruits') }}</h5>
                     </div>
                     <div class="card table-responsive border-0 shadow-sm card-body">
                         <table id="example" class="table table-responsive table-hover table-striped" style="width:100%">
