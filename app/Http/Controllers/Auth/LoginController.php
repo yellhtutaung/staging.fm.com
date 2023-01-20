@@ -51,6 +51,9 @@ class LoginController extends Controller
         $formData = $request->validate([
             'key' => 'required',
             'password' => 'required',
+        ], [
+            'key.required' => 'Please enter your email or phone number or username.',
+            'password.required' => 'Please enter your password.'
         ]);
 
         $key = $request->key;
