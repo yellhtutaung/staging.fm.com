@@ -49,7 +49,7 @@
     <div class="row">
         <div class="col-sm-12 col-md-10 offset-md-1">
             <div class="main_title d-inline-block ">
-                <h3 class="text-black title-fm animate__animated animate__slideInLeft ">Previous price list of {{$priceList->name}}</h3>
+                <h3 class="text-black title-fm animate__animated animate__slideInLeft ">{{ __('message.previous_price_list') }} {{$priceList->name}}</h3>
                 <span class="main_title_underline w-75 bg-dark"></span>
             </div>
             <div class="d-inline-block ">

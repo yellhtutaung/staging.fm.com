@@ -17,8 +17,8 @@
                         @csrf
                         <div class="input-wrapper">
                             <label for="email" class="form-label">Email</label>
-                            <input type="email" class="input @error('email') is-invalid @enderror" name="email" placeholder="Enter your email" value="{{ old('email') }}" id="email" autocomplete="off" autofocus>
-                            @error('email')
+                            <input type="email" class="input @error('key') is-invalid @enderror" name="key" placeholder="Enter your email" value="{{ old('key') }}" id="email" autocomplete="off" autofocus>
+                            @error('key')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
                             </span>
