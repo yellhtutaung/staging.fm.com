@@ -103,10 +103,10 @@ return [
 
     'my_profile' => 'ပရိုဖိုင်',
     'edit_profile' => 'ပရိုဖိုင်ပြုပြင်မည်',
-    'change_password' => 'ပတ်စ်ဝေါ့ပြောင်းမည်',
-    'old_password' => 'ပတ်စ်ဝေါ့အဟောင်း',
-    'new_password' =>  'ပတ်စ်ဝေါ့အသစ်',
-    'confirm_password' => 'ပတ်စ်ဝေါ့အသစ်ပြန်ထည့်ပါ',
+    'change_password' => 'စကားဝှက်ပြောင်းမည်',
+    'old_password' => 'စကားဝှက်အဟောင်း',
+    'new_password' =>  'စကားဝှက်အသစ်',
+    'confirm_password' => 'စကားဝှက်အသစ်ပြန်ထည့်ပါ',
     'update' => 'အပ်ဒိပ်လုပ်မည်',
 
     'personal_information' => 'ကိုယ်ပိုင်သတင်းအချက်အလက်များ',
