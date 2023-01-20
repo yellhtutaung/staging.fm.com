@@ -7,7 +7,7 @@
         <a href="" class="btn theme_bg text-white my-3" >ADD +</a>
 
         <div class="card-header form-header-border border-0 theme_bg ">
-            <h5 class="card-title text-white"> Fruits</h5>
+            <h5 class="card-title text-white"> User Information</h5>
         </div>
         <div class="card table-responsive border-0 shadow-sm card-body animate__animated animate__fadeIn">
             <table id="example" class="table table-responsive table-hover table-striped" >

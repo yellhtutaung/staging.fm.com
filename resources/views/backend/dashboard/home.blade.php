@@ -1,9 +1,9 @@
 @extends('backend.layouts.app')
 @section('title', 'Dashboard')
 <style>
-    .fs-50
+    .fs-80
     {
-        font-size: 50px!important;
+        font-size: 80px!important;
     }
 </style>
 @section('content')
@@ -16,34 +16,47 @@
 
             <div class="row g-2 mt-3">
                 <div class="col-lg-6 col-xl-3">
-                    <div class="info-box">
-                        <span class="icon-container"><i class="fa-solid fa-users"></i></span>
-                        <div class="info-box-content">
-                            <span class="info-box-text dashboard_box_text mb-2">Today New Users</span>
-                            <span class="info-box-number dashboard_box_text-small">{{$user_count}}</span>
+                    <div class="card animate__animated animate__fadeIn shadow-lg p-3">
+                        <div class="row">
+                            <div class="col-4">
+                                <span class="theme_green_color material-symbols-outlined fs-80">local_florist</span>
+                            </div>
+                            <div class="col-8">
+                                <h4>Fruits & Vegetables</h4>
+                                <h4>{{$fruitPrice}}</h4>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-lg-6 col-xl-3">
-                    <div class="info-box">
-                        <span class="icon-container"><i class="fa-solid fa-users"></i></span>
-                        <div class="info-box-content">
-                            <span class="info-box-text dashboard_box_text mb-2">Today New Users</span>
-                            <span class="info-box-number dashboard_box_text-small">0</span>
+                    <div class="card animate__animated animate__fadeIn shadow-lg p-3">
+                        <div class="row">
+                            <div class="col-4">
+                                <span class="text-danger material-symbols-outlined fs-80">person</span>
+                            </div>
+                            <div class="col-8">
+                                <h4>Register Users</h4>
+                                <h4>{{$user_count}} </h4>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-lg-6 col-xl-3">
-                    <div class="info-box">
-                        <span class="icon-container"><i class="fas fa-shopping-basket"></i></span>
-                        <div class="info-box-content">
-                            <span class="info-box-text dashboard_box_text mb-2">Today Sales Amount</span>
-                            <span class="info-box-number dashboard_box_text-small">0 /ks</span>
+                    <div class="card animate__animated animate__fadeIn shadow-lg p-3">
+                        <div class="row">
+                            <div class="col-4">
+                                <span class="material-symbols-outlined fs-80">mail</span>
+                            </div>
+                            <div class="col-8">
+                                <h4>Contact SMS</h4>
+                                <h4>{{$contactSms}} </h4>
+                            </div>
                         </div>
                     </div>
                 </div>
+
             </div>
 
         </div>

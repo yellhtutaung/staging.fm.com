@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
+use App\Models\ContactForm;
+use App\Models\FruitPriceList;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -17,7 +19,9 @@ class DashboardController extends Controller
 
     public function home () {
         $user_count = User::all()->count();
-        return view('backend.dashboard.home', compact('user_count'));
+        $contactSms = ContactForm::all()->count();
+        $fruitPrice = FruitPriceList::all()->count();
+        return view('backend.dashboard.home', compact('user_count','contactSms','fruitPrice'));
     }
 
     public function job () {
