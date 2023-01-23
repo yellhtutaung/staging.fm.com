@@ -15,11 +15,12 @@
         <div>
 
             <div class="row g-2 mt-3">
-                <div class="col-lg-6 col-xl-3">
+                <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3">
                     <div class="card animate__animated animate__fadeIn shadow-lg p-3">
                         <div class="row">
                             <div class="col-4">
-                                <span class="theme_green_color material-symbols-outlined fs-80">local_florist</span>
+                                <img src="{{asset('backend-assets/images/dashboard/f_v.png')}}" style="width: 79px !important;height: 79px !important;" alt="">
+{{--                                <span class="theme_green_color material-symbols-outlined fs-80">local_florist</span>--}}
                             </div>
                             <div class="col-8">
                                 <h4>Fruits & Vegetables</h4>
@@ -29,11 +30,12 @@
                     </div>
                 </div>
 
-                <div class="col-lg-6 col-xl-3">
+                <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3">
                     <div class="card animate__animated animate__fadeIn shadow-lg p-3">
                         <div class="row">
                             <div class="col-4">
-                                <span class="text-danger material-symbols-outlined fs-80">person</span>
+                                <img src="{{asset('backend-assets/images/dashboard/user.png')}}" style="width: 79px !important;height: 79px !important;" alt="">
+{{--                                <span class="theme_green_color material-symbols-outlined fs-80">person</span>--}}
                             </div>
                             <div class="col-8">
                                 <h4>Register Users</h4>
@@ -43,11 +45,12 @@
                     </div>
                 </div>
 
-                <div class="col-lg-6 col-xl-3">
+                <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3">
                     <div class="card animate__animated animate__fadeIn shadow-lg p-3">
                         <div class="row">
                             <div class="col-4">
-                                <span class="material-symbols-outlined fs-80">mail</span>
+                                <img src="{{asset('backend-assets/images/dashboard/sms.png')}}" style="width: 79px !important;height: 79px !important;" alt="">
+{{--                                <span class="theme_green_color material-symbols-outlined fs-80">mail</span>--}}
                             </div>
                             <div class="col-8">
                                 <h4>Contact SMS</h4>
