@@ -38,8 +38,6 @@
     {{--    global css --}}
     <link rel="stylesheet" href="{{asset('frontend-assets/css/global.css')}}">
     <link rel="stylesheet" href="{{asset('backend-assets/css/login.css')}}">
-    {{-- <link rel="stylesheet" href="{{asset('frontend-assets/css/auth/login.css')}}"> --}}
-    {{-- <link rel="stylesheet" href="{{asset('frontend-assets/css/auth/register.css')}}"> --}}
     <link rel="stylesheet" href="{{asset('frontend-assets/css/auth.css')}}">
 
     {{--    select2--}}

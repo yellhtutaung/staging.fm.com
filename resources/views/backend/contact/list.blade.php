@@ -67,10 +67,11 @@
             $('.js-example-basic-multiple').select2();
         });
         function viewMessage(message) {
+            let msg = message.replace(/</g, "&lt;").replace(/>/g, "&gt;");
             Swal.fire({
                 title: 'Message',
-                icon: 'info',
-                html: `<p class="lh-lg">${message}</p>`,
+                // icon: 'info',
+                html: `<p class="lh-lg">${msg}</p>`,
                 showCloseButton: false,
                 showCancelButton: false,
                 showConfirmButton: false,

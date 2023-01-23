@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 class ContactController extends Controller
 {
     public function contactMessageList () {
-        $records = ContactForm::all();
+        $records = ContactForm::orderBy('created_at', 'DESC')->get();
         return view('backend.contact.list', compact('records'));
     }
 }
