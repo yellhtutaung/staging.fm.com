@@ -15,7 +15,7 @@
         <div>
 
             <div class="row g-2 mt-3">
-                <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3">
+                <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4">
                     <div class="card animate__animated animate__fadeIn shadow-lg p-3">
                         <div class="row">
                             <div class="col-4">
@@ -30,7 +30,7 @@
                     </div>
                 </div>
 
-                <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3">
+                <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4">
                     <div class="card animate__animated animate__fadeIn shadow-lg p-3">
                         <div class="row">
                             <div class="col-4">
@@ -45,7 +45,7 @@
                     </div>
                 </div>
 
-                <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3">
+                <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4">
                     <div class="card animate__animated animate__fadeIn shadow-lg p-3">
                         <div class="row">
                             <div class="col-4">
