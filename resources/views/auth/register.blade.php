@@ -3,7 +3,7 @@
 @section('content')
 
     <div class="user-register auth_bg container-fluid" >
-        <div class="row">
+        <div class="row justify-content-end">
             <div class="col-lg-6 p-3">
                 <div class="form-content  p-3 d-flex flex-column justify-content-center h-100">
                     <div class="logo d-lg-none d-flex justify-content-center mb-2">
@@ -16,7 +16,7 @@
                             <span class="main_title_underline bg-dark"></span>
                         </div>
 
-                        <div class="row">
+                        <div class="row align-items-stretch">
                             <div class="col-md-6 input-wrapper">
                                 <input type="text" class="input @error('name') is-invalid @enderror" name="name"
                                        value="{{ old('name') }}" id="name" placeholder="Enter your name"

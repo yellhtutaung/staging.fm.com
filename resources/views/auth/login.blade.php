@@ -3,7 +3,7 @@
 @section('content')
 
     <div class="user-login auth_bg container-fluid">
-        <div class="row">
+        <div class="row justify-content-end">
             <div class="col-lg-6 p-3">
                 <div class="form-content  p-3 d-flex flex-column justify-content-center h-100">
                     <div class="logo d-lg-none d-flex justify-content-center mb-2">
