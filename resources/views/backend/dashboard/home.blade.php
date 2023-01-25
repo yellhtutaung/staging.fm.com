@@ -16,7 +16,7 @@
 
             <div class="row g-2 mt-3">
                 <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4">
-                    <div class="card animate__animated animate__fadeIn shadow-lg p-3">
+                    <a href="{{route('home')}}" class="card text-decoration-none text-black animate__animated animate__fadeIn shadow-lg p-3">
                         <div class="row">
                             <div class="col-4">
                                 <img src="{{asset('backend-assets/images/dashboard/f_v.png')}}" style="width: 79px !important;height: 79px !important;" alt="">
@@ -27,11 +27,11 @@
                                 <h4>{{$fruitPrice}}</h4>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
 
                 <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4">
-                    <div class="card animate__animated animate__fadeIn shadow-lg p-3">
+                    <a href="{{route('userList')}}" class="card text-decoration-none text-black animate__animated animate__fadeIn shadow-lg p-3">
                         <div class="row">
                             <div class="col-4">
                                 <img src="{{asset('backend-assets/images/dashboard/user.png')}}" style="width: 79px !important;height: 79px !important;" alt="">
@@ -42,11 +42,11 @@
                                 <h4>{{$user_count}} </h4>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
 
                 <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4">
-                    <div class="card animate__animated animate__fadeIn shadow-lg p-3">
+                    <a href="{{route('contactMessageList')}}" class="card text-decoration-none text-black animate__animated animate__fadeIn shadow-lg p-3">
                         <div class="row">
                             <div class="col-4">
                                 <img src="{{asset('backend-assets/images/dashboard/sms.png')}}" style="width: 79px !important;height: 79px !important;" alt="">
@@ -57,7 +57,7 @@
                                 <h4>{{$contactSms}} </h4>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
 
             </div>
