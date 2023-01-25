@@ -32,7 +32,7 @@
                 <tbody>
                 @foreach($fruitPriceList as $Index => $fruits)
                     <tr>
-                        <td>{{$Index+1}}4</td>
+                        <td>{{$Index+1}}</td>
                         <td><span class="badge bg-primary shadow-lg">{{$fruits->name_id}}</span></td>
                         <td>{{$fruits->name}}</td>
                         <td><img class="avator-rounded" src="{{asset("backend-assets/uploads/fruits/$fruits->id/$fruits->images")}}" alt="{{$fruits->name}}"></td>
