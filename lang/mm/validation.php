@@ -31,8 +31,8 @@ return [
         'string' => 'The :attribute must be between :min and :max characters.',
     ],
     'boolean' => 'The :attribute field must be true or false.',
-    'confirmed' => 'The :attribute confirmation does not match.',
-    'current_password' => 'The password is incorrect.',
+    'confirmed' => ':attribute ကိုက်ညီစွာဖြည့်သွင်းရမည်',
+    'current_password' => 'စကားဝှက် မှားယွင်းနေပါသည်။',
     'date' => 'The :attribute is not a valid date.',
     'date_equals' => 'The :attribute must be a date equal to :date.',
     'date_format' => 'The :attribute does not match the format :format.',
@@ -85,19 +85,19 @@ return [
     ],
     'mac_address' => 'The :attribute must be a valid MAC address.',
     'max' => [
-        'array' => 'The :attribute must not have more than :max items.',
-        'file' => 'The :attribute must not be greater than :max kilobytes.',
-        'numeric' => 'The :attribute must not be greater than :max.',
-        'string' => 'The :attribute must not be greater than :max characters.',
+        'numeric' => 'The :attribute may not be greater than :max.',
+        'file'    => ':attribute :max kilobytes သတ်မှတ်ထားသောဆိုဒ်ထက်မကြီးရပါ',
+        'string'  => ':attribute သည် အများဆုံး :max လုံးဖြည့်သွင်းရပါမည်',
+        'array'   => 'The :attribute may not have more than :max items.',
     ],
     'max_digits' => 'The :attribute must not have more than :max digits.',
     'mimes' => 'The :attribute must be a file of type: :values.',
     'mimetypes' => 'The :attribute must be a file of type: :values.',
     'min' => [
-        'array' => 'The :attribute must have at least :min items.',
-        'file' => 'The :attribute must be at least :min kilobytes.',
         'numeric' => 'The :attribute must be at least :min.',
-        'string' => 'The :attribute must be at least :min characters.',
+        'file'    => 'The :attribute must be at least :min kilobytes.',
+        'string' => ':attribute သည် အနည်းဆုံး :min လုံးဖြည့်သွင်းရပါမည်',
+        'array'   => 'The :attribute must have at least :min items.',
     ],
     'min_digits' => 'The :attribute must have at least :min digits.',
     'multiple_of' => 'The :attribute must be a multiple of :value.',
@@ -117,7 +117,7 @@ return [
     'prohibited_unless' => 'The :attribute field is prohibited unless :other is in :values.',
     'prohibits' => 'The :attribute field prohibits :other from being present.',
     'regex' => 'The :attribute format is invalid.',
-    'required' => 'The :attribute field is required.',
+    'required' => ':attribute ထည့်ရန်လိုအပ်ပါသည်။',
     'required_array_keys' => 'The :attribute field must contain entries for: :values.',
     'required_if' => 'The :attribute field is required when :other is :value.',
     'required_if_accepted' => 'The :attribute field is required when :other is accepted.',
@@ -136,7 +136,7 @@ return [
     'starts_with' => 'The :attribute must start with one of the following: :values.',
     'string' => 'The :attribute must be a string.',
     'timezone' => 'The :attribute must be a valid timezone.',
-    'unique' => 'The :attribute has already been taken.',
+    'unique' => ':attribute သည် အသုံးပြုပြီးဖြစ်သည်။',
     'uploaded' => 'The :attribute failed to upload.',
     'url' => 'The :attribute must be a valid URL.',
     'uuid' => 'The :attribute must be a valid UUID.',
@@ -153,8 +153,8 @@ return [
     */
 
     'custom' => [
-        'attribute-name' => [
-            'rule-name' => 'custom-message',
+        'key' => [
+            'require' => 'custom-message',
         ],
     ],
 
@@ -170,7 +170,11 @@ return [
     */
 
     'attributes' => [
-        'email' => 'email'
+        'email' => 'အီးမေး',
+        'name' => 'အမည်',
+        'phone' => 'ဖုန်းနံပါတ်',
+        'password' => 'စကားဝှက်',
+        'credentials' => 'အထောက်အထား'
     ],
 
 ];

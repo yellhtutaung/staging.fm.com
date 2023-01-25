@@ -10,23 +10,23 @@
                         <img src="{{asset('freshmoe_logo.png')}}" alt="">
                     </div>
                     <div class="">
-                        <h5 class="title-fm ">Sign In</h5>
+                        <h5 class="title-fm ">{{ __('auth.sign_up.sign_in') }}</h5>
                         <span class="main_title_underline"></span>
                     </div>
                     <form method="POST" action="{{ route('login') }}" class="body-fm ">
                         @csrf
                         <div class="input-wrapper">
-                            <label for="email" class="form-label">Email</label>
-                            <input type="email" class="input @error('key') is-invalid @enderror" name="key" placeholder="Enter your email" value="{{ old('key') }}" id="email" autocomplete="off" autofocus>
-                            @error('key')
+                            <label for="email" class="form-label">{{ __('auth.sign_in.email') }}</label>
+                            <input type="text" class="input @error('credentials') is-invalid @enderror" name="credentials" placeholder="{{ __('auth.sign_in.enter_email') }}" value="{{ old('credentials') }}" id="email" autocomplete="off" autofocus>
+                            @error('credentials')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
                             </span>
                             @enderror
                         </div>
                         <div class="input-wrapper">
-                            <label for="password" class="form-label">Password</label>
-                            <input type="password" class="input @error('password') is-invalid @enderror" name="password" placeholder="Enter your password" id="password" autocomplete="off">
+                            <label for="password" class="form-label">{{ __('auth.sign_in.password') }}</label>
+                            <input type="password" class="input @error('password') is-invalid @enderror" name="password" placeholder="{{ __('auth.sign_in.enter_password') }}" id="password" autocomplete="off">
                             @error('password')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
@@ -34,15 +34,15 @@
                             @enderror
                         </div>
                         <div  class="input-wrapper">
-                            <button>Sign in</button>
+                            <button>{{ __('auth.sign_in.sign_in') }}</button>
                         </div>
                     </form>
                     <div class="body-fm d-flex justify-content-between flex-wrap bottom-text">
                         <div class='my-2 me-1'>
-                            <span class="d-none d-sm-inline"> You don't have an account.</span>
-                            <a href="{{route('register')}}" class="text-decoration-none underline ms-1">Sign Up</a>
+                            <span class="d-none d-sm-inline"> {{ __('auth.sign_in.dont_have_acc') }}</span>
+                            <a href="{{route('register')}}" class="text-decoration-none underline ms-1">{{ __('auth.sign_in.sign_up') }}</a>
                         </div>
-                        <a href="{{route('password.request')}}" class="underline my-2 ms-1">Forgot your password?</a>
+                        <a href="{{route('password.request')}}" class="underline my-2 ms-1">{{ __('auth.sign_in.forgot_password') }}</a>
 
                     </div>
                 </div>

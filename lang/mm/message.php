@@ -49,6 +49,9 @@ return [
 
     'employees_hero' => 'ဝန်ထမ်းများ',
     'chief_executive_officer' => 'အမှုဆောင်အရာရှိချုပ်',
+    'chief_financial_officer' => 'ဘဏ္ဍာရေးအရာရှိချုပ်',
+    'chief_technology_officer' => 'နည်းပညာအရာရှိချုပ်',
+    'chief_operating_officer' => 'လည်ပတ်ရေးအရာရှိချုပ်',
     'web_developer' => 'ဝက်ဘ်ဆိုက် ဖန်တီးသူ',
     'android_developer' => 'အက်ပလီကေးရှင်း ဖန်တီးသူ',
     'graphic_designer' => 'ဂရပ်ဖစ်ဒီဇိုင်နာ',
