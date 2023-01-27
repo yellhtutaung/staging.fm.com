@@ -10,7 +10,7 @@
                         <img src="{{asset('freshmoe_logo.png')}}" alt="">
                     </div>
                     <div class="my-2">
-                        <h3 class="text-black text-left ">Enter OTP</h3>
+                        <h3 class="text-black text-left ">{{ __('auth.enter_otp.enter_otp') }}</h3>
                         <span class="main_title_underline theme_bg w-25"></span>
                     </div>
                     @if (session('status'))
@@ -25,7 +25,7 @@
                         <input type="hidden" data-user-phone="{{$phone}}" class="user-phone" name="phone" value="{{$phone}}" />
                         <input type="hidden" name="password" value="123456" />
                         <div class="input-wrapper my-4">
-                            <label for="phone" class="form-label">OTP Code</label>
+                            <label for="phone" class="form-label">{{ __('auth.enter_otp.otp_code') }}</label>
                             <input type="number" placeholder="" class="input @error('otp') is-invalid @enderror @error('phone') is-invalid @enderror " name="otp" value="{{old('otp')}}" id="otp" autocomplete="off" autofocus >
                             @error('otp')
                             <span class="invalid-feedback" role="alert">
@@ -40,11 +40,11 @@
                         </div>
                         <div  class="input-wrapper">
                             <button type="submit" class="text-center">
-                                {{ __('Submit') }}
+                                {{ __('auth.enter_otp.submit') }}
                             </button>
                         </div>
                     </form>
-                    <span class="mt-3">Already have an account ? <a href="{{route('login')}}" class="text-decoration-none underline"> Sign In.</a></span>
+                    <span class="mt-3">{{ __('auth.enter_otp.already_acc') }} <a href="{{route('login')}}" class="text-decoration-none underline"> {{ __('auth.enter_otp.sign_in') }}</a></span>
                 </div>
             </div>
             <div class="col-lg-7 d-none d-lg-block p-2">

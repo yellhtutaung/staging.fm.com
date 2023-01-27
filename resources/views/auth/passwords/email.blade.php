@@ -10,7 +10,7 @@
                         <img src="{{asset('freshmoe_logo.png')}}" alt="">
                     </div>
                     <div class="my-2">
-                        <h3 class="text-black text-left ">Forgot Password</h3>
+                        <h3 class="text-black text-left ">{{ __('auth.forgot_password.forgot_password') }}</h3>
                         <span class="main_title_underline theme_bg w-25"></span>
                     </div>
                     @if (session('status'))
@@ -22,7 +22,7 @@
                     <form method="POST" action="{{ route('customForgotPassword') }}" class="login body-fm">
                         @csrf
                         <div class="input-wrapper my-4">
-                            <label for="phone" class="form-label">Phone</label>
+                            <label for="phone" class="form-label">{{ __('auth.forgot_password.phone') }}</label>
                             <input type="phone" placeholder="09..." class="input @error('phone') is-invalid @enderror" name="phone"
                                    value="{{old('phone')}}" id="phone" autocomplete="off" autofocus >
                             @error('phone')
@@ -33,11 +33,11 @@
                         </div>
                         <div  class="input-wrapper">
                             <button type="submit" class="text-center">
-                                {{ __('Forgot') }}
+                                {{ __('auth.forgot_password.forgot') }}
                             </button>
                         </div>
                     </form>
-                    <span class="mt-3 body-fm">Already have an account ? <a href="{{route('login')}}" class="text-decoration-none"> Sign In.</a></span>
+                    <span class="mt-3 body-fm">{{ __('auth.forgot_password.already_acc') }}<a href="{{route('login')}}" class="text-decoration-none"> {{ __('auth.forgot_password.sign_in') }}</a></span>
                 </div>
             </div>
             <div class="col-lg-7 d-none d-lg-block p-2">

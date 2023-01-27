@@ -12,6 +12,7 @@ use Illuminate\Http\Request;
 use Illuminate\Foundation\Auth\ResetsPasswords;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\Rule;
 use function Sodium\compare;
@@ -50,7 +51,7 @@ class ResetPasswordController extends Controller
             );
             if ($validator->fails()) {
                 $message = $validator->errors();
-                return  redirect()->back()->withErrors($message);
+                return  redirect()->back()->withErrors($message)->withInput();
             } else {
 //                $phone = PhoneNumber::make($In->phone, 'MM')->formatE164(); // format phone number to international format
                 if (User::where('phone', $In->phone)->first())
@@ -64,10 +65,16 @@ class ResetPasswordController extends Controller
                             return redirect()->route('checkOtp')->with('phone',$phone );
                         }
                     }else{
+                        if (Session::get('locale', 'mm')){
+                            return redirect()->back()->withErrors(['phone'=>'Otp ကုဒ်ဖန်တီးခြင်းပြသနာ']);
+                        }
                         return redirect()->back()->withErrors(['phone'=>'Otp code creating error ...']);
                     }
                 } else {
-                    return redirect()->back()->withErrors(['phone'=>'There is no user with this phone number...']);
+                    if (Session::get('locale', 'mm')){
+                        return redirect()->back()->withErrors(['phone'=>'ထိုဖုန်းနံပါတ်ဖြင့် အကောင့်ဖန်းတီးထားခြင်းမရှိပါ။'])->withInput();
+                    }
+                    return redirect()->back()->withErrors(['phone'=>'There is no user with this phone number...'])->withInput();
                 }
             }
         }catch (\Exception $errorMessage) {
@@ -135,6 +142,9 @@ class ResetPasswordController extends Controller
                         return redirect()->route('change-password')->with('forgot_bot',1);
                     }
                 } else {
+                    if (Session::get('locale', 'mm')){
+                        return  redirect()->back()->withErrors(['otp'=>'OTP မှားယွင်းနေပါသည်‌'])->with('phone',$In->phone);
+                    }
                     return  redirect()->back()->withErrors(['otp'=>'Your OTP is Wrong'])->with('phone',$In->phone);
                 }
             }

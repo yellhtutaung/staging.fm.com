@@ -9,6 +9,7 @@ use http\Env\Request;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Session;
 
 class LoginController extends Controller
 {
@@ -49,23 +50,26 @@ class LoginController extends Controller
 
     public function login (\Illuminate\Http\Request $request) {
         $formData = $request->validate([
-            'key' => 'required',
+            'credentials' => 'required',
             'password' => 'required',
-        ], [
-            'key.required' => 'Please enter your email or phone number or username.',
-            'password.required' => 'Please enter your password.'
         ]);
 
-        $key = $request->key;
-        $user = User::where('username', $key)->orWhere('email', $key)->orWhere('phone', $key)->first();
+        $credentials = $request->credentials;
+        $user = User::where('username', $credentials)->orWhere('email', $credentials)->orWhere('phone', $credentials)->first();
         if (!$user){
-            return back()->withErrors(['key'=>'Your data is invalid.'])->withInput();
+            if (Session::get('locale', 'mm')){
+                return back()->withErrors(['credentials'=>'သင့်ရဲ့အထောက်အထား မမှန်ကန်ပါ။'])->withInput();
+            }
+            return back()->withErrors(['credentials'=>'Your data is invalid.'])->withInput();
         }
 
         if(Hash::check($request->password, $user->password)){
             Auth::login($user);
             return redirect()->route('priceList');
         }else {
+            if (Session::get('locale', 'mm')){
+                return back()->withErrors(['password'=>'သင့်ရဲ့စကားဝှက် မမှန်ကန်ပါ။'])->withInput();
+            }
             return back()->withErrors(['password' => 'Your password is incorrect.'])->withInput();
         }
     }

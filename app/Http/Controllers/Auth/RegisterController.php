@@ -12,6 +12,7 @@ use Illuminate\Http\Request;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\Rule;
 use stdClass;
@@ -144,6 +145,9 @@ class RegisterController extends Controller
                     return redirect()->route('priceList');
                 }
             } else {
+                if (Session::get('locale', 'mm')){
+                    return  redirect()->route('registerOtpCheck')->with('In',$userData)->withErrors(['otp'=>'otp မှားယွင်းနေပါသည်။']);
+                }
                 return  redirect()->route('registerOtpCheck')->with('In',$userData)->withErrors(['otp'=>'Your OTP is Wrong']);
             }
         }
@@ -156,13 +160,13 @@ class RegisterController extends Controller
             [
                 'name' => ['required', 'string', 'max:255'],
                 'email' => ['nullable', 'string', 'email', 'max:255', 'unique:users'],
-                'phone' => ['required', 'unique:users' , 'min:10'],
+                'phone' => ['required', 'unique:users' , 'min:10', 'max:13'],
                 'password' => ['required', 'string', 'min:6', 'confirmed'],
             ],
         );
         if ($validator->fails()) {
             $message = $validator->errors();
-            return  redirect()->back()->withErrors($message);
+            return  redirect()->back()->withErrors($message)->withInput();
         } else {
             $generateOtp = $this->generateOTP($In->phone);
             if($generateOtp)

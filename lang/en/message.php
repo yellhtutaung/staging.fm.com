@@ -48,6 +48,9 @@ return [
 
     'employees_hero' => 'Our Employees',
     'chief_executive_officer' => 'Chief Executive Officer',
+    'chief_financial_officer' => 'Chief Financial Officer',
+    'chief_technology_officer' => 'Chief Technology Officer',
+    'chief_operating_officer' => 'Chief Operating Officer',
     'web_developer' => 'Web Developer',
     'android_developer' => 'Android Developer',
     'graphic_designer' => 'Graphic Designer',
