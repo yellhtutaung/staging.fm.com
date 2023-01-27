@@ -92,10 +92,13 @@
                 token: csrf_token
             },
             function (data, status) {
-                console.log(data.data, status)
+                console.log(data.data, status);
+                if(data.status == 200)
+                {
+                    window.location.reload();
+                }
             }
         )
-
     });
 
 
