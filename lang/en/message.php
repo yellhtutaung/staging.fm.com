@@ -54,10 +54,10 @@ return [
     'web_developer' => 'Web Developer',
     'android_developer' => 'Android Developer',
     'graphic_designer' => 'Graphic Designer',
-    'thuramoe' => 'Thura Moe',
-    'kyawthetnaing' => 'Kyaw Thet Naing',
-    'aungchanoo' => 'Aung Chan Oo',
-    'zawmyataung' => 'Zaw Myat Aung',
+    'ceo_name' => 'Thura Moe',
+    'coo_name' => 'Olivia',
+    'cfo_name' => 'Qianfan',
+    'cto_name' => 'Abdullah',
 
 
 
