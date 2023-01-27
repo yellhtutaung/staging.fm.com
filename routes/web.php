@@ -51,7 +51,7 @@ Route::get('register/otp/check', [RegisterController::class, 'registerOtpCheck']
 //Test Route
 Route::get('test', [TestController::class, 'test'])->name('test');
 
-Route::get('lang/change', [LangController::class, 'change'])->name('changeLang');
+Route::post('lang/change', [LangController::class, 'change'])->name('changeLang');
 
 
 //Admin

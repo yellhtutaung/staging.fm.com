@@ -85,8 +85,17 @@
     var url = "{{ route('changeLang') }}";
 
     $(".changeLang").change(function(){
-        console.log($(this).val());
-        window.location.href = url + "?lang="+ $(this).val();
+        let language = $(this).val();
+        $.post("lang/change",
+            {
+                lang: language,
+                token: csrf_token
+            },
+            function (data, status) {
+                console.log(data.data, status)
+            }
+        )
+
     });
 
 
