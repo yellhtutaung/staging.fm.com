@@ -55,10 +55,10 @@ return [
     'web_developer' => 'ဝက်ဘ်ဆိုက် ဖန်တီးသူ',
     'android_developer' => 'အက်ပလီကေးရှင်း ဖန်တီးသူ',
     'graphic_designer' => 'ဂရပ်ဖစ်ဒီဇိုင်နာ',
-    'thuramoe' => 'သူရမိုး',
-    'kyawthetnaing' => 'ကျော်သက်နိုင်',
-    'aungchanoo' => 'အောင်ချမ်းဉီး',
-    'zawmyataung' => 'ဇော်မြတ်အောင်',
+    'ceo_name' => 'Thura Moe',
+    'coo_name' => 'Olivia',
+    'cfo_name' => 'Qianfan',
+    'cto_name' => 'Abdullah',
 
 
 
