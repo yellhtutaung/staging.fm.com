@@ -8,12 +8,13 @@ class LangController extends Controller
 {
     public function change(Request $request)
     {
-//        return response()->json([
-//            'status' => 'success',
-//            'data' => $request->lang
-//        ]);
         App::setLocale($request->lang);
+        // \Session::put('locale','en');
+        // \Session::save();
+
+        // $putSession = session()->put('aa', $request->lang);
         session()->put('locale', $request->lang);
+        // return session()->get('locale');
         return response()->json([
             'status' => 200,
             'data' => $request->lang
