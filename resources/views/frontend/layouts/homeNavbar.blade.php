@@ -44,7 +44,6 @@
                         @endif
                         <a href="#contact">{{ __('message.contact') }}</a>
                     </li>
-                    <li>{{ session()->get('locale')}}</li>
                     <li>
                         <select class="form-control changeLang">
                             <option value="en" {{ session()->get('locale') == 'en' ? 'selected' : '' }}>English</option>
