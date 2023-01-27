@@ -16,7 +16,7 @@
 
             <div class="row g-2 mt-3">
                 <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4">
-                    <a href="{{route('home')}}" class="card text-decoration-none text-black animate__animated animate__fadeIn shadow-lg p-3">
+                    <a href="{{route('fruitList')}}" class="card text-decoration-none text-black animate__animated animate__fadeIn shadow-lg p-3">
                         <div class="row">
                             <div class="col-4">
                                 <img src="{{asset('backend-assets/images/dashboard/f_v.png')}}" style="width: 79px !important;height: 79px !important;" alt="">
