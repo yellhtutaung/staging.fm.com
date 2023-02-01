@@ -71,6 +71,41 @@
     height: 200px;
 }
 
+/* ------------------ Deals ----------------- */
+
+.deals .image {
+    padding: 20px;
+    cursor: pointer;
+    transition: all .3s;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*border: 1px solid #5bba47;*/
+}
+
+.deals .image img {
+    width: 100%;
+    transition: all .3s;
+}
+
+.deals .image:hover {
+    border-color: white;
+    /*box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;*/
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.deals .image:hover img {
+    transform: scale(1.05);
+}
+
+.divider {
+    width: 50px;
+    height: 3px;
+    background-color: #5bba47;
+    margin: 0 auto;
+}
+
 @media screen and (min-width: 768px) {
     .title {
         font-size: 2.2rem;
