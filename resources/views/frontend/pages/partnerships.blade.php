@@ -39,6 +39,79 @@
 </div>
 {{--our partnerships end --}}
 
+<section class="deals">
+    <div class="container py-5">
+        <div class="title title-fm text-center mb-3">
+            <h3>Our Deals</h3>
+            <div class="divider"></div>
+        </div>
+        <div class="row g-2 align-items-stretch" data-aos="fade-in">
+            <div class="col-xs-6 col-md-4 col-lg-3 p-2">
+                <div class="image">
+                    <img src="{{asset('/frontend-assets/images/deals/mucci.jpg')}}" alt="">
+                </div>
+            </div>
+            <div class="col-xs-6 col-md-4 col-lg-3 p-2">
+                <div class="image">
+                    <img src="{{asset('/frontend-assets/images/deals/berry_gardens.webp')}}" alt="">
+                </div>
+            </div>
+            <div class="col-xs-6 col-md-4 col-lg-3 p-2">
+                <div class="image">
+                    <img src="{{asset('/frontend-assets/images/deals/dole.jpg.webp')}}" alt="">
+                </div>
+            </div>
+            <div class="col-xs-6 col-md-4 col-lg-3 p-2">
+                <div class="image">
+                    <img src="{{asset('/frontend-assets/images/deals/hazera.webp')}}" alt="">
+                </div>
+            </div>
+
+            <div class="col-xs-6 col-md-4 col-lg-3 p-2">
+                <div class="image">
+                    <img src="{{asset('/frontend-assets/images/deals/migiva.jpg.webp')}}" alt="">
+                </div>
+            </div>
+            <div class="col-xs-6 col-md-4 col-lg-3 p-2">
+                <div class="image">
+                    <img src="{{asset('/frontend-assets/images/deals/mucci.jpg')}}" alt="">
+                </div>
+            </div>
+            <div class="col-xs-6 col-md-4 col-lg-3 p-2">
+                <div class="image">
+                    <img src="{{asset('/frontend-assets/images/deals/pura.jpg')}}" alt="">
+                </div>
+            </div>
+            <div class="col-xs-6 col-md-4 col-lg-3 p-2">
+                <div class="image">
+                    <img src="{{asset('/frontend-assets/images/deals/santa_maria.webp')}}" alt="">
+                </div>
+            </div>
+
+            <div class="col-xs-6 col-md-4 col-lg-3 p-2">
+                <div class="image">
+                    <img src="{{asset('/frontend-assets/images/deals/sanzucar.jpg')}}" alt="">
+                </div>
+            </div>
+            <div class="col-xs-6 col-md-4 col-lg-3 p-2">
+                <div class="image">
+                    <img src="{{asset('/frontend-assets/images/deals/sunkist.webp')}}" alt="">
+                </div>
+            </div>
+            <div class="col-xs-6 col-md-4 col-lg-3 p-2">
+                <div class="image">
+                    <img src="{{asset('/frontend-assets/images/deals/tali_grapes.jpg')}}" alt="">
+                </div>
+            </div>
+            <div class="col-xs-6 col-md-4 col-lg-3 p-2">
+                <div class="image">
+                    <img src="{{asset('/frontend-assets/images/deals/zespri.webp')}}" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 
 {{--footer start--}}
 <?php echo View::make ('frontend.layouts.footer'); ?>
