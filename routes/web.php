@@ -60,7 +60,7 @@ Route::get('admin/login', [AdminLoginController::class, 'showLoginForm']);
 Route::post('admin/login', [AdminLoginController::class, 'login'])->name('admin.login');
 Route::post('admin/logout', [AdminLoginController::class, 'logout'])->name('admin.logout');
 
-Route::middleware(['auth'])->group(function ()
+Route::middleware(['auth','ban'])->group(function ()
 {
     Route::get('pricelist', [PagesController::class, 'priceList'])->name('priceList');
     Route::get('pricelist/{token}/history', [PagesController::class, 'priceListHistory'])->name('priceListHistory');

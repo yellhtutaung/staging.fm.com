@@ -44,10 +44,10 @@
                         </td>
                         <td>
                             <div class="form-check form-switch p-0 m-0">
-                                <input data-id="{{$user->id}}" data-status-val="{{$user->hide_show}}" onchange="universalSwitch(1,{{$user->id}},'hide_show',{{$user->hide_show}});"
+                                <input data-id="{{$user->id}}" data-status-val="{{$user->is_ban}}" onchange="universalSwitch(1,{{$user->id}},'is_ban',{{$user->is_ban}});"
                                        class="toggle-class toggle-id{{$user->id}}" type="checkbox"
-                                       data-onstyle="success" data-offstyle="danger" data-toggle="toggle"
-                                       data-on="Active  "  data-off="Ban" {{$user->hide_show==1?"checked":""}}>
+                                       data-onstyle="danger" data-offstyle="success" data-toggle="toggle"
+                                       data-on="Ban"  data-off="Active" {{$user->is_ban==1?"checked":""}}>
                             </div>
                         </td>
                         <td>
