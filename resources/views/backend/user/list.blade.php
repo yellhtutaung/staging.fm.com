@@ -43,9 +43,12 @@
                             </a>
                         </td>
                         <td>
-                            <a href="" class="rounded btn btn-danger">
-                                <span class="material-symbols-outlined mt-2 text-white">delete</span>
-                            </a>
+                            <div class="form-check form-switch p-0 m-0">
+                                <input data-id="{{$user->id}}" data-status-val="{{$user->hide_show}}" onchange="universalSwitch(1,{{$user->id}},'hide_show',{{$user->hide_show}});"
+                                       class="toggle-class toggle-id{{$user->id}}" type="checkbox"
+                                       data-onstyle="success" data-offstyle="danger" data-toggle="toggle"
+                                       data-on="Active  "  data-off="Ban" {{$user->hide_show==1?"checked":""}}>
+                            </div>
                         </td>
                         <td>
                             <a href="{{route('userDetails',$user->token)}}" class="rounded btn btn-dark">
@@ -62,16 +65,19 @@
 @endsection
 
 @section('extra-script')
+    <script src="{{asset('backend-assets/js/universalSwitch.js')}}" ></script>
     <script>
-        $(document).ready(function () {
-            $('#example').DataTable({
-                "pageLength": 100,
-            });
-            $('.form-control-sm').addClass("input-data-search")
-            $('.input-data-search').focus(); // input auto focus
 
-            $('.js-example-basic-multiple').select2();
-
+    $(document).ready(function () {
+        $('#example').DataTable({
+            "pageLength": 100,
         });
-    </script>
+        $('.form-control-sm').addClass("input-data-search")
+        $('.input-data-search').focus(); // input auto focus
+
+        $('.js-example-basic-multiple').select2();
+
+    });
+
+</script>
 @endsection

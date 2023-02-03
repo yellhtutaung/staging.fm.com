@@ -94,6 +94,7 @@ Route::middleware([CheckAdmin::class])->prefix('admin')->group(function ()
         Route::get('{id}/edit', [UserController::class, 'editUser'])->name('editUser');
         Route::get('{token}/details', [UserController::class, 'userDetails'])->name('userDetails');
         Route::post('update', [UserController::class, 'updateUser'])->name('updateUser');
+        Route::post('/banUser', [UserController::class, 'banUser'])->name('banUser');
     });
     Route::prefix('country')->group(function () {
         Route::get('/', [CountryController::class, 'countryList'])->name('countryList');

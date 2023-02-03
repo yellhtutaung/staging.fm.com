@@ -12,7 +12,7 @@ class UserController extends Controller
 {
     public function userList()
     {
-        $users = User::where('status',1)->where('is_ban',1)->orderBy('id','DESC')->get();
+        $users = User::where('status',1)->orderBy('id','DESC')->get();
         return view('backend.user.list',compact('users'));
     }
 
@@ -52,5 +52,11 @@ class UserController extends Controller
             return redirect()->back()->with('warning', $e->getMessage());
         }
     }
+
+    public function banUser(Request $In)
+    {
+        return $fetchUser = User::find($In->userId);
+    }
+
 
 }

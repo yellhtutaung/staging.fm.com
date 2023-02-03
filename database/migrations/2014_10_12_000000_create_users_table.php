@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string('email')->unique()->nullable();
             $table->string('password');
             $table->timestamp('email_verified_at')->nullable();
-            $table->integer('is_ban')->default(1); // zero is banded user
+            $table->integer('is_ban')->default(0); // zero is banded user
             $table->integer('hide_show')->default(1); // zero is hidden user
             $table->integer('status')->default(1);
             $table->integer('upd_id')->nullable();
