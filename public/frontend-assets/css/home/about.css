@@ -1,7 +1,7 @@
 
 .about_section {
     margin-top: 3rem;
-    background-color: rgba(205, 202, 202, 0.105);
+    background-color: #FAFAFA;
 }
 .about_bg {
     display: flex;
@@ -10,6 +10,30 @@
 .about_text {
     padding: 0 20px;
 }
+
+.why {
+    margin-top: 3rem;
+    background-color: #FAFAFA;
+}
+
+.why .icon {
+    width: 40px;
+    height: 40px;
+    background-color: #5BBA47;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.why img {
+    width: 300px;
+    height: 300px;
+}
+
+
+
 @media screen and (min-width: 765px) {
     .main_title {
         color: white;
@@ -23,5 +47,16 @@
     }
     .about_text {
         padding: 0 50px;
+    }
+    .why img {
+        width: 320px;
+        height: 320px;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .why img {
+        width: 400px;
+        height: 400px;
     }
 }

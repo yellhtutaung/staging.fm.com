@@ -57,7 +57,7 @@ class LoginController extends Controller
         $credentials = $request->credentials;
         $user = User::where('username', $credentials)->orWhere('email', $credentials)->orWhere('phone', $credentials)->first();
         if (!$user){
-            if (Session::get('locale', 'mm')){
+            if (Session::get('locale') == 'mm'){
                 return back()->withErrors(['credentials'=>'သင့်ရဲ့အထောက်အထား မမှန်ကန်ပါ။'])->withInput();
             }
             return back()->withErrors(['credentials'=>'Your data is invalid.'])->withInput();
@@ -66,7 +66,7 @@ class LoginController extends Controller
         if(Hash::check($request->password, $user->password)){
             if($user->is_ban)
             {
-                if (Session::get('locale', 'mm')){
+                if (Session::get('locale') == 'mm'){
                     return back()->withErrors(['credentials'=>'အသုံးပြုခွင့်ပိတ်ပင်ထားပါသည် | ကျေးဇူးပြု၍ FreshMoe ရုံးချုပ်သို့ ဆက်သွယ်ပေးပါခင်ဗျ'])->withInput();
                 }
                 return back()->withErrors(['credentials'=>'You are banned user | Plz connect to admin '])->withInput();
@@ -74,7 +74,7 @@ class LoginController extends Controller
             Auth::login($user);
             return redirect()->route('priceList');
         }else {
-            if (Session::get('locale', 'mm')){
+            if (Session::get('locale') == 'mm'){
                 return back()->withErrors(['password'=>'သင့်ရဲ့စကားဝှက် မမှန်ကန်ပါ။'])->withInput();
             }
             return back()->withErrors(['password' => 'Your password is incorrect.'])->withInput();

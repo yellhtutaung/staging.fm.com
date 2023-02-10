@@ -171,6 +171,40 @@
     </div>
     {{--about end--}}
 
+    {{--ourmission start--}}
+    <div>
+        <section class="mission_section" data-aos="fade-up" id="mission">
+            <div class="container-fluid m-0 p-0">
+                <div class="d-flex flex-wrap" >
+                    <div class="col-md-6 mission_text my-3">
+                        <div class="main_title">
+                            <h3 class="text-center text-black title-fm">{{ __('message.our_mission') }}</h3>
+                            <span class="main_title_underline bg-dark" ></span>
+                        </div>
+                        <p class="body-fm">
+                            Fresh Moe is the Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Hic officia dolorem iure error vel totam nobis nostrum magnam
+                            et a? Harum, minima earum dolore cumque praesentium, eaque quia
+                            alias natus ullam ex, vero animi sed suscipit repudiandae ea! Dolor
+                            molestias molestiae nemo, eveniet vel totam asperiores repellat,
+                            soluta vitae iusto hic non ipsam ratione aperiam? Est itaque neque
+                            enim numquam aspernatur expedita repellat incidunt molestiae error
+                            voluptatum. Magnam dolores, illum ratione doloribus laboriosam quas
+                            qui temporibus ea aliquam deleniti rem facilis cupiditate beatae
+                            quisquam cum architecto? Doloremque rerum accusamus voluptas omnis
+                            corporis deleniti numquam blanditiis, suscipit qui magni modi,
+                            quidem magnam veniam iste consectetur expedita voluptatibus aperiam
+                            fugiat labore tenetur reiciendis quia maiores? Molestiae, aperiam
+                            tempore? Delectus, reprehenderit expedita?
+                        </p>
+                    </div>
+                    <div class="col-md-6 mission_bg"></div>
+                </div>
+            </div>
+        </section>
+    </div>
+    {{--ourmission end--}}
+
     {{--ITProducts start--}}
     <div>
         <section id="it_products" data-aos="fade-up">
@@ -237,39 +271,95 @@
     </div>
     {{--ITProducts end--}}
 
-    {{--ourmission start--}}
+
+    {{-- wyh choose us start --}}
+
     <div>
-        <section class="mission_section" data-aos="fade-up" id="mission">
-            <div class="container-fluid m-0 p-0">
-                <div class="d-flex flex-wrap" >
-                    <div class="col-md-6 mission_text my-3">
-                        <div class="main_title">
-                            <h3 class="text-center text-black title-fm">{{ __('message.our_mission') }}</h3>
-                            <span class="main_title_underline bg-dark" ></span>
+        <section class="why" data-aos="fade-up" id="why">
+            <div class="container py-5">
+                <div class="center_title">
+                    <h3 class="text-center text-dark title-fm">Why Choose Us</h3>
+                    <span class="center_title_underline"></span>
+                </div>
+                <div class="row g-3">
+                    <div class="col-lg-4 d-flex flex-column justify-content-center">
+                        <div class="mb-4 d-flex">
+                            <div class="me-3">
+                                <div class="icon"><span class="material-symbols-rounded">published_with_changes</span></div>
+                            </div>
+                            <div>
+                                <h5 class="title-fm">Fresh is Best</h5>
+                                <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, quo!</div>
+                            </div>
                         </div>
-                        <p class="body-fm">
-                            Fresh Moe is the Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Hic officia dolorem iure error vel totam nobis nostrum magnam
-                            et a? Harum, minima earum dolore cumque praesentium, eaque quia
-                            alias natus ullam ex, vero animi sed suscipit repudiandae ea! Dolor
-                            molestias molestiae nemo, eveniet vel totam asperiores repellat,
-                            soluta vitae iusto hic non ipsam ratione aperiam? Est itaque neque
-                            enim numquam aspernatur expedita repellat incidunt molestiae error
-                            voluptatum. Magnam dolores, illum ratione doloribus laboriosam quas
-                            qui temporibus ea aliquam deleniti rem facilis cupiditate beatae
-                            quisquam cum architecto? Doloremque rerum accusamus voluptas omnis
-                            corporis deleniti numquam blanditiis, suscipit qui magni modi,
-                            quidem magnam veniam iste consectetur expedita voluptatibus aperiam
-                            fugiat labore tenetur reiciendis quia maiores? Molestiae, aperiam
-                            tempore? Delectus, reprehenderit expedita?
-                        </p>
+                        <div class="mb-4 d-flex">
+                            <div class="me-3">
+                                <div class="icon"><span class="material-symbols-rounded">local_shipping</span></div>
+                            </div>
+                            <div>
+                                <h5 class="title-fm">Quick Delivery System</h5>
+                                <div>Lorem ipsum dolor sit sit amet, consectetur adipisicing elit. Facere, quo!</div>
+                            </div>
+                        </div>
+                        <div class="mb-4 d-flex">
+                            <div class="me-3">
+                                <div class="icon"><span class="material-symbols-rounded">phonelink_setup</span></div>
+                            </div>
+                            <div>
+                                <h5 class="title-fm">Easy To Use Application</h5>
+                                <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, quo!</div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-md-6 mission_bg"></div>
+                    <div class="col-lg-4 d-flex justify-content-center align-items-center p-1">
+                        <img class="mb-4" src="{{asset('frontend-assets/images/circle.webp')}}" alt="">
+                    </div>
+                    <div class="col-lg-4 d-flex flex-column justify-content-center">
+                        <div class="mb-3 d-flex text-lg-end">
+                            <div class="me-4 d-lg-none">
+                                <div class="icon"><span class="material-symbols-rounded">star</span></div>
+                            </div>
+                            <div>
+                                <h5 class="title-fm">Service is Best</h5>
+                                <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, quo!</div>
+                            </div>
+                            <div class="ms-3 d-none d-lg-block">
+                                <div class="icon"><span class="material-symbols-rounded">star</span></div>
+                            </div>
+                        </div>
+                        <div class="mb-4 d-flex text-lg-end">
+                            <div class="me-3 d-lg-none">
+                                <div class="icon"><span class="material-symbols-rounded">nutrition</span></div>
+                            </div>
+                            <div>
+                                <h5 class="title-fm">Healthy Food</h5>
+                                <div>Lorem ipsum dolor sit amet, consectetur consectetur adipisicing elit. Facere, quo!</div>
+                            </div>
+                            <div class="ms-3 d-none d-lg-block">
+                                <div class="icon"><span class="material-symbols-rounded">nutrition</span></div>
+                            </div>
+                        </div>
+                        <div class="mb-4 d-flex text-lg-end">
+                            <div class="me-3 d-lg-none">
+                                <div class="icon"><span class="material-symbols-rounded">shopping_cart</span></div>
+                            </div>
+                            <div>
+                                <h5 class="title-fm">Easy To Buy</h5>
+                                <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, quo!</div>
+                            </div>
+                            <div class="ms-3 d-none d-lg-block">
+                                <div class="icon"><span class="material-symbols-rounded">shopping_cart</span></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
     </div>
-    {{--ourmission end--}}
+
+    {{-- wyh choose us end --}}
+
+
 
     {{--footer start--}}
     <?php echo View::make ('frontend.layouts.footer'); ?>
