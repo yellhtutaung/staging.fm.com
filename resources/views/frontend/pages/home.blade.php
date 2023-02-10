@@ -312,7 +312,7 @@
                         </div>
                     </div>
                     <div class="col-lg-4 d-flex justify-content-center align-items-center p-1">
-                        <img class="mb-4" src="{{asset('frontend-assets/images/circle.webp')}}" alt="">
+                        <img class="mb-4" src="{{asset('frontend-assets/images/circle.png')}}" alt="">
                     </div>
                     <div class="col-lg-4 d-flex flex-column justify-content-center">
                         <div class="mb-3 d-flex text-lg-end">
