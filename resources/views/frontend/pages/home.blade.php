@@ -278,7 +278,7 @@
         <section class="why" data-aos="fade-up" id="why">
             <div class="container py-5">
                 <div class="center_title">
-                    <h3 class="text-center text-dark title-fm">Why Choose Us</h3>
+                    <h3 class="text-center text-dark title-fm">{{ __('message.why_choose_us') }}</h3>
                     <span class="center_title_underline"></span>
                 </div>
                 <div class="row g-3">
@@ -288,7 +288,7 @@
                                 <div class="icon"><span class="material-symbols-rounded">published_with_changes</span></div>
                             </div>
                             <div>
-                                <h5 class="title-fm">Fresh is Best</h5>
+                                <h5 class="title-fm">{{ __('message.fresh_is_best') }}</h5>
                                 <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, quo!</div>
                             </div>
                         </div>
@@ -297,7 +297,7 @@
                                 <div class="icon"><span class="material-symbols-rounded">local_shipping</span></div>
                             </div>
                             <div>
-                                <h5 class="title-fm">Quick Delivery System</h5>
+                                <h5 class="title-fm">{{ __('message.quick_delivery_system') }}</h5>
                                 <div>Lorem ipsum dolor sit sit amet, consectetur adipisicing elit. Facere, quo!</div>
                             </div>
                         </div>
@@ -306,7 +306,7 @@
                                 <div class="icon"><span class="material-symbols-rounded">phonelink_setup</span></div>
                             </div>
                             <div>
-                                <h5 class="title-fm">Easy To Use Application</h5>
+                                <h5 class="title-fm">{{ __('message.easy_to_use_application') }}</h5>
                                 <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, quo!</div>
                             </div>
                         </div>
@@ -320,7 +320,7 @@
                                 <div class="icon"><span class="material-symbols-rounded">star</span></div>
                             </div>
                             <div>
-                                <h5 class="title-fm">Service is Best</h5>
+                                <h5 class="title-fm">{{ __('message.service_is_best') }}</h5>
                                 <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, quo!</div>
                             </div>
                             <div class="ms-3 d-none d-lg-block">
@@ -332,7 +332,7 @@
                                 <div class="icon"><span class="material-symbols-rounded">nutrition</span></div>
                             </div>
                             <div>
-                                <h5 class="title-fm">Healthy Food</h5>
+                                <h5 class="title-fm">{{ __('message.healthy_food') }}</h5>
                                 <div>Lorem ipsum dolor sit amet, consectetur consectetur adipisicing elit. Facere, quo!</div>
                             </div>
                             <div class="ms-3 d-none d-lg-block">
@@ -344,7 +344,7 @@
                                 <div class="icon"><span class="material-symbols-rounded">shopping_cart</span></div>
                             </div>
                             <div>
-                                <h5 class="title-fm">Easy To Buy</h5>
+                                <h5 class="title-fm">{{ __('message.easy_to_buy') }}</h5>
                                 <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, quo!</div>
                             </div>
                             <div class="ms-3 d-none d-lg-block">
