@@ -42,6 +42,13 @@ return [
     'phone'=>'Phone',
     'phone_no'=>'09123456798',
     'follow_us'=>'Follow Us',
+    'why_choose_us' => 'Why Choose Us',
+    'fresh_is_best' => 'Fresh is Best',
+    'quick_delivery_system' => 'Quick Delivery System',
+    'easy_to_use_application' => 'Easy To Use Application',
+    'service_is_best' => 'Service is Best',
+    'healthy_food' => 'Healthy Food',
+    'easy_to_buy' => 'Easy To Buy',
 
 
     // ------------------------ Employees -------------------------
