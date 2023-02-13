@@ -30,16 +30,16 @@
 }
 
 .home-carousel-1{
-    background-image: url('../../../frontend-assets/images/home_carousel_1.jpg');
+    background-image: url('../../../frontend-assets/images/sliders/home_carousel_1.jpg');
 }
 .home-carousel-2{
-    background-image: url('../../../frontend-assets/images/home_carousel_2.jpg');
+    background-image: url('../../../frontend-assets/images/sliders/home_carousel_2.jpg');
 }
 .home-carousel-3{
-    background-image: url('../../../frontend-assets/images/home_carousel_3.jpg');
+    background-image: url('../../../frontend-assets/images/sliders/home_carousel_3.jpg');
 }
 .home-carousel-4{
-    background-image: url('../../../frontend-assets/images/home_carousel_4.jpg');
+    background-image: url('../../../frontend-assets/images/sliders/home_carousel_4.jpg');
 }
 
 .swiper-slide {
