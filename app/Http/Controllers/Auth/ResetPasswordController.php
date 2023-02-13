@@ -54,8 +54,16 @@ class ResetPasswordController extends Controller
                 return  redirect()->back()->withErrors($message)->withInput();
             } else {
 //                $phone = PhoneNumber::make($In->phone, 'MM')->formatE164(); // format phone number to international format
-                if (User::where('phone', $In->phone)->first())
+                $fetchUser = User::where('phone', $In->phone)->first();
+                if ($fetchUser)
                 {
+                    if ($fetchUser->is_ban)
+                    {
+                        if (Session::get('locale', 'mm')){
+                            return redirect()->back()->withErrors(['phone'=>'အသုံးပြုခွင့်ပိတ်ပင်ထားပါသည် ကျေးဇူးပြု၍ FreshMoe ရုံးချုပ်သို့ ဆက်သွယ်ပေးပါ']);
+                        }
+                        return redirect()->back()->withErrors(['phone'=>'You are banded form admin | Plz contact to FreshMoe Head office']);
+                    }
                     $generateOtp = $this->generateOTP($In->phone);
                     if($generateOtp)
                     {
@@ -72,7 +80,7 @@ class ResetPasswordController extends Controller
                     }
                 } else {
                     if (Session::get('locale', 'mm')){
-                        return redirect()->back()->withErrors(['phone'=>'ထိုဖုန်းနံပါတ်ဖြင့် အကောင့်ဖန်းတီးထားခြင်းမရှိပါ။'])->withInput();
+                        return redirect()->back()->withErrors(['phone'=>'အကောင့်ဖန်းတီးထားခြင်းမရှိပါ။'])->withInput();
                     }
                     return redirect()->back()->withErrors(['phone'=>'There is no user with this phone number...'])->withInput();
                 }
