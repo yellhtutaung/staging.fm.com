@@ -11,8 +11,8 @@
 @endsection
 
 @section('content')
-
-    <div class="container py-5" style="margin-top: 190px !important;" >
+    <div class="authenticated_bg">
+        <div class="container py-5" style="margin-top: 140px !important;" >
 
         <div class="row g-2">
             <div class="col-md-3">
@@ -54,7 +54,7 @@
             </div>
         </div>
     </div>
-
+    </div>
 @endsection
 
 

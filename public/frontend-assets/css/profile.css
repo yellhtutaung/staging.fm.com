@@ -9,16 +9,30 @@
 /*    background-repeat: no-repeat;*/
 /*    background-position: center;*/
 /*}*/
-
-body{
-    background-image: linear-gradient(rgb(91, 186, 71, 0.7), rgb(91, 186, 71, 0.7)), url("../../frontend-assets/images/authenticated/authenticated_bg_2.png");
+.authenticated_bg{
+    position: relative;
+}
+.authenticated_bg::before{
+    /*background-image: linear-gradient(rgba(91, 186, 71, 0.6), rgba(91, 186, 71, 0.6)), url("../../frontend-assets/images/authenticated/authenticated_bg_2.png");*/
+    content: "";
+    background-image: url("../../frontend-assets/images/authenticated/authenticated_bg_2.png");
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.2;
 }
 
 .card {
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .card-header {
+    /*background-color: rgb(237,28,36) !important;*/
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding-top: 20px!important;
+    padding-bottom: 20px!important;
 }
 
 .nav-pills-primary-soft.flex-column .nav-item {
@@ -134,7 +148,7 @@ a:hover {
 .avatar i {
     font-size: 100px;
     margin: 10px;
-    color: #5bba47;
+    color: #5bba47 !important;
 }
 
 .profile-card .nav-link span {

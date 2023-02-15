@@ -3,22 +3,7 @@
 @section('title', 'Fresh Moe')
 
 @section('extra-css')
-    <link rel="stylesheet" href="{{asset('frontend-assets/css/coldchain/coldchain.css')}}"/>
-    <link rel="stylesheet" href="{{asset('frontend-assets/css/coldchain/transportation.css')}}"/>
-
-    <style>
-        .cct_banner {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../../frontend-assets/images/cct_banner.jpg');
-            margin-top: 140px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-        }
-    </style>
+    <link rel="stylesheet" href="{{asset('frontend-assets/css/coldchain.css')}}"/>
 @endsection
 
 

@@ -3,21 +3,7 @@
 @section('title', 'Fresh Moe')
 
 @section('extra-css')
-    <link rel="stylesheet" href="{{asset('frontend-assets/css/markets/targetMarkets.css')}}"/>
-
-    <style>
-        .target_banner {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../../frontend-assets/images/target_market.jpg");
-            margin-top: 140px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-        }
-    </style>
+    <link rel="stylesheet" href="{{asset('frontend-assets/css/targetMarkets.css')}}"/>
 @endsection
 
 @section('content')

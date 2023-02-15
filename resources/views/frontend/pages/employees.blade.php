@@ -8,37 +8,8 @@
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
     />
-    <link rel="stylesheet" href="{{asset('frontend-assets/css/employee/employee.css')}}"/>
+    <link rel="stylesheet" href="{{asset('frontend-assets/css/employee.css')}}"/>
 
-
-    <style>
-        .employees_banner {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../frontend-assets/images/em_banner.jpg");
-            margin-top: 140px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-        }
-
-        .job-btn {
-            padding: 0.7rem 1.5rem;
-            border: 2px solid #ccc;
-            border-radius: 10px;
-            background-color: #ED1C24;
-            color: white;
-        }
-
-        .job-btn:hover {
-            background-color: white;
-            color: #ED1C24;
-            border: 2px solid #ED1C24;
-        }
-
-    </style>
 @endsection
 
 @section('content')
@@ -170,7 +141,6 @@
 <script>
     var swiper = new Swiper(".mySwiper", {
         centeredSlides: false,
-        spaceBetween: 30,
         loop: false,
         autoplay: {
             delay: 3000,
@@ -184,24 +154,24 @@
         breakpoints: {
             300: {
                 slidesPerView: 1,
-                spaceBetween: 20,
+                spaceBetween: 0,
             },
             400: {
                 slidesPerView: 1,
-                spaceBetween: 35,
+                spaceBetween: 0,
             },
             768: {
                 slidesPerView: 2,
-                spaceBetween: 40,
+                spaceBetween: 0,
             },
             992: {
                 slidesPerView: 3,
-                spaceBetween: 35,
+                spaceBetween: 0,
             },
 
             1200: {
                 slidesPerView: 4,
-                spaceBetween: 35,
+                spaceBetween: 0,
             },
         },
     });

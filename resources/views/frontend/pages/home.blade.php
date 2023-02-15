@@ -3,11 +3,13 @@
 @section('title', 'Fresh Moe')
 
 @section('extra-css')
-    <link rel="stylesheet" href="{{asset('frontend-assets/css/home/service.css')}}"/>
-    <link rel="stylesheet" href="{{asset('frontend-assets/css/home/about.css')}}"/>
-    <link rel="stylesheet" href="{{asset('frontend-assets/css/home/ITProducts.css')}}"/>
-    <link rel="stylesheet" href="{{asset('frontend-assets/css/home/ourmission.css')}}"/>
-    <link rel="stylesheet" href="{{asset('frontend-assets/css/home/carousel.css')}}"/>
+{{--    <link rel="stylesheet" href="{{asset('frontend-assets/css/home/service.css')}}"/>--}}
+{{--    <link rel="stylesheet" href="{{asset('frontend-assets/css/home/about.css')}}"/>--}}
+{{--    <link rel="stylesheet" href="{{asset('frontend-assets/css/home/ITProducts.css')}}"/>--}}
+{{--    <link rel="stylesheet" href="{{asset('frontend-assets/css/home/ourmission.css')}}"/>--}}
+{{--    <link rel="stylesheet" href="{{asset('frontend-assets/css/home/carousel.css')}}"/>--}}
+    <link rel="stylesheet" href="{{asset('frontend-assets/css/home.css')}}"/>
+
 
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>

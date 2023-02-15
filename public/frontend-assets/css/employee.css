@@ -1,0 +1,54 @@
+.employees_banner {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../frontend-assets/images/em_banner.jpg");
+    margin-top: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.job-btn {
+    padding: 0.7rem 1.5rem;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: #ED1C24;
+    color: white;
+}
+
+.job-btn:hover {
+    background-color: white;
+    color: #ED1C24;
+    border: 2px solid #ED1C24;
+}
+
+
+.row {
+    margin: 0 auto;
+    max-width: 95em;
+}
+.employee_card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    transition: all 0.3s;
+}
+.employee_card img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.employee_card .footer div {
+    font-size: 12px !important;
+}
+.employee_card:hover {
+     transform: translateY(-20px);
+     cursor: pointer;
+ }
+
+
+.swiper-pagination-bullet-active {
+    background-color: #5bba47 !important;
+}

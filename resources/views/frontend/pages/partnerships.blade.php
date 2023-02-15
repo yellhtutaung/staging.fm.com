@@ -3,7 +3,7 @@
 @section('title', 'Fresh Moe')
 
 @section('extra-css')
-    <link rel="stylesheet" href="{{asset('frontend-assets/css/partnerships/ourpartnerships.css')}}"/>
+    <link rel="stylesheet" href="{{asset('frontend-assets/css/ourpartnerships.css')}}"/>
 @endsection
 
 @section('content')

@@ -1,0 +1,70 @@
+.cct_banner {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/cct_banner.jpg');
+    margin-top: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+.cc_section {
+    background-color: #FAFAFA;
+}
+.cc_section .cc_bg {
+    display: flex;
+    justify-content: center;
+}
+.cc_section .mission_text {
+    padding: 20px;
+}
+.cc_section .main_title {
+    color: black;
+}
+
+
+.transport_section {
+    background-color: #FAFAFA;
+}
+.transport_section .transport_bg {
+    display: flex;
+    justify-content: center;
+}
+.transport_section .transport_text {
+    padding: 20px;
+}
+.transport_section .transport_text p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+
+@media screen and (min-width: 768px) {
+    .cc_section .cc_bg {
+        background-image: url("../../../frontend-assets/images/cct_banner.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: left;
+    }
+    .cc_section .mission_text {
+        padding: 50px;
+    }
+
+
+    .transport_section .main_title {
+        color: white;
+    }
+    .transport_section .transport_bg {
+        background-image: url('../../../frontend-assets/images/transport.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .transport_section .transport_text {
+        padding: 50px;
+    }
+}
+

@@ -1,0 +1,296 @@
+/*------------------- Carousel ------------------------*/
+
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+.fonts {
+    font-family: "Lobster", cursive;
+    font-family: "Lobster", cursive;
+    font-family: "Lobster Two", cursive;
+    font-family: "Libre Baskerville", serif;
+}
+
+.home-slide-container {
+    margin-top: 140px !important;
+    width: 100%;
+    min-height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    object-fit: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display: flex;
+}
+
+.carousel-content {
+    font-size: 40px;
+    color: #5BBA47;
+    font-family: "Lobster", cursive;
+    text-shadow: 2px 2px 2px #fff;
+}
+
+.home-carousel-1{
+    background-image: url('../../../frontend-assets/images/sliders/home_carousel_1.jpg');
+}
+.home-carousel-2{
+    background-image: url('../../../frontend-assets/images/sliders/home_carousel_2.jpg');
+}
+.home-carousel-3{
+    background-image: url('../../../frontend-assets/images/sliders/home_carousel_3.jpg');
+}
+.home-carousel-4{
+    background-image: url('../../../frontend-assets/images/sliders/home_carousel_4.jpg');
+}
+
+.swiper-slide {
+    z-index: 0 !important;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #3c8132 !important;
+}
+
+/*-------------------- Service -----------------*/
+
+#services {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.our_service_card_container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.our_service_card {
+    margin-top: 6rem;
+    margin-bottom: 1rem;
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: all 0.3s;
+    overflow: hidden;
+    border-radius: 20px;
+}
+.service_card_title {
+    align-self: flex-start;
+    padding-left: 20px;
+    margin-top: 20px;
+    font-family: "Merriweather", serif;
+}
+.service_underline{
+    background-color:  #5BBA47;
+    height: 2px;
+    width: 80px;
+}
+
+.service_card_body {
+    padding: 20px;
+    text-align: left;
+    line-height: 1.5;
+    font-size: 17.5px;
+    font-family: "Lora", serif;
+}
+.service_card_img {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    overflow: hidden;
+}
+img {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+.our_service_card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    transform: translateY(-20px);
+    cursor: pointer;
+}
+
+.our_service_card_container:last-child {
+    border-right: none;
+}
+
+
+/*-------------- About --------------------*/
+.about_section {
+    margin-top: 3rem;
+    background-color: #FAFAFA;
+}
+.about_bg {
+    display: flex;
+    justify-content: center;
+}
+.about_text {
+    padding: 0 20px;
+}
+
+/*--------------------- Our Mission -------------------*/
+
+.mission_section {
+    /*margin-top: 3rem;*/
+    background-color: #FAFAFA;
+}
+.mission_bg {
+    display: flex;
+    justify-content: center;
+}
+.mission_text {
+    padding: 0 20px;
+}
+
+
+/*----------------------- ITProducts ------------------------*/
+
+#it_products {
+    margin-top: 3rem;
+}
+
+#it_products .it_product_img {
+    transition: ease-in 0.2s;
+}
+
+.laptop_img {
+    width: 100%;
+    height: auto;
+}
+.phone_img {
+    width: 100%;
+    height: auto;
+}
+
+.it_product_detail .underline {
+    text-decoration: none;
+    color: #0074d9;
+    position: relative;
+}
+
+.it_product_detail .underline::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 2px;
+    background-color:#5BBA47;
+    transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.it_product_detail .underline:hover {
+    color: #5BBA47;
+}
+
+.it_product_detail .underline:hover::before {
+    left: 0;
+    right: auto;
+    width: 100%;
+}
+
+.it_products_col {
+    border-right: 3px solid #ebebeb;
+}
+
+.it_products_col:last-child {
+    border-right: 1px solid transparent;
+}
+
+.application-store {
+    width: 150px !important;
+    height: 50px !important;
+}
+
+
+/*------------------ Why Choose Us ------------------*/
+
+.why {
+    margin-top: 3rem;
+    background-color: #FAFAFA;
+}
+
+.why .icon {
+    width: 45px;
+    height: 45px;
+    background-color: #5BBA47;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.why img {
+    width: 300px;
+    height: 300px;
+}
+
+
+
+@media screen and (min-width: 768px) {
+    .carousel-content {
+        font-size: 60px;
+    }
+    .main_title {
+        color: white;
+    }
+    .our_service_card_container {
+        border-right: 3px solid #ebebeb;
+    }
+    .our_service_card_container .our_service_card {
+        margin-top: 4rem;
+        width: 65%;
+    }
+    .about_bg {
+        /*background-image: url('/public/frontend-assets/images/about_us_bg.f2d574dd.jpg');*/
+        background-image: url("../images/about_us_bg.f2d574dd.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .about_text {
+        padding: 0 50px;
+    }
+    .mission_bg {
+        background-image: url("../images/mission_bg.1380949c.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .mission_text {
+        padding:  0 50px;
+    }
+    .why img {
+        width: 320px;
+        height: 320px;
+    }
+}
+
+
+@media screen and (min-width: 992px) {
+    #it_products .it_product_img .laptop_img {
+        width: 100%;
+        height: auto;
+    }
+
+    #it_products .it_product_img .phone_img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+@media screen and (min-width: 1400px) {
+    .why img {
+        width: 400px;
+        height: 400px;
+    }
+}

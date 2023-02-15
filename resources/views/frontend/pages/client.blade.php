@@ -3,22 +3,7 @@
 @section('title', 'Fresh Moe')
 
 @section('extra-css')
-    <link rel="stylesheet" href="{{asset('frontend-assets/css/client/ourclients.css')}}"/>
-    <link rel="stylesheet" href="{{asset('frontend-assets/css/client/featureplans.css')}}"/>
-
-    <style>
-        .client_banner {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("{{asset('frontend-assets/images/client_banner.jpg')}}");
-            margin-top: 140px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-        }
-    </style>
+    <link rel="stylesheet" href="{{asset('frontend-assets/css/client.css')}}"/>
 @endsection
 
 @section('content')

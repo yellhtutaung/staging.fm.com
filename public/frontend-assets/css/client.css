@@ -1,3 +1,18 @@
+
+.client_banner {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/client_banner.jpg");
+    margin-top: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/*----------------- Feature Plans --------------------*/
+
 #future {
     padding-top: 50px;
     padding-bottom: 50px;
@@ -50,14 +65,54 @@
 }
 
 .our_future_card:hover {
-     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-     transform: translateY(-20px);
-     cursor: pointer;
- }
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    transform: translateY(-20px);
+    cursor: pointer;
+}
 
 .our_future_card_container:last-child {
-     border-right: none;
- }
+    border-right: none;
+}
+
+
+/*-------------------------- Our Clients -----------------------*/
+
+#clients {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.our_clients_card {
+    width: 90%;
+    padding: 20px;
+    margin: 3rem auto;
+    background-color: rgba(205, 202, 202, 0.313);
+    border-radius: 25px;
+    font-size: 1rem;
+}
+.our_clients_card .title {
+    display: flex;
+    justify-content: flex-start;
+    font-size: 1.2rem;
+    align-items: center;
+    gap: 0.5rem;
+    opacity: 1;
+    margin-bottom: 1rem;
+}
+.our_clients_card .title .underline {
+    background: #ED1C24;
+    height: 10px;
+    width: 5%;
+    opacity: 0.5;
+}
+.our_clients_card .content {
+    opacity: 1;
+}
+
+
 
 @media screen and (min-width: 768px) {
     .our_future_card_container {
@@ -66,6 +121,9 @@
     .our_future_card_container .our_future_card {
         margin-top: 4rem;
         width: 65%;
+    }
+    .title {
+        font-size: 2.2rem;
     }
 }
 
