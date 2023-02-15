@@ -7,6 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
+    @yield('extra')
 @endsection
 
 @section('content')
@@ -16,7 +17,7 @@
         <div class="row g-2">
             <div class="col-md-3">
                 <div class="animate__animated animate__fadeIn">
-                    <div class="card profile-card border-0 shadow-sm card-body">
+                    <div class="card profile-card border-0 card-body">
                         <div class="text-center">
                             <div class="avatar avatar-xl mb-2">
                                 {{--<img class="avatar-img rounded-circle border border-2 border-white" width="80" height="80" src="{{asset("frontend-assets/images/employee_profile_1.jpg")}}" alt="">--}}
@@ -27,6 +28,9 @@
                             <hr>
                         </div>
                         <ul class="nav nav-pills-primary-soft flex-column ">
+                            <li class="nav-item">
+                                <a class="nav-link {{ Request::is('pricelist') ? 'active' : '' }}" href="{{route('priceList')}}"><i class="fa-solid fa-list me-2"></i><span>Price List</span></a>
+                            </li>
                             <li class="nav-item">
                                 <a class="nav-link {{ Request::is('profile') ? 'active' : '' }}" href="{{route('profile')}}"><i class="fa fa-user me-2"></i><span>{{ __('message.my_profile') }}</span></a>
                             </li>
@@ -60,7 +64,6 @@
     {{-- sweetalert --}}
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-    @yield('extra_scripts')
 
     <script>
 
@@ -134,6 +137,36 @@
             })
 
         })
+
+
+    //    ------------- Price List ----------------
+
+        $(document).ready(function () {
+            $('#example').DataTable({
+                "pageLength": 100,
+            });
+            $('.form-control-sm').addClass("input-data-search")
+            $('.input-data-search').focus(); // input auto focus
+
+            $('.js-example-basic-multiple').select2();
+
+        });
+
+
+
+
+        let language = {
+            mm: [
+                'Home ',
+                'About ',
+            ],
+            en: [
+                'မူရင်းစာမျက်နှာ ',
+                'အကြောင်း ',
+            ]
+        }
+        let lenStr = 'mm';
+        console.log(language[lenStr][0])
 
     </script>
 

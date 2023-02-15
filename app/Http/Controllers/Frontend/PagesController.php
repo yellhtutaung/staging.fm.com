@@ -10,6 +10,7 @@ use App\Models\FruitPriceList;
 use App\Models\FruitPriceListTransition;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
 
@@ -61,8 +62,9 @@ class PagesController extends Controller
 
     public function priceList()
     {
+        $user = Auth::guard('web')->user();
         $fruitPriceList = FruitPriceList::where('hide_show',1)->where('status',1)->orderBy('id','DESC')->get();
-        return view('frontend.price_list',compact('fruitPriceList'));
+        return view('frontend.price_list',compact('fruitPriceList', 'user'));
     }
 
     public function priceListHistory($id,$limit=8)

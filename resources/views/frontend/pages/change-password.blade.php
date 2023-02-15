@@ -5,7 +5,7 @@
         <div class="card-header form-header-border border-0 theme_bg ">
             <h5 class="card-title text-white"> {{ __('message.change_password') }}</h5>
         </div>
-        <div class="card border-0 shadow-sm card-body profile-info">
+        <div class="card border-0 card-body profile-info">
             <form action="{{route('updatePassword')}}" method="POST">
                 @csrf
                 <div class="row">

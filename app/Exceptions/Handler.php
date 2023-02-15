@@ -47,4 +47,25 @@ class Handler extends ExceptionHandler
             //
         });
     }
+
+//    public function render($request, Throwable $exception)
+//    {
+//        if ($exception instanceof ModelNotFoundException && $request->is('api/*')) {
+//            return response()->json(['error' => 'Not found'], 404);
+//        }
+//
+//        if($exception instanceof \Illuminate\Auth\AuthenticationException && $request->is('api/*')){
+//            return response()->json([
+//                'status'=> false,
+//                'message' => 'unauthorized',
+//                'data'=>null
+//            ], 401);
+//        }
+//        $response = parent::render($request, $exception);
+//
+//        if($response->status() == 404) {
+//            return response()->view('admin.not_found.404');
+//        }
+//        return $response;
+//    }
 }

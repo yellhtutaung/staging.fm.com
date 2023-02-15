@@ -18,17 +18,17 @@
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <style>
-        {{--.client_banner {--}}
-        {{--    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("{{asset('frontend-assets/images/client_banner.jpg')}}");--}}
-        {{--    margin-top: 140px;--}}
-        {{--    display: flex;--}}
-        {{--    justify-content: center;--}}
-        {{--    align-items: center;--}}
-        {{--    min-height: 100vh;--}}
-        {{--    background-size: cover;--}}
-        {{--    background-repeat: no-repeat;--}}
-        {{--    background-position: center;--}}
-        {{--}--}}
+        .back-price-list {
+            float: right;
+            padding: 0.5rem 1.5rem;
+            margin: 0.5rem;
+            margin-right: 0;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #5bba47;
+            color: white !important;
+            text-decoration: none;
+        }
         .product-img
         {
             width: 100px;
@@ -48,12 +48,19 @@
 <div class="container-fluid mb-5" style="margin-top: 190px !important;" >
     <div class="row">
         <div class="col-sm-12 col-md-10 offset-md-1">
-            <div class="main_title d-inline-block ">
-                <h3 class="text-black title-fm animate__animated animate__slideInLeft ">{{ __('message.previous_price_list') }} {{$priceList->name}}</h3>
-                <span class="main_title_underline w-75 bg-dark"></span>
-            </div>
-            <div class="d-inline-block ">
-                <img class="product-img animate__animated animate__bounce" src="{{asset("backend-assets/uploads/fruits/$priceList->id/$priceList->images")}}" alt="{{$priceList->name}}" />
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+                    <div class="main_title d-inline-block ">
+                        <h3 class="text-black title-fm animate__animated animate__slideInLeft ">{{ __('message.previous_price_list') }} {{$priceList->name}}</h3>
+                        <span class="main_title_underline w-75 bg-dark"></span>
+                    </div>
+                    <div class="d-inline-block ">
+                        <img class="product-img animate__animated animate__bounce" src="{{asset("backend-assets/uploads/fruits/$priceList->id/$priceList->images")}}" alt="{{$priceList->name}}" />
+                    </div>
+                </div>
+                <div class="animate__animated animate__slideInRight">
+                    <a href="{{route('priceList')}}" class="back-price-list">Back</a>
+                </div>
             </div>
             <div class="card animate__animated animate__fadeIn shadow-sm">
                 <div id="chart"></div>

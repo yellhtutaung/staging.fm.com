@@ -6,8 +6,9 @@
 }
 
 .socials {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: white;
 }
 .social_icon {
     color: #ED1C24 !important;

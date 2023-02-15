@@ -1,14 +1,26 @@
-.client_banner {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("{{asset('frontend-assets/images/client_banner.jpg')}}");
-    margin-top: 140px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+/*.client_banner {*/
+/*    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("{{asset('frontend-assets/images/client_banner.jpg')}}");*/
+/*    margin-top: 140px;*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    min-height: 100vh;*/
+/*    background-size: cover;*/
+/*    background-repeat: no-repeat;*/
+/*    background-position: center;*/
+/*}*/
+
+body{
+    background-image: linear-gradient(rgb(91, 186, 71, 0.7), rgb(91, 186, 71, 0.7)), url("../../frontend-assets/images/authenticated/authenticated_bg_2.png");
 }
+
+.card {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.card-header {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
 .nav-pills-primary-soft.flex-column .nav-item {
     margin-bottom: 3px;
     margin-right: 0;
@@ -21,12 +33,15 @@
     border-bottom: 0 !important;
 }
 
-.nav-pills-primary-soft .nav-link.active:after, .nav-pills-primary-soft .nav-link:hover:after{
-    /*color: green;*/
-    /*background-color: rgba(81, 67, 217, 0.1)*/
+.nav-pills-primary-soft .nav-link.active:after{
     transform: scaleY(1);
     color: #5bba47 !important;
 }
+
+/*.nav-pills-primary-soft .nav-link:hover:after{*/
+/*    transform: scaleY(1);*/
+/*    color: #5bba47 !important;*/
+/*}*/
 
 .nav-pills-primary-soft .nav-link {
     padding: 0.5rem 0.8rem !important;
@@ -39,8 +54,8 @@
     content: '';
     position: absolute;
     top: 0;
-    bottom: 0;
-    right: auto;
+    bottom: auto;
+    right: 0;
     left: 0;
     height: 100%;
     width: 3px;
@@ -154,6 +169,15 @@ a:hover {
     background-color: #5bba47 !important;
 
 }
+
+
+/*---------------------- Price List --------------------------*/
+
+.price-list .card a span {
+    color: white;
+}
+
+
 
 
 
