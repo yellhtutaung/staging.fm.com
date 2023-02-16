@@ -175,7 +175,7 @@ class RegisterController extends Controller
             $generateOtp = $this->generateOTP($In->phone);
             if($generateOtp)
             {
-                if($this->sendSMS($In->phone,$generateOtp,' is you are register OTP number .'))
+                if($this->sendSMS($In->phone,$generateOtp,' is your register OTP number .'))
                 {
 //                return redirect()->route('registerOtpCheck',compact('In'));
                     $userData = $this->registerObj($In);

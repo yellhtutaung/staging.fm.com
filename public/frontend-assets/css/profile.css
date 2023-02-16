@@ -26,6 +26,21 @@
     opacity: 0.2;
 }
 
+/*------------------ User Sidebar ----------------------*/
+.side-col {
+    position: relative;
+}
+
+.side-col .card {
+    position: sticky;
+    top: 180px;
+    left: 0;
+    width: 100%;
+
+}
+
+
+
 .card {
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }

@@ -69,7 +69,7 @@ class LoginController extends Controller
                 if (Session::get('locale') == 'mm'){
                     return back()->withErrors(['credentials'=>'အသုံးပြုခွင့်ပိတ်ပင်ထားပါသည် | ကျေးဇူးပြု၍ FreshMoe ရုံးချုပ်သို့ ဆက်သွယ်ပေးပါခင်ဗျ'])->withInput();
                 }
-                return back()->withErrors(['credentials'=>'You are banned user | Plz connect to admin '])->withInput();
+                return back()->withErrors(['credentials'=>'You are banned user | Please connect to admin '])->withInput();
             }
             Auth::login($user);
             return redirect()->route('priceList');

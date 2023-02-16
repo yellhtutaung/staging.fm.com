@@ -23,8 +23,8 @@ return [
     'sign_in' => [
         'sign_in' => 'Sign In',
         'sign_up' => 'Sign Up',
-        'email' => 'email',
-        'password' => 'password',
+        'email' => 'Email',
+        'password' => 'Password',
         'enter_email' => 'Enter your email',
         'enter_password' => 'Enter your password',
         'dont_have_acc' => "You don't have an account",

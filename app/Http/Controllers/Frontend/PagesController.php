@@ -12,6 +12,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Validator;
 
 class PagesController extends Controller
@@ -130,6 +131,12 @@ class PagesController extends Controller
 
         if ($contactDb->save())
         {
+            if (Session::get('locale') == 'mm'){
+                return response()->json([
+                    'status' => 'success',
+                    'message' =>  'သင့်ရဲ့မက်ဆေ့ဂ်ျကို ရရှိပါသည်'
+                ]);
+            }
             return response()->json([
                 'status' => 'success',
                 'message' =>  'We received your message'

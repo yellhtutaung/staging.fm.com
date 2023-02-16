@@ -1,0 +1,438 @@
+/*------------------- navbar start ---------------------------*/
+
+nav li.router-link-active {
+    text-decoration: underline;
+}
+#top_brand_bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    background-color: white;
+}
+#top_brand_bar .red_block {
+    background-color: #ED1C24;
+    width: 100%;
+    min-height: 10px;
+}
+#top_brand_bar .green_block {
+    background-color: #5BBA47;
+    width: 100%;
+    min-height: 30px;
+}
+#top_brand_bar .white_block {
+    background-color: #ffffff;
+    width: 100%;
+    min-height: 5px;
+}
+
+.navigation_bar.web {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navigation_bar.web .left_navigation_bar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.navigation_bar.web .left_navigation_bar ul {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation_bar.web .left_navigation_bar ul li {
+    list-style: none;
+    display: flex;
+}
+.navigation_bar.web .left_navigation_bar ul li a {
+    padding: 10px;
+    text-decoration: none;
+    font-size: 1.2em;
+    color: black;
+}
+.navigation_bar.web .left_navigation_bar ul li a:hover {
+    color: green;
+}
+
+
+.right_navigation_bar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.right_navigation_bar ul {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right_navigation_bar ul li {
+    list-style: none;
+    display: flex;
+}
+.right_navigation_bar ul li a {
+    padding: 10px;
+    text-decoration: none;
+    font-size: 1.2em;
+    color: black;
+}
+.right_navigation_bar ul li a:hover {
+    color: green;
+}
+
+
+.navigation_bar {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.mobile_menu_icon {
+    position: absolute;
+    top: 35%;
+    left: 0%;
+}
+
+.main_logo {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 150px;
+    height: auto;
+}
+
+.menu_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #00000085 !important;
+    padding: 0.5rem 1rem !important;
+}
+.menu_button:hover {
+    background-color: #5BBA47;
+    color: #ffffff !important;
+    transition: ease-in 0.25s;
+    border-color: transparent;
+}
+
+
+
+
+/* --------------- Language Dropdown ------------------- */
+
+.lan-dropdown {
+    position: relative;
+}
+
+#lan_action {
+    z-index: 999;
+}
+
+.lan-dropdown > ul {
+    top: 150%;
+    right: 0;
+    width: 200%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 5px;
+}
+
+.lan-dropdown > ul > .first {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.lan-dropdown > ul > .last {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.lan-dropdown > ul > li {
+    width: 100%;
+}
+
+.lan-dropdown > ul > li > a {
+    width: 100%;
+    cursor: pointer;
+}
+
+.lan-dropdown > ul > li:hover {
+    background-color: #5bba47;
+    color: white !important;
+
+}
+
+.lan-dropdown > ul > li:hover > a {
+    color: white !important;
+}
+
+/*------------------- navbar end ---------------------------*/
+
+
+/*------------------- navbar overlay start ---------------------------*/
+
+.overlay {
+    height: 0;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    transition: 0.5s;
+    z-index: 10000;
+}
+
+.overlay-content {
+    position: relative;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay a {
+    padding: 15px 20px;
+    text-align: right;
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: black;
+    display: block;
+    transition: 0.3s;
+    margin-right: 20px;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+    color: #3c8132;
+    transform: scale(1.1) translate(0px , -5px);
+}
+
+.overlay .closebtn {
+    text-decoration: none !important;
+    position: absolute;
+    top: -20px;
+    right: 0;
+    font-size: 3rem;
+    z-index: 100;
+}
+.overlay .closebtn:hover {
+    transform: scale(1.3);
+}
+
+
+/*------------------- navbar overlay end ---------------------------*/
+
+
+/*------------------- footer start---------------------------*/
+#footer {
+    margin-top: 3rem;
+}
+#footer .footer_section_1 {
+    margin-bottom: 3rem;
+}
+
+.socials {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: white;
+}
+.social_icon {
+    color: #ED1C24 !important;
+    display: block;
+    margin: 0 5px;
+    font-size: 1.5rem;
+}
+.social_icon:hover {
+    color: #5BBA47 !important;
+}
+
+
+/*footer link start */
+
+.green_hr_line {
+    width: 50%;
+    height: 2px;
+    background-color: #ebebeb;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+.short_text {
+    margin-top: 1.5em;
+    margin-bottom: 0;
+    line-height: normal;
+    text-align: center;
+}
+.footer_links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.footer_links a {
+    color: #000000;
+    text-decoration: none;
+    position: relative;
+    border: 1px solid gray;
+    padding: 1.25rem;
+    border-radius: 25px;
+    text-align: center;
+    -webkit-transition: ease-in-out 0.25s;
+    -moz-transition: ease-in-out 0.25s;
+    transition: ease-in-out 0.25s;
+}
+.footer_links a:hover {
+    background-color: #5BBA47;
+    color: #ffffff;
+}
+
+
+.footer_links2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.footer_links2 a {
+    color: #000000;
+    text-decoration: none;
+    position: relative;
+    border: 1px solid gray;
+    padding: 1.25rem;
+    border-radius: 25px;
+    text-align: center;
+    -webkit-transition: ease-in-out 0.25s;
+    -moz-transition: ease-in-out 0.25s;
+    transition: ease-in-out 0.25s;
+}
+.footer_links2 a:hover {
+    background-color: #5BBA47;
+    color: #ffffff;
+}
+.footer_links2_active {
+    background-color: #5BBA47;
+    color: #ffffff;
+}
+
+/*footer link end*/
+
+
+/*contact form start*/
+
+.contact_center_title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.contact_center_title .contact_center_title_underline {
+    width: 50px;
+    height: 3px;
+    background-color: #5BBA47;
+    margin: 10px 5px;
+}
+
+.contact_form {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.contact_form input {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+.contact_form input:focus {
+    outline-color: #5BBA47;
+}
+.contact_form textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+.contact_form textarea:focus {
+    outline-color: #5BBA47;
+}
+.contact_form button {
+    float: right;
+    padding: 0.7rem 1.5rem;
+    margin: 0.5rem;
+    margin-right: 0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #ED1C24;
+    color: white;
+}
+.contact_form button:hover {
+    background-color: white;
+    color: #ED1C24;
+    border: 1px solid #ED1C24;
+}
+/*------------------- footer end ---------------------------*/
+
+
+
+/*-------------------  ---------------------------*/
+/*-------------------  ---------------------------*/
+
+
+
+@media screen and (max-width: 768px) {
+    .navigation_bar.web {
+        display: none;
+    }
+    .navigation_bar.mobile {
+        display: flex;
+    }
+}
+
+
+
+@media screen and (min-width: 768px) {
+    .overlay {
+        background-image: url("../../../frontend-assets/images/bg_nav_bar.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .overlay-content {
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+
+    .overlay a {
+        font-size: 1.7rem;
+    }
+
+    .overlay a:hover,
+    .overlay a:focus {
+        color: #3c8132;
+        transform: scale(1.1) translate(-20px , -5px);
+    }
+}

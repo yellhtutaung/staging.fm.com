@@ -176,7 +176,9 @@ return [
         'password' => 'စကားဝှက်',
         'credentials' => 'အထောက်အထား',
         'country_id' => 'နိုင်ငံ',
-        'city_id' => 'မြို့'
+        'city_id' => 'မြို့',
+        'old_password' => 'စကားဝှက်အဟောင်း',
+        'message' => 'မက်ဆေ့ဂ်ျ'
     ],
 
 ];

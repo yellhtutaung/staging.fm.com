@@ -39,9 +39,7 @@
 
     {{--    global css --}}
     <link rel="stylesheet" href="{{asset('frontend-assets/css/global.css')}}">
-    <link rel="stylesheet" href="{{asset('frontend-assets/css/navlayout.css')}}"/>
-    <link rel="stylesheet" href="{{asset('frontend-assets/css/footer.css')}}"/>
-    <link rel="stylesheet" href="{{asset('frontend-assets/css/navbaroverlay.css')}}"/>
+    <link rel="stylesheet" href="{{asset('frontend-assets/css/layout.css')}}"/>
 
     @yield('extra-css')
 </head>
