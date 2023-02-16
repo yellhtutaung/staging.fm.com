@@ -33,8 +33,8 @@
                                        id="email" >
                                 @error('email')
                                 <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
+                                    <strong>{{ $message }}</strong>
+                                </span>
                                 @enderror
                             </div>
                             <div class="col-md-6 input-wrapper">
@@ -61,7 +61,7 @@
                                 <select id="country" onchange="takeCitiesByCountryId()"  class="form-control js-example-placeholder-single js-example-disabled-results @error('country_id') is-invalid @enderror" name="country_id" >
                                     <option value="">{{ __('auth.sign_up.select_country') }}</option>
                                     @foreach($countries as $country)
-                                        <option value="{{$country->id}}">{{$country->name}}</option>
+                                        <option value="{{$country->id}}" {{old('country_id') == $country->id ? 'selected' : ''}}>{{$country->name}}</option>
                                     @endforeach
                                 </select>
 
@@ -72,10 +72,14 @@
                                 @enderror
                             </div>
                             <div class="col-md-6 input-wrapper">
-                                <select id="city" class="form-control js-example-disabled-results" name="city_id" >
+                                <select id="city" class="form-control js-example-disabled-results @error('city_id') is-invalid @enderror" name="city_id" >
                                     <option value="">{{ __('auth.sign_up.select_city') }}</option>
                                 </select>
-
+                                @error('city_id')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                                @enderror
                             </div>
                             <div class="col-md-6 input-wrapper">
                                 <input type="text" class="input @error('postal_code') is-invalid @enderror"
@@ -155,6 +159,8 @@
             allowClear: false
         });
 
+        takeCitiesByCountryId()
+
     });
     const outCities = <?php echo json_encode($cities,true); ?>;
     function takeCitiesByCountryId () {
@@ -165,10 +171,12 @@
             return city.parent_id === country_id
         })
 
+        const selected_id =  {{old('city_id')}}
+
         $('#city').empty()
         if(cities.length > 0) {
             for (let i = 0; i < cities.length; i++) {
-                let data = `<option value="${cities[i].id}">${cities[i].name}</option>`;
+                let data = `<option value="${cities[i].id}" ${selected_id === cities[i].id ? 'selected' : ''}>${cities[i].name}</option>`;
                 $('#city').append(data)
             }
         }else{

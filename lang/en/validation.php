@@ -170,7 +170,9 @@ return [
     */
 
     'attributes' => [
-        'email' => 'email'
+        'email' => 'email',
+        'country_id' => 'country',
+        'city_id' => 'city'
     ],
 
 ];

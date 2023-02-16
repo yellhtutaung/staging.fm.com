@@ -17,6 +17,7 @@
     content: "";
     background-image: url("../../frontend-assets/images/authenticated/authenticated_bg_2.png");
     background-size: cover;
+    background-attachment: fixed;
     position: absolute;
     top: 0px;
     right: 0px;

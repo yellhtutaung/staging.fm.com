@@ -112,7 +112,9 @@ class RegisterController extends Controller
                 'email' => ['nullable', 'string', 'email', 'max:255', 'unique:users'],
                 'phone' => ['required', 'unique:users' , 'min:10'],
                 'password' => ['required', 'string', 'min:6', 'confirmed'],
-                'otp' => ['required' , 'min:6']
+                'otp' => ['required' , 'min:6'],
+                'country_id' => ['required'],
+                'city_id' => ['required']
             ],
         );
         if ($validator->fails()) {
@@ -162,7 +164,9 @@ class RegisterController extends Controller
                 'email' => ['nullable', 'string', 'email', 'max:255', 'unique:users'],
                 'phone' => ['required', 'unique:users' , 'min:10', 'max:13'],
                 'password' => ['required', 'string', 'min:6', 'confirmed'],
-            ],
+                'country_id' => ['required'],
+                'city_id' => ['required']
+            ]
         );
         if ($validator->fails()) {
             $message = $validator->errors();

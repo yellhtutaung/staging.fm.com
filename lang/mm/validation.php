@@ -174,7 +174,9 @@ return [
         'name' => 'အမည်',
         'phone' => 'ဖုန်းနံပါတ်',
         'password' => 'စကားဝှက်',
-        'credentials' => 'အထောက်အထား'
+        'credentials' => 'အထောက်အထား',
+        'country_id' => 'နိုင်ငံ',
+        'city_id' => 'မြို့'
     ],
 
 ];
