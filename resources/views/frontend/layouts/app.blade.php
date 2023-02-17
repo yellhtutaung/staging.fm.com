@@ -84,6 +84,9 @@
     </div>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    {{-- sweetalert --}}
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <script src="{{asset('frontend-assets/js/app.js')}}"></script>
     <script>
         AOS.init({
@@ -97,6 +100,40 @@
             }
         });
         const csrf_token = $('meta[name="csrf-token"]').attr('content');
+
+
+        const Toast = Swal.mixin({
+            toast: true,
+            position: 'bottom-end',
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+                toast.addEventListener('mouseenter', Swal.stopTimer)
+                toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+        })
+
+        @if (session('create'))
+        Toast.fire({
+            icon: 'success',
+            title: "{{ session('create') }}"
+        })
+        @endif
+
+        @if (session('update'))
+        Toast.fire({
+            icon: 'success',
+            title: "{{ session('update') }}"
+        })
+        @endif
+
+        @if (session('delete'))
+        Toast.fire({
+            icon: 'success',
+            title: "{{ session('delete') }}"
+        })
+        @endif
     </script>
 
     @yield('extra-script')

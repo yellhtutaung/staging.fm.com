@@ -416,7 +416,7 @@ nav li.router-link-active {
 
 @media screen and (min-width: 768px) {
     .overlay {
-        background-image: url("../../../frontend-assets/images/bg_nav_bar.jpg");
+        background-image: url("../../../frontend-assets/images/bg_nav_bar_2.jpg");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
