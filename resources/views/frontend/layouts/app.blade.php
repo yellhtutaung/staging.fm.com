@@ -61,8 +61,9 @@
     <hr class="m-0 p-0"/>
     <div class="socials body-fm">
         <p class="text-center">{{ __('message.phone') }}: {{ __('message.phone_no') }}</p>
-        <h5 class="text-center my-1">{{ __('message.follow_us') }}</h5>
-        <div class="d-flex justify-content-center my-1 mt-3">
+{{--        <h5 class="text-center my-1"></h5>--}}
+        <div class="d-flex justify-content-center  ">
+{{--            {{ __('message.follow_us') }}--}}
             <a href="/" class="social_icon">
                 <i class="fa-brands fa-square-facebook"></i>
             </a>

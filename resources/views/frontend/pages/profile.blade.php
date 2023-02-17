@@ -1,7 +1,7 @@
 @extends('frontend.layouts.user-sidebar')
 @section('title', 'Profile')
 @section('sidebar')
-    <div class="animate__animated animate__fadeIn">
+    <div class="animate__animated animate__fadeIn ">
         <div class="card-header form-header-border border-0 theme_bg ">
             <h5 class="card-title text-white m-0"> {{ __('message.personal_information') }}</h5>
         </div>

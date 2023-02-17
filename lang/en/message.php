@@ -72,6 +72,7 @@ return [
 
     'client_hero' => 'Clients and Future Plans',
     'clients' => 'Our Clients',
+    "servies_country"=>"Services Country",
     'thailand' => 'Thailand',
     'singapore' => 'Singapore',
     'malaysia' => 'Malaysia',

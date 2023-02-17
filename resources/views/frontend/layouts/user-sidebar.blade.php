@@ -6,7 +6,12 @@
 
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-
+    <style>
+        .theme_card_border
+        {
+            border: 2px solid red !important;
+        }
+    </style>
     @yield('extra')
 @endsection
 
@@ -16,7 +21,7 @@
 
         <div class="row g-2">
             <div class="col-md-3 side-col">
-                <div class="card w-100 profile-card border-0 card-body animate__animated animate__fadeLeft">
+                <div class="card w-100 profile-card border-0 card-body animate__animated animate__fadeLeft ">
                     <div class="text-center">
                         <div class="avatar avatar-xl mb-2">
                             {{--<img class="avatar-img rounded-circle border border-2 border-white" width="80" height="80" src="{{asset("frontend-assets/images/employee_profile_1.jpg")}}" alt="">--}}
@@ -47,7 +52,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-md-9 ms-md-auto">
+            <div class="col-md-9 ms-md-auto ">
                 @yield('sidebar')
             </div>
         </div>
