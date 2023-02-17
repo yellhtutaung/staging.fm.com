@@ -65,7 +65,7 @@ class PagesController extends Controller
     {
         $user = Auth::guard('web')->user();
         $fruitPriceList = FruitPriceList::where('hide_show',1)->where('status',1)->orderBy('id','DESC')->get();
-        return view('frontend.price_list',compact('fruitPriceList', 'user'));
+        return view('frontend.pages.price_list',compact('fruitPriceList', 'user'));
     }
 
     public function priceListHistory($id,$limit=8)
@@ -81,7 +81,8 @@ class PagesController extends Controller
                 $History->date = $created_at[0];
                 $History->time = $created_at[1];
             }
-            return view('frontend.price_logs',compact('priceListHistory','priceList'));
+            $user = Auth::guard('web')->user();
+            return view('frontend.pages.price_logs',compact('priceListHistory','priceList', 'user'));
         }else{
             return abort(404);
         }
