@@ -107,7 +107,7 @@ return [
 
     // ----------------------- Price logs ------------------------------
 
-    'previous_price_list' => 'Previous price list of',
+    'previous_price_list' => 'Previous price list',
 
 
 
