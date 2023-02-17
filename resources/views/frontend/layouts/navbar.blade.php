@@ -85,7 +85,7 @@
 
     $(".changeLang").change(function(){
         let language = $(this).val();
-        $.post("lang/change",
+        $.post("/lang/change",
             {
                 lang: language,
                 token: csrf_token
