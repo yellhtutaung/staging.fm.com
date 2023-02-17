@@ -25,26 +25,7 @@
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
         <link rel="stylesheet" href="{{asset('frontend-assets/css/profile.css')}}"/>
-    <style>
-        .back-price-list {
-            float: right;
-            padding: 0.5rem 1.5rem;
-            margin: 0.5rem;
-            margin-right: 0;
-            border: 1px solid #ccc;
-            border-radius: 10px;
-            background-color: #5bba47;
-            color: white !important;
-            text-decoration: none;
-        }
-        .product-img
-        {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-        }
 
-    </style>
 @endsection
 
 @section('content')
@@ -57,15 +38,15 @@
                 <div class="col-md-9 ms-md-auto">
                     {{--price list --}}
 
-                    <div class="" >
+                    <div class="price_logs">
                         <div class="row">
                             <div class="col-sm-12">
                                 <div class="card-header theme_bg">
-                                    <div class="main_title m-0 me-2 d-inline-block " >
-                                        <h3 class="title-fm animate__animated animate__slideInLeft text-light m-0">{{ __('message.previous_price_list') }} {{$priceList->name}}</h3>
-                                        <span class="main_title_underline w-75 bg-light"></span>
-                                    </div>
                                     <img class="product-img animate__animated animate__bounce " src="{{asset("backend-assets/uploads/fruits/$priceList->id/$priceList->images")}}" alt="{{$priceList->name}}" />
+                                    <div class="main_title m-0 ms-2 d-inline-block " >
+                                        <h4 class="title-fm animate__animated animate__slideInRight text-light m-0"><b>{{$priceList->name}}</b> - {{ __('message.previous_price_list') }} </h4>
+{{--                                        <span class="main_title_underline w-75 bg-light"></span>--}}
+                                    </div>
                                 </div>
                                 <div class="card border-0 animate__animated animate__fadeIn shadow-sm">
                                     <div id="chart"></div>
