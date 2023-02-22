@@ -217,6 +217,18 @@ return [
         'Country',
         'City',
         'State'
+    ],
+
+        'roles' =>
+    [
+        'Programmer',
+        'Owner',
+        'Finance',
+        'Accountant',
+        'Data Analysis',
+        'Digital Marketing',
+        'Data Entry',
+        'Staff'
     ]
 
 ];

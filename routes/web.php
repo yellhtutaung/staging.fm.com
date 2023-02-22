@@ -4,6 +4,7 @@ use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\ResetPasswordController;
 use App\Http\Controllers\Backend\DashboardController;
 use App\Http\Controllers\Backend\AdminAuthController;
+use App\Http\Controllers\Backend\AccountController;
 use App\Http\Controllers\Backend\FruitController;
 use App\Http\Controllers\Backend\ContactController;
 use App\Http\Controllers\Backend\CountryController;
@@ -95,6 +96,14 @@ Route::middleware([CheckAdmin::class])->prefix('admin')->group(function ()
         Route::get('{token}/details', [UserController::class, 'userDetails'])->name('userDetails');
         Route::post('update', [UserController::class, 'updateUser'])->name('updateUser');
         Route::post('/banUser', [UserController::class, 'banUser'])->name('banUser');
+    });
+    Route::prefix('account')->group(function () {
+        Route::get('/', [AccountController::class, 'accountList'])->name('accountList');
+        Route::get('/add', [AccountController::class, 'addAccount'])->name('addAccount');
+        Route::post('create', [AccountController::class, 'createAccount'])->name('createAccount');
+        Route::get('{token}/details', [AccountController::class, 'accountDetails'])->name('accountDetails');
+        Route::get('{token}/edit', [AccountController::class, 'editAccount'])->name('editAccount');
+        Route::post('update', [AccountController::class, 'updateAccount'])->name('updateAccount');
     });
     Route::prefix('country')->group(function () {
         Route::get('/', [CountryController::class, 'countryList'])->name('countryList');

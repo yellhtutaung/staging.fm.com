@@ -46,7 +46,7 @@ class UserController extends Controller
             {
                 return view('backend.user.details',compact('fetchUser','currentCity','currentCountry'));
             }else{
-                return redirect()->back()->with('warning', 'Route not found ');
+                return redirect()->back()->with('warning', 'User not found ');
             }
         }catch (\Exception $e) {
             return redirect()->back()->with('warning', $e->getMessage());
