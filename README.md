@@ -64,3 +64,18 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+
+
+
+
+
+
+
+
+
+Custom Referance Command
+________________________
+    
+Spatie Referance Link ( yellhtut -> https://www.itsolutionstuff.com/post/laravel-9-user-roles-and-permissions-tutorialexample.html )
