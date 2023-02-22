@@ -3,9 +3,13 @@
 namespace App\Http\Controllers\Helpers;
 use App\Models\OtpVerify;
 use GuzzleHttp\Client;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 trait General
 {
+    public  static $sessionAdmin = Auth::guard('admin')->user();
+    public  static $sessionUser = Auth::guard('web')->user();
+
     public static function strGenerator($no)
     {
         return   Str::random($no); // how many str do u want to use

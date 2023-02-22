@@ -17,7 +17,19 @@
             </ul>
             <hr>
             <ul class="m-0 p-0">
-                <li id="user" class="dropNav {{ Route::currentRouteName() == 'userList'  ?  'open-drop' : null }}" >
+                <li id="account" class="dropNav {{ Request::segment(2) == 'account'  ?  'open-drop' : null }}" >
+                    <a class="{{ Route::currentRouteName() == 'accountList' ? 'active-link' : null}}" href="javascript:void(0)" onclick="dropTagAction('account')">
+                        <i class="fa-solid fa-users"></i>
+                        <span>Account Management</span>
+                        <i class="fa fa-angle-right aside-icon " id="account-icon"></i>
+                    </a>
+                    <ul>
+                        <li class="{{ Route::currentRouteName() == 'accountList' ? 'active-route' : null}}"><a class="w-100 " href="{{route('accountList')}}">List</a></li>
+                    </ul>
+                </li>
+                <hr>
+
+                <li id="user" class="dropNav {{ Request::segment(2) == 'user'  ?  'open-drop' : null }}" >
                     <a class="{{ Route::currentRouteName() == 'userList' ? 'active-link' : null}}" href="javascript:void(0)" onclick="dropTagAction('user')">
                         <i class="fa-solid fa-users"></i>
                         <span>Users Management</span>
