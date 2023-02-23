@@ -17,6 +17,7 @@
             </ul>
             <hr>
             <ul class="m-0 p-0">
+                <small class="text-muted " style="margin-left: 10px">Account Management</small>
                 <li id="account" class="dropNav {{ Request::segment(2) == 'account'  ?  'open-drop' : null }}" >
                     <a class="{{ Route::currentRouteName() == 'accountList' ? 'active-link' : null}}" href="javascript:void(0)" onclick="dropTagAction('account')">
                         <i class="fa-solid fa-users"></i>
@@ -24,11 +25,14 @@
                         <i class="fa fa-angle-right aside-icon " id="account-icon"></i>
                     </a>
                     <ul>
-                        <li class="{{ Route::currentRouteName() == 'accountList' ? 'active-route' : null}}"><a class="w-100 " href="{{route('accountList')}}">List</a></li>
+                        <li class="{{ Route::currentRouteName() == 'accountList' || Route::currentRouteName()  == 'addAccount' || Route::currentRouteName()  == 'editAccount' || Route::currentRouteName()  == 'accountDetails' ? 'active-route' : null}}">
+                            <a class="w-100 " href="{{route('accountList')}}">List</a>
+                        </li>
                     </ul>
                 </li>
                 <hr>
 
+                <small class="text-muted " style="margin-left: 10px">Users Management</small>
                 <li id="user" class="dropNav {{ Request::segment(2) == 'user'  ?  'open-drop' : null }}" >
                     <a class="{{ Route::currentRouteName() == 'userList' ? 'active-link' : null}}" href="javascript:void(0)" onclick="dropTagAction('user')">
                         <i class="fa-solid fa-users"></i>
@@ -36,7 +40,7 @@
                         <i class="fa fa-angle-right aside-icon " id="user-icon"></i>
                     </a>
                     <ul>
-                        <li class="{{ Route::currentRouteName() == 'userList' ? 'active-route' : null}}"><a class="w-100 " href="{{route('userList')}}">List</a></li>
+                        <li class="{{ Route::currentRouteName() == 'userList' || Route::currentRouteName() == 'editUser' || Route::currentRouteName() == 'userDetails' ? 'active-route' : null}}"><a class="w-100 " href="{{route('userList')}}">List</a></li>
                     </ul>
                 </li>
                 <hr>

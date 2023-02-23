@@ -6,7 +6,7 @@
             <div class="col-sm-12 col-md-6">
                 <div class="animate__animated animate__fadeIn">
                     <div class="card-header form-header-border theme_bg border-0">
-                        <h5 class="card-title text-white">ADD ACCOUNT </h5>
+                        <h5 class="card-title text-white">UPDATE ACCOUNT </h5>
                     </div>
                     <div class="card shadow-lg card-body border-0" >
                         @if(session('warning'))
@@ -23,37 +23,37 @@
                             </div>
                         @endif
 
-                        <form  action="{{route('createAccount')}}" method="POST">
+                        <form  action="{{route('updateAccount', $account->token)}}" method="POST">
                             @csrf
                             <div class="row ">
                                 <div class="form-group my-1">
                                     <label class="my-1 form-label" for="">Name</label>
-                                    <input type="text" class="form-control" name="name" value="{{old('name')}}" />
+                                    <input type="text" class="form-control" name="name" value="{{old('name', $account->name)}}" />
                                 </div>
                                 <div class="form-group my-1">
                                     <label class="my-2 form-label" for="">Role</label>
                                     <select  class="form-control js-example-basic-single" name="role" id="role" value="{{old('role')}}" >
                                         @foreach($roles as $index=>$role)
                                             @if( $index > $current_auth_user_role - 1 )
-                                                <option value="{{$index+1}}">{{$role}}</option>
+                                                <option value="{{$index+1}}" {{ old('role', $account->role) == $index+1 ? 'selected': '' }}>{{$role}}</option>
                                             @endif
                                         @endforeach
                                     </select>
                                 </div>
                                 <div class="form-group my-1">
                                     <label class="my-1 form-label" for="">Phone</label>
-                                    <input type="number" class="form-control" name="phone" value="{{old('phone')}}" />
+                                    <input type="number" class="form-control" name="phone" value="{{old('phone', $account->phone)}}" />
                                 </div>
                                 <div class="form-group my-1">
                                     <label class="my-1 form-label" for="">Email</label>
-                                    <input type="email" class="form-control" name="email" value="{{old('email')}}" />
+                                    <input type="email" class="form-control" name="email" value="{{old('email', $account->email)}}" />
                                 </div>
                                 <div class="form-group my-1">
                                     <label class="my-1 form-label" for="">Password</label>
-                                    <input type="password" class="form-control" name="password"/>
+                                    <input type="password" class="form-control" name="password" value="{{old('password')}}"/>
                                 </div>
                                 <div class="form-group mt-4">
-                                    <input type="submit" class="btn col-12 theme_bg text-white" value="ADD">
+                                    <input type="submit" class="btn col-12 theme_bg text-white" value="UPDATE">
                                 </div>
                             </div>
                         </form>

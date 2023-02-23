@@ -103,7 +103,7 @@ Route::middleware([CheckAdmin::class])->prefix('admin')->group(function ()
         Route::post('create', [AccountController::class, 'createAccount'])->name('createAccount');
         Route::get('{token}/details', [AccountController::class, 'accountDetails'])->name('accountDetails');
         Route::get('{token}/edit', [AccountController::class, 'editAccount'])->name('editAccount');
-        Route::post('update', [AccountController::class, 'updateAccount'])->name('updateAccount');
+        Route::post('{token}/update', [AccountController::class, 'updateAccount'])->name('updateAccount');
     });
     Route::prefix('country')->group(function () {
         Route::get('/', [CountryController::class, 'countryList'])->name('countryList');

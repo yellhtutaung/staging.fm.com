@@ -3,7 +3,7 @@
 @section('content')
     <div class="container-fluid ">
         <div class="row mt-4">
-            <div class="col-sm-12 col-md-4">
+            <div class="col-sm-12 col-md-6">
                 <div class="animate__animated animate__fadeIn">
                     <div class="card-header form-header-border border-0 theme_bg ">
                         <h5 class="card-title text-white">User Information of {{$fetchUser->name}}</h5>
