@@ -16,6 +16,7 @@ use \App\Http\Controllers\TestController;
 use App\Http\Controllers\Frontend\PasswordController;
 use App\Http\Controllers\UniversalController;
 use App\Http\Middleware\CheckAdmin;
+use App\Http\Middleware\PermissionCheck;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\AdminLoginController;
 //use App\Http\Controllers\Auth\RegisterController;
@@ -77,7 +78,7 @@ Route::middleware(['auth','ban'])->group(function ()
 
 Route::post('/contact', [PagesController::class, 'contact'])->name('contact');
 
-Route::middleware([CheckAdmin::class])->prefix('admin')->group(function ()
+Route::middleware([CheckAdmin::class,PermissionCheck::class])->prefix('admin')->group(function ()
 {
     Route::get('/', [DashboardController::class, 'home'])->name('home');
     Route::post('adminUniversalSwitch', [UniversalController::class, 'adminUniversalSwitch'])->name('adminUniversalSwitch');
