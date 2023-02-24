@@ -13,18 +13,21 @@
         </a>
         <ul class="dropdown-menu std-box-shadow content-fm" aria-labelledby="dropdownMenuButton1">
             <li class="list-item d-flex align-items-center">
-                <span class="material-symbols-rounded me-3">admin_panel_settings</span> <span>{{auth()->guard('admin')->user()->name}}</span>
+                <span class="material-symbols-rounded me-3">admin_panel_settings</span> <span>{{config('app.roles')[Auth::guard('admin')->user()->role - 1]}}</span>
             </li >
-            <li class="list-item d-flex align-items-center">
+            <li class="list-item d-flex align-items-center" id="goPublic">
                 <span class="material-symbols-rounded me-3">public</span> <span>Public Site</span>
             </li>
-            <li class="list-item d-flex align-items-center">
-                <span class="material-symbols-rounded me-3">settings_suggest</span> <span>Profile Setting</span>
+            <li class="list-item d-flex align-items-center" id="profileInfo">
+                <span class="material-symbols-outlined me-3">badge</span> <span>Profile Information</span>
+            </li>
+            <li class="list-item d-flex align-items-center" id="updateProfile">
+                <span class="material-symbols-rounded me-3">settings_suggest</span> <span>Update Profile</span>
             </li>
             <li class="list-item d-flex align-items-center" id="logout">
                 <span class="material-symbols-rounded me-3">logout</span> <span>Logout</span>
             </li>
-            <form action="{{ route('logout') }}" method="POST" id="logout-form">
+            <form action="{{ route('admin.logout') }}" method="POST" id="logout-form">
                 @csrf
             </form>
         </ul>
@@ -35,8 +38,44 @@
 
 <script>
     $(document).ready(function () {
-        $('#logout').on('click', function () {
-            $('#logout-form').submit()
+        // $('#logout').on('click', function () {
+        //     $('#logout-form').submit()
+        // })
+
+        $('#goPublic').on('click', function () {
+            window.location.replace(`/`)
         })
+
+        $('#profileInfo').on('click', function () {
+            window.location.replace('{{route('accountDetails', Auth::guard('admin')->user()->token)}}')
+        })
+
+        $('#updateProfile').on('click', function () {
+            window.location.replace('{{route('editAccount', Auth::guard('admin')->user()->token)}}')
+        })
+
+    })
+    $(document).on('click', '#logout', function (e) {
+        e.preventDefault();
+        let id = $(this).data('id');
+        Swal.fire({
+            title: '{{ __('message.logout_confirm') }}',
+            showCancelButton: true,
+            cancelButtonText: '{{ __('message.cancel_btn') }}',
+            confirmButtonText: '{{ __('message.confirm_btn') }}',
+            denyButtonText: `Don't save`,
+            reverseButtons: true
+        }).then((result) => {
+            if (result.isConfirmed) {
+                $.ajax({
+                    url: "{{ route('admin.logout') }}",
+                    type: "POST",
+                    success: function () {
+                        window.location.reload()
+                    }
+                })
+            }
+        })
+
     })
 </script>

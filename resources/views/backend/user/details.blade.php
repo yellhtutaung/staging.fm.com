@@ -13,44 +13,44 @@
                             <table class="table table-hover">
                                 <tbody>
                                 <tr class="">
-                                    <td class="py-3 form-label">Full Name</td>
-                                    <td class="py-3 form-label">{{$fetchUser->name}}</td>
+                                    <td class="py-3 ">Full Name</td>
+                                    <td class="py-3 ">{{$fetchUser->name}}</td>
                                 </tr>
                                 <tr class="">
-                                    <td class="py-3 form-label">Email</td>
-                                    <td class="py-3 form-label">{{$fetchUser->email}}</td>
+                                    <td class="py-3 ">Email</td>
+                                    <td class="py-3 ">{{$fetchUser->email}}</td>
                                 </tr>
                                 <tr class="">
-                                    <td class="py-3 form-label">Username</td>
-                                    <td class="py-3 form-label">{{$fetchUser->username}}</td>
+                                    <td class="py-3 ">Username</td>
+                                    <td class="py-3 ">{{$fetchUser->username}}</td>
                                 </tr>
                                 <tr class="">
-                                    <td class="py-3 form-label">Phone Number</td>
-                                    <td class="py-3 form-label">{{$fetchUser->phone}}</td>
+                                    <td class="py-3 ">Phone Number</td>
+                                    <td class="py-3 ">{{$fetchUser->phone}}</td>
                                 </tr>
                                 <tr class="">
-                                    <td class="py-3 form-label">Shop Name</td>
-                                    <td class="py-3 form-label">{{$fetchUser->shop_name}}</td>
+                                    <td class="py-3 ">Shop Name</td>
+                                    <td class="py-3 ">{{$fetchUser->shop_name}}</td>
                                 </tr>
                                 <tr class="">
-                                    <td class="py-3 form-label">Country</td>
-                                    <td class="py-3 form-label">{{ $currentCountry ? $currentCountry->name : "-" }}</td>
+                                    <td class="py-3 ">Country</td>
+                                    <td class="py-3 ">{{ $currentCountry ? $currentCountry->name : "-" }}</td>
                                 </tr>
                                 <tr class="">
-                                    <td class="py-3 form-label">City</td>
-                                    <td class="py-3 form-label">{{ $currentCity ? $currentCity->name: "-" }}</td>
+                                    <td class="py-3 ">City</td>
+                                    <td class="py-3 ">{{ $currentCity ? $currentCity->name: "-" }}</td>
                                 </tr>
                                 <tr class="">
-                                    <td class="py-3 form-label">Postal Code</td>
-                                    <td class="py-3 form-label">{{$fetchUser->postal_code ? $fetchUser->postal_code : '-'}}</td>
+                                    <td class="py-3 ">Postal Code</td>
+                                    <td class="py-3 ">{{$fetchUser->postal_code ? $fetchUser->postal_code : '-'}}</td>
                                 </tr>
                                 <tr class="">
-                                    <td class="py-3 form-label">Zip Code</td>
-                                    <td class="py-3 form-label">{{$fetchUser->zip_code ? $fetchUser->zip_code : '-'}}</td>
+                                    <td class="py-3 ">Zip Code</td>
+                                    <td class="py-3 ">{{$fetchUser->zip_code ? $fetchUser->zip_code : '-'}}</td>
                                 </tr>
                                 <tr class="">
-                                    <td class="py-3 form-label">Address</td>
-                                    <td class="py-3 form-label">{{$fetchUser->address ? $fetchUser->address : '-'}}</td>
+                                    <td class="py-3 ">Address</td>
+                                    <td class="py-3 ">{{$fetchUser->address ? $fetchUser->address : '-'}}</td>
                                 </tr>
                                 </tbody>
                             </table>
