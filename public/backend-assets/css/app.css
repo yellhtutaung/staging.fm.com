@@ -60,3 +60,59 @@ font-weight: 500;
 font-size: 17px;
 }
 
+
+/* ------------------   --------------------*/
+
+.card-header {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px !important;
+}
+
+.card {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px !important;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.profile-info {
+    /*border-radius: 15px !important;*/
+}
+
+.profile-avatar{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+.profile-avatar img{
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px !important;
+}
+
+.profile-info-item {
+    padding: 15px 10px;
+    border-bottom: 1px solid lightgray;
+    transition: all .2s;
+}
+
+.profile-info-item:hover {
+    background-color: #d1d1d173;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

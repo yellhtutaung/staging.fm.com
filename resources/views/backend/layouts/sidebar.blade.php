@@ -21,7 +21,7 @@
                 <li id="account" class="dropNav {{ Request::segment(2) == 'account'  ?  'open-drop' : null }}" >
                     <a class="{{ Route::currentRouteName() == 'accountList' ? 'active-link' : null}}" href="javascript:void(0)" onclick="dropTagAction('account')">
                         <i class="fa-solid fa-users"></i>
-                        <span>Account Management</span>
+                        <span>Account </span>
                         <i class="fa fa-angle-right aside-icon " id="account-icon"></i>
                     </a>
                     <ul>
@@ -36,7 +36,7 @@
                 <li id="user" class="dropNav {{ Request::segment(2) == 'user'  ?  'open-drop' : null }}" >
                     <a class="{{ Route::currentRouteName() == 'userList' ? 'active-link' : null}}" href="javascript:void(0)" onclick="dropTagAction('user')">
                         <i class="fa-solid fa-users"></i>
-                        <span>Users Management</span>
+                        <span>Users </span>
                         <i class="fa fa-angle-right aside-icon " id="user-icon"></i>
                     </a>
                     <ul>
@@ -49,7 +49,7 @@
                 <li id="fruit" class="dropNav {{ Request::segment(2) == 'fruit'  ?  'open-drop' : null }}" >
                     <a class="{{ Request::segment(2) == 'fruit' ? 'active-link' : null}}" href="javascript:void(0)" onclick="dropTagAction('fruit')">
                         <i class="fa-solid fa-list"></i>
-                        <span>Fruits Management</span>
+                        <span>Fruits </span>
                         <i class="fa fa-angle-right aside-icon " id="fruit-icon"></i>
                     </a>
                     <ul>
@@ -65,7 +65,7 @@
                 <li id="country" class="dropNav {{ Request::segment(2) == 'country'  ?  'open-drop' : null }}" >
                     <a class="{{ Request::segment(2) == 'country' ? 'active-link' : null}}" href="javascript:void(0)" onclick="dropTagAction('country')">
                         <i class="fa-solid fa-flag"></i>
-                        <span>Country Management</span>
+                        <span>Country </span>
                         <i class="fa fa-angle-right aside-icon " id="country-icon"></i>
                     </a>
                     <ul>
@@ -78,7 +78,7 @@
                 <small class="text-muted " style="margin-left: 10px">Contact SMS</small>
                 <li class="{{ Route::currentRouteName() == 'contactMessageList' ? 'theme_bg text-white border-radius-5' : null}}">
                     <a class="{{ Request::segment(2) == 'contact' ? 'active-link text-white' : null}} " href="{{route('contactMessageList')}}">
-                        <i class="fa fa-envelope"></i> Contact Message
+                        <i class="fa fa-envelope"></i> Contact
                     </a>
                 </li>
 {{--                <li id="contact" class="dropNav {{ Request::segment(2) == 'contact'  ?  'open-drop' : null }}" >--}}

@@ -98,7 +98,6 @@
                 reverseButtons: true
             }).then((result) => {
                 if (result.isConfirmed) {
-                    console.log('hello')
                     $.ajax({
                         url: "{{ route('logout') }}",
                         type: "POST",
