@@ -80,6 +80,7 @@ trait General
             \App\Models\FruitPriceList::find($findId),
             \App\Models\FruitPriceListTransition::find($findId),
             \App\Models\Country::find($findId),
+            \App\Models\Permission::find($findId),
         ];
         $fetchOne = $modelArr[$Index];
         $fetchOne->$field = $on_off;

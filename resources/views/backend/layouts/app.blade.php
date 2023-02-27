@@ -43,9 +43,9 @@
 
     <link rel="stylesheet" href="{{asset('frontend-assets/css/animated.min.css')}}"/>
     <link rel="stylesheet" href="{{asset('frontend-assets/css/global.css')}}">
-    <link rel="stylesheet" href="{{asset('backend-assets/css/app.css')}}">
     <link rel="stylesheet" href="{{asset('backend-assets/css/layout.css')}}">
     <script type="text/javascript" src="{{asset('backend-assets/js/bootstrap-toggle.min.js')}}"></script>
+    <link rel="stylesheet" href="{{asset('backend-assets/css/app.css')}}">
     <script>
         $.ajaxSetup({
             headers: {

@@ -9,6 +9,7 @@ use App\Http\Controllers\Backend\FruitController;
 use App\Http\Controllers\Backend\ContactController;
 use App\Http\Controllers\Backend\CountryController;
 use App\Http\Controllers\Backend\UserController;
+use App\Http\Controllers\Backend\PermissionController;
 use App\Http\Controllers\Frontend\PagesController;
 use App\Http\Controllers\Frontend\ProfileController;
 use App\Http\Controllers\LangController;
@@ -116,6 +117,14 @@ Route::middleware([CheckAdmin::class,PermissionCheck::class])->prefix('admin')->
 
     Route::prefix('contact')->group(function () {
         Route::get('/', [ContactController::class, 'contactMessageList'])->name('contactMessageList');
+    });
+
+    Route::prefix('permission')->group(function () {
+        Route::get('/', [PermissionController::class, 'permissionList'])->name('permissionList');
+        Route::get('add', [PermissionController::class, 'addPermission'])->name('addPermission');
+        Route::post('create', [PermissionController::class, 'createPermission'])->name('createPermission');
+        Route::get('{id}/edit', [PermissionController::class, 'editPermission'])->name('editPermission');
+        Route::post('{id}/update', [PermissionController::class, 'updatePermission'])->name('updatePermission');
     });
 
 }); // For admin only
