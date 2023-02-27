@@ -3,11 +3,6 @@
 @section('title', 'Fresh Moe')
 
 @section('extra-css')
-{{--    <link rel="stylesheet" href="{{asset('frontend-assets/css/home/service.css')}}"/>--}}
-{{--    <link rel="stylesheet" href="{{asset('frontend-assets/css/home/about.css')}}"/>--}}
-{{--    <link rel="stylesheet" href="{{asset('frontend-assets/css/home/ITProducts.css')}}"/>--}}
-{{--    <link rel="stylesheet" href="{{asset('frontend-assets/css/home/ourmission.css')}}"/>--}}
-{{--    <link rel="stylesheet" href="{{asset('frontend-assets/css/home/carousel.css')}}"/>--}}
     <link rel="stylesheet" href="{{asset('frontend-assets/css/home.css')}}"/>
 
 
@@ -24,7 +19,7 @@
             <div class="swiper-slide">
                 <div class="home-slide-container home-carousel-1">
                     <div class="container py-5">
-                        <div class="carousel-content col-md-10 col-lg-8 col-xl-7 p-2 py-5 ">
+                        <div class="carousel-content col-md-10 col-xl-7 p-2 py-5 ">
                             {{ __('message.slider1') }}
                         </div>
                     </div>
@@ -33,7 +28,7 @@
             <div class="swiper-slide">
                 <div class="home-slide-container home-carousel-2">
                     <div class="container py-5">
-                        <div class="carousel-content col-md-10 col-lg-8 col-xl-7 p-2 py-5 ">
+                        <div class="carousel-content col-md-10 col-xl-7 p-2 py-5 ">
                             {{ __('message.slider2') }}
                         </div>
                     </div>
@@ -42,7 +37,7 @@
             <div class="swiper-slide">
                 <div class="home-slide-container home-carousel-3">
                     <div class="container py-5">
-                        <div class="carousel-content col-md-10 col-lg-8 col-xl-7 p-2 py-5 ">
+                        <div class="carousel-content col-md-10 col-xl-7 p-2 py-5 ">
                             {{ __('message.slider3') }}
                         </div>
                     </div>
@@ -51,7 +46,7 @@
             <div class="swiper-slide">
                 <div class="home-slide-container home-carousel-4">
                     <div class="container py-5">
-                        <div class="carousel-content col-md-10 col-lg-8 col-xl-7 p-2 py-5 ">
+                        <div class="carousel-content col-md-10 col-xl-7 p-2 py-5 ">
                             {{ __('message.slider1') }}
                         </div>
                     </div>

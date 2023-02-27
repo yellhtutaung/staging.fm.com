@@ -75,12 +75,26 @@
                 </li>
                 <hr>
 
+                <small class="text-muted " style="margin-left: 10px">Permissions Management</small>
+                <li id="permission" class="dropNav {{ Request::segment(2) == 'permission'  ?  'open-drop' : null }}" >
+                    <a class="{{ Request::segment(2) == 'permission' ? 'active-link' : null}}" href="javascript:void(0)" onclick="dropTagAction('permission')">
+                        <i class="fa-solid fa-flag"></i>
+                        <span>Permissions </span>
+                        <i class="fa fa-angle-right aside-icon " id="permission-icon"></i>
+                    </a>
+                    <ul>
+                        <li class="{{ Route::currentRouteName() == 'permissionList' || Route::currentRouteName() == 'permissionList' ? 'active-route' : null}}"><a class="w-100 " href="{{route('permissionList')}}">List</a></li>
+                    </ul>
+                </li>
+                <hr>
+
                 <small class="text-muted " style="margin-left: 10px">Contact SMS</small>
                 <li class="{{ Route::currentRouteName() == 'contactMessageList' ? 'theme_bg text-white border-radius-5' : null}}">
                     <a class="{{ Request::segment(2) == 'contact' ? 'active-link text-white' : null}} " href="{{route('contactMessageList')}}">
                         <i class="fa fa-envelope"></i> Contact
                     </a>
                 </li>
+
 {{--                <li id="contact" class="dropNav {{ Request::segment(2) == 'contact'  ?  'open-drop' : null }}" >--}}
 {{--                    <a class="{{ Request::segment(2) == 'contact' ? 'active-link' : null}}" href="javascript:void(0)" onclick="dropTagAction('contact')">--}}
 {{--                        <i class="fa-solid fa-envelope"></i>--}}
