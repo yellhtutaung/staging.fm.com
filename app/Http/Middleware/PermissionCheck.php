@@ -48,10 +48,6 @@ class PermissionCheck
                 if ($getCat[0] == $uriSegments[2])
                 {
                     $subRoute = $permission[$uriSegments[2]]; // sub route ( example -> edit , details , history )
-//                    if ($subRoute == $uriSegments[4])
-//                    {
-
-//                    }
                     return $subRoute[end($uriSegments)] == false ?null:$subRoute[end($uriSegments)];
                 }
 //                $add = $subRoute['add'];
