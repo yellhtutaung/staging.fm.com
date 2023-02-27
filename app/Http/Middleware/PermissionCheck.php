@@ -52,7 +52,7 @@ class PermissionCheck
 //                    {
 
 //                    }
-                    return $subRoute[end($uriSegments)] == false ?null:$subRoute[$uriSegments[4]];
+                    return $subRoute[end($uriSegments)] == false ?null:$subRoute[end($uriSegments)];
                 }
 //                $add = $subRoute['add'];
 //                $edit = $subRoute['edit'];
@@ -74,7 +74,7 @@ class PermissionCheck
         $checkPermission = $this->checkPermission();
         if (is_null($checkPermission) )
         {
-            return  redirect()->route('home')->with('error','You are not allowed to go there .');
+            return  redirect()->back()->with('error','You are not allowed to go there .');
         }else{
             return $next($request);
         }
