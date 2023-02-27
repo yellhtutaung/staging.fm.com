@@ -26,20 +26,46 @@ class PermissionCheck
         {
             return 'admin';
         }
-        $checkUrlIndex = count($uriSegments) >= 3 ? $uriSegments[2]:null;  // mainRoute
+        $countUriSegments = count($uriSegments);
+        $checkUrlIndex = $countUriSegments >= 3 ? $uriSegments[2]:null;  // mainRoute
 //        return $checkUrlIndex;
         $userRole = Auth::guard('admin')->user()->role;
         $fetchPermission = Permission::find($userRole);
         $permissionJson = json_decode($fetchPermission->guard_json,true);
+
         foreach ($permissionJson as $Index => $permission)
         {
             $mainRoute = array_keys($permission); // main route only
-            if ($checkUrlIndex == $mainRoute[0])
+//            return $uriSegments;
+            if ($countUriSegments ==3 )
             {
-                return true;
+                if ($checkUrlIndex == $mainRoute[0])
+                {
+                    return true;
+                }
+            }else{
+                $getCat = array_keys($permissionJson[$Index]);
+                if ($getCat[0] == $uriSegments[2])
+                {
+                    $subRoute = $permission[$uriSegments[2]]; // sub route ( example -> edit , details , history )
+//                    if ($subRoute == $uriSegments[4])
+//                    {
+
+//                    }
+                    return $subRoute[end($uriSegments)] == false ?null:$subRoute[$uriSegments[4]];
+                }
+//                $add = $subRoute['add'];
+//                $edit = $subRoute['edit'];
+//                $hideShow = $subRoute['hide_show'];
+//                $details = $subRoute['details'];
+//                return $subRoute[$uriSegments[4]];
+//                if () //$uriSegments[2] == $subRoute
+//                {
+////                    return $subRoute;
+//                    return $subRouteRes = $subRoute[$uriSegments[4]] == false ?null:$subRoute[$uriSegments[4]];
+//                }
             }
         }
-
     }
 
     public function handle(Request $request, Closure $next)
