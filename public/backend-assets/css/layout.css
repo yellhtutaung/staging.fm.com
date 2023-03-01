@@ -44,7 +44,8 @@ body {
     z-index: 1;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    height: 100%;
+    position: relative;
 }
 
 footer {
@@ -52,6 +53,14 @@ footer {
     margin-top: auto !important;
     padding: 20px;
     background-color: white;
+    position: fixed;
+    bottom: 0 !important;
+    left: 300px;
+    transition: left .3s ease-in-out;
+}
+
+.footer-toggle {
+    left: 0px;
 }
 
 .sidebar-change-1 {
@@ -247,11 +256,15 @@ aside ul li > ul li {
     height: 40px;
     line-height: 30px;
     font-family: 'Open Sans', sans-serif;
-    padding: 5px 5px 0px 20px;
+    padding: 5px 5px 0px 0px;
     /*border-radius: 8px;*/
     font-weight: normal;
     margin: 5px;
     cursor: pointer;
+}
+
+aside ul li > ul li a{
+    padding-left: 20px;
 }
 
 aside ul li > ul li::after {
@@ -345,5 +358,8 @@ aside ul li:target:hover {
     }
     .sidebar-change-2 {
         left: 0;
+    }
+    footer {
+        left: 0px;
     }
 }

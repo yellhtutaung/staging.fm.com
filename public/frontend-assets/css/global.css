@@ -113,7 +113,7 @@
 
 .form-header-border
 {
-    border-radius: 10px 10px 0 0 !important;
+    border-radius: 20px 20px 0 0 !important;
 }
 
 .linear-activity {
@@ -236,27 +236,23 @@ input[type=number] {
     color: white !important;
 }
 .js-example-basic-multiple{
-    border: 2px solid #5BBA47;
+    border: 1px solid #5BBA47;
 }
 
 
-.form-control:focus {border: 2px solid #5bba47!important;
+.form-control:focus {border: 1px solid #5bba47!important;
     -webkit-box-shadow: none!important;
     -moz-box-shadow: none!important;
     box-shadow: none!important;
 }
-.form-control {
-    border-width: 2px !important;
-
-}
 
 .select2-selection{
     min-height: 40px !important;
-    border: 2px solid #ced4da !important;
+    border: 1px solid #ced4da !important;
 }
 
 .select2-selection:focus {
-    border: 2px solid #5bba47 !important;
+    border: 1px solid #5bba47 !important;
 }
 
 .select2-container--default .select2-selection--single .select2-selection__rendered {
@@ -283,8 +279,8 @@ input[type=number] {
     z-index: 1;
     width: 3rem;
     padding: 1rem;
-    border-top-left-radius: 25px;
-    border-bottom-left-radius: 25px;
+    border-top-left-radius: var(--radius);
+    border-bottom-left-radius: var(--radius);
     transform: translateX(105%);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
     background: #ffffff;
@@ -337,8 +333,8 @@ input[type=number] {
     padding: 0.5em 1.5em;
     background-color: #ED1C24;
     color: #ffffff;
-    border: 2px solid;
-    border-radius: 45px;
+    border: 1px solid;
+    border-radius: var(--radius);
     cursor: pointer;
 
 }
@@ -376,8 +372,8 @@ input[type=number] {
         right: 0;
     }
     #go_to_shop .shop_redirect_card {
-        border-top-left-radius: 25px;
-        border-bottom-left-radius: 25px;
+        border-top-left-radius: var(--radius);
+        border-bottom-left-radius: var(--radius);
         border-top-right-radius: 0;
     }
 }

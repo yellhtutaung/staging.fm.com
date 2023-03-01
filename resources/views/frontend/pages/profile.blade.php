@@ -21,7 +21,7 @@
                         <div class="card-header form-header-border border-0 theme_bg ">
                             <h5 class="card-title text-white m-0"> {{ __('message.personal_information') }}</h5>
                         </div>
-                        <div class="card border-0 card-body profile-info">
+                        <div class="card card-custom border-0 card-body profile-info">
                             <div class="table-responsive">
                                 <table class="table table-hover">
                                     <tbody>

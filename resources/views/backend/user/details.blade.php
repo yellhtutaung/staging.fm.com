@@ -8,7 +8,7 @@
                     <div class="card-header form-header-border border-0 theme_bg ">
                         <h5 class="card-title text-white">User Information of {{$fetchUser->name}}</h5>
                     </div>
-                    <div class="card border-0 shadow-sm card-body profile-info">
+                    <div class="card card-custom border-0 shadow-sm card-body profile-info">
                         <div class="table-responsive">
                             <table class="table table-hover">
                                 <tbody>

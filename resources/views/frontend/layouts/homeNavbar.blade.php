@@ -45,7 +45,7 @@
                         <a href="#contact">{{ __('message.contact') }}</a>
                     </li>
                     <li>
-                        <select class="form-control changeLang">
+                        <select class="form-select changeLang">
                             <option value="en" {{ session()->get('locale') == 'en' ? 'selected' : '' }}>English</option>
                             <option value="mm" {{ session()->get('locale') == 'mm' ? 'selected' : '' }}>မြန်မာ</option>
                         </select>

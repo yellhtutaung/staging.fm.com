@@ -1,16 +1,5 @@
 @extends('frontend.layouts.app')
 @section('title', 'Fresh Moe')
-{{--@section('extra-css')--}}
-{{--    <link rel="stylesheet" href="{{asset('frontend-assets/css/profile.css')}}"/>--}}
-
-{{--    <link rel="stylesheet" type="text/css"--}}
-{{--          href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css"/>--}}
-
-{{--    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet"/>--}}
-{{--    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>--}}
-{{--@endsection--}}
-
-
 @section('extra-css')
     <link rel="stylesheet" href="{{asset('frontend-assets/css/animated.min.css')}}"/>
 

@@ -3,12 +3,12 @@
 @section('content')
     <div class="container-fluid ">
         <div class="row ">
-            <div class="col-sm-12 col-md-4">
+            <div class="col-sm-12 col-md-6">
                 <div class="animate__animated animate__fadeIn">
                     <div class="card-header form-header-border theme_bg ">
-                        <h5 class="card-title text-white">ADD FRUITS </h5>
+                        <h5 class="card-title text-white">EDIT FRUITS </h5>
                     </div>
-                    <div class=" card card-body">
+                    <div class=" card card-custom card-body">
                         @if(session('warning'))
                             <div class="alert alert-warning alert-dismissible fade show" role="alert">
                                 <span><strong>Warning !</strong>  {{session('warning')}}</span>

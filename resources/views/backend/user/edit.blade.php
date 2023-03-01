@@ -8,7 +8,7 @@
                     <div class="card-header form-header-border theme_bg ">
                         <h5 class="card-title text-white">Edit </h5>
                     </div>
-                    <div class=" card card-body">
+                    <div class=" card card-custom card-body">
                         @if(session('warning'))
                             <div class="alert alert-warning alert-dismissible fade show" role="alert">
                                 <span><strong>Warning !</strong>  {{session('warning')}}</span>
