@@ -92,4 +92,10 @@ class PermissionController extends Controller
         return view('backend.permission.edit', compact('permission'));
     }
 
+
+    public function createRoleAndPermissions(Request $In)
+    {
+        return $In;
+    }
+
 }

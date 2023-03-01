@@ -93,7 +93,6 @@
 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 <script src="{{asset('backend-assets/js/app.js')}}"></script>
 
-@yield('extra-script')
 
 <script>
     const Toast = Swal.mixin({
@@ -137,6 +136,7 @@
     @endif
 
 </script>
+@yield('extra-script')
 
 </body>
 </html>

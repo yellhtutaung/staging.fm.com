@@ -31,11 +31,11 @@
                             <div class="row ">
                                 <div class="form-group my-1">
                                     <label class="my-1 form-label" for="">Role Name</label>
-                                    <input type="text" class="form-control" name="name" placeholder="Manager" value="{{old('name')}}" />
+                                    <input type="text" class="form-control" id="name" value="Manager" name="name" placeholder="Example: Manager" value="{{old('name')}}" />
                                 </div>
                                 <div class="form-group my-1">
                                     <label class="my-1 form-label" for="">Note</label>
-                                    <textarea class="form-control" name="notes"  rows="3">{{old('note')}}</textarea>
+                                    <textarea class="form-control" id="notes" name="notes"  rows="3">{{old('note')}}</textarea>
 {{--                                    <hr class="text-muted mt-4">--}}
                                 </div>
                                 @php
@@ -85,7 +85,7 @@
                                        @endforeach
                                 </div>
                                 <div class="form-group mt-4">
-                                    <input type="submit" class="btn col-12 theme_bg text-white" value="ADD">
+                                    <input type="submit" class="btn col-12 theme_bg text-white" id="submit-btn" value="CREATE">
                                 </div>
                             </div>
                         </form>
@@ -194,12 +194,11 @@
         {
             e.preventDefault();
             checkBoxFun();
+            saveToServer();
         });
 
         const subToggle = (subUrl,field) =>
         {
-            // console.log(subUrl,field);
-            // console.log(resArr);
             for(let i=0; i<resArr.length; i++)
             {
                 let index = resArr[i];
@@ -224,5 +223,61 @@
             });
         }
 
+        const saveToServer = () =>
+        {
+            let roleName = $('#name').val();
+            let notes = $('#notes').val();
+            if(navigator.onLine)
+            {
+                if(resArr.length == 0 || roleName.length <=4 )
+                {
+                    Toast.fire({
+                        icon: 'warning',
+                        title: "Please select at least one permission"
+                    });
+                    console.log('show alert');
+                }else {
+                    // $('#submit-btn').attr('disabled', '');
+                    let formData = new FormData($('#form-upload')[0]);
+                    console.log(formData);
+                    // console.log(csrf_token);
+                    $.ajax({
+                        // _token: csrf_token,
+                        type: "POST",
+                        url: "{{route('createRoleAndPermissions')}}",
+                        data: {name:roleName},
+                        // roleName:roleName,
+                        // notes:notes,
+                        dataType: 'json',
+                        // contentType: "application/json",
+                        // processData: false,
+                        success: function (data) {
+                            if (data.status === 200){
+                                $('input').val('')
+                                $('textarea').val('')
+                                $('#submit-btn').removeAttr('disabled');
+                                // alertUi('success',data.message);
+                                Toast.fire({
+                                    icon: 'success',
+                                    title: data.message
+                                });
+                            }else {
+                                console.log(data);
+                            }
+
+                        },
+                    });
+
+                }
+
+
+
+            }else {
+                Toast.fire({
+                    icon: 'warning',
+                    title: "Check you are internet connection"
+                });
+            }
+        }
     </script>
 @endsection
