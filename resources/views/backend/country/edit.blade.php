@@ -6,7 +6,7 @@
             <div class="col-sm-12 col-md-6">
                 <div class="animate__animated animate__fadeIn">
                     <div class="card-header form-header-border theme_bg border-0">
-                        <h5 class="card-title text-white">EDIT COUNTRY </h5>
+                        <h5 class="card-title text-white">UPDATE COUNTRY </h5>
                     </div>
                     <div class="card card-custom shadow-lg card-body border-0" >
                         @if(session('warning'))

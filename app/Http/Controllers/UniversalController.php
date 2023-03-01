@@ -10,6 +10,7 @@ class UniversalController extends Controller
     use General;
     public function adminUniversalSwitch(Request $In)
     {
+        return response()->json(['status'=>200,'message'=>"Switch  "]);
         try{
             $requestField = $In->data_obj;
             $updStatus = $this->findIdWithModelIndex($requestField['Index'],$requestField['findId'],$requestField['field'],$requestField['on_off']);

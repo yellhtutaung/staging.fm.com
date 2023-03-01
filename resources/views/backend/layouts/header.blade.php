@@ -38,9 +38,29 @@
 
 <script>
     $(document).ready(function () {
-        // $('#logout').on('click', function () {
-        //     $('#logout-form').submit()
-        // })
+        $('#logout').on('click', function (e) {
+            e.preventDefault();
+            let id = $(this).data('id');
+            Swal.fire({
+                title: '{{ __('message.logout_confirm') }}',
+                showCancelButton: true,
+                cancelButtonText: '{{ __('message.cancel_btn') }}',
+                confirmButtonText: '{{ __('message.confirm_btn') }}',
+                denyButtonText: `Don't save`,
+                reverseButtons: true
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    $.ajax({
+                        url: "{{ route('admin.logout') }}",
+                        type: "POST",
+                        success: function () {
+                            window.location.reload()
+                        }
+                    })
+                }
+            })
+
+        })
 
         $('#goPublic').on('click', function () {
             window.location.replace(`/`)
@@ -55,27 +75,5 @@
         })
 
     })
-    $(document).on('click', '#logout', function (e) {
-        e.preventDefault();
-        let id = $(this).data('id');
-        Swal.fire({
-            title: '{{ __('message.logout_confirm') }}',
-            showCancelButton: true,
-            cancelButtonText: '{{ __('message.cancel_btn') }}',
-            confirmButtonText: '{{ __('message.confirm_btn') }}',
-            denyButtonText: `Don't save`,
-            reverseButtons: true
-        }).then((result) => {
-            if (result.isConfirmed) {
-                $.ajax({
-                    url: "{{ route('admin.logout') }}",
-                    type: "POST",
-                    success: function () {
-                        window.location.reload()
-                    }
-                })
-            }
-        })
 
-    })
 </script>

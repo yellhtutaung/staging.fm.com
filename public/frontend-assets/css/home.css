@@ -14,15 +14,19 @@
     width: 100%;
     height: 100vh;
     background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center !important;
-    object-fit: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
+    background-position: center;
     display: flex;
     align-items: center;
-    background-clip: border-box;
+
+
+    /*background-size: cover;*/
+    /*background-repeat: no-repeat;*/
+    /*background-position: center !important;*/
+    /*object-fit: cover;*/
+    -webkit-background-size: cover;
+    /*-moz-background-size: cover;*/
+    -o-background-size: cover;
+    /*background-clip: border-box;*/
 }
 
 .carousel-content {
@@ -33,16 +37,16 @@
 }
 
 .home-carousel-1{
-    background-image: url('../../../frontend-assets/images/sliders/home_carousel_4.jpg');
+    background-image: url('../../../frontend-assets/images/sliders/carousel_update.jpg');
 }
 .home-carousel-2{
-    background-image:url('../../../frontend-assets/images/sliders/home_carousel_4.jpg');
+    background-image:url('../../../frontend-assets/images/sliders/carousel_update.jpg');
 }
 .home-carousel-3{
-    background-image: url('../../../frontend-assets/images/sliders/home_carousel_4.jpg');
+    background-image: url('../../../frontend-assets/images/sliders/carousel_update.jpg');
 }
 .home-carousel-4{
-    background-image: url('../../../frontend-assets/images/sliders/home_carousel_4.jpg');
+    background-image: url('../../../frontend-assets/images/sliders/carousel_update.jpg');
 }
 
 .swiper-slide {

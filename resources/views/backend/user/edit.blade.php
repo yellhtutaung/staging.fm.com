@@ -6,7 +6,7 @@
             <div class="col-sm-12 col-md-6">
                 <div class="animate__animated animate__fadeIn">
                     <div class="card-header form-header-border theme_bg ">
-                        <h5 class="card-title text-white">Edit </h5>
+                        <h5 class="card-title text-white">UPDATE USER </h5>
                     </div>
                     <div class=" card card-custom card-body">
                         @if(session('warning'))
@@ -35,7 +35,7 @@
                                     <input type="text" class="form-control" name="username" value="{{old('username',$fetchUser->username)}}" />
                                 </div>
                                 <div class="form-group mt-4">
-                                    <input type="submit" class="btn col-12 theme_bg text-white" value="Update">
+                                    <input type="submit" class="btn col-12 theme_bg text-white" value="UPDATE">
                                 </div>
                             </div>
                         </form>
