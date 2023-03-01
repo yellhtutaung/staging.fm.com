@@ -17,6 +17,7 @@
     margin: 3rem auto;
     background-color: rgba(205, 202, 202, 0.105);
     font-size: 1rem;
+    border-radius: var(--radius);
 }
 .about_parntner_ships_card .title {
     display: flex;
@@ -81,7 +82,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /*border: 1px solid #5bba47;*/
+    border-radius: var(--radius);
 }
 
 .deals .image img {
@@ -91,8 +92,7 @@
 
 .deals .image:hover {
     border-color: white;
-    /*box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;*/
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    box-shadow: var(--box-shadow);
 }
 
 .deals .image:hover img {

@@ -40,6 +40,7 @@
     {{--    global css --}}
     <link rel="stylesheet" href="{{asset('frontend-assets/css/global.css')}}">
     <link rel="stylesheet" href="{{asset('frontend-assets/css/layout.css')}}"/>
+    <link rel="stylesheet" href="{{asset('css/style.css')}}"/>
 
     @yield('extra-css')
 </head>
@@ -54,7 +55,7 @@
             <?php echo View::make ('frontend.layouts.navbar'); ?>
     @endif
 
-    <?php //echo View::make('frontend.layouts.go_to_shop') ?>
+    <?php echo View::make('frontend.layouts.go_to_shop') ?>
 
     @yield('content')
 

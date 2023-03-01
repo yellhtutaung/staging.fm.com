@@ -83,7 +83,7 @@
                         <i class="fa fa-angle-right aside-icon " id="permission-icon"></i>
                     </a>
                     <ul>
-                        <li class="{{ Route::currentRouteName() == 'permissionList' || Route::currentRouteName() == 'permissionList' ? 'active-route' : null}}"><a class="w-100 " href="{{route('permissionList')}}">List</a></li>
+                        <li class="{{ Route::currentRouteName() == 'permissionList' || Route::currentRouteName() == 'addPermission' || Route::currentRouteName() == 'editPermission' ? 'active-route' : null}}"><a class="w-100 " href="{{route('permissionList')}}">List</a></li>
                     </ul>
                 </li>
                 <hr>

@@ -30,7 +30,7 @@
                             <div class="card-header form-header-border border-0 theme_bg ">
                                 <h5 class="card-title text-white m-0">{{ __('message.realtime_price_list') }}</h5>
                             </div>
-                            <div class="card table-responsive border-0  card-body">
+                            <div class="card card-custom table-responsive border-0  card-body">
                                 <table id="example" class="table table-responsive table-hover table-striped"
                                        style="width:100%">
                                     <thead>
@@ -60,7 +60,7 @@
                                             <td>{{$fruits->updated_at->diffForHumans()}}</td>
                                             <td>
                                                 <a href="{{route('priceListHistory',$fruits->token)}}"
-                                                   class="rounded text-decoration-none text-light btn theme_bg">
+                                                   class="secondary-radius text-decoration-none text-light btn theme_bg">
                                                     <span class="material-symbols-outlined">history</span>
                                                 </a>
                                             </td>

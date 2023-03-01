@@ -4,12 +4,14 @@
 @section('content')
     <div class="container-fluid ">
 
-        <a href="{{route('addAccount')}}" class="btn theme_bg text-white my-3" >ADD +</a>
+        <a href="{{route('addAccount')}}" class="btn add-button theme_bg text-white my-3" >
+            ADD <i class="fa-solid fa-plus"></i>
+        </a>
 
         <div class="card-header form-header-border border-0 theme_bg ">
             <h5 class="card-title text-white"> Account Information</h5>
         </div>
-        <div class="card table-responsive border-0 shadow-sm card-body animate__animated animate__fadeIn">
+        <div class="card card-custom table-responsive border-0 shadow-sm card-body animate__animated animate__fadeIn">
             <table id="example" class="table table-responsive table-hover table-striped" >
                 <thead>
                 <tr>
@@ -19,8 +21,8 @@
                     <th>Email</th>
                     <th>Reg Date</th>
                     <th>Last Active</th>
-                    <th>Edit</th>
                     <th>Ban</th>
+                    <th>Edit</th>
                     <th>Details</th>
                 </tr>
                 </thead>
@@ -34,11 +36,6 @@
                         <td>{{$admin->created_at ? $admin->created_at->toDateString() : '-'}}</td>
                         <td>{{$admin->updated_at ? $admin->updated_at->diffForHumans() : '-'}}</td>
                         <td>
-                            <a href="{{route('editAccount', $admin->token)}}" class="rounded btn btn-info">
-                                <span class="material-symbols-outlined mt-2 text-white">edit</span>
-                            </a>
-                        </td>
-                        <td>
                             <div class="form-check form-switch p-0 m-0">
                                 <input data-id="{{$admin->id}}" data-status-val="{{$admin->is_ban}}" onchange="universalSwitch(0,{{$admin->id}},'is_ban',{{$admin->is_ban}});"
                                        class="toggle-class toggle-id{{$admin->id}}" type="checkbox"
@@ -47,7 +44,12 @@
                             </div>
                         </td>
                         <td>
-                            <a href="{{route('accountDetails', $admin->token)}}" class="rounded btn btn-dark">
+                            <a href="{{route('editAccount', $admin->token)}}" class="secondary-radius btn btn-info">
+                                <span class="material-symbols-outlined mt-2 text-white">edit</span>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="{{route('accountDetails', $admin->token)}}" class="secondary-radius text-decoration-none text-light btn theme_bg">
                                 <span class="material-symbols-outlined mt-2 text-white">visibility</span>
                             </a>
                         </td>

@@ -15,30 +15,31 @@
     height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center !important;
     object-fit: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     display: flex;
     align-items: center;
+    background-clip: border-box;
 }
 
 .carousel-content {
-    font-size: 35px;
+    font-size: 30px;
     color: #5BBA47;
     font-family: "Lobster", cursive;
     text-shadow: 2px 2px 2px #fff;
 }
 
 .home-carousel-1{
-    background-image: url('../../../frontend-assets/images/sliders/home_carousel_1.jpg');
+    background-image: url('../../../frontend-assets/images/sliders/home_carousel_4.jpg');
 }
 .home-carousel-2{
-    background-image: url('../../../frontend-assets/images/sliders/home_carousel_2.jpg');
+    background-image:url('../../../frontend-assets/images/sliders/home_carousel_4.jpg');
 }
 .home-carousel-3{
-    background-image: url('../../../frontend-assets/images/sliders/home_carousel_3.jpg');
+    background-image: url('../../../frontend-assets/images/sliders/home_carousel_4.jpg');
 }
 .home-carousel-4{
     background-image: url('../../../frontend-assets/images/sliders/home_carousel_4.jpg');
@@ -72,10 +73,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: var(--box-shadow);
     transition: all 0.3s;
     overflow: hidden;
-    border-radius: 20px;
+    border-radius: var(--radius);
 }
 .service_card_title {
     align-self: flex-start;
@@ -112,7 +113,6 @@ img {
     height: 100%;
 }
 .our_service_card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
     transform: translateY(-20px);
     cursor: pointer;
 }
@@ -237,7 +237,7 @@ img {
 
 @media screen and (min-width: 768px) {
     .carousel-content {
-        font-size: 60px;
+        font-size: 40px;
     }
     .main_title {
         color: white;
@@ -276,6 +276,9 @@ img {
 
 
 @media screen and (min-width: 992px) {
+    .carousel-content {
+        font-size: 45px;
+    }
     #it_products .it_product_img .laptop_img {
         width: 100%;
         height: auto;
@@ -289,6 +292,9 @@ img {
 
 
 @media screen and (min-width: 1400px) {
+    .carousel-content {
+        font-size: 50px;
+    }
     .why img {
         width: 400px;
         height: 400px;

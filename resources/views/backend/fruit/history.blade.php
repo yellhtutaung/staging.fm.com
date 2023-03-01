@@ -10,7 +10,7 @@
         <div class="card-header form-header-border border-0 theme_bg ">
             <h5 class="card-title text-white"> Fruits Price List Transitions</h5>
         </div>
-        <div class="card table-responsive border-0 shadow-sm card-body animate__animated animate__fadeIn">
+        <div class="card card-custom table-responsive border-0 shadow-sm card-body animate__animated animate__fadeIn">
             <table id="example" class="table table-responsive table-hover table-striped" >
                 <thead>
                 <tr>

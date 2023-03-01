@@ -2,6 +2,7 @@ const menu = document.querySelector(".menu");
 const sidebar = document.querySelector(".sidebar");
 const main = document.querySelector(".main");
 const content =document.querySelector(".content-section")
+const footer = document.querySelector('footer')
 // const body = document.querySelector(".body");
 
 menu.addEventListener("click", () => {
@@ -10,10 +11,12 @@ menu.addEventListener("click", () => {
             sidebar.classList.remove("sidebar-change-1");
             main.classList.remove("main-change-1");
             menu.classList.remove("clicked");
+            footer.classList.remove("footer-toggle");
         } else {
             sidebar.classList.add("sidebar-change-1");
             main.classList.add("main-change-1");
             menu.classList.add("clicked");
+            footer.classList.add("footer-toggle");
         }
     } else {
         console.log(sidebar)

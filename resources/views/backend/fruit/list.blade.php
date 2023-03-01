@@ -5,12 +5,12 @@
 @section('content')
     <div class="container-fluid ">
 
-        <a href="{{route('addFruit')}}" class="btn theme_bg text-white my-3" >ADD +</a>
+        <a href="{{route('addFruit')}}" class="btn add-button theme_bg text-white my-3" >ADD <i class="fa-solid fa-plus"></i></a>
 
         <div class="card-header form-header-border border-0 theme_bg ">
             <h5 class="card-title text-white"> Fruits</h5>
         </div>
-        <div class="card table-responsive border-0 shadow-sm card-body animate__animated animate__fadeIn">
+        <div class="card card-custom table-responsive border-0 shadow-sm card-body animate__animated animate__fadeIn">
             <table id="example" class="table table-responsive table-hover table-striped" >
                 <thead>
                 <tr>
@@ -49,12 +49,12 @@
                             </div>
                         </td>
                         <td>
-                            <a href="{{route('fruitHistory',$fruits->token)}}" class="rounded btn theme_bg text-white">
+                            <a href="{{route('fruitHistory',$fruits->token)}}" class="secondary-radius btn theme_bg text-white">
                                 <span class="material-symbols-outlined p-1">history</span>
                             </a>
                         </td>
                         <td>
-                            <a href="{{route('editFruit',$fruits->id)}}" class="rounded btn btn-info">
+                            <a href="{{route('editFruit',$fruits->id)}}" class="secondary-radius btn btn-info">
                                 <span class="material-symbols-outlined mt-2 text-white">edit</span>
                             </a>
                         </td>
