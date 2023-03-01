@@ -103,7 +103,7 @@
 @section('extra-script')
     <script src="{{asset('backend-assets/js/permission_setup.js')}}"></script>
     <script>
-        // action="{{route('createPermission')}}";
+        {{--// action="{{route('createPermission')}}";--}}
         $(document).ready(function() {
             $('.js-example-basic-single').select2();
         });
