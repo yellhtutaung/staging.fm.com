@@ -46,28 +46,38 @@
                                 <div class="form-group  d-flex">
                                 @foreach($permissionLabel as $index => $permissions)
                                         <div class="form-group m-2 p-2">
-                                            <input type="checkbox" class="form-check-input" id="lb-check{{$permissionUrlPrefix[$index]}}"
-                                                   name="permissions" value="{{$permissionUrlPrefix[$index]}}" />
+                                            <input type="checkbox" class="form-check-input" onclick="checkBoxToggle('{{$permissionUrlPrefix[$index]}}');"
+                                                   id="lb-check{{$permissionUrlPrefix[$index]}}" name="permissions" value="{{$permissionUrlPrefix[$index]}}" />
                                             <label for="lb-check{{$permissionUrlPrefix[$index]}}" class="form-check-label ms-2">{{$permissionLabel[$index]}}</label>
-                                            <div class="mt-2 ms-3 d-none" id="permission">
+
+                                            <div class="mt-2 ms-3 d-none animate__animated animate__fadeIn p-d{{$permissionUrlPrefix[$index]}} " id="permission">
                                                 <div class="form-group my-2">
-                                                    <input class="form-check-input" type="checkbox" id="{{$permissionUrlPrefix[$index]}}-list" name="{{$permissionUrlPrefix[$index]}}[list]" value="true" />
+                                                    <input class="form-check-input" type="checkbox" onclick="subToggle('{{$permissionUrlPrefix[$index]}}','list');"
+                                                           id="{{$permissionUrlPrefix[$index]}}-list" />
                                                     <label class="form-check-label ms-2" for="{{$permissionUrlPrefix[$index]}}-list">List</label>
                                                 </div>
                                                 <div class="form-group my-2">
-                                                    <input class="form-check-input" type="checkbox" id="{{$permissionUrlPrefix[$index]}}-add" name="{{$permissionUrlPrefix[$index]}}[add]" value="true" />
+                                                    <input class="form-check-input" type="checkbox" onclick="subToggle('{{$permissionUrlPrefix[$index]}}','add');"
+                                                           id="{{$permissionUrlPrefix[$index]}}-add"  />
                                                     <label class="form-check-label ms-2" for="{{$permissionUrlPrefix[$index]}}-add">Add</label>
                                                 </div>
                                                 <div class="form-group my-2">
-                                                    <input class="form-check-input" type="checkbox" id="{{$permissionUrlPrefix[$index]}}-edit" name="{{$permissionUrlPrefix[$index]}}[edit]" value="true" />
+                                                    <input class="form-check-input" type="checkbox" onclick="subToggle('{{$permissionUrlPrefix[$index]}}','create');"
+                                                           id="{{$permissionUrlPrefix[$index]}}-create"  />
+                                                    <label class="form-check-label ms-2" for="{{$permissionUrlPrefix[$index]}}-create">Create</label>
+                                                </div>
+                                                <div class="form-group my-2">
+                                                    <input class="form-check-input" type="checkbox" onclick="subToggle('{{$permissionUrlPrefix[$index]}}','edit');"
+                                                           id="{{$permissionUrlPrefix[$index]}}-edit"  />
                                                     <label class="form-check-label ms-2" for="{{$permissionUrlPrefix[$index]}}-edit">Edit</label>
                                                 </div>
 {{--                                                <div class="form-group my-2">--}}
-{{--                                                    <input class="form-check-input" type="checkbox" id="{{$permissionUrlPrefix[$index]}}-hide_show" name="{{$permissionUrlPrefix[$index]}}[hide_show]" value="true" />--}}
+{{--                                                    <input class="form-check-input" type="checkbox" id="{{$permissionUrlPrefix[$index]}}-hide_show" name="{{$permissionUrlPrefix[$index]}}[hide_show]" />--}}
 {{--                                                    <label class="form-check-label ms-2" for="{{$permissionUrlPrefix[$index]}}-hide_show">Hide_show</label>--}}
 {{--                                                </div>--}}
                                                 <div class="form-group my-2">
-                                                    <input class="form-check-input" type="checkbox" id="{{$permissionUrlPrefix[$index]}}-details" name="{{$permissionUrlPrefix[$index]}}[details]" value="true" />
+                                                    <input class="form-check-input" type="checkbox" onclick="subToggle('{{$permissionUrlPrefix[$index]}}','details');"
+                                                           id="{{$permissionUrlPrefix[$index]}}-details" />
                                                     <label class="form-check-label ms-2" for="{{$permissionUrlPrefix[$index]}}-details">Details</label>
                                                 </div>
                                             </div>
@@ -98,16 +108,121 @@
             $('.js-example-basic-single').select2();
         });
 
-        $('#form-upload').submit(function(e){
+        let resArr = [];
+        let checkArr = [];
+
+        const checkIsExitObj = (selectedField) =>
+        {
+            if(resArr.length == 0)
+            {
+                return true;
+            }else {
+                console.log('check __________________')
+                let responseArr = [];
+                for(let i=0; i<resArr.length; i++)
+                {
+                    let eachKey = resArr[i];
+                    return eachKey;
+                    console.log(eachKey);
+                    console.log('each key .........')
+                }
+                console.log(resArr);
+                console.log('end check __________________')
+
+            }
+        }
+
+        const recalibrateChecked = () =>
+        {
+            for(let i=0; i<resArr.length; i++)
+            {
+                let index = resArr[i];
+            }
+        }
+
+        const checkBoxFun = async () =>
+        {
+            let selectedArr = new Array();
+            let checked = $("input[name=permissions]:checked");
+            // let subCheck
+            for (let i = 0; i < checked.length; i++) {
+                if (checked[i].checked) {
+                    selectedArr.push(checked[i].value);
+                }
+            }
+            console.log(selectedArr);
+            resArr = [];
+
+            for(let o=0; o<selectedArr.length; o++)
+            {
+                {{--$('#{{$permissionUrlPrefix[$index]}}-edit')--}}
+                let field = selectedArr[o];
+                let checkListVal = $(`#${field}-list`).is(':checked');
+                let checkAddVal = $(`#${field}-add`).is(':checked');
+                let checkCreateVal = $(`#${field}-create`).is(':checked');
+                let checkEditVal = $(`#${field}-edit`).is(':checked');
+                let checkDetailsVal = $(`#${field}-details`).is(':checked');
+
+                let sampleObj = {[field]:{"list":checkListVal,"add":checkAddVal,"create":checkCreateVal,"edit":checkEditVal,"hide_show":false,"details":checkDetailsVal}};
+                // $(`#${selectedArr[o]}-list`).prop("checked",false);
+                // $(`#${selectedArr[o]}-add`).prop("checked",false);
+                // $(`#${selectedArr[o]}-edit`).prop("checked",false);
+                // $(`#${selectedArr[o]}-details`).prop("checked",false);
+                // console.log(await checkIsExitObj(selectedArr[o]));
+
+                    resArr.push(sampleObj);
+
+            }
+            console.table(resArr);
+            checkAllSubCheckBox();
+            console.log('****************************************');
+        }
+
+        const checkBoxToggle = (urlVal) =>
+        {
+            checkBoxFun();
+            let eachCheckBox = $('#lb-check'+urlVal);
+            if(eachCheckBox.is(':checked'))
+            {
+                $('.p-d'+urlVal).removeClass('d-none');
+            }else {
+                $('.p-d'+urlVal).addClass('d-none');
+            }
+        }
+
+        $('#form-upload').submit(function(e)
+        {
             e.preventDefault();
-            var arr = [];
-            $.each($("input[name='permissions']:checked"), function(){
-                arr.push($(this).val());
-            });
-            console.log(arr);
+            checkBoxFun();
         });
 
+        const subToggle = (subUrl,field) =>
+        {
+            // console.log(subUrl,field);
+            // console.log(resArr);
+            for(let i=0; i<resArr.length; i++)
+            {
+                let index = resArr[i];
+                let getEachIndex = index[subUrl];
+                if(getEachIndex != undefined)
+                {
+                    let presentChecked = $(`#${subUrl}-${field}`);
+                    getEachIndex[field] = presentChecked.is(':checked');
+                }
+            }
+            console.log(resArr);
+        }
 
+        const checkAllSubCheckBox = () =>
+        {
+            resArr.map((eachPermission , index) => {
+                let eachKey = Object.keys(eachPermission);
+                if($(`#${eachKey[0]}-list`).is(':checked'))
+                {
+                    $(`#${eachKey[0]}-list`).val();
+                }
+            });
+        }
 
     </script>
 @endsection
