@@ -246,11 +246,7 @@
                         type: "POST",
                         url: "{{route('createRoleAndPermissions')}}",
                         data: {name:roleName},
-                        // roleName:roleName,
-                        // notes:notes,
                         dataType: 'json',
-                        // contentType: "application/json",
-                        // processData: false,
                         success: function (data) {
                             if (data.status === 200){
                                 $('input').val('')
