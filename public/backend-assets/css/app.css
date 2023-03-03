@@ -14,7 +14,7 @@
 .add-button {
     padding: 0.7rem 1.5rem;
     border: 1px solid #ccc;
-    border-radius: var(--secondary-radius);
+    border-radius: var(--radius);
     background-color: #ED1C24;
     color: white;
 }
@@ -162,6 +162,20 @@ font-size: 17px;
     display: none;
 }
 
+input[type=checkbox] {
+    border: 1px solid #ccc !important;
+}
+
+input[type=checkbox]:checked {
+    box-shadow: none !important;
+    outline: none !important;
+    background-color: var(--primary-color) !important;
+}
+
+input[type=checkbox]:focus {
+    box-shadow: none !important;
+    outline: none !important;
+}
 
 
 

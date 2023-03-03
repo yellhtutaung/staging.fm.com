@@ -33,9 +33,13 @@
                                 <div class="form-group my-1">
                                     <label class="my-2 form-label" for="">Role</label>
                                     <select  class="form-control js-example-basic-single" name="role" id="role" value="{{old('role')}}" >
-                                        @foreach($roles as $index=>$role)
-                                            @if( $index > $current_auth_user_role - 1 )
-                                                <option value="{{$index+1}}">{{$role}}</option>
+                                        @php
+                                            $UserRole = Auth::guard('admin')->user()->role;
+                                            $RoleDb = App\Models\Permission::find($UserRole);
+                                        @endphp
+                                        @foreach($roles as $role)
+                                            @if( $RoleDb->id > $role->id )
+                                                <option value="{{$role->id}}">{{$role->name}}</option>
                                             @endif
                                         @endforeach
                                     </select>

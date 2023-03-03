@@ -21,8 +21,12 @@
                                         <td class="py-3">{{$account->username}}</td>
                                     </tr>
                                     <tr class="">
+                                        @php
+                                            $UserRole = Auth::guard('admin')->user()->role;
+                                            $RoleDb = App\Models\Permission::find($UserRole);
+                                        @endphp
                                         <td class="py-3">Role</td>
-                                        <td class="py-3">{{config('app.roles')[$account->role - 1]}}</td>
+                                        <td class="py-3">{{$RoleDb->name}}</td>
                                     </tr>
                                     <tr class="">
                                         <td class="py-3">Phone Number</td>

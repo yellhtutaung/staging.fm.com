@@ -16,7 +16,7 @@
                     <th>ID</th>
                     <th>Name</th>
                     <th>Phone</th>
-{{--                    <th>Shop Name</th>--}}
+                    {{--                    <th>Shop Name</th>--}}
                     <th>Country</th>
                     <th>City</th>
                     <th>Reg Date</th>
@@ -32,7 +32,7 @@
                         <td>{{$Index+1}}</td>
                         <td>{{$user->name}}</td>
                         <td>{{$user->phone}}</td>
-{{--                        <td>{{$user->shop_name}}</td>--}}
+                        {{--                        <td>{{$user->shop_name}}</td>--}}
                         <td>Myanmar</td>
                         <td>Yangon</td>
                         <td>{{$user->created_at->toDateString()}}</td>
@@ -68,16 +68,16 @@
     <script src="{{asset('backend-assets/js/universalSwitch.js')}}" ></script>
     <script>
 
-    $(document).ready(function () {
-        $('#example').DataTable({
-            "pageLength": 100,
+        $(document).ready(function () {
+            $('#example').DataTable({
+                "pageLength": 100,
+            });
+            $('.form-control-sm').addClass("input-data-search")
+            $('.input-data-search').focus(); // input auto focus
+
+            $('.js-example-basic-multiple').select2();
+
         });
-        $('.form-control-sm').addClass("input-data-search")
-        $('.input-data-search').focus(); // input auto focus
 
-        $('.js-example-basic-multiple').select2();
-
-    });
-
-</script>
+    </script>
 @endsection

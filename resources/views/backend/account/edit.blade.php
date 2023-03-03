@@ -31,11 +31,15 @@
                                     <input type="text" class="form-control" name="name" value="{{old('name', $account->name)}}" />
                                 </div>
                                 <div class="form-group my-1">
+                                    @php
+                                        $UserRole = Auth::guard('admin')->user()->role;
+                                        $RoleDb = App\Models\Permission::find($UserRole);
+                                    @endphp
                                     <label class="my-2 form-label" for="">Role</label>
                                     <select  class="form-control js-example-basic-single" name="role" id="role" value="{{old('role')}}" >
-                                        @foreach($roles as $index=>$role)
-                                            @if( $index > $current_auth_user_role - 1 )
-                                                <option value="{{$index+1}}" {{ old('role', $account->role) == $index+1 ? 'selected': '' }}>{{$role}}</option>
+                                        @foreach($roles as $role)
+                                            @if( $RoleDb->id > $role->id )
+                                                <option value="{{$role->id}}" {{ old('role', $account->role) == $role->id ? 'selected': '' }}>{{$role->name}}</option>
                                             @endif
                                         @endforeach
                                     </select>

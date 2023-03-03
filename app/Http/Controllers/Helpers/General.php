@@ -7,8 +7,6 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 trait General
 {
-//    public  static $sessionAdmin = Auth::guard('admin')->user();
-//    public  static $sessionUser = Auth::guard('web')->user();
 
     public static function strGenerator($no)
     {
