@@ -17,8 +17,8 @@
             </ul>
             <hr>
             <ul class="m-0 p-0">
-                <small class="text-muted " style="margin-left: 10px">Account Management</small>
-                <li id="account" class="dropNav {{ Request::segment(2) == 'account'  ?  'open-drop' : null }}" >
+                <small class="text-muted hide-sidebar-account" style="margin-left: 10px">Account Management</small>
+                <li id="account" class="hide-sidebar-account dropNav {{ Request::segment(2) == 'account'  ?  'open-drop' : null }}" >
                     <a class="{{ Route::currentRouteName() == 'accountList' ? 'active-link' : null}}" href="javascript:void(0)" onclick="dropTagAction('account')">
                         <i class="fa-solid fa-users"></i>
                         <span>Account </span>

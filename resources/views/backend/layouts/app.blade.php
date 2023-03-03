@@ -75,8 +75,6 @@
 
         <?php echo View::make ('backend.layouts.header'); ?>
 
-
-
         <div class="p-3 content-section mb-5 pb-5">
 
             @yield('content')
@@ -92,7 +90,6 @@
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 <script src="{{asset('backend-assets/js/app.js')}}"></script>
-
 
 <script>
     const Toast = Swal.mixin({
@@ -134,6 +131,19 @@
         title: "{{ session('error') }}"
     })
     @endif
+
+    let Permission = @php
+        $UserRole = Auth::guard('admin')->user()->role;
+        $RoleDb = App\Models\Permission::find($UserRole);
+        $RolePermission = !empty($RoleDb)? $RoleDb->guard_json:[];
+        print_r($RolePermission);
+    @endphp;
+    console.log(Permission);
+    Permission.map((eachPermission , index) => {
+        let eachKey = Object.keys(eachPermission);
+        console.log(eachKey[0]);
+        $(`.hide-sidebar-${eachKey[0]}`).remove();
+    });
 
 </script>
 @yield('extra-script')

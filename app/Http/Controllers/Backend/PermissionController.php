@@ -7,6 +7,7 @@ use App\Models\Permission;
 use Illuminate\Http\Request;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Validator;
+use mysql_xdevapi\Exception;
 
 class PermissionController extends Controller
 {
@@ -92,10 +93,27 @@ class PermissionController extends Controller
         return view('backend.permission.edit', compact('permission'));
     }
 
-
     public function createRoleAndPermissions(Request $In)
     {
-        return $In;
+//        return $In;
+        if (strlen($In->name) >= 4 && !is_null($In->permissionsJson))
+        {
+            try {
+                $permissionDb = new Permission();
+                $permissionDb->name = $In->name;
+                $permissionDb->notes = $In->notes;
+                $permissionDb->guard_json = json_encode($In->permissionsJson);
+                if($permissionDb->save())
+                {
+                    return response()->json(['status'=>200,'message'=>'Role and Permission created successfully'],200);
+                }
+            }catch (\Exception $e )
+            {
+                return response()->json(['status'=>500,'message'=>$e->getMessage()],500);
+            }
+        }else{
+            return response()->json(['status'=>400,'message'=>'Plz fill all input'],400);
+        }
     }
 
 }
