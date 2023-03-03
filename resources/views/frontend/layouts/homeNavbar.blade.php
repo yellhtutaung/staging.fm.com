@@ -84,6 +84,7 @@
     var url = "{{ route('changeLang') }}";
 
     $(".changeLang").change(function(){
+        console.log(csrf_token)
         let language = $(this).val();
         $.post("lang/change",
             {

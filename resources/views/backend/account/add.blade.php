@@ -38,7 +38,7 @@
                                             $RoleDb = App\Models\Permission::find($UserRole);
                                         @endphp
                                         @foreach($roles as $role)
-                                            @if( $RoleDb->id > $role->id )
+                                            @if( $RoleDb->id < $role->id )
                                                 <option value="{{$role->id}}">{{$role->name}}</option>
                                             @endif
                                         @endforeach
