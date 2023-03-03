@@ -76,7 +76,7 @@
         <?php echo View::make ('backend.layouts.header'); ?>
 
         <div class="p-3 content-section mb-5 pb-5">
-            
+
             @yield('content')
 
         </div>
@@ -138,13 +138,15 @@
         $RolePermission = !empty($RoleDb)? $RoleDb->guard_json:[];
         print_r($RolePermission);
     @endphp;
-    console.log(Permission);
+    // console.log(Permission);
+    let accessArr = [];
     Permission.map((eachPermission , index) => {
         let eachKey = Object.keys(eachPermission);
-        console.log(eachKey[0]);
-        $(`.hide-sidebar-${eachKey[0]}`).remove();
+        accessArr.push(eachKey[0]);
+        $(`.hide-sidebar-${eachKey[0]}`).removeClass('d-none');
+        $(`.hide-hr-sidebar-${eachKey[0]}`).removeClass('d-none');
     });
-
+    console.log(accessArr);
 </script>
 @yield('extra-script')
 
