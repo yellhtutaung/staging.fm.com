@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
 use App\Models\Admin;
+use App\Models\Permission;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -24,7 +25,7 @@ class AccountController extends Controller
 
     public function addAccount () {
         $current_auth_user_role = Auth::guard('admin')->user()->role;
-        $roles = config('app.roles');
+        $roles = Permission::get();
         return view('backend.account.add', compact('roles', 'current_auth_user_role'));
     }
 
@@ -79,7 +80,7 @@ class AccountController extends Controller
             $account = Admin::where('status', 1)->where('token', $token)->first();
             if($account) {
                 $current_auth_user_role = Auth::guard('admin')->user()->role;
-                $roles = config('app.roles');
+                $roles = Permission::get();
                 return view('backend.account.edit', compact('roles', 'account', 'current_auth_user_role'));
             }else {
                 return redirect()->back()->with('warning', 'User not found ');

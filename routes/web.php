@@ -82,12 +82,7 @@ Route::post('/contact', [PagesController::class, 'contact'])->name('contact');
 Route::middleware([CheckAdmin::class,PermissionCheck::class])->prefix('admin')->group(function ()
 {
     Route::get('/', [DashboardController::class, 'home'])->name('home');
-
-    Route::post('testAjax', [UniversalController::class, 'testAjax'])->name('testAjax');
-//    Route::post('adminUniversalSwitch', [UniversalController::class, 'adminUniversalSwitch'])->name('adminUniversalSwitch');
-    Route::post('adminUniversalSwitch', function () {
-        return 'hi';
-    })->name('adminUniversalSwitch');
+    Route::post('adminUniversalSwitch', [UniversalController::class, 'adminUniversalSwitch'])->name('adminUniversalSwitch');
     Route::get('/job', [DashboardController::class, 'job'])->name('job');
     Route::prefix('fruit')->group(function () {
         Route::get('/', [FruitController::class, 'fruitList'])->name('fruitList');

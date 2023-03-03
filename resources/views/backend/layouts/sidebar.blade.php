@@ -35,7 +35,7 @@
                 <small class="text-muted " style="margin-left: 10px">Users Management</small>
                 <li id="user" class="dropNav {{ Request::segment(2) == 'user'  ?  'open-drop' : null }}" >
                     <a class="{{ Route::currentRouteName() == 'userList' ? 'active-link' : null}}" href="javascript:void(0)" onclick="dropTagAction('user')">
-                        <i class="fa-solid fa-users"></i>
+                        <i class="fa-solid fa-user"></i>
                         <span>Users </span>
                         <i class="fa fa-angle-right aside-icon " id="user-icon"></i>
                     </a>
@@ -78,7 +78,7 @@
                 <small class="text-muted " style="margin-left: 10px">Permissions Management</small>
                 <li id="permission" class="dropNav {{ Request::segment(2) == 'permission'  ?  'open-drop' : null }}" >
                     <a class="{{ Request::segment(2) == 'permission' ? 'active-link' : null}}" href="javascript:void(0)" onclick="dropTagAction('permission')">
-                        <i class="fa-solid fa-flag"></i>
+                        <i class="fa-solid fa-shield-halved"></i>
                         <span>Permissions </span>
                         <i class="fa fa-angle-right aside-icon " id="permission-icon"></i>
                     </a>

@@ -37,7 +37,7 @@
 {{--                                        <span class="main_title_underline w-75 bg-light"></span>--}}
                                     </div>
                                 </div>
-                                <div class="card border-0 animate__animated animate__fadeIn shadow-sm">
+                                <div class="card card-custom border-0 animate__animated animate__fadeIn shadow-sm">
                                     <div id="chart"></div>
                                 </div>
                             </div>
