@@ -46,7 +46,7 @@
                 <hr class="d-none hide-hr-sidebar-user ">
 
                 <small class="text-muted hide-sidebar-fruit d-none" style="margin-left: 10px">Fruits Management</small>
-                <li id="fruit" class="dropNav {{ Request::segment(2) == 'fruit'  ?  'open-drop' : null }}" >
+                <li id="fruit" class="hide-sidebar-li-fruit d-none dropNav {{ Request::segment(2) == 'fruit'  ?  'open-drop' : null }}" >
                     <a class="{{ Request::segment(2) == 'fruit' ? 'active-link' : null}}" href="javascript:void(0)" onclick="dropTagAction('fruit')">
                         <i class="fa-solid fa-list"></i>
                         <span>Fruits </span>
@@ -62,7 +62,7 @@
                 <hr class="d-none hide-hr-sidebar-fruit">
 
                 <small class="text-muted hide-sidebar-country d-none" style="margin-left: 10px">Country Management</small>
-                <li id="country" class="dropNav {{ Request::segment(2) == 'country'  ?  'open-drop' : null }}" >
+                <li id="country" class="hide-sidebar-li-country d-none dropNav {{ Request::segment(2) == 'country'  ?  'open-drop' : null }}" >
                     <a class="{{ Request::segment(2) == 'country' ? 'active-link' : null}}" href="javascript:void(0)" onclick="dropTagAction('country')">
                         <i class="fa-solid fa-flag"></i>
                         <span>Country </span>
@@ -76,7 +76,7 @@
                 <hr class="d-none hide-hr-sidebar-country">
 
                 <small class="text-muted hide-sidebar-permission d-none" style="margin-left: 10px">Permissions Management</small>
-                <li id="permission" class="dropNav hide-sidebar-permission d-none {{ Request::segment(2) == 'permission'  ?  'open-drop' : null }}" >
+                <li id="permission" class="dropNav hide-sidebar-li-permission d-none d-none {{ Request::segment(2) == 'permission'  ?  'open-drop' : null }}" >
                     <a class="{{ Request::segment(2) == 'permission' ? 'active-link' : null}}" href="javascript:void(0)" onclick="dropTagAction('permission')">
                         <i class="fa-solid fa-shield-halved"></i>
                         <span>Permissions </span>
@@ -89,7 +89,7 @@
                 <hr class="hide-hr-sidebar-permission d-none">
 
                 <small class="text-muted hide-sidebar-contact d-none" style="margin-left: 10px">Contact SMS</small>
-                <li class="{{ Route::currentRouteName() == 'contactMessageList' ? 'theme_bg text-white border-radius-5' : null}}">
+                <li class="hide-sidebar-li-contact d-none {{ Route::currentRouteName() == 'contactMessageList' ? 'theme_bg text-white border-radius-5' : null}}">
                     <a class="{{ Request::segment(2) == 'contact' ? 'active-link text-white' : null}} " href="{{route('contactMessageList')}}">
                         <i class="fa fa-envelope"></i> Contact
                     </a>

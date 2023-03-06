@@ -122,8 +122,8 @@
             let notes = $('#notes').val();
             if(navigator.onLine)
             {
-                console.log(roleName);
-                console.log(resArr.length);
+                // console.log(roleName);
+                // console.log(resArr.length);
                 if(resArr.length == 0 || roleName.length == 0 )
                 {
                     Toast.fire({
@@ -131,9 +131,9 @@
                         title: "Please select at least one permission"
                     });
                 }else {
-                    $('#submit-btn').attr('disabled', '');
+                    // $('#submit-btn').attr('disabled', '');
                     let formData = new FormData($('#form-upload')[0]);
-                    // console.log(formData);
+                    // console.log(resArr);
                     $.ajax({
                         _token: csrf_token,
                         type: "POST",

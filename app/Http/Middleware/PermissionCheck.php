@@ -39,17 +39,19 @@ class PermissionCheck
         {
             $mainRoute = array_keys($permission); // main route only
 //            return $uriSegments;
-            if ($countUriSegments ==3 )
+            if ($countUriSegments == 3 )
             {
                 if ($checkUrlIndex == $mainRoute[0])
                 {
-                    return true;
+//                    return $permission[$checkUrlIndex]['list'];
+                    return $permission[$checkUrlIndex]['list'] == "false"?null:true;
+//                    return true;
                 }
             }else{
                 $getCat = array_keys($permissionJson[$Index]);
                 if ($getCat[0] == $uriSegments[2])
                 {
-//                    return$permission;
+//                    $permission;
                     $subRoute = $permission[$uriSegments[2]]; // sub route ( example -> edit , details , history )
                     return $subRoute[end($uriSegments)] == "false"?null:$subRoute[end($uriSegments)];
                 }

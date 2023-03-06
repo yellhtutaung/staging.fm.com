@@ -23,6 +23,7 @@
 //     });
 // }
 
+function isStrTrueOrFalse(string) { return !string.toLowerCase().match(/false/);}
 
 let resArr = [];
 

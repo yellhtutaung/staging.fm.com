@@ -145,6 +145,7 @@
         accessArr.push(eachKey[0]);
         $(`.hide-sidebar-${eachKey[0]}`).removeClass('d-none');
         $(`.hide-hr-sidebar-${eachKey[0]}`).removeClass('d-none');
+        $(`.hide-sidebar-li-${eachKey[0]}`).removeClass('d-none');
     });
     console.log(accessArr);
 </script>

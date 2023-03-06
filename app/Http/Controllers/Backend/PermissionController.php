@@ -101,6 +101,7 @@ class PermissionController extends Controller
             return response()->json(['status'=>400,'message'=>'Plz fill all input'],400);
         }else{
             try {
+
                 $permissionDb = new Permission();
                 $permissionDb->name = $In->name;
                 $permissionDb->notes = $In->notes;
