@@ -43,9 +43,10 @@
                                     $permissionUrlPrefix = ['account','user','fruit','country','permission','contact'];
                                 @endphp
                                 <label class="form-label my-2" >Permissions </label>
-                                <div class="form-group  d-flex">
-                                @foreach($permissionLabel as $index => $permissions)
-                                        <div class="form-group m-2 p-2">
+                                <div class="form-group ">
+                                    <div class="row g-2">
+                                        @foreach($permissionLabel as $index => $permissions)
+                                        <div class="form-group col-6 col-sm-4 col-lg-3">
                                             <input type="checkbox" class="form-check-input" onclick="checkBoxToggle('{{$permissionUrlPrefix[$index]}}');"
                                                    id="lb-check{{$permissionUrlPrefix[$index]}}" name="permissions" value="{{$permissionUrlPrefix[$index]}}" />
                                             <label for="lb-check{{$permissionUrlPrefix[$index]}}" class="form-check-label ms-2">{{$permissionLabel[$index]}}</label>
@@ -88,6 +89,7 @@
                                             </div>
                                         </div>
                                        @endforeach
+                                    </div>
                                 </div>
                                 <div class="form-group ">
 {{--                                    <input type="submit" class="btn col-12 theme_bg text-white" id="submit-btn" value="CREATE">--}}

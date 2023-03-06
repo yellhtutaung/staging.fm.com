@@ -38,7 +38,7 @@
                         <td><img class="avator-rounded" src="{{asset("backend-assets/uploads/fruits/$fruits->id/$fruits->images")}}" alt="{{$fruits->name}}"></td>
                         <td><span class="badge bg-danger shadow-lg">{{$fruits->depend_count ." ".$fruits->unit}}</span></td>
                         <td><span class="badge bg-success shadow-lg">{{$fruits->price}} MMK</span></td>
-                        <td>{{$fruits->userInformation->name}}</td>
+                        <td>{{$fruits->userInformation->name ?? '-'}}</td>
                         <td>{{$fruits->created_at}}</td>
                         <td>{{!is_null($fruits->upd_id)?$fruits->updaterInformation->name:''}}</td>
                         <td>{{$fruits->updated_at->diffForHumans()}}</td>

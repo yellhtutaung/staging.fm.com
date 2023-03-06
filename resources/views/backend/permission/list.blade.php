@@ -17,6 +17,7 @@
                     <th>ID</th>
                     <th>Name</th>
                     <th>Notes</th>
+                    <th>Permissions</th>
                     <th>Reg Date</th>
                     <th>Updated</th>
                     <th>Hide | Show</th>
@@ -29,7 +30,10 @@
                     <tr>
                         <td>{{$Index+1}}</td>
                         <td>{{$permission->name}}</td>
-                        <td>{{$permission->notes}}</td>
+                        <td>{{$permission->notes??'-'}}</td>
+                        <td>
+
+                        </td>
                         <td>{{$permission->created_at->toDateString()}}</td>
                         <td>{{$permission->updated_at->diffForHumans()}}</td>
                         <td>
@@ -50,9 +54,12 @@
                             </a>
                         </td>
                         <td>
-                            <a href="" class="secondary-radius btn btn-danger">
+                            <form action="{{route('deletePermission', $permission->id)}}" id="delPermissionForm-{{$permission->id}}" method="POST">
+                                @csrf
+                            </form>
+                            <button class="secondary-radius btn btn-danger" onclick="delPermission({{$permission->id}})">
                                 <span class="material-symbols-outlined mt-2 text-white">delete</span>
-                            </a>
+                            </button>
                         </td>
                     </tr>
                 @endforeach
@@ -74,6 +81,10 @@
             $('.input-data-search').focus(); // input auto focus
 
             $('.js-example-basic-multiple').select2();
+
         });
+        const delPermission = (id) => {
+            $('#delPermissionForm-'+id).submit()
+        }
     </script>
 @endsection

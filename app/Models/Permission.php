@@ -10,4 +10,8 @@ class Permission extends Model
     use HasFactory;
 
     protected $table='permissions';
+
+    public function accounts () {
+        return $this->hasMany(Admin::class, 'role', 'id');
+    }
 }

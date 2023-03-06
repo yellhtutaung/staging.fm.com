@@ -116,4 +116,17 @@ class PermissionController extends Controller
         }
     }
 
+    public function deletePermission ($id) {
+        $permission = Permission::find($id);
+        if(!$permission) {
+            return redirect()->route('permissionList')->with('error', 'Permission not found.');
+        }
+        $accounts = count($permission->accounts);
+        if($accounts){
+            return redirect()->route('permissionList')->with('error', 'There are accounts with this permission.');
+        }
+        $permission->delete();
+        return redirect()->back()->with('delete', 'Permission deleted successfully!');
+    }
+
 }
