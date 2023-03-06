@@ -30,8 +30,8 @@
                             @csrf
                             <div class="row ">
                                 <div class="form-group my-1">
-                                    <label class="my-1 form-label" for="">Role Name</label>
-                                    <input type="text" class="form-control" id="name" name="name" placeholder="Example: Manager" value="{{old('name')}}" />
+                                    <label class="my-1 form-label" for="name">Role Name</label>
+                                    <input type="text" class="form-control name" id="name" name="name" placeholder="Example: Manager" value="{{old('name')}}" />
                                 </div>
                                 <div class="form-group my-1">
                                     <label class="my-1 form-label" for="">Note</label>
@@ -116,11 +116,13 @@
 
         const saveToServer = () =>
         {
-            let roleName = $('#name').val();
+            let roleName = $('.name').val();
             let notes = $('#notes').val();
             if(navigator.onLine)
             {
-                if(resArr.length == 0 || roleName.length <=3 )
+                console.log(roleName);
+                console.log(resArr.length);
+                if(resArr.length == 0 || roleName.length == 0 )
                 {
                     Toast.fire({
                         icon: 'warning',

@@ -49,7 +49,7 @@ const checkBoxFun = async () =>
         let checkUpdateVal = $(`#${field}-update`).is(':checked');
         let checkDetailsVal = $(`#${field}-details`).is(':checked');
 
-        let sampleObj = {[field]:{"list":checkListVal,"add":checkAddVal,"create":checkCreateVal,"edit":checkEditVal,"update":checkUpdateVal,"hide_show":false,"details":checkDetailsVal}};
+        let sampleObj = {[field]:{"list":checkListVal,"add":checkAddVal,"create":checkCreateVal,"edit":checkEditVal,"update":checkUpdateVal,"hide_show":false,"details":checkDetailsVal,"history":true}};
 
         resArr.push(sampleObj);
 

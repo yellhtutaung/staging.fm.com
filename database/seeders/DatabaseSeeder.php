@@ -22,12 +22,12 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
 
-        $sampleJson = '[{"account": {"list": true,"add": true,"create": true,"edit": true,"update": true,"hide_show": false,"details": true}},
-                        {"user": {"list": true,"add": true,"create": true,"edit": true,"update": true,"hide_show": false,"details": true}},
-                        {"fruit": {"list": true,"add": true,"create": true,"edit": true,"update": true,"hide_show": false,"details": true}},
-                        {"country": {"list": true,"add": true,"create": true,"edit": true,"update": true,"hide_show": false,"details": true}},
-                        {"permission": {"list": true,"add": true,"create": true,"edit": true,"update": true,"hide_show": false,"details": true}},
-                        {"contact":{"list": true,"add":true,"create":true,"edit":true,"update":true,"hide_show":false,"details":true}
+        $sampleJson = '[{"account": {"list": true,"add": true,"create": true,"edit": true,"update": true,"hide_show": false,"details": true,"history": true}},
+                        {"user": {"list": true,"add": true,"create": true,"edit": true,"update": true,"hide_show": false,"details": true,"history": true}},
+                        {"fruit": {"list": true,"add": true,"create": true,"edit": true,"update": true,"hide_show": false,"details": true,"history": true}},
+                        {"country": {"list": true,"add": true,"create": true,"edit": true,"update": true,"hide_show": false,"details": true,"history": true}},
+                        {"permission": {"list": true,"add": true,"create": true,"edit": true,"update": true,"hide_show": false,"details": true,"history": true}},
+                        {"contact":{"list": true,"add":true,"create":true,"edit":true,"update":true,"hide_show":false,"details":true,"history":true}
             }
         ]  ';
 
