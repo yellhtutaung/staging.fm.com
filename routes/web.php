@@ -114,17 +114,15 @@ Route::middleware([CheckAdmin::class,PermissionCheck::class])->prefix('admin')->
         Route::get('{token}/edit', [CountryController::class, 'editCountry'])->name('editCountry');
         Route::post('{token}/update', [CountryController::class, 'updateCountry'])->name('updateCountry');
     });
-
-    Route::prefix('contact')->group(function () {
-        Route::get('/', [ContactController::class, 'contactMessageList'])->name('contactMessageList');
-    });
-
     Route::prefix('permission')->group(function () {
         Route::get('/', [PermissionController::class, 'permissionList'])->name('permissionList');
         Route::get('add', [PermissionController::class, 'addPermission'])->name('addPermission');
         Route::post('create', [PermissionController::class, 'createRoleAndPermissions'])->name('createRoleAndPermissions');
         Route::get('{id}/edit', [PermissionController::class, 'editPermission'])->name('editPermission');
         Route::post('{id}/update', [PermissionController::class, 'updatePermission'])->name('updatePermission');
+    });
+    Route::prefix('contact')->group(function () {
+        Route::get('/', [ContactController::class, 'contactMessageList'])->name('contactMessageList');
     });
 
 }); // For admin only

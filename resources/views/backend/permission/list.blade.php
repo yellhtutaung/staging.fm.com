@@ -75,18 +75,5 @@
 
             $('.js-example-basic-multiple').select2();
         });
-
-        setInterval(function (){
-            console.log('ajax auto task is working')
-            $.ajax({
-                {{--url: "{{route('testAjax')}}",--}}
-                url: "{{route('admin.logout')}}",
-                type: "POST",
-                success: function (data) {
-                    console.log(data);
-                }
-            });
-        },2000)
-
     </script>
 @endsection
