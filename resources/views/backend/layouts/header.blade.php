@@ -13,11 +13,7 @@
         </a>
         <ul class="dropdown-menu std-box-shadow content-fm" aria-labelledby="dropdownMenuButton1">
             <li class="list-item d-flex align-items-center">
-                @php
-                    $UserRole = Auth::guard('admin')->user()->role;
-                    $RoleDb = App\Models\Permission::find($UserRole);
-                @endphp
-                <span class="material-symbols-rounded me-3">admin_panel_settings</span> <span>{{$RoleDb->name}}</span>
+                <span class="material-symbols-rounded me-3">admin_panel_settings</span> <span>{{Auth::guard('admin')->user()->roleInfo->name}}</span>
             </li >
             <li class="list-item d-flex align-items-center" id="goPublic">
                 <span class="material-symbols-rounded me-3">public</span> <span>Public Site</span>
