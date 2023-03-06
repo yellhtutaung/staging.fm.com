@@ -96,8 +96,10 @@ class PermissionController extends Controller
     public function createRoleAndPermissions(Request $In)
     {
 //        return $In;
-        if (strlen($In->name) >= 4 && !is_null($In->permissionsJson))
+        if (strlen($In->name) == 0 || is_null($In->permissionsJson))
         {
+            return response()->json(['status'=>400,'message'=>'Plz fill all input'],400);
+        }else{
             try {
                 $permissionDb = new Permission();
                 $permissionDb->name = $In->name;
@@ -111,8 +113,6 @@ class PermissionController extends Controller
             {
                 return response()->json(['status'=>500,'message'=>$e->getMessage()],500);
             }
-        }else{
-            return response()->json(['status'=>400,'message'=>'Plz fill all input'],400);
         }
     }
 

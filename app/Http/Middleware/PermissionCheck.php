@@ -49,8 +49,9 @@ class PermissionCheck
                 $getCat = array_keys($permissionJson[$Index]);
                 if ($getCat[0] == $uriSegments[2])
                 {
+//                    return$permission;
                     $subRoute = $permission[$uriSegments[2]]; // sub route ( example -> edit , details , history )
-                    return $subRoute[end($uriSegments)] == false ?null:$subRoute[end($uriSegments)];
+                    return $subRoute[end($uriSegments)] == "false"?null:$subRoute[end($uriSegments)];
                 }
 //                $add = $subRoute['add'];
 //                $edit = $subRoute['edit'];
@@ -70,7 +71,7 @@ class PermissionCheck
     {
 //        dd($this->checkPermission());
         $checkPermission = $this->checkPermission();
-        if (is_null($checkPermission) )
+        if (is_null($checkPermission))
         {
             return  redirect()->back()->with('error','You are not allowed to go there .');
         }else{
