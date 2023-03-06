@@ -17,8 +17,8 @@
             </ul>
             <hr>
             <ul class="m-0 p-0">
-                <small class="text-muted hide-sidebar-account" style="margin-left: 10px">Account Management</small>
-                <li id="account" class="hide-sidebar-account dropNav {{ Request::segment(2) == 'account'  ?  'open-drop' : null }}" >
+                <small class="text-muted hide-sidebar-account d-none" style="margin-left: 10px">Account Management</small>
+                <li id="account" class="hide-sidebar-account d-none dropNa d-nonev {{ Request::segment(2) == 'account'  ?  'open-drop' : null }}" >
                     <a class="{{ Route::currentRouteName() == 'accountList' ? 'active-link' : null}}" href="javascript:void(0)" onclick="dropTagAction('account')">
                         <i class="fa-solid fa-users"></i>
                         <span>Account </span>
@@ -30,10 +30,10 @@
                         </li>
                     </ul>
                 </li>
-                <hr>
+                <hr class="d-none hide-hr-sidebar-account">
 
-                <small class="text-muted " style="margin-left: 10px">Users Management</small>
-                <li id="user" class="dropNav {{ Request::segment(2) == 'user'  ?  'open-drop' : null }}" >
+                <small class="text-muted hide-sidebar-user d-none" style="margin-left: 10px">Users Management</small>
+                <li id="user" class="dropNav  hide-sidebar-user d-none {{ Request::segment(2) == 'user'  ?  'open-drop' : null }}" >
                     <a class="{{ Route::currentRouteName() == 'userList' ? 'active-link' : null}}" href="javascript:void(0)" onclick="dropTagAction('user')">
                         <i class="fa-solid fa-user"></i>
                         <span>Users </span>
@@ -43,9 +43,9 @@
                         <li class="{{ Route::currentRouteName() == 'userList' || Route::currentRouteName() == 'editUser' || Route::currentRouteName() == 'userDetails' ? 'active-route' : null}}"><a class="w-100 " href="{{route('userList')}}">List</a></li>
                     </ul>
                 </li>
-                <hr>
+                <hr class="d-none hide-hr-sidebar-user ">
 
-                <small class="text-muted " style="margin-left: 10px">Fruits Management</small>
+                <small class="text-muted hide-sidebar-fruit d-none" style="margin-left: 10px">Fruits Management</small>
                 <li id="fruit" class="dropNav {{ Request::segment(2) == 'fruit'  ?  'open-drop' : null }}" >
                     <a class="{{ Request::segment(2) == 'fruit' ? 'active-link' : null}}" href="javascript:void(0)" onclick="dropTagAction('fruit')">
                         <i class="fa-solid fa-list"></i>
@@ -59,9 +59,9 @@
                         <li class="{{ Route::currentRouteName() == 'addFruit' ? 'active-route' : null}}"><a class="w-100 " href="{{route('addFruit')}}">Add</a></li>
                     </ul>
                 </li>
-                <hr>
+                <hr class="d-none hide-hr-sidebar-fruit">
 
-                <small class="text-muted " style="margin-left: 10px">Country Management</small>
+                <small class="text-muted hide-sidebar-country d-none" style="margin-left: 10px">Country Management</small>
                 <li id="country" class="dropNav {{ Request::segment(2) == 'country'  ?  'open-drop' : null }}" >
                     <a class="{{ Request::segment(2) == 'country' ? 'active-link' : null}}" href="javascript:void(0)" onclick="dropTagAction('country')">
                         <i class="fa-solid fa-flag"></i>
@@ -73,10 +73,10 @@
                         <li class="{{ Route::currentRouteName() == 'addCountry' ? 'active-route' : null}}"><a class="w-100 " href="{{route('addCountry')}}">Add</a></li>
                     </ul>
                 </li>
-                <hr>
+                <hr class="d-none hide-hr-sidebar-country">
 
-                <small class="text-muted " style="margin-left: 10px">Permissions Management</small>
-                <li id="permission" class="dropNav {{ Request::segment(2) == 'permission'  ?  'open-drop' : null }}" >
+                <small class="text-muted hide-sidebar-permission d-none" style="margin-left: 10px">Permissions Management</small>
+                <li id="permission" class="dropNav hide-sidebar-permission d-none {{ Request::segment(2) == 'permission'  ?  'open-drop' : null }}" >
                     <a class="{{ Request::segment(2) == 'permission' ? 'active-link' : null}}" href="javascript:void(0)" onclick="dropTagAction('permission')">
                         <i class="fa-solid fa-shield-halved"></i>
                         <span>Permissions </span>
@@ -86,9 +86,9 @@
                         <li class="{{ Route::currentRouteName() == 'permissionList' || Route::currentRouteName() == 'addPermission' || Route::currentRouteName() == 'editPermission' ? 'active-route' : null}}"><a class="w-100 " href="{{route('permissionList')}}">List</a></li>
                     </ul>
                 </li>
-                <hr>
+                <hr class="hide-hr-sidebar-permission d-none">
 
-                <small class="text-muted " style="margin-left: 10px">Contact SMS</small>
+                <small class="text-muted hide-sidebar-contact d-none" style="margin-left: 10px">Contact SMS</small>
                 <li class="{{ Route::currentRouteName() == 'contactMessageList' ? 'theme_bg text-white border-radius-5' : null}}">
                     <a class="{{ Request::segment(2) == 'contact' ? 'active-link text-white' : null}} " href="{{route('contactMessageList')}}">
                         <i class="fa fa-envelope"></i> Contact
