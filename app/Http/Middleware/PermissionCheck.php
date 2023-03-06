@@ -32,6 +32,8 @@ class PermissionCheck
         $userRole = Auth::guard('admin')->user()->role;
         $fetchPermission = Permission::find($userRole);
         $permissionJson = json_decode($fetchPermission->guard_json,true);
+//        return $permissionJson;
+
 
         foreach ($permissionJson as $Index => $permission)
         {

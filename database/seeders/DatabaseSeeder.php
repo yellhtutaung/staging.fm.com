@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Permission;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -14,11 +15,35 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+         \App\Models\Admin::factory(1)->create();
 
         // \App\Models\User::factory()->create([
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+
+        $sampleJson = '[{"account": {"list": true,"add": true,"create": true,"edit": true,"update": true,"hide_show": false,"details": true}},
+                        {"user": {"list": true,"add": true,"create": true,"edit": true,"update": true,"hide_show": false,"details": true}},
+                        {"fruit": {"list": true,"add": true,"create": true,"edit": true,"update": true,"hide_show": false,"details": true}},
+                        {"country": {"list": true,"add": true,"create": true,"edit": true,"update": true,"hide_show": false,"details": true}},
+                        {"permission": {"list": true,"add": true,"create": true,"edit": true,"update": true,"hide_show": false,"details": true}},
+                        {"contact":{"list": true,"add":true,"create":true,"edit":true,"update":true,"hide_show":false,"details":true}
+            }
+        ]  ';
+
+         Permission::insert(array(
+             array(
+                 'name' => "Programmer",
+                 'guard_json' => $sampleJson,
+                 "created_at" => date("y-m-d h:i:s"),
+                 "updated_at" => date("y-m-d h:i:s"),
+             ),
+             array(
+                 'name' => "Owner",
+                 'guard_json' =>  $sampleJson,
+                 "created_at" => date("y-m-d h:i:s"),
+                 "updated_at" => date("y-m-d h:i:s"),
+             )
+         ));
     }
 }
