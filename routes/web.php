@@ -80,7 +80,7 @@ Route::middleware(['auth','ban'])->group(function ()
 Route::post('/contact', [PagesController::class, 'contact'])->name('contact');
 Route::post('adminUniversalSwitch', [UniversalController::class, 'adminUniversalSwitch'])->name('adminUniversalSwitch');
 
-Route::middleware([CheckAdmin::class,PermissionCheck::class])->prefix('admin')->group(function ()
+Route::middleware([CheckAdmin::class])->prefix('admin')->group(function ()
 {
     Route::get('/', [DashboardController::class, 'home'])->name('home');
     Route::get('/job', [DashboardController::class, 'job'])->name('job');

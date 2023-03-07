@@ -17,7 +17,7 @@
                     <th>ID</th>
                     <th>Name</th>
                     <th>Notes</th>
-                    <th>Permissions</th>
+                    <th>Permission Count</th>
                     <th>Reg Date</th>
                     <th>Updated</th>
                     <th>Hide | Show</th>
@@ -32,7 +32,30 @@
                         <td>{{$permission->name}}</td>
                         <td>{{$permission->notes??'-'}}</td>
                         <td>
-
+                            <?php $count=0?>
+                            @foreach(json_decode($permission->guard_json, true) as $all)
+                                @foreach($all as $prefix=>$list)
+                                    @foreach($list as $permit=>$bol)
+                                        @if($bol == "true")
+                                            <?php $count += 1 ?>
+                                        @endif
+                                    @endforeach
+                                @endforeach
+                            @endforeach
+                            <span class="badge bg-warning">{{$count}}</span>
+{{--                            <div style="max-height: 200px; overflow: scroll">--}}
+{{--                                @foreach(json_decode($permission->guard_json, true) as $all)--}}
+{{--                                    @foreach($all as $prefix=>$list)--}}
+{{--                                        <span class="badge bg-dark mb-3">{{$prefix}}</span> <br>--}}
+{{--                                        @foreach($list as $permit=>$bol)--}}
+{{--                                            @if($bol)--}}
+{{--                                                <span class="badge bg-danger">{{$permit}}</span>--}}
+{{--                                            @endif--}}
+{{--                                        @endforeach--}}
+{{--                                        <hr>--}}
+{{--                                    @endforeach--}}
+{{--                                @endforeach--}}
+{{--                            </div>--}}
                         </td>
                         <td>{{$permission->created_at->toDateString()}}</td>
                         <td>{{$permission->updated_at->diffForHumans()}}</td>
