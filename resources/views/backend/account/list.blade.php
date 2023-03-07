@@ -22,8 +22,8 @@
                     <th>Reg Date</th>
                     <th>Last Active</th>
                     <th>Ban</th>
-                    <th>Edit</th>
                     <th>Details</th>
+                    <th>Edit</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -44,13 +44,13 @@
                             </div>
                         </td>
                         <td>
-                            <a href="{{route('editAccount', $admin->token)}}" class="secondary-radius btn btn-info">
-                                <span class="material-symbols-outlined mt-2 text-white">edit</span>
+                            <a href="{{route('accountDetails', $admin->token)}}" class="secondary-radius text-decoration-none text-light btn theme_bg">
+                                <span class="material-symbols-outlined mt-2 text-white">visibility</span>
                             </a>
                         </td>
                         <td>
-                            <a href="{{route('accountDetails', $admin->token)}}" class="secondary-radius text-decoration-none text-light btn theme_bg">
-                                <span class="material-symbols-outlined mt-2 text-white">visibility</span>
+                            <a href="{{route('editAccount', $admin->token)}}" class="secondary-radius btn btn-info">
+                                <span class="material-symbols-outlined mt-2 text-white">edit</span>
                             </a>
                         </td>
                     </tr>
