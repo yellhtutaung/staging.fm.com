@@ -380,7 +380,7 @@
             centeredSlides: true,
             loop: true,
             autoplay: {
-                delay: 3000,
+                delay: 5000,
                 disableOnInteraction: false,
                 pauseOnMouseEnter: true,
             },
@@ -394,7 +394,7 @@
             },
         });
 
-        let carouselInnerHeight = $('.home-carousel-1').innerHeight()
+        let carouselInnerHeight = $(".slider-img-parent").height();
         console.log(carouselInnerHeight)
 
     </script>

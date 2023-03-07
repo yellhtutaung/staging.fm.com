@@ -21,7 +21,7 @@
                     <th>Email</th>
                     <th>Reg Date</th>
                     <th>Last Active</th>
-                    <th>Ban</th>
+{{--                    <th>Ban</th>--}}
                     <th>Details</th>
                     <th>Edit</th>
                 </tr>
@@ -35,14 +35,14 @@
                         <td>{{$admin->email}}</td>
                         <td>{{$admin->created_at ? $admin->created_at->toDateString() : '-'}}</td>
                         <td>{{$admin->updated_at ? $admin->updated_at->diffForHumans() : '-'}}</td>
-                        <td>
-                            <div class="form-check form-switch p-0 m-0">
-                                <input data-id="{{$admin->id}}" data-status-val="{{$admin->is_ban}}" onchange="universalSwitch(0,{{$admin->id}},'is_ban',{{$admin->is_ban}});"
-                                       class="toggle-class toggle-id{{$admin->id}}" type="checkbox"
-                                       data-onstyle="danger" data-offstyle="success" data-toggle="toggle"
-                                       data-on="Ban"  data-off="Active" {{$admin->is_ban==1?"checked":""}}>
-                            </div>
-                        </td>
+{{--                        <td>--}}
+{{--                            <div class="form-check form-switch p-0 m-0">--}}
+{{--                                <input data-id="{{$admin->id}}" data-status-val="{{$admin->is_ban}}" onchange="universalSwitch(0,{{$admin->id}},'is_ban',{{$admin->is_ban}});"--}}
+{{--                                       class="toggle-class toggle-id{{$admin->id}}" type="checkbox"--}}
+{{--                                       data-onstyle="danger" data-offstyle="success" data-toggle="toggle"--}}
+{{--                                       data-on="Ban"  data-off="Active" {{$admin->is_ban==1?"checked":""}}>--}}
+{{--                            </div>--}}
+{{--                        </td>--}}
                         <td>
                             <a href="{{route('accountDetails', $admin->token)}}" class="secondary-radius text-decoration-none text-light btn theme_bg">
                                 <span class="material-symbols-outlined mt-2 text-white">visibility</span>
