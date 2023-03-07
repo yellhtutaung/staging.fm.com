@@ -138,9 +138,10 @@
                         _token: csrf_token,
                         type: "POST",
                         url: "{{route('createRoleAndPermissions')}}",
-                        data: {name:roleName,notes:notes,permissionsJson:resArr},
+                        data: {name:roleName,notes:notes,permissionsJson:resArr,updId:0},
                         dataType: 'json',
                         success: function (data) {
+                            console.log(data);
                             if (data.status == 200){
                                 $('input').val('');
                                 $('textarea').val('');
@@ -149,6 +150,7 @@
                                     icon: 'success',
                                     title: data.message
                                 });
+                                placeToCheckBoxInitial();
                             }else {
                                 $('#submit-btn').removeAttr('disabled');
                                 Toast.fire({
@@ -157,7 +159,6 @@
                                 });
                                 console.log(data);
                             }
-                            placeToCheckBoxInitial();
                         },
                     });
                 }

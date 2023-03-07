@@ -88,7 +88,7 @@ class PermissionController extends Controller
         $permission = Permission::find($id);
 
         if(!$permission){
-            return redirect()->route('permissionList')->with('error', 'Permission not found.');
+            return redirect()->back()->with('error', 'Permission not found.');
         }
         return view('backend.permission.edit', compact('permission'));
     }
@@ -101,15 +101,15 @@ class PermissionController extends Controller
             return response()->json(['status'=>400,'message'=>'Plz fill all input'],400);
         }else{
             try {
-
-                $permissionDb = new Permission();
+                $permissionDb = $In->updId == 0 || $In->updId == '0' ? new Permission() : Permission::find($In->updId);
                 $permissionDb->name = $In->name;
                 $permissionDb->notes = $In->notes;
                 $permissionDb->guard_json = json_encode($In->permissionsJson);
+                $returnMessage = $In->updId == 0 ? 'Role and Permission created successfully' : 'Record updated .';
                 if($permissionDb->save())
-                {
-                    return response()->json(['status'=>200,'message'=>'Role and Permission created successfully'],200);
-                }
+                   {
+                        return response()->json(['status'=>200,'message'=>$returnMessage],200);
+                   }
             }catch (\Exception $e )
             {
                 return response()->json(['status'=>500,'message'=>$e->getMessage()],500);

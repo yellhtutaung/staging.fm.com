@@ -116,6 +116,7 @@ const placeToCheckBoxInitial = ()  =>
         $(`#${eachKey[0]}-add`).prop("checked",false);
         $(`#${eachKey[0]}-create`).prop("checked",false);
         $(`#${eachKey[0]}-edit`).prop("checked",false);
+        $(`#${eachKey[0]}-update`).prop("checked",false);
         $(`#${eachKey[0]}-details`).prop("checked",false);
     });
     resArr=[];
