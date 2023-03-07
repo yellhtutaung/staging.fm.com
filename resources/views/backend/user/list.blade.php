@@ -21,8 +21,8 @@
                     <th>City</th>
                     <th>Reg Date</th>
                     <th>Last Active</th>
-                    <th>Edit</th>
                     <th>Ban</th>
+                    <th>Edit</th>
                     <th>Details</th>
                 </tr>
                 </thead>

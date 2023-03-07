@@ -118,6 +118,7 @@ Route::middleware([CheckAdmin::class])->prefix('admin')->group(function ()
         Route::get('/', [PermissionController::class, 'permissionList'])->name('permissionList');
         Route::get('add', [PermissionController::class, 'addPermission'])->name('addPermission');
         Route::post('create', [PermissionController::class, 'createRoleAndPermissions'])->name('createRoleAndPermissions');
+        Route::get('{id}/details', [PermissionController::class, 'permissionDetails'])->name('permissionDetails');
         Route::get('{id}/edit', [PermissionController::class, 'editPermission'])->name('editPermission');
         Route::post('{id}/update', [PermissionController::class, 'updatePermission'])->name('updatePermission');
         Route::post('{id}/delete', [PermissionController::class, 'deletePermission'])->name('deletePermission');
