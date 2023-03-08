@@ -21,9 +21,9 @@
                     <th>City</th>
                     <th>Reg Date</th>
                     <th>Last Active</th>
-                    <th>Edit</th>
-                    <th>Ban</th>
+{{--                    <th>Ban</th>--}}
                     <th>Details</th>
+                    <th>Edit</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -37,22 +37,22 @@
                         <td>Yangon</td>
                         <td>{{$user->created_at->toDateString()}}</td>
                         <td>{{$user->updated_at->diffForHumans()}}</td>
+{{--                        <td>--}}
+{{--                            <div class="form-check form-switch p-0 m-0">--}}
+{{--                                <input data-id="{{$user->id}}" data-status-val="{{$user->is_ban}}" onchange="universalSwitch(1,{{$user->id}},'is_ban',{{$user->is_ban}});"--}}
+{{--                                       class="toggle-class toggle-id{{$user->id}}" type="checkbox"--}}
+{{--                                       data-onstyle="danger" data-offstyle="success" data-toggle="toggle"--}}
+{{--                                       data-on="Ban"  data-off="Active" {{$user->is_ban==1?"checked":""}}>--}}
+{{--                            </div>--}}
+{{--                        </td>--}}
                         <td>
-                            <div class="form-check form-switch p-0 m-0">
-                                <input data-id="{{$user->id}}" data-status-val="{{$user->is_ban}}" onchange="universalSwitch(1,{{$user->id}},'is_ban',{{$user->is_ban}});"
-                                       class="toggle-class toggle-id{{$user->id}}" type="checkbox"
-                                       data-onstyle="danger" data-offstyle="success" data-toggle="toggle"
-                                       data-on="Ban"  data-off="Active" {{$user->is_ban==1?"checked":""}}>
-                            </div>
+                            <a href="{{route('userDetails',$user->token)}}" class="secondary-radius btn theme_bg">
+                                <span class="material-symbols-outlined mt-2 text-white">visibility</span>
+                            </a>
                         </td>
                         <td>
                             <a href="{{route('editUser',$user->id)}}" class="secondary-radius btn btn-info">
                                 <span class="material-symbols-outlined mt-2 text-white">edit</span>
-                            </a>
-                        </td>
-                        <td>
-                            <a href="{{route('userDetails',$user->token)}}" class="secondary-radius btn theme_bg">
-                                <span class="material-symbols-outlined mt-2 text-white">visibility</span>
                             </a>
                         </td>
                     </tr>

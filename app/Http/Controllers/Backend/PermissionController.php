@@ -117,6 +117,14 @@ class PermissionController extends Controller
         }
     }
 
+    public function permissionDetails ($id) {
+        $permission = Permission::find($id);
+        if(!$permission) {
+            return redirect()->route('permissionList')->with('error', 'Permission not found.');
+        }
+        return view('backend.permission.details', compact('permission'));
+    }
+
     public function deletePermission ($id) {
         $permission = Permission::find($id);
         if(!$permission) {

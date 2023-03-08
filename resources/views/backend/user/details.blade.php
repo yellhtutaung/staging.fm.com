@@ -52,6 +52,17 @@
                                     <td class="py-3 ">Address</td>
                                     <td class="py-3 ">{{$fetchUser->address ? $fetchUser->address : '-'}}</td>
                                 </tr>
+                                <tr>
+                                    <td class="py-3">Is Ban</td>
+                                    <td class="py-3">
+                                        <div class="form-check form-switch p-0 m-0">
+                                            <input data-id="{{$fetchUser->id}}" data-status-val="{{$fetchUser->is_ban}}" onchange="universalSwitch(1,{{$fetchUser->id}},'is_ban',{{$fetchUser->is_ban}});"
+                                                   class="toggle-class toggle-id{{$fetchUser->id}}" type="checkbox"
+                                                   data-onstyle="danger" data-offstyle="success" data-toggle="toggle"
+                                                   data-on="Ban"  data-off="Active" {{$fetchUser->is_ban==1?"checked":""}}>
+                                        </div>
+                                    </td>
+                                </tr>
                                 </tbody>
                             </table>
                         </div>
@@ -63,12 +74,8 @@
 @endsection
 
 @section('extra-script')
+    <script src="{{asset('backend-assets/js/universalSwitch.js')}}" ></script>
     <script>
-        $(document).ready(function() {
-            $('.js-example-basic-single').select2();
-        });
-        $('#file-action').click(function () {
-            $('#file-input').click()
-        })
+
     </script>
 @endsection

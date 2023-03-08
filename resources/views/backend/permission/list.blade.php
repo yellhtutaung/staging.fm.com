@@ -21,6 +21,7 @@
                     <th>Reg Date</th>
                     <th>Updated</th>
                     <th>Hide | Show</th>
+                    <th>Detail</th>
                     <th>Edit</th>
                     <th>Delete</th>
                 </tr>
@@ -32,30 +33,7 @@
                         <td>{{$permission->name}}</td>
                         <td>{{$permission->notes??'-'}}</td>
                         <td>
-                            <?php $count=0?>
-                            @foreach(json_decode($permission->guard_json, true) as $all)
-                                @foreach($all as $prefix=>$list)
-                                    @foreach($list as $permit=>$bol)
-                                        @if($bol == "true")
-                                            <?php $count += 1 ?>
-                                        @endif
-                                    @endforeach
-                                @endforeach
-                            @endforeach
-                            <span class="badge bg-warning">{{$count}}</span>
-{{--                            <div style="max-height: 200px; overflow: scroll">--}}
-{{--                                @foreach(json_decode($permission->guard_json, true) as $all)--}}
-{{--                                    @foreach($all as $prefix=>$list)--}}
-{{--                                        <span class="badge bg-dark mb-3">{{$prefix}}</span> <br>--}}
-{{--                                        @foreach($list as $permit=>$bol)--}}
-{{--                                            @if($bol)--}}
-{{--                                                <span class="badge bg-danger">{{$permit}}</span>--}}
-{{--                                            @endif--}}
-{{--                                        @endforeach--}}
-{{--                                        <hr>--}}
-{{--                                    @endforeach--}}
-{{--                                @endforeach--}}
-{{--                            </div>--}}
+                            <span class="badge bg-warning">{{count(json_decode($permission->guard_json))}}</span>
                         </td>
                         <td>{{$permission->created_at->toDateString()}}</td>
                         <td>{{$permission->updated_at->diffForHumans()}}</td>
@@ -65,12 +43,11 @@
                                        data-on="Show"  data-off="Hide" {{$permission->hide_show==1?"checked":""}}>
                             </div>
                         </td>
-{{--                        <td>--}}
-{{--                            <div class="form-check form-switch p-0 m-0">--}}
-{{--                                <input data-id="1" class="toggle-class" type="checkbox"  data-onstyle="success" data-offstyle="danger" data-toggle="toggle"--}}
-{{--                                       data-on="Show"  data-off="Hide" {{$permission->hide_show==1?"checked":""}}>--}}
-{{--                            </div>--}}
-{{--                        </td>--}}
+                        <td>
+                            <a href="{{route('permissionDetails', $permission->id)}}" class="secondary-radius btn theme_bg">
+                                <span class="material-symbols-outlined mt-2 text-white">visibility</span>
+                            </a>
+                        </td>
                         <td>
                             <a href="{{route('editPermission', $permission->id)}}" class="secondary-radius btn btn-info">
                                 <span class="material-symbols-outlined mt-2 text-white">edit</span>

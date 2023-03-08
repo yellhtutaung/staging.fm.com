@@ -23,7 +23,7 @@
                     <th>Updated</th>
                     <th>Hide | Show</th>
                     <th>Edit</th>
-                    <th>Delete</th>
+{{--                    <th>Delete</th>--}}
                 </tr>
                 </thead>
                 <tbody>
@@ -55,11 +55,11 @@
                                 <span class="material-symbols-outlined mt-2 text-white">edit</span>
                             </a>
                         </td>
-                        <td>
-                            <a href="" class="secondary-radius btn btn-danger">
-                                <span class="material-symbols-outlined mt-2 text-white">delete</span>
-                            </a>
-                        </td>
+{{--                        <td>--}}
+{{--                            <a href="" class="secondary-radius btn btn-danger">--}}
+{{--                                <span class="material-symbols-outlined mt-2 text-white">delete</span>--}}
+{{--                            </a>--}}
+{{--                        </td>--}}
                     </tr>
                 @endforeach
                 </tbody>

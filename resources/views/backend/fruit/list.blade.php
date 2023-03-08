@@ -21,8 +21,8 @@
                     <th>Unit</th>
                     <th>Price</th>
                     <th>Uploader</th>
-                    <th>Timestamp</th>
                     <th>Updater</th>
+                    <th>Timestamp</th>
                     <th>Updated Time</th>
                     <th>Hide | Show</th>
                     <th>History</th>
@@ -39,8 +39,8 @@
                         <td><span class="badge bg-danger shadow-lg">{{$fruits->depend_count ." ".$fruits->unit}}</span></td>
                         <td><span class="badge bg-success shadow-lg">{{$fruits->price}} MMK</span></td>
                         <td>{{$fruits->userInformation->name ?? '-'}}</td>
-                        <td>{{$fruits->created_at}}</td>
                         <td>{{!is_null($fruits->upd_id)?$fruits->updaterInformation->name:''}}</td>
+                        <td>{{$fruits->created_at}}</td>
                         <td>{{$fruits->updated_at->diffForHumans()}}</td>
                         <td>
                             <div class="form-check form-switch p-0 m-0">
