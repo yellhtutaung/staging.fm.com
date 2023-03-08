@@ -9,18 +9,23 @@
     font-family: "Libre Baskerville", serif;
 }
 
+.slider-img {
+    width: 100% !important;
+    height: 100% !important;
+}
+
 .home-slide-container {
-    /*margin-top: 140px !important;*/
-    width: 100%;
-    height: 100vh;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: top;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    display: flex;
-    align-items: center;
+    margin-top: 142px !important;
+    width: 100% !important;
+    height: 100% !important;
+    /*background-size: cover;*/
+    /*background-repeat: no-repeat;*/
+    /*background-position: top;*/
+    /*-webkit-background-size: cover;*/
+    /*-moz-background-size: cover;*/
+    /*-o-background-size: cover;*/
+    /*display: flex;*/
+    /*align-items: center;*/
 }
 
 .carousel-content {

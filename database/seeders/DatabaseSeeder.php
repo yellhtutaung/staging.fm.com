@@ -22,12 +22,12 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
 
-        $sampleJson = '[{"account": {"list": "true","add": "true","create": "true","edit": "true","update": "true","hide_show": "false","details": "true","history": "true"}},
-                        {"user": {"list": "true","add": "true","create": "true","edit": "true","update": "true","hide_show": "false","details": "true","history": "true"}},
-                        {"fruit": {"list": "true","add": "true","create": "true","edit": "true","update": "true","hide_show": "false","details": "true","history": "true"}},
-                        {"country": {"list": "true","add": "true","create": "true","edit": "true","update": "true","hide_show": "false","details": "true","history": "true"}},
-                        {"permission": {"list": "true","add": "true","create": "true","edit": "true","update": "true","hide_show": "false","details": "true","history": "true"}},
-                        {"contact":{"list": "true","add":"true","create":"true","edit":"true","update":"true","hide_show":"false","details":"true","history":"true"}}
+        $sampleJson = '[{"account": {"list": "true","add": "true","create": "true","edit": "true","update": "true","hide_show": "false","details": "true","history": "true","delete": "true"}},
+                        {"user": {"list": "true","add": "true","create": "true","edit": "true","update": "true","hide_show": "false","details": "true","history": "true","delete": "true"}},
+                        {"fruit": {"list": "true","add": "true","create": "true","edit": "true","update": "true","hide_show": "false","details": "true","history": "true","delete": "true"}},
+                        {"country": {"list": "true","add": "true","create": "true","edit": "true","update": "true","hide_show": "false","details": "true","history": "true","delete": "true"}},
+                        {"permission": {"list": "true","add": "true","create": "true","edit": "true","update": "true","hide_show": "false","details": "true","history": "true","delete": "true"}},
+                        {"contact":{"list": "true","add":"true","create":"true","edit":"true","update":"true","hide_show":"false","details":"true","history":"true","delete": "true"}}
         ]  ';
 
          Permission::insert(array(

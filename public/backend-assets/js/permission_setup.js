@@ -49,8 +49,10 @@ const checkBoxFun = async () =>
         let checkEditVal = $(`#${field}-edit`).is(':checked');
         let checkUpdateVal = $(`#${field}-update`).is(':checked');
         let checkDetailsVal = $(`#${field}-details`).is(':checked');
+        let checkDeleteVal = $(`#${field}-delete`).is(':checked');
 
-        let sampleObj = {[field]:{"list":checkListVal,"add":checkAddVal,"create":checkCreateVal,"edit":checkEditVal,"update":checkUpdateVal,"hide_show":false,"details":checkDetailsVal,"history":true}};
+        let sampleObj = {[field]:{"list":checkListVal,"add":checkAddVal,"create":checkCreateVal,"edit":checkEditVal,
+                "update":checkUpdateVal,"hide_show":false,"details":checkDetailsVal,"history":true,"delete":checkDeleteVal}};
 
         resArr.push(sampleObj);
 
@@ -118,6 +120,7 @@ const placeToCheckBoxInitial = ()  =>
         $(`#${eachKey[0]}-edit`).prop("checked",false);
         $(`#${eachKey[0]}-update`).prop("checked",false);
         $(`#${eachKey[0]}-details`).prop("checked",false);
+        $(`#${eachKey[0]}-delete`).prop("checked",false);
     });
     resArr=[];
 }

@@ -84,6 +84,11 @@
                                                                id="{{$permissionUrlPrefix[$index]}}-details" />
                                                         <label class="form-check-label ms-2" for="{{$permissionUrlPrefix[$index]}}-details">Details</label>
                                                     </div>
+                                                    <div class="form-group my-2">
+                                                        <input class="form-check-input" type="checkbox" onclick="subToggle('{{$permissionUrlPrefix[$index]}}','delete');"
+                                                               id="{{$permissionUrlPrefix[$index]}}-delete" />
+                                                        <label class="form-check-label ms-2" for="{{$permissionUrlPrefix[$index]}}-delete">Delete</label>
+                                                    </div>
                                                 </div>
                                             </div>
                                         @endforeach
@@ -135,6 +140,7 @@
                 $(`#${eachKey[0]}-edit`).prop("checked",eachObj['edit']=='false'?false:true);
                 $(`#${eachKey[0]}-update`).prop("checked",eachObj['update']=='false'?false:true);
                 $(`#${eachKey[0]}-details`).prop("checked",eachObj['details']=='false'?false:true);
+                $(`#${eachKey[0]}-delete`).prop("checked",eachObj['details']=='false'?false:true);
             });
         }
         recalibrateToInitial(permissionJson); // on
