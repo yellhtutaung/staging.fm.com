@@ -103,7 +103,7 @@
                             </div>
                         </form>
                     </div>
-                    <div class="linear-activity d-none">
+                    <div class="linear-activity d-none" style="width: 96%!important; margin: -4px auto;">
                         <div class="indeterminate"></div>
                     </div>
                 </div>
@@ -136,7 +136,8 @@
                         title: "Please select at least one permission"
                     });
                 }else {
-                    // $('#submit-btn').attr('disabled', '');
+                    $('.linear-activity').removeClass('d-none');
+                    $('#submit-btn').attr('disabled', '');
                     let formData = new FormData($('#form-upload')[0]);
                     // console.log(resArr);
                     $.ajax({
@@ -151,12 +152,14 @@
                                 $('input').val('');
                                 $('textarea').val('');
                                 $('#submit-btn').removeAttr('disabled');
+                                $('.linear-activity').addClass('d-none');
                                 Toast.fire({
                                     icon: 'success',
                                     title: data.message
                                 });
                                 placeToCheckBoxInitial();
                             }else {
+                                $('.linear-activity').addClass('d-none');
                                 $('#submit-btn').removeAttr('disabled');
                                 Toast.fire({
                                     icon: 'warning',

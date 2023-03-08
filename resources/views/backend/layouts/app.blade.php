@@ -43,6 +43,7 @@
 
     <link rel="stylesheet" href="{{asset('frontend-assets/css/animated.min.css')}}"/>
     <link rel="stylesheet" href="{{asset('frontend-assets/css/global.css')}}">
+    <link rel="stylesheet" href="{{asset('frontend-assets/css/linear.css')}}">
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
     <link rel="stylesheet" href="{{asset('backend-assets/css/app.css')}}">
     <link rel="stylesheet" href="{{asset('backend-assets/css/layout.css')}}">

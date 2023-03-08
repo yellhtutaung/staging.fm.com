@@ -94,14 +94,13 @@
                                         @endforeach
                                     </div>
                                 </div>
-                                <div class="form-group ">
-                                    {{--<input type="submit" class="btn col-12 theme_bg text-white" id="submit-btn" value="CREATE">--}}
-                                    <button type="submit" class="btn col-12 theme_bg text-white" id="submit-btn" >CREATE</button>
+                                <div class="form-group mt-3">
+                                    <button type="submit" class="btn col-12 theme_bg text-white" id="submit-btn" >UPDATE</button>
                                 </div>
                             </div>
                         </form>
                     </div>
-                    <div class="linear-activity d-none">
+                    <div class="linear-activity d-none" style="width: 96%!important; margin: -4px auto;">
                         <div class="indeterminate"></div>
                     </div>
                 </div>
@@ -160,7 +159,8 @@
                         title: "Please select at least one permission"
                     });
                 }else {
-                    // $('#submit-btn').attr('disabled', '');
+                    $('.linear-activity').removeClass('d-none');
+                    $('#submit-btn').attr('disabled', '');
                     let formData = new FormData($('#form-upload')[0]);
                     let updId = $('.upd-id').val();
                     // console.log(resArr);
@@ -174,6 +174,7 @@
                             if (data.status == 200){
                                 // $('input').val('');
                                 // $('textarea').val('');
+                                $('.linear-activity').addClass('d-none');
                                 $('#submit-btn').removeAttr('disabled');
                                 Toast.fire({
                                     icon: 'success',
@@ -181,6 +182,7 @@
                                 });
                                 // placeToCheckBoxInitial();
                             }else {
+                                $('.linear-activity').addClass('d-none');
                                 $('#submit-btn').removeAttr('disabled');
                                 Toast.fire({
                                     icon: 'warning',
