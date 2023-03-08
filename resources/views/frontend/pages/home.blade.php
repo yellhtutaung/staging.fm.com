@@ -17,38 +17,17 @@
         <div class="swiper-wrapper">
             <div class="swiper-slide">
                 <div class="home-slide-container home-carousel-1" >
-                    <div class="container carousel-container">
-                        <div class="carousel-content col-md-10 col-xl-8 p-2 py-5 ">
-                            {{ __('message.slider1') }}
-                        </div>
-                    </div>
+                    <img class="img" src="{{ asset('frontend-assets/images/sliders/slider_1.jpg') }}" alt="">
                 </div>
             </div>
             <div class="swiper-slide">
-                <div class="home-slide-container home-carousel-2">
-                    <div class="container py-5">
-                        <div class="carousel-content col-md-10 col-xl-8 p-2 py-5 ">
-                            {{ __('message.slider2') }}
-                        </div>
-                    </div>
+                <div class="home-slide-container home-carousel-1" >
+                    <img class="img" src="{{ asset('frontend-assets/images/sliders/slider_2.jpg') }}" alt="">
                 </div>
             </div>
             <div class="swiper-slide">
-                <div class="home-slide-container home-carousel-3">
-                    <div class="container py-5">
-                        <div class="carousel-content col-md-10 col-xl-8 p-2 py-5 ">
-                            {{ __('message.slider3') }}
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="home-slide-container home-carousel-4">
-                    <div class="container py-5">
-                        <div class="carousel-content col-md-10 col-xl-8 p-2 py-5 ">
-                            {{ __('message.slider1') }}
-                        </div>
-                    </div>
+                <div class="home-slide-container home-carousel-1" >
+                    <img class="img" src="{{ asset('frontend-assets/images/sliders/slider_3.jpg') }}" alt="">
                 </div>
             </div>
         </div>
@@ -375,6 +354,23 @@
 
     <!-- Initialize Swiper -->
     <script>
+
+
+        const header = $('.green_block').innerHeight() + $('.white_block').innerHeight() + $('.red_block').innerHeight() + $('.navigation_bar').innerHeight()
+        const avalible = document.documentElement.clientHeight - header
+        $('.img').css({"height": `${avalible}px`, "margin-top": `${header}px`});
+
+        window.addEventListener("resize", ()=>{
+            if (window.screen.width > 992) {
+                const header = $('.green_block').innerHeight() + $('.white_block').innerHeight() + $('.red_block').innerHeight() + $('.navigation_bar').innerHeight()
+                const avalible = document.documentElement.clientHeight - header
+                $('.img').css({"height": `${avalible}px`, "margin-top": `${header}px`});
+            }
+        });
+
+
+
+
         var swiper = new Swiper(".mySwiper", {
             spaceBetween: 0,
             centeredSlides: true,
