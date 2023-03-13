@@ -18,16 +18,25 @@
             <div class="swiper-slide">
                 <div class="home-slide-container home-carousel-1" >
                     <img class="img" src="{{ asset('frontend-assets/images/sliders/slider_1.jpg') }}" alt="">
+                    <div class="carousel-content ">
+                        <div class="container">{{ __('message.slider2') }}</div>
+                    </div>
                 </div>
             </div>
             <div class="swiper-slide">
                 <div class="home-slide-container home-carousel-1" >
                     <img class="img" src="{{ asset('frontend-assets/images/sliders/slider_2.jpg') }}" alt="">
+                    <div class="carousel-content ">
+                        <div class="container">{{ __('message.slider1') }}</div>
+                    </div>
                 </div>
             </div>
             <div class="swiper-slide">
                 <div class="home-slide-container home-carousel-1" >
                     <img class="img" src="{{ asset('frontend-assets/images/sliders/slider_3.jpg') }}" alt="">
+                    <div class="carousel-content ">
+                        <div class="container">{{ __('message.slider3') }}</div>
+                    </div>
                 </div>
             </div>
 {{--            <div class="swiper-slide">--}}
@@ -382,10 +391,11 @@
     <!-- Initialize Swiper -->
     <script>
 
-
-        const header = $('.green_block').innerHeight() + $('.white_block').innerHeight() + $('.red_block').innerHeight() + $('.navigation_bar').innerHeight()
-        const avalible = document.documentElement.clientHeight - header
-        $('.img').css({"height": `${avalible}px`, "margin-top": `${header}px`});
+        $(document).ready(function () {
+            const header = $('.green_block').innerHeight() + $('.white_block').innerHeight() + $('.red_block').innerHeight() + $('.navigation_bar').innerHeight()
+            const avalible = document.documentElement.clientHeight - header
+            $('.img').css({"height": `${avalible}px`, "margin-top": `${header}px`});
+        })
 
         window.addEventListener("resize", ()=>{
             if (window.screen.width > 992) {
