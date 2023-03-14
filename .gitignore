@@ -5,6 +5,7 @@
 /public/backend-assets/uploads/fruits/*
 /storage/*.key
 /vendor
+/.DS_Store
 .env
 .env.example
 .env.backup
