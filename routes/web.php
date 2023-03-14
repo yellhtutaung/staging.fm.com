@@ -122,12 +122,14 @@ Route::middleware([CheckAdmin::class,PermissionCheck::class])->prefix('admin')->
         Route::get('{id}/edit', [PermissionController::class, 'editPermission'])->name('editPermission');
         Route::post('{id}/update', [PermissionController::class, 'updatePermission'])->name('updatePermission');
         Route::post('{id}/delete', [PermissionController::class, 'deletePermission'])->name('deletePermission');
+
     });
     Route::prefix('contact')->group(function () {
         Route::get('/', [ContactController::class, 'contactMessageList'])->name('contactMessageList');
     });
 
 }); // For admin only
+Route::post('admin/permission/sort', [PermissionController::class, 'sort'])->name('sortPermission');
 
 
 // User auth

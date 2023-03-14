@@ -12,7 +12,8 @@ use mysql_xdevapi\Exception;
 class PermissionController extends Controller
 {
     public function permissionList () {
-        $permissions = Permission::all();
+        $permissions = Permission::OrderBy('order_sort_id')->get();
+
 //        return $permissions;
         return view('backend.permission.list', compact('permissions'));
     }
@@ -136,6 +137,19 @@ class PermissionController extends Controller
         }
         $permission->delete();
         return redirect()->back()->with('delete', 'Permission deleted successfully!');
+    }
+
+    public function sort (Request $request) {
+        $dataArr = $request->all()['data'];
+        foreach ($dataArr as $data){
+            $permission = Permission::find($data['id']);
+            $permission->order_sort_id = $data['sort_id'];
+            $permission->save();
+        }
+
+
+
+        return response()->json(['status' => 200, 'message' => 'Order changed.', 'data' => $request->all()]);
     }
 
 }
