@@ -23,7 +23,7 @@
         <div class="d-flex flex-wrap">
 
             <div
-                class="col-md-6 col-lg-4 our_market_card_container"
+                class="col-md-6 col-lg-4 our_market_card_container p-2"
             >
                 <div class="our_market_card">
                     <div class="market_card_img">
@@ -41,7 +41,7 @@
             </div>
 
             <div
-                class="col-md-6 col-lg-4 our_market_card_container"
+                class="col-md-6 col-lg-4 our_market_card_container p-2"
             >
                 <div class="our_market_card">
                     <div class="market_card_img">
@@ -59,7 +59,7 @@
             </div>
 
             <div
-                class="col-md-6 col-lg-4 our_market_card_container"
+                class="col-md-6 col-lg-4 our_market_card_container p-2"
             >
                 <div class="our_market_card">
                     <div class="market_card_img">

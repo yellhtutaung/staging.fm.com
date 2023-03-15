@@ -43,7 +43,7 @@
 {{--feature plans start--}}
 <section id="future" data-aos="fade-up">
     <div class="d-flex flex-wrap" >
-        <div class="col-md-6 col-lg-4 our_future_card_container">
+        <div class="col-md-6 col-lg-4 our_future_card_container p-2">
             <div class="our_future_card">
                 <div class="future_card_img">
                     <img src="{{asset('frontend-assets/images/thailand.jpg')}}" alt="" class="img-fluid" />
@@ -58,7 +58,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-6 col-lg-4 our_future_card_container">
+        <div class="col-md-6 col-lg-4 our_future_card_container p-2">
             <div class="our_future_card">
                 <div class="future_card_img">
                     <img src="{{asset('frontend-assets/images/singapore.jpg')}}" alt="" class="img-fluid" />
@@ -73,7 +73,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-6 col-lg-4 our_future_card_container">
+        <div class="col-md-6 col-lg-4 our_future_card_container p-2">
             <div class="our_future_card">
                 <div class="future_card_img">
                     <img src="{{asset('frontend-assets/images/malaysia.jpg')}}" alt="" class="img-fluid" />
