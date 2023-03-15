@@ -33,12 +33,14 @@ class DatabaseSeeder extends Seeder
          Permission::insert(array(
              array(
                  'name' => "Programmer",
+                 'order_sort_id' => 1,
                  'guard_json' => $sampleJson,
                  "created_at" => date("y-m-d h:i:s"),
                  "updated_at" => date("y-m-d h:i:s"),
              ),
              array(
                  'name' => "Owner",
+                 'order_sort_id' => 2,
                  'guard_json' =>  $sampleJson,
                  "created_at" => date("y-m-d h:i:s"),
                  "updated_at" => date("y-m-d h:i:s"),

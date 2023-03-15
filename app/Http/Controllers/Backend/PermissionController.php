@@ -102,10 +102,13 @@ class PermissionController extends Controller
             return response()->json(['status'=>400,'message'=>'Plz fill all input'],400);
         }else{
             try {
+
+                $fetchDescSort = Permission::orderBy('order_sort_id', 'desc')->first();
                 $permissionDb = $In->updId == 0 || $In->updId == '0' ? new Permission() : Permission::find($In->updId);
                 $permissionDb->name = $In->name;
-                $permissionDb->notes = $In->notes;
+                $permissionDb->order_sort_id = $fetchDescSort->order_sort_id + 1;
                 $permissionDb->guard_json = json_encode($In->permissionsJson);
+                $permissionDb->notes = $In->notes;
                 $returnMessage = $In->updId == 0 ? 'Role and Permission created successfully' : 'Record updated .';
                 if($permissionDb->save())
                    {

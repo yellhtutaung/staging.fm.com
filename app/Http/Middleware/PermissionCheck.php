@@ -51,20 +51,9 @@ class PermissionCheck
                 $getCat = array_keys($permissionJson[$Index]);
                 if ($getCat[0] == $uriSegments[2])
                 {
-//                    $permission;
                     $subRoute = $permission[$uriSegments[2]]; // sub route ( example -> edit , details , history )
                     return $subRoute[end($uriSegments)] == "false"?null:$subRoute[end($uriSegments)];
                 }
-//                $add = $subRoute['add'];
-//                $edit = $subRoute['edit'];
-//                $hideShow = $subRoute['hide_show'];
-//                $details = $subRoute['details'];
-//                return $subRoute[$uriSegments[4]];
-//                if () //$uriSegments[2] == $subRoute
-//                {
-////                    return $subRoute;
-//                    return $subRouteRes = $subRoute[$uriSegments[4]] == false ?null:$subRoute[$uriSegments[4]];
-//                }
             }
         }
     }

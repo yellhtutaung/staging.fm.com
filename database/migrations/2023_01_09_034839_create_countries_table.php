@@ -20,8 +20,8 @@ return new class extends Migration
             $table->integer('level'); // ( country=1 , city=2 and state=3 )
             $table->string('lat')->nullable();
             $table->string('long')->nullable();
-            $table->string('note')->nullable();
-            $table->string('description')->nullable();
+            $table->text('note')->nullable();
+            $table->text('description')->nullable();
             $table->integer('status')->default(1);
             $table->integer('hide_show')->default(1); // 1 is show
             $table->integer('reg_id');
