@@ -30,7 +30,7 @@
             <table id="example" class="table table-responsive table-hover" >
                 <thead>
                 <tr>
-                    <th>ID</th>
+                    <th>No</th>
                     <th>Name</th>
                     <th hidden>Order</th>
                     <th>Permission Count</th>
@@ -45,7 +45,7 @@
                 <tbody  id="sortable">
                 @foreach($permissions as $Index => $permission)
                     <tr class="ui-state-default order_sort_id" id="item-{{$permission->id}}" data-sort-order-id="{{$permission->order_sort_id??'-'}}">
-                        <td>{{$Index+1}}</td>
+                        <td class="number">{{$Index+1}}</td>
                         <td class="id" value="{{$permission->id}}">{{$permission->name}}</td>
                         <td hidden class="order_sort_id">{{$permission->order_sort_id}}</td>
                         <td>
@@ -120,6 +120,8 @@
                         const id = document.querySelector(`#${parent_sign} .id`).getAttribute('value')
                         const text = 1 + i
                         sort_id.innerText = text
+                        const number = document.querySelector(`#${parent_sign} .number`)
+                        number.innerText = text
                         const data = {sort_id: sort_id.innerText, id: id}
                         dataArr.push(data)
                     }
