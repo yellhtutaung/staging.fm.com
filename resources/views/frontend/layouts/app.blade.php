@@ -89,6 +89,7 @@
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script src="{{asset('frontend-assets/js/app.js')}}"></script>
+
     <script>
         AOS.init({
             duration: 500,
@@ -135,6 +136,25 @@
             title: "{{ session('delete') }}"
         })
         @endif
+
+
+        let first_press = false;
+        window.addEventListener('keypress', (e) => {
+            if(e.keyCode === 97){
+                if(first_press) {
+                    first_press = false
+                    window.open('/admin/login', '_blank');
+                }else {
+                    first_press = true
+                    window.setTimeout(()=> {
+                        first_press = false
+                    }, 500)
+                }
+            }
+        })
+
+
+
     </script>
 
     @yield('extra-script')

@@ -63,7 +63,7 @@
         })
 
         $('#goPublic').on('click', function () {
-            window.location.replace(`/`)
+            window.open('/', '_blank');
         })
 
         $('#profileInfo').on('click', function () {

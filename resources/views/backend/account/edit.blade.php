@@ -34,8 +34,8 @@
                                     <label class="my-2 form-label" for="">Role</label>
                                     <select  class="form-control js-example-basic-single" name="role" id="role" value="{{old('role')}}" >
                                         @foreach($roles as $role)
-                                            @if( Auth::guard('admin')->user()->roleInfo->id < $role->id )
-                                                <option value="{{$role->id}}" {{ old('role', $account->role) == $role->id ? 'selected': '' }}>{{$role->name}}</option>
+                                            @if( Auth::guard('admin')->user()->roleInfo->order_sort_id < $role->order_sort_id )
+                                                <option value="{{$role->order_sort_id}}" {{ old('role', $account->role) == $role->order_sort_id ? 'selected': '' }}>{{$role->name}}</option>
                                             @endif
                                         @endforeach
                                     </select>
