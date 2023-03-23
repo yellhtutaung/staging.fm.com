@@ -36,7 +36,6 @@
                     <th>Permission Count</th>
                     <th>Reg Date</th>
                     <th>Updated</th>
-                    <th>Hide | Show</th>
                     <th>Detail</th>
                     <th>Edit</th>
                     <th>Delete</th>
@@ -53,12 +52,6 @@
                         </td>
                         <td>{{$permission->created_at->toDateString()}}</td>
                         <td>{{$permission->updated_at->diffForHumans()}}</td>
-                        <td>
-                            <div class="form-check form-switch p-0 m-0">
-                                <input data-id="{{$permission->id}}" data-status-val="{{$permission->hide_show}}" onchange="universalSwitch(5,{{$permission->id}},'hide_show',{{$permission->hide_show}});" class="toggle-class toggle-id{{$permission->id}}" type="checkbox"  data-onstyle="success" data-offstyle="danger" data-toggle="toggle"
-                                       data-on="Show"  data-off="Hide" {{$permission->hide_show==1?"checked":""}}>
-                            </div>
-                        </td>
                         <td>
                             <a href="{{route('permissionDetails', $permission->id)}}" class="secondary-radius btn theme_bg">
                                 <span class="material-symbols-outlined mt-2 text-white">visibility</span>
