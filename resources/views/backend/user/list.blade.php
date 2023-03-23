@@ -4,7 +4,7 @@
 @section('content')
     <div class="container-fluid ">
 
-        <a href="" class="btn add-button theme_bg text-white my-3" >ADD <i class="fa-solid fa-plus"></i></a>
+{{--        <a href="" class="btn add-button theme_bg text-white my-3" >ADD <i class="fa-solid fa-plus"></i></a>--}}
 
         <div class="card-header form-header-border border-0 theme_bg ">
             <h5 class="card-title text-white"> User Information</h5>
