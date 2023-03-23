@@ -20,7 +20,7 @@
                                                     <td class="py-3 ">
                                                         @foreach($list as $permit => $bol)
                                                             @if($bol == 'true')
-                                                                <span class="badge bg-warning">{{$permit}}</span>
+                                                                <span class="badge bg-danger">{{$permit}}</span>
                                                             @endif
                                                         @endforeach
                                                     </td>
