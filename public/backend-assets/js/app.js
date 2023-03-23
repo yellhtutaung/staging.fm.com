@@ -48,12 +48,21 @@ for (let i = 0; i < inputBoxs.length; i++) {
 
 let fileInput = document.getElementById("file-input");
 let imageContainer = document.getElementsByClassName("preview-img-container")[0];
-
+let fileTypes = ['jpg', 'png', 'jpeg', 'webp'];
 function preview(){
-    console.log(fileInput.files.length )
+
+    let extension = fileInput.files[0].name.split('.').pop().toLowerCase()
+    let isSuccess = fileTypes.indexOf(extension) > -1;
+    if(!isSuccess){
+        document.querySelector('.file-invalid-feedback').classList.remove('d-none')
+        setTimeout(() => {
+            document.querySelector('.file-invalid-feedback').classList.add('d-none')
+        }, 3000)
+        return false;
+    }
+
     if(fileInput.files.length > 0) {
         imageContainer.innerHTML = "";
-
         for(i of fileInput.files){
             let reader = new FileReader();
             let figure = document.createElement("figure");

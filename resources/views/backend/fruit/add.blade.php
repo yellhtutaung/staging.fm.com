@@ -15,7 +15,10 @@
                                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                             </div>
                         @endif
-
+                        <div class="alert alert-warning alert-dismissible d-none file-invalid-feedback" role="alert">
+                            <span><strong>Warning !</strong>  Your upload image is invalid.</span>
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
                         @if(session('success'))
                             <div class="alert alert-success alert-dismissible" role="alert">
                                 <span><strong>Success !</strong>  {{session('success')}}</span>
