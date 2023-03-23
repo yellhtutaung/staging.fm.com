@@ -178,6 +178,13 @@ input[type=checkbox]:focus {
 }
 
 
+/*---------------- Fruit -------------------*/
+
+.avator-rounded {
+    width: 65px !important;
+    height: auto !important;
+}
+
 
 
 
