@@ -77,6 +77,20 @@ class FruitController extends Controller
         }
     }
 
+    public function fruitDetails ($token) {
+        try {
+            $fruit = FruitPriceList::where('token', $token)->first();
+            if($fruit) {
+                return view('backend.fruit.details', compact('fruit'));
+            }else {
+                return redirect()->back()->with('warning', 'Fruit not found ');
+            }
+
+        }catch (\Exception $e){
+            return back()->with('warning', $e->getMessage());
+        }
+    }
+
     public function createFruit(Request $In)
     {
         if ($In->hasFile('images'))
