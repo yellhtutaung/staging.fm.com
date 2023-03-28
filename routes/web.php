@@ -88,6 +88,7 @@ Route::middleware([CheckAdmin::class,PermissionCheck::class])->prefix('admin')->
         Route::get('/', [FruitController::class, 'fruitList'])->name('fruitList');
         Route::get('add', [FruitController::class, 'addFruit'])->name('addFruit');
         Route::post('create', [FruitController::class, 'createFruit'])->name('createFruit');
+        Route::get('{token}/details', [FruitController::class, 'fruitDetails'])->name('fruitDetails');
         Route::get('{id}/edit', [FruitController::class, 'editFruit'])->name('editFruit');
         Route::post('{id}/update', [FruitController::class, 'updateFruit'])->name('updateFruit');
         Route::get('{token}/history', [FruitController::class, 'history'])->name('fruitHistory');
