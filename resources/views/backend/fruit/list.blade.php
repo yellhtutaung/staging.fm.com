@@ -34,7 +34,7 @@
                 @foreach($fruitPriceList as $Index => $fruits)
                     <tr>
                         <td>{{$Index+1}}</td>
-                        <td><span class="badge bg-primary shadow-lg">{{$fruits->name_id}}</span></td>
+                        <td><span class="badge bg-primary shadow-lg " onclick="copiedToId()">{{$fruits->name_id}}</span></td>
                         <td>{{$fruits->name}}</td>
                         <td><img class="avator-rounded" src="{{asset("backend-assets/uploads/fruits/$fruits->id/$fruits->images")}}" alt="{{$fruits->name}}"></td>
                         <td><span class="badge bg-danger shadow-lg">{{$fruits->depend_count ." ".$fruits->unit}}</span></td>
@@ -86,5 +86,20 @@
             $('.js-example-basic-multiple').select2();
         });
 
+        function triggerExample1()
+        {
+            // Create a fake `textarea` and set the contents to the text
+            // you want to copy
+            const storage = document.createElement('textarea');
+            storage.value = element.innerHTML;
+            const element = document.querySelector('#example1');
+            element.appendChild(storage);
+
+            // Copy the text in the fake `textarea` and remove the `textarea`
+            storage.select();
+            storage.setSelectionRange(0, 99999);
+            document.execCommand('copy');
+            element.removeChild(storage);
+        }
     </script>
 @endsection
