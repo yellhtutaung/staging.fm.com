@@ -74,7 +74,6 @@
             });
             $('.form-control-sm').addClass("input-data-search")
             $('.input-data-search').focus(); // input auto focus
-
             $('.js-example-basic-multiple').select2();
 
         });
