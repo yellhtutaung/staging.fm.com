@@ -18,6 +18,7 @@ class ProfileController extends Controller
         $user = Auth::guard('web')->user();
         $currentCountry = Country::where('status', 1)->where('level', 1)->where('id', $user->country_id)->first();
         $currentCity = Country::where('status', 1)->where('level', 2)->where('id', $user->city_id)->first();
+//        return view('frontend.pages.old_pages.old_profile' , compact('user', 'currentCountry', 'currentCity'));
         return view('frontend.pages.profile' , compact('user', 'currentCountry', 'currentCity'));
     }
 
