@@ -1,6 +1,6 @@
 
-<div class="col-md-3 side-col">
-    <div class="card w-100 profile-card border-0 card-body animate__animated animate__fadeLeft">
+<div class="col-md-3 side-col border-success">
+    <div class="card w-100 profile-card border-0 card-body animate__animated animate__fadeLeft " style="border: 1px solid green!important;">
         <div class="text-center">
             <div class="avatar avatar-xl mb-2">
                 {{--<img class="avatar-img rounded-circle border border-2 border-white" width="80" height="80" src="{{asset("frontend-assets/images/employee_profile_1.jpg")}}" alt="">--}}
