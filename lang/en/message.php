@@ -27,6 +27,7 @@ return [
     'our_web_app' => 'Our Website & Apps',
     'u_can_find_in_web' => 'You can find the webiste on',
     'our_mission' => 'Our Mission',
+    'get_app'=> 'Get this App',
     'quick_link' => 'Quick Links',
     'our_info' => 'Other Information',
     'employees' => 'Employees',

@@ -38,7 +38,7 @@
                                     </div>
                                 </div>
                                 <div class="card card-custom border-0 animate__animated animate__fadeIn shadow-sm">
-                                    <div id="chart"></div>
+                                    <div style="height: 100px!important;" id="chart"></div>
                                 </div>
                             </div>
                         </div>
@@ -121,7 +121,7 @@
                 // },
             ],
             chart: {
-                height: 500,
+                height: 400,
                 type: 'area'
             },
             dataLabels: {
