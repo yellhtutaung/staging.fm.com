@@ -362,6 +362,49 @@
 
     {{-- wyh choose us end --}}
 
+    {{---------- Organic Food ------------}}
+
+    <div>
+        <section class="organic_food" data-aos="fade-up" id="why">
+            <div class="container-fluid py-5">
+                <div class="row g-3">
+                    <div class="col-lg-6 p-2 d-flex justify-content-center">
+                        <div class="p-2 img-one">
+                            <img src="{{ asset('frontend-assets/images/organic_food_2.jpg') }}" alt="">
+                        </div>
+                        <div class="p-2 img-two d-none d-sm-block">
+                            <img src="{{ asset('frontend-assets/images/organic_food_1.png') }}" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 p-4">
+
+                        <div class="center_title d-flex flex-column align-items-start">
+                            <h3 class="text-dark title-fm">Trusted  Organic Food Store Conscious</h3>
+                            <span class="center_title_underline"></span>
+                        </div>
+                        <div class="d-flex mb-3 ">
+                            <div class="vertical_line"></div>
+                            <div class="body-fm py-1 vertical_text">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos fugit ipsa libero molestias perspiciatis! Ad commodi cumque dolorem iure iusto odio possimus.
+                            </div>
+                        </div>
+                        <div class="body-fm">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ad aliquid architecto atque culpa cupiditate est ipsa itaque labore laboriosam minus non officia perferendis, quibusdam rem rerum sapiente veniam veritatis!
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ad aliquid architecto atque culpa cupiditate est ipsa itaque labore laboriosam minus non officia perferendis, quibusdam rem rerum sapiente veniam veritatis!
+                        </div>
+                        <div>
+                            <form action="#contact">
+                                <button type="" href="#contact" class="">Send Message <i class="fa-solid fa-arrow-right"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+
 
 
     {{--footer start--}}
