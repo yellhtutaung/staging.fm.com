@@ -230,11 +230,11 @@
                         <h2>{{ __('message.get_app') }}</h2><br>
                         <p>Download molestias molestiae nemo, eveniet vel totam asperiores repellat, soluta vitae iusto hic non ipsam ratione aperiam? Est itaque neque enim numquam aspernatur expedita repellat incidunt molestiae error voluptatum. Magnam dolores, illum ratione doloribus laboriosam quas qui temporibus ea aliquam deleniti rem facilis cupiditate beatae quisquam cum architecto? </p>
                         <div class="d-flex justify-content-start gap-1 mt-3">
-                            <a href="https://play.google.com/store/apps/details?id=commerce.freshmoe.fresh_moe">
+                            <a target="_blank" href="https://play.google.com/store/apps/details?id=commerce.freshmoe.fresh_moe">
                                 <img width="150" height="50" src="{{asset('frontend-assets/images/playstore_img.ba0de1d3.png')}}"
                                     alt="" class="application-store" />
                             </a>
-                            <a href="https://play.google.com/store/apps/details?id=commerce.freshmoe.fresh_moe">
+                            <a>
                                 <img width="150" height="50" src="{{asset('frontend-assets/images/app_store.428f2d8e.png')}}"
                                     alt="" class="application-store" />
                             </a>
