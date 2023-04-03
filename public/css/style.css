@@ -63,7 +63,8 @@ textarea {
 /* -------------------------- Logout --------------------------------- */
 
 .swal2-styled.swal2-cancel{
-    background-color: var(--primary-color) !important;
+    background-color: var(--secondary-color) !important;
+
     float: right;
     padding: 0.7rem 1.5rem !important;
     margin: 0.5rem;
@@ -74,7 +75,7 @@ textarea {
 }
 
 .swal2-styled.swal2-confirm{
-    background-color: var(--secondary-color) !important;
+    background-color: var(--primary-color) !important;
     float: right;
     padding: 0.7rem 1.5rem !important;
     margin: 0.5rem;
