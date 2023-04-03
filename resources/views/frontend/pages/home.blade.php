@@ -19,7 +19,7 @@
                 <div class="home-slide-container home-carousel-1" >
                     <img class="img" src="{{ asset('frontend-assets/images/sliders/slider_1.jpg') }}" alt="">
                     <div class="carousel-content ">
-                        <div class="container">{{ __('message.slider2') }}</div>
+                        <div class="container title-fm">{{ __('message.slider2') }}</div>
                     </div>
                 </div>
             </div>
@@ -27,7 +27,7 @@
                 <div class="home-slide-container home-carousel-1" >
                     <img class="img" src="{{ asset('frontend-assets/images/sliders/slider_2.jpg') }}" alt="">
                     <div class="carousel-content ">
-                        <div class="container">{{ __('message.slider1') }}</div>
+                        <div class="container title-fm">{{ __('message.slider1') }}</div>
                     </div>
                 </div>
             </div>
@@ -35,7 +35,7 @@
                 <div class="home-slide-container home-carousel-1" >
                     <img class="img" src="{{ asset('frontend-assets/images/sliders/slider_3.jpg') }}" alt="">
                     <div class="carousel-content ">
-                        <div class="container">{{ __('message.slider3') }}</div>
+                        <div class="container title-fm">{{ __('message.slider3') }}</div>
                     </div>
                 </div>
             </div>
@@ -379,7 +379,7 @@
                     <div class="col-lg-6 p-4">
 
                         <div class="center_title d-flex flex-column align-items-start">
-                            <h3 class="text-dark title-fm">Trusted  Organic Food Store Conscious</h3>
+                            <h3 class="text-dark title-fm">{{ __('message.our_organic_farm') }}</h3>
                             <span class="center_title_underline"></span>
                         </div>
                         <div class="d-flex mb-3 ">
