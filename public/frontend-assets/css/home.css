@@ -230,6 +230,51 @@
 }
 
 
+/*--------------------------------------------*/
+
+.organic_food img {
+    width: 300px;
+    height: 480px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.organic_food .img-one {
+    margin-top: -35px;
+}
+
+.organic_food .sub-title {
+    font-weight: bold;
+}
+
+.organic_food .vertical_line {
+    width: 3px;
+    margin-right: 20px;
+    background-color: var(--primary-color);
+}
+
+.organic_food .vertical_text {
+    font-size: 20px;
+}
+
+.organic_food button {
+    margin-top: 20px;
+    padding: 0.7rem 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: var(--radius);
+    background-color: #ED1C24;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.organic_food button i {
+    font-size: 15px;
+    margin-left: 10px;
+}
+
+
 
 @media screen and (min-width: 768px) {
     .carousel-content {
@@ -284,6 +329,18 @@
         width: 100%;
         height: auto;
     }
+
+    .organic_food img {
+        width: 240px;
+        height: 400px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .organic_food img {
+        width: 290px;
+        height: 520px;
+    }
 }
 
 
@@ -294,5 +351,9 @@
     .why img {
         width: 400px;
         height: 400px;
+    }
+    .organic_food img {
+        width: 320px;
+        height: 520px;
     }
 }
