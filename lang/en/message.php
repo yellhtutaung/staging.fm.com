@@ -44,6 +44,7 @@ return [
     'phone_no'=>'09123456798',
     'follow_us'=>'Follow Us',
     'why_choose_us' => 'Why Choose Us',
+    'our_organic_farm' => 'Our Organic Farm',
     'fresh_is_best' => 'Fresh is Best',
     'quick_delivery_system' => 'Quick Delivery System',
     'easy_to_use_application' => 'Easy To Use Application',
