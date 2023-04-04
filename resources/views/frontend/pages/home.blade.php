@@ -19,7 +19,7 @@
                 <div class="home-slide-container home-carousel-1" >
                     <img class="img" src="{{ asset('frontend-assets/images/sliders/slider_1.jpg') }}" alt="">
                     <div class="carousel-content ">
-                        <div class="container">{{ __('message.slider2') }}</div>
+                        <div class="container title-fm">{{ __('message.slider2') }}</div>
                     </div>
                 </div>
             </div>
@@ -27,7 +27,7 @@
                 <div class="home-slide-container home-carousel-1" >
                     <img class="img" src="{{ asset('frontend-assets/images/sliders/slider_2.jpg') }}" alt="">
                     <div class="carousel-content ">
-                        <div class="container">{{ __('message.slider1') }}</div>
+                        <div class="container title-fm">{{ __('message.slider1') }}</div>
                     </div>
                 </div>
             </div>
@@ -35,7 +35,7 @@
                 <div class="home-slide-container home-carousel-1" >
                     <img class="img" src="{{ asset('frontend-assets/images/sliders/slider_3.jpg') }}" alt="">
                     <div class="carousel-content ">
-                        <div class="container">{{ __('message.slider3') }}</div>
+                        <div class="container title-fm">{{ __('message.slider3') }}</div>
                     </div>
                 </div>
             </div>
@@ -226,54 +226,46 @@
                 </div>
 
                 <div class="row justify-content-center">
-                    <div
-                        class="col-md-6 d-flex justify-content-center align-items-center it_products_col"
-                    >
-                        <div class="it_product_detail">
-                            <img
-                                src="{{asset('frontend-assets/images/website_laptop.6aef0c01.jpg')}}"
-                                alt=""
-                                class="it_product_img laptop_img"
-                            />
-                            <p class="text-center mt-3 body-fm">
-                                {{ __('message.u_can_find_in_web') }}<br />
-                                <a href="https://www.freshmoe.shop" class="underline"
-                                >www.freshmoe.shop</a
-                                >
-                            </p>
+                    <div class="col-md-6  it_products_col mt-5" >
+                        <h2>{{ __('message.get_app') }}</h2><br>
+                        <p>Download molestias molestiae nemo, eveniet vel totam asperiores repellat, soluta vitae iusto hic non ipsam ratione aperiam? Est itaque neque enim numquam aspernatur expedita repellat incidunt molestiae error voluptatum. Magnam dolores, illum ratione doloribus laboriosam quas qui temporibus ea aliquam deleniti rem facilis cupiditate beatae quisquam cum architecto? </p>
+                        <div class="d-flex justify-content-start gap-1 mt-3">
+                            <a target="_blank" href="https://play.google.com/store/apps/details?id=commerce.freshmoe.fresh_moe">
+                                <img width="150" height="50" src="{{asset('frontend-assets/images/playstore_img.ba0de1d3.png')}}"
+                                    alt="" class="application-store" />
+                            </a>
+                            <a>
+                                <img width="150" height="50" src="{{asset('frontend-assets/images/app_store.428f2d8e.png')}}"
+                                    alt="" class="application-store" />
+                            </a>
                         </div>
                     </div>
-                    <div
-                        class="col-md-6 d-flex justify-content-center align-items-center it_products_col"
-                    >
+                    <div class="col-md-6 d-flex justify-content-center align-items-center it_products_col">
                         <div class="it_product_detail">
-                            <img
-                                src="{{asset('frontend-assets/images/app_phone.76db84c5.jpg')}}"
-                                alt=""
-                                class="it_product_img phone_img"
-                            />
-                            <div class="d-flex justify-content-center gap-1 mt-3">
-                                <a
-                                    href="https://play.google.com/store/apps/details?id=commerce.freshmoe.fresh_moe"
-                                >
-                                    <img
-                                        width="150"
-                                        height="50"
-                                        src="{{asset('frontend-assets/images/playstore_img.ba0de1d3.png')}}"
-                                        alt=""
-                                        class="application-store"
-                                    />
-                                </a>
-                                <a href="https://play.google.com/store/apps/details?id=commerce.freshmoe.fresh_moe">
-                                    <img
-                                        width="150"
-                                        height="50"
-                                        src="{{asset('frontend-assets/images/app_store.428f2d8e.png')}}"
-                                        alt=""
-                                        class="application-store"
-                                    />
-                                </a>
-                            </div>
+                            <img src="{{asset('frontend-assets/images/mobile_png.png')}}" alt=""
+                                class="it_product_img phone_img"/>
+{{--                            <div class="d-flex justify-content-center gap-1 mt-3">--}}
+{{--                                <a--}}
+{{--                                    href="https://play.google.com/store/apps/details?id=commerce.freshmoe.fresh_moe"--}}
+{{--                                >--}}
+{{--                                    <img--}}
+{{--                                        width="150"--}}
+{{--                                        height="50"--}}
+{{--                                        src="{{asset('frontend-assets/images/playstore_img.ba0de1d3.png')}}"--}}
+{{--                                        alt=""--}}
+{{--                                        class="application-store"--}}
+{{--                                    />--}}
+{{--                                </a>--}}
+{{--                                <a href="https://play.google.com/store/apps/details?id=commerce.freshmoe.fresh_moe">--}}
+{{--                                    <img--}}
+{{--                                        width="150"--}}
+{{--                                        height="50"--}}
+{{--                                        src="{{asset('frontend-assets/images/app_store.428f2d8e.png')}}"--}}
+{{--                                        alt=""--}}
+{{--                                        class="application-store"--}}
+{{--                                    />--}}
+{{--                                </a>--}}
+{{--                            </div>--}}
                         </div>
                     </div>
                 </div>
@@ -387,7 +379,7 @@
                     <div class="col-lg-6 p-4">
 
                         <div class="center_title d-flex flex-column align-items-start">
-                            <h3 class="text-dark title-fm">Trusted  Organic Food Store Conscious</h3>
+                            <h3 class="text-dark title-fm">{{ __('message.our_organic_farm') }}</h3>
                             <span class="center_title_underline"></span>
                         </div>
                         <div class="d-flex mb-3 ">

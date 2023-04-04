@@ -4,7 +4,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Lobster&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 .fonts {
     font-family: "Lobster", cursive;
-    font-family: "Lobster", cursive;
     font-family: "Lobster Two", cursive;
     font-family: "Libre Baskerville", serif;
 }
@@ -162,7 +161,7 @@
 }
 .phone_img {
     width: 100%;
-    height: auto;
+    height: 450px !important;
 }
 
 .it_product_detail .underline {
@@ -234,7 +233,7 @@
 
 .organic_food img {
     width: 300px;
-    height: 480px;
+    height: 450px;
     object-fit: cover;
     border-radius: 20px;
 }
@@ -332,14 +331,14 @@
 
     .organic_food img {
         width: 240px;
-        height: 400px;
+        height: 450px;
     }
 }
 
 @media screen and (min-width: 1200px) {
     .organic_food img {
         width: 290px;
-        height: 520px;
+        height: 450px;
     }
 }
 
@@ -354,6 +353,6 @@
     }
     .organic_food img {
         width: 320px;
-        height: 520px;
+        height: 450px;
     }
 }
