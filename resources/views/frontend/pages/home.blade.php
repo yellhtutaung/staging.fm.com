@@ -404,7 +404,6 @@
     </div>
 
 
-
     {{-- Fresh Food Start --}}
 
     <div>
@@ -447,7 +446,6 @@
     </div>
 
     {{-- Fresh Food End --}}
-
 
     {{--footer start--}}
     <?php echo View::make ('frontend.layouts.footer'); ?>
