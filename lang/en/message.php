@@ -51,6 +51,7 @@ return [
     'service_is_best' => 'Service is Best',
     'healthy_food' => 'Healthy Food',
     'easy_to_buy' => 'Easy To Buy',
+    'our_fresh_food' => 'Our Fresh Food',
 
 
     // ------------------------ Employees -------------------------

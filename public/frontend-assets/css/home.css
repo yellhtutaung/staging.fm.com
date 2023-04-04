@@ -274,9 +274,53 @@
     margin-left: 10px;
 }
 
+/*------------------ Fresh Food ------------------*/
 
+.fresh_food_underline {
+    background-color:  #5BBA47;
+    height: 5px;
+    width: 100px;
+}
+
+.fresh_food {
+    background-color: #FAFAFA;
+}
+
+.fresh_food_card {
+    width: 70%;
+    margin-left: 20px;
+}
+
+.fresh_food .left_img img {
+    width: 350px;
+}
+
+.fresh_food .right_img{
+    margin-top: -30px;
+    overflow: hidden;
+    background-size: contain;
+    background-position: center right;
+    background-repeat: no-repeat;
+}
+
+.fresh_food_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    color: white;
+    margin-bottom: 2rem;
+}
 
 @media screen and (min-width: 768px) {
+    .fresh_food .right_img{
+        background-image: url("../images/fresh_food1.png");
+    }
+
+    .fresh_food_underline {
+        width: 300px !important;
+    }
     .carousel-content {
         font-size: 40px;
     }
@@ -313,6 +357,8 @@
         width: 320px;
         height: 320px;
     }
+
+
 }
 
 
@@ -334,6 +380,8 @@
         width: 240px;
         height: 450px;
     }
+
+
 }
 
 @media screen and (min-width: 1200px) {
