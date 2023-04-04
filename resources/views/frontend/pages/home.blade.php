@@ -404,8 +404,48 @@
     </div>
 
 
+    {{-- Fresh Food Start --}}
 
+    <div>
+        <section class="fresh_food" data-aos="fade-up" id="fresh_food">
+            <div class="container-fluid m-0 py-5 px-0">
+                <div class="row g-3">
+                    <div class="col-lg-3">
+                        <div class="left_img pb-5">
+                            <img src="{{ asset('frontend-assets/images/fresh_food2.png') }}" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-9 right_img">
+                        <div class="fresh_food_card p-4">
+                            <div class="fresh_food_title mt-sm-5 pt-sm-5">
+                                <h3 class="text-dark title-fm">{{ __('message.our_fresh_food') }}</h3>
+                            </div>
+                            <div class="fresh_food_text d-flex flex-column align-items-start">
+                                <p class="text-dark title-fm">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus amet architecto autem commodi corporis, deserunt dicta dignissimos distinctio
+                                </p>
+                                <span class="fresh_food_underline"></span>
+                            </div>
+                            <div class="d-flex mb-3 ">
+                                <div class="vertical_line"></div>
+                                <div class="body-fm py-1 vertical_text">
+                                    - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos fugit ipsa libero molestias perspiciatis! Ad commodi cumque dolorem iure iusto odio possimus Ad commodi cumque dolorem iure iusto odio possimus.
+                                </div>
+                            </div>
+                            <div class="body-fm py-1">
+                                - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ad aliquid architecto atque culpa cupiditate !
+                            </div>
+                            <div class="body-fm py-3">
+                                - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ad aliquid architecto atque culpa cupiditate est ipsa itaque !
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
 
+    {{-- Fresh Food End --}}
 
     {{--footer start--}}
     <?php echo View::make ('frontend.layouts.footer'); ?>
