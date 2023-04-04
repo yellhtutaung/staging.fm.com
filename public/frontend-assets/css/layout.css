@@ -57,6 +57,7 @@ nav li.router-link-active {
     text-decoration: none;
     font-size: 1.2em;
     color: black;
+    font-family: 'Sriracha', cursive;
 }
 .navigation_bar.web .left_navigation_bar ul li a:hover {
     color: green;
@@ -86,6 +87,7 @@ nav li.router-link-active {
     text-decoration: none;
     font-size: 1.2em;
     color: black;
+    font-family: 'Sriracha', cursive;
 }
 .right_navigation_bar ul li a:hover {
     color: green;
@@ -133,6 +135,7 @@ nav li.router-link-active {
 .changeLang{
     font-size: 1.2em;
     cursor: pointer;
+    font-family: 'Sriracha', cursive;
 }
 .changeLang option {
     cursor: pointer !important;
@@ -228,6 +231,7 @@ nav li.router-link-active {
     display: block;
     transition: 0.3s;
     margin-right: 20px;
+    font-family: 'Sriracha', cursive;
 }
 
 .overlay a:hover,
