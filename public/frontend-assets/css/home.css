@@ -328,6 +328,11 @@
     align-items: center;
 }
 
+.fresh_food button i {
+    font-size: 15px;
+    margin-left: 10px;
+}
+
 @media screen and (min-width: 768px) {
     .fresh_food .right_img{
         background-image: url("../images/fresh_food1.png");

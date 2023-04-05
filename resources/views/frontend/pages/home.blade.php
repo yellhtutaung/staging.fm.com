@@ -439,7 +439,7 @@
                             <div class="body-fm py-3">
                                 - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ad aliquid architecto atque culpa cupiditate est ipsa itaque !
                             </div>
-                            <div class="d-flex align-items-center justify-content-center">
+                            <div class="d-flex align-items-center justify-content-start">
                                 <form action="#">
                                     <button type="" href="#fresh_food_btn" id="fresh_food_btn">See More <i class="fa-solid fa-arrow-right"></i></button>
                                 </form>
