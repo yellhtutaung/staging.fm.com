@@ -10,7 +10,7 @@
                         <img src="{{asset('freshmoe_logo.png')}}" alt="">
                     </div>
                     <div class="my-2">
-                        <h3 class="text-black text-left ">{{ __('auth.enter_otp.enter_otp') }}</h3>
+                        <h3 class="text-black title-fm text-left ">{{ __('auth.enter_otp.enter_otp') }}</h3>
                         <span class="main_title_underline theme_bg w-25"></span>
                     </div>
                     @if (session('status'))

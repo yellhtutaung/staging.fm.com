@@ -8,6 +8,7 @@
 
 :root{
     --theme-color: #5BBA47;
+    --primary-fontfamily: 'Sriracha', cursive;
 }
 
 .avator-rounded
@@ -200,7 +201,7 @@
 
 .title-fm{
     /*font-family: 'Merriweather', serif;*/
-    font-family: 'Sriracha', cursive;
+    font-family: var(--primary-fontfamily);
 }
 
 .body-fm{

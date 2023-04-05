@@ -28,7 +28,7 @@
                     <div class="price-list">
                         <div class="animate__animated animate__fadeIn">
                             <div class="card-header form-header-border border-0 theme_bg ">
-                                <h5 class="card-title text-white m-0">{{ __('message.realtime_price_list') }}</h5>
+                                <h5 class="card-title text-white m-0 title-fm">{{ __('message.realtime_price_list') }}</h5>
                             </div>
                             <div class="card card-custom table-responsive border-0  card-body">
                                 <table id="example" class="table table-responsive table-hover table-striped"
