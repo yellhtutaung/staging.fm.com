@@ -19,7 +19,7 @@
                 <div class="home-slide-container home-carousel-1" >
                     <img class="img" src="{{ asset('frontend-assets/images/sliders/slider_1.jpg') }}" alt="">
                     <div class="carousel-content ">
-                        <div class="container title-fm">{{ __('message.slider2') }}</div>
+{{--                        <div class="container title-fm">{{ __('message.slider2') }}</div>--}}
                     </div>
                 </div>
             </div>
@@ -27,7 +27,7 @@
                 <div class="home-slide-container home-carousel-1" >
                     <img class="img" src="{{ asset('frontend-assets/images/sliders/slider_2.jpg') }}" alt="">
                     <div class="carousel-content ">
-                        <div class="container title-fm">{{ __('message.slider1') }}</div>
+{{--                        <div class="container title-fm">{{ __('message.slider1') }}</div>--}}
                     </div>
                 </div>
             </div>
@@ -35,7 +35,7 @@
                 <div class="home-slide-container home-carousel-1" >
                     <img class="img" src="{{ asset('frontend-assets/images/sliders/slider_3.jpg') }}" alt="">
                     <div class="carousel-content ">
-                        <div class="container title-fm">{{ __('message.slider3') }}</div>
+{{--                        <div class="container title-fm">{{ __('message.slider3') }}</div>--}}
                     </div>
                 </div>
             </div>
@@ -369,11 +369,15 @@
             <div class="container-fluid py-5">
                 <div class="row g-3">
                     <div class="col-lg-6 p-2 d-flex justify-content-center">
-                        <div class="p-2 img-one">
-                            <img src="{{ asset('frontend-assets/images/organic_food_2.jpg') }}" alt="">
+                        <div>
+                            <div class="m-2 img-one">
+                                <img src="{{ asset('frontend-assets/images/organic_food_2.jpg') }}" alt="">
+                            </div>
                         </div>
-                        <div class="p-2 img-two d-none d-sm-block">
-                            <img src="{{ asset('frontend-assets/images/organic_food_1.png') }}" alt="">
+                        <div>
+                            <div class="m-2 img-two d-none d-sm-block">
+                                <img src="{{ asset('frontend-assets/images/organic_food_1.png') }}" alt="">
+                            </div>
                         </div>
                     </div>
                     <div class="col-lg-6 p-4">
