@@ -33,6 +33,16 @@ class ResetPasswordController extends Controller
     */
     use General;
     use ResetsPasswords;
+
+    public function __construct()
+    {
+        $this->middleware(function ($request, $next) {
+            if (Auth::check()) {
+                return redirect()->back();
+            }
+            return $next($request);
+        });
+    } // if u have auth go to back | else go to next
     /**
      * Where to redirect users after resetting their password.
      *
