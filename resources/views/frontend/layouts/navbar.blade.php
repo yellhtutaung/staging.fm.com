@@ -46,17 +46,10 @@
                             <a href="{{route('mainPage')}}#contact">{{ __('message.contact') }}</a>
                         </li>
                         <li>
-                            <select class="form-select changeLang">
+                            <select class="form-select border-0 changeLang">
                                 <option value="en" {{ session()->get('locale') == 'en' ? 'selected' : '' }}>English</option>
                                 <option value="mm" {{ session()->get('locale') == 'mm' ? 'selected' : '' }}>မြန်မာ</option>
                             </select>
-                            {{--                        <div class="lan-dropdown">--}}
-                            {{--                            <a href="javascript:void(0);" id="lan_action">English</a>--}}
-                            {{--                            <ul class="lan-dropdown-menu">--}}
-                            {{--                                <li class="first"><a class="" href="#">Myanmar</a></li>--}}
-                            {{--                                <li class="last"><a class="" href="#">English</a></li>--}}
-                            {{--                            </ul>--}}
-                            {{--                        </div>--}}
                         </li>
                     </ul>
                 </div>

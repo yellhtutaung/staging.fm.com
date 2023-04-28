@@ -133,7 +133,7 @@ nav li.router-link-active {
 /* --------------- Language Dropdown ------------------- */
 
 .changeLang{
-    font-size: 1.2em;
+    font-size: 1.2em !important;
     cursor: pointer;
     font-family: var(--primary-fontfamily);
 }
