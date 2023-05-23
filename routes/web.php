@@ -11,6 +11,7 @@ use App\Http\Controllers\Backend\CountryController;
 use App\Http\Controllers\Backend\UserController;
 use App\Http\Controllers\Backend\PermissionController;
 use App\Http\Controllers\Frontend\PagesController;
+use App\Http\Controllers\BlogController;
 use App\Http\Controllers\Frontend\ProfileController;
 use App\Http\Controllers\LangController;
 use \App\Http\Controllers\TestController;
@@ -35,6 +36,9 @@ use App\Http\Controllers\Auth\AdminLoginController;
 
 
 Route::get('/', [PagesController::class, 'home'])->name('mainPage');
+Route::prefix('blogs')->group(function () {
+    Route::get('/', [BlogController::class, 'index'])->name('blogIndex');
+});
 Route::get('employees', [PagesController::class, 'employees']);
 Route::get('client', [PagesController::class, 'client']);
 Route::get('partnerships', [PagesController::class, 'partnerships']);
@@ -128,6 +132,7 @@ Route::middleware([CheckAdmin::class,PermissionCheck::class])->prefix('admin')->
     Route::prefix('contact')->group(function () {
         Route::get('/', [ContactController::class, 'contactMessageList'])->name('contactMessageList');
     });
+
 
 }); // For admin only
 Route::post('admin/permission/sort', [PermissionController::class, 'sort'])->name('sortPermission');
