@@ -93,7 +93,7 @@
                                 <img src="{{asset('frontend-assets/images/service_img_1.f6724c41.jpg')}}" alt="" class="img-fluid" />
                             </div>
                             <div class="service_card_title">
-                                <h5 class="title-fm">{{ __('message.our_services') }}</h5>
+                                <h5 class="title-fm mb-2">{{ __('message.our_services') }}</h5>
                                 <div class='service_underline'></div>
                             </div>
                             <div class="service_card_body">
@@ -112,7 +112,7 @@
                                 <img src="{{asset('frontend-assets/images/service_img_2.a0c01eb8.jpg')}}" alt="" class="img-fluid" />
                             </div>
                             <div class="service_card_title">
-                                <h5 class="title-fm">{{ __('message.easy_to_use_app') }}</h5>
+                                <h5 class="title-fm mb-2">{{ __('message.easy_to_use_app') }}</h5>
                                 <div class='service_underline'></div>
                             </div>
                             <div class="service_card_body">
@@ -131,7 +131,7 @@
                                 <img src="{{asset('frontend-assets/images/service_img_3.ea841d04.jpg')}}" alt="" class="img-fluid" />
                             </div>
                             <div class="service_card_title">
-                                <h5 class="title-fm">{{ __('message.fresh_fruits_and_vegetables') }}</h5>
+                                <h5 class="title-fm mb-2">{{ __('message.fresh_fruits_and_vegetables') }}</h5>
                                 <div class='service_underline'></div>
                             </div>
                             <div class="service_card_body body-fm">

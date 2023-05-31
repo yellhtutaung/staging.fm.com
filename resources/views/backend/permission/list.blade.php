@@ -54,7 +54,7 @@
                         <td class="id" value="{{$permission->id}}">{{$permission->name}}</td>
                         <td hidden class="order_sort_id">{{$permission->order_sort_id}}</td>
                         <td>
-                            <span class="badge bg-danger">{{count(json_decode($permission->guard_json))}}</span>
+                            <span class="badge theme_bg_red">{{count(json_decode($permission->guard_json))}}</span>
                         </td>
                         <td>{{$permission->created_at->toDateString()}}</td>
                         <td>{{$permission->updated_at->diffForHumans()}}</td>
@@ -72,7 +72,7 @@
                             <form action="{{route('deletePermission', $permission->id)}}" id="delPermissionForm-{{$permission->id}}" method="POST">
                                 @csrf
                             </form>
-                            <button class="secondary-radius btn btn-danger" onclick="delPermission({{$permission->id}})">
+                            <button class="secondary-radius btn theme_bg_red" onclick="delPermission({{$permission->id}})">
                                 <span class="material-symbols-outlined mt-2 text-white">delete</span>
                             </button>
                         </td>

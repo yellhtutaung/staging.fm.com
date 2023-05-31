@@ -49,7 +49,7 @@
                             </a>
                         </td>
                         <td>
-                            <a href="" class="secondary-radius btn btn-danger">
+                            <a href="" class="secondary-radius btn theme_bg_red">
                                 <span class="material-symbols-outlined mt-2 text-white">Delete</span>
                             </a>
                         </td>

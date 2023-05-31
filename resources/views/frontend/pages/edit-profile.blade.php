@@ -153,7 +153,7 @@
                                         </div>
                                     </div>
                                     <div class="col-lg-12">
-                                        <button>{{ __('message.update') }}</button>
+                                        <button class="" >{{ __('message.update') }}</button>
                                     </div>
                                 </div>
                             </form>

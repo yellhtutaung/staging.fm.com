@@ -52,12 +52,12 @@
 {{--                        </td>--}}
                         <td>
                             <a href="{{route('accountDetails', $admin->token)}}" class="secondary-radius text-decoration-none text-light btn theme_bg">
-                                <span class="material-symbols-outlined mt-2 text-white">visibility</span>
+                                <span class="material-symbols-outlined mt-1 text-white">visibility</span>
                             </a>
                         </td>
                         <td>
                             <a href="{{route('editAccount', $admin->token)}}" class="secondary-radius btn btn-info">
-                                <span class="material-symbols-outlined mt-2 text-white">edit</span>
+                                <span class="material-symbols-outlined mt-1 text-white">edit</span>
                             </a>
                         </td>
                     </tr>

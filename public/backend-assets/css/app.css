@@ -18,10 +18,11 @@
 
 .add-button {
     padding: 0.7rem 1.5rem;
-    border: 1px solid #ccc;
+    background-color: #ED1C24 !important;
+    color:  #F4F6F9 !important;
     border-radius: var(--secondary-radius);
-    background-color: #ED1C24;
-    color: white;
+    /*border-color: #5bba47 !important;*/
+
 }
 
 .add-button i {
@@ -29,9 +30,8 @@
 }
 
 .add-button:hover {
-    background-color: #F4F6F9 !important;
-    color: #ED1C24 !important;
-    border-color: #5bba47 !important;
+    background-color: #ED1C24;
+    color: white;
 }
 
 .page-item.active .page-link {

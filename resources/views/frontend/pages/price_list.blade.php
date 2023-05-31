@@ -53,7 +53,7 @@
                                                      src="{{asset("backend-assets/uploads/fruits/$fruits->id/$fruits->images")}}"
                                                      alt="{{$fruits->name}}"></td>
                                             <td><span
-                                                    class="badge bg-danger shadow-lg">{{$fruits->depend_count ." ".$fruits->unit}}</span>
+                                                    class="badge theme_bg_red shadow-lg">{{$fruits->depend_count ." ".$fruits->unit}}</span>
                                             </td>
                                             <td><span class="badge bg-success shadow-lg">{{$fruits->price}} MMK</span>
                                             </td>

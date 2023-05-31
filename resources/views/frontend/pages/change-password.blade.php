@@ -71,7 +71,7 @@
                                         </div>
                                     </div>
                                     <div class="col-lg-12">
-                                        <button>{{ __('message.update') }}</button>
+                                        <button class="theme_bg_red" >{{ __('message.update') }}</button>
                                     </div>
                                 </div>
                             </form>
