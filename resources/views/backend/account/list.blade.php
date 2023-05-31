@@ -11,7 +11,7 @@
 @section('content')
     <div class="container-fluid ">
 
-        <a href="{{route('addAccount')}}" class="btn add-button theme_bg text-white my-3" >
+        <a href="{{route('addAccount')}}" class="btn add-button text-white my-3" >
             ADD <i class="fa-solid fa-plus"></i>
         </a>
 
@@ -51,13 +51,13 @@
 {{--                            </div>--}}
 {{--                        </td>--}}
                         <td>
-                            <a href="{{route('accountDetails', $admin->token)}}" class="secondary-radius text-decoration-none text-light btn theme_bg">
-                                <span class="material-symbols-outlined mt-1 text-white">visibility</span>
+                            <a href="{{route('accountDetails', $admin->token)}}" class="d-flex justify-content-center align-items-center  secondary-radius w-50px-h50px text-decoration-none text-light btn theme_bg">
+                                <span class="material-symbols-outlined  text-white">visibility</span>
                             </a>
                         </td>
                         <td>
-                            <a href="{{route('editAccount', $admin->token)}}" class="secondary-radius btn btn-info">
-                                <span class="material-symbols-outlined mt-1 text-white">edit</span>
+                            <a href="{{route('editAccount', $admin->token)}}" class="d-flex justify-content-center align-items-center  w-50px-h50px secondary-radius btn btn-info">
+                                <span class="material-symbols-outlined text-white">edit</span>
                             </a>
                         </td>
                     </tr>

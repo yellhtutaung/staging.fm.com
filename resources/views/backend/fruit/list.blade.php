@@ -13,7 +13,7 @@
 @section('content')
     <div class="container-fluid ">
 
-        <a href="{{route('addFruit')}}" class="btn add-button theme_bg text-white my-3" >ADD <i class="fa-solid fa-plus"></i></a>
+        <a href="{{route('addFruit')}}" class="btn add-button text-white my-3" >ADD <i class="fa-solid fa-plus"></i></a>
 
         <div class="card-header form-header-border border-0 theme_bg ">
             <h5 class="card-title text-white"> Fruits</h5>
@@ -42,7 +42,7 @@
                 @foreach($fruitPriceList as $Index => $fruits)
                     <tr>
                         <td>{{$Index+1}}</td>
-                        <td><span class="badge bg-primary shadow-lg " onclick="copiedToId()">{{$fruits->name_id}}</span></td>
+                        <td>{{$fruits->name_id}}</td>
                         <td>{{$fruits->name}}</td>
                         <td><img class="avator-rounded" src="{{asset("backend-assets/uploads/fruits/$fruits->id/$fruits->images")}}" alt="{{$fruits->name}}"></td>
                         <td><span class="badge theme_bg_red shadow-lg">{{$fruits->depend_count ." ".$fruits->unit}}</span></td>
@@ -58,18 +58,18 @@
 {{--                            </div>--}}
 {{--                        </td>--}}
                         <td>
-                            <a href="{{route('fruitDetails', $fruits->token)}}" class="secondary-radius text-decoration-none text-light btn theme_bg">
-                                <span class="material-symbols-outlined mt-2 text-white">visibility</span>
+                            <a href="{{route('fruitDetails', $fruits->token)}}" class="d-flex justify-content-center align-items-center w-50px-h50px secondary-radius text-decoration-none text-light btn theme_bg">
+                                <span class="material-symbols-outlined text-white">visibility</span>
                             </a>
                         </td>
                         <td>
-                            <a href="{{route('fruitHistory',$fruits->token)}}" class="secondary-radius text-decoration-none btn theme_bg text-light">
-                                <span class="material-symbols-outlined mt-2">history</span>
+                            <a href="{{route('fruitHistory',$fruits->token)}}" class="d-flex justify-content-center align-items-center w-50px-h50px  secondary-radius text-decoration-none btn theme_bg text-light">
+                                <span class="material-symbols-outlined ">history</span>
                             </a>
                         </td>
                         <td>
-                            <a href="{{route('editFruit',$fruits->id)}}" class="secondary-radius btn btn-info">
-                                <span class="material-symbols-outlined mt-2 text-white">edit</span>
+                            <a href="{{route('editFruit',$fruits->id)}}" class="d-flex justify-content-center align-items-center w-50px-h50px  secondary-radius btn btn-info">
+                                <span class="material-symbols-outlined text-white">edit</span>
                             </a>
                         </td>
                     </tr>

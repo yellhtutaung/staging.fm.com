@@ -13,7 +13,9 @@
         </a>
         <ul class="dropdown-menu std-box-shadow content-fm" aria-labelledby="dropdownMenuButton1">
             <li class="list-item d-flex align-items-center">
-                <span class="material-symbols-rounded me-3">admin_panel_settings</span> <span>{{Auth::guard('admin')->user()->name}} ( {{Auth::guard('admin')->user()->roleInfo->name}} )</span>
+                <span class="material-symbols-rounded me-3">admin_panel_settings</span>
+                <span>{{Auth::guard('admin')->user()->name}}</span>
+{{--                <small> ( {{Auth::guard('admin')->user()->roleInfo->name}} )</small>--}}
             </li >
             <li class="list-item d-flex align-items-center" id="goPublic">
                 <span class="material-symbols-rounded me-3">public</span> <span>Public Site</span>

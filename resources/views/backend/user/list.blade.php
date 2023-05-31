@@ -53,13 +53,13 @@
 {{--                            </div>--}}
 {{--                        </td>--}}
                         <td>
-                            <a href="{{route('userDetails',$user->token)}}" class="secondary-radius btn theme_bg">
-                                <span class="material-symbols-outlined mt-1 text-white">visibility</span>
+                            <a href="{{route('userDetails',$user->token)}}" class="d-flex justify-content-center align-items-center w-50px-h50px  secondary-radius btn theme_bg">
+                                <span class="material-symbols-outlined text-white">visibility</span>
                             </a>
                         </td>
                         <td>
-                            <a href="{{route('editUser',$user->id)}}" class="secondary-radius btn btn-info">
-                                <span class="material-symbols-outlined mt-1 text-white">edit</span>
+                            <a href="{{route('editUser',$user->id)}}" class="d-flex justify-content-center align-items-center w-50px-h50px secondary-radius btn btn-info">
+                                <span class="material-symbols-outlined text-white">edit</span>
                             </a>
                         </td>
                     </tr>

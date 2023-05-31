@@ -26,13 +26,12 @@
                         @enderror
                     </div>
                     <div class=" d-flex justify-content-end my-3 ">
-                        <button class="singin-btn w-100 mx-3 btn  theme_bg"><i class="fa-solid fa-right-to-bracket"></i> Sign In</button>
+                        <button class="text-white w-100 mx-3 btn theme_bg_red"><i class="fa-solid text-white fa-right-to-bracket"></i> Sign In</button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
 </div>
-
 
 @endsection

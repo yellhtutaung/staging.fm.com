@@ -27,7 +27,7 @@
 @section('content')
     <div class="container-fluid ">
 
-        <a href="{{route('addPermission')}}" class="btn add-button theme_bg text-white my-3" >ADD <i class="fa-solid fa-plus"></i></a>
+        <a href="{{route('addPermission')}}" class="btn add-button text-white my-3" >ADD <i class="fa-solid fa-plus"></i></a>
 
         <div class="card-header form-header-border border-0 theme_bg ">
             <h5 class="card-title text-white">Permissions</h5>
@@ -59,21 +59,21 @@
                         <td>{{$permission->created_at->toDateString()}}</td>
                         <td>{{$permission->updated_at->diffForHumans()}}</td>
                         <td>
-                            <a href="{{route('permissionDetails', $permission->id)}}" class="secondary-radius btn theme_bg">
-                                <span class="material-symbols-outlined mt-2 text-white">visibility</span>
+                            <a href="{{route('permissionDetails', $permission->id)}}" class="d-flex justify-content-center align-items-center w-50px-h50px secondary-radius btn theme_bg">
+                                <span class="material-symbols-outlined text-white">visibility</span>
                             </a>
                         </td>
                         <td>
-                            <a href="{{route('editPermission', $permission->id)}}" class="secondary-radius btn btn-info">
-                                <span class="material-symbols-outlined mt-2 text-white">edit</span>
+                            <a href="{{route('editPermission', $permission->id)}}" class="d-flex justify-content-center align-items-center w-50px-h50px secondary-radius btn btn-info">
+                                <span class="material-symbols-outlined text-white">edit</span>
                             </a>
                         </td>
                         <td>
-                            <form action="{{route('deletePermission', $permission->id)}}" id="delPermissionForm-{{$permission->id}}" method="POST">
-                                @csrf
-                            </form>
-                            <button class="secondary-radius btn theme_bg_red" onclick="delPermission({{$permission->id}})">
-                                <span class="material-symbols-outlined mt-2 text-white">delete</span>
+{{--                            <form action="{{route('deletePermission', $permission->id)}}" id="delPermissionForm-{{$permission->id}}" method="POST">--}}
+{{--                                @csrf--}}
+{{--                            </form>--}}
+                            <button class="secondary-radius btn theme_bg_red d-flex justify-content-center align-items-center w-50px-h50px " onclick="delPermission({{$permission->id}})">
+                                <span class="material-symbols-outlined text-white">delete</span>
                             </button>
                         </td>
                     </tr>
@@ -102,7 +102,7 @@
 
         });
         const delPermission = (id) => {
-            $('#delPermissionForm-'+id).submit()
+            // $('#delPermissionForm-'+id).submit()
         }
 
 

@@ -13,7 +13,7 @@
 @section('content')
     <div class="container-fluid ">
 
-        <a href="{{route('addCountry')}}" class="btn add-button theme_bg text-white my-3" >ADD <i class="fa-solid fa-plus"></i></a>
+        <a href="{{route('addCountry')}}" class="btn add-button text-white my-3" >ADD <i class="fa-solid fa-plus"></i></a>
 
         <div class="card-header form-header-border border-0 theme_bg ">
             <h5 class="card-title text-white">Country</h5>
@@ -59,8 +59,8 @@
 {{--                            </div>--}}
 {{--                        </td>--}}
                         <td>
-                            <a href="{{route('editCountry', $city->token)}}" class="secondary-radius btn btn-info">
-                                <span class="material-symbols-outlined mt-2 text-white">edit</span>
+                            <a href="{{route('editCountry', $city->token)}}" class="d-flex justify-content-center align-items-center w-50px-h50px  secondary-radius btn btn-info">
+                                <span class="material-symbols-outlined text-white">edit</span>
                             </a>
                         </td>
 {{--                        <td>--}}

@@ -34,7 +34,7 @@
                             @enderror
                         </div>
                         <div  class="input-wrapper">
-                            <button>{{ __('auth.sign_in.sign_in') }}</button>
+                            <button class="theme_bg_red">{{ __('auth.sign_in.sign_in') }}</button>
                         </div>
                     </form>
                     <div class="body-fm d-flex justify-content-between flex-wrap bottom-text">

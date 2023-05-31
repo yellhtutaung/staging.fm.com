@@ -44,13 +44,13 @@
                         <td>{{$record->created_at->toDateString()}}</td>
                         <td>{{$record->created_at->diffForHumans()}}</td>
                         <td>
-                            <a href="javascript:void(0)" onclick="viewMessage(`{{$record->message}}`)" class="secondary-radius btn theme_bg">
-                                <span class="material-symbols-outlined mt-2 text-white">visibility</span>
+                            <a href="javascript:void(0)" onclick="viewMessage(`{{$record->message}}`)" class="secondary-radius btn theme_bg d-flex justify-content-center align-items-center w-50px-h50px ">
+                                <span class="material-symbols-outlined text-white">visibility</span>
                             </a>
                         </td>
                         <td>
-                            <a href="" class="secondary-radius btn theme_bg_red">
-                                <span class="material-symbols-outlined mt-2 text-white">Delete</span>
+                            <a href="" class="secondary-radius btn theme_bg_red d-flex justify-content-center align-items-center w-50px-h50px ">
+                                <span class="material-symbols-outlined text-white">Delete</span>
                             </a>
                         </td>
                     </tr>
