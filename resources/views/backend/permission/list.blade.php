@@ -10,7 +10,7 @@
             cursor: grabbing;
         }
         td{
-             text-align: center;
+             text-align: center !important;
         }
         th{
             text-align: center!important;
@@ -58,17 +58,20 @@
                         </td>
                         <td>{{$permission->created_at->toDateString()}}</td>
                         <td>{{$permission->updated_at->diffForHumans()}}</td>
-                        <td>
+                        <td class="d-flex justify-content-center align-items-center">
                             <a href="{{route('permissionDetails', $permission->id)}}" class="d-flex justify-content-center align-items-center w-50px-h50px secondary-radius btn theme_bg">
                                 <span class="material-symbols-outlined text-white">visibility</span>
                             </a>
                         </td>
-                        <td>
-                            <a href="{{route('editPermission', $permission->id)}}" class="d-flex justify-content-center align-items-center w-50px-h50px secondary-radius btn btn-info">
-                                <span class="material-symbols-outlined text-white">edit</span>
-                            </a>
+                        <td class="">
+                            <center>
+                                <a href="{{route('editPermission', $permission->id)}}" class="d-flex justify-content-center align-items-center w-50px-h50px secondary-radius btn btn-info">
+                                    <span class="material-symbols-outlined text-white">edit</span>
+                                </a>
+                            </center>
+
                         </td>
-                        <td>
+                        <td class="d-flex justify-content-center align-items-center">
 {{--                            <form action="{{route('deletePermission', $permission->id)}}" id="delPermissionForm-{{$permission->id}}" method="POST">--}}
 {{--                                @csrf--}}
 {{--                            </form>--}}
