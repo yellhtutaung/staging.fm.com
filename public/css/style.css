@@ -63,14 +63,14 @@ textarea {
 /* -------------------------- Logout --------------------------------- */
 
 .swal2-styled.swal2-cancel{
-    background-color: var(--secondary-color) !important;
+    background-color: #ed1c24 !important;
 
     float: right;
     padding: 0.7rem 1.5rem !important;
     margin: 0.5rem;
     margin-right: 0;
     border: 1px solid #ccc;
-    border-radius: var(--radius) !important;
+    border-radius: var(--secondary-radius) !important;
     color: white;
 }
 
@@ -81,21 +81,21 @@ textarea {
     margin: 0.5rem;
     margin-right: 0;
     border: 1px solid #ccc;
-    border-radius: var(--radius) !important;
+    border-radius: var(--secondary-radius) !important;
     color: white;
 
 }
 
 .swal2-styled.swal2-cancel:hover {
-    background-color: #fff !important;
-    color: #ED1C24 !important;
-    border-color: #ED1C24 !important;
+    /*background-color: #fff !important;*/
+    /*color: #ED1C24 !important;*/
+    /*border-color: #ED1C24 !important;*/
 }
 
 .swal2-styled.swal2-confirm:hover {
-    background-color: #fff !important;
-    color: #ED1C24 !important;
-    border-color: #ED1C24 !important;
+    /*background-color: #fff !important;*/
+    /*color: #ED1C24 !important;*/
+    /*border-color: #ED1C24 !important;*/
 }
 
 .swal2-styled.swal2-cancel:focus {

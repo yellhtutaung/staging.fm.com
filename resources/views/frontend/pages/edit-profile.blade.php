@@ -40,7 +40,7 @@
                                     <div class="col-lg-6">
                                         <div class="form-group mb-3">
                                             <label for="" class="form-label">{{ __('message.email') }}</label>
-                                            <input type="email"
+                                            <input type="email" disabled
                                                    class="form-control @error('email') is-invalid @enderror"
                                                    name="email" value="{{old('email', $user->email)}}">
                                             @error('email')
