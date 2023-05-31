@@ -69,7 +69,7 @@
                                     <textarea class="form-control" placeholder="Notes" rows="2" name="notes" value="{{old('notes')}}">Wide range of design variants.</textarea>
                                 </div>
                                 <div class="form-group mt-4">
-                                    <input type="submit" class="btn col-12 theme_bg text-white" value="ADD">
+                                    <input type="submit" class="btn col-12 secondary-radius theme_bg text-white" value="ADD">
                                 </div>
                             </div>
                         </form>

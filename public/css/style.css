@@ -21,8 +21,8 @@
 }
 
 .card-header {
-    border-top-left-radius: var(--radius) !important;
-    border-top-right-radius: var(--radius) !important;
+    border-top-left-radius: var(--secondary-radius) !important;
+    border-top-right-radius: var(--secondary-radius) !important;
     padding-top: 20px !important;
     padding-bottom: 20px !important;
     background-color: var(--primary-color) !important;

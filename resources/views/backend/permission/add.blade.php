@@ -98,7 +98,7 @@
                                 </div>
                                 <div class="form-group ">
 {{--                                    <input type="submit" class="btn col-12 theme_bg text-white" id="submit-btn" value="CREATE">--}}
-                                    <button type="submit" class="btn col-12 theme_bg text-white" id="submit-btn" >CREATE</button>
+                                    <button type="submit" class="btn secondary-radius col-12 theme_bg text-white" id="submit-btn" >CREATE</button>
                                 </div>
                             </div>
                         </form>

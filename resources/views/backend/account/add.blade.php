@@ -53,7 +53,7 @@
                                     <input type="password" class="form-control" name="password"/>
                                 </div>
                                 <div class="form-group mt-4">
-                                    <input type="submit" class="btn col-12 theme_bg text-white" value="ADD">
+                                    <input type="submit" class="secondary-radius btn col-12 theme_bg text-white" value="ADD">
                                 </div>
                             </div>
                         </form>

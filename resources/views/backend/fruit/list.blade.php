@@ -33,9 +33,9 @@
                     <th>Timestamp</th>
 {{--                    <th>Updated Time</th>--}}
 {{--                    <th>Hide | Show</th>--}}
+                    <th>Edit</th>
                     <th>View</th>
                     <th>History</th>
-                    <th>Edit</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -58,6 +58,11 @@
 {{--                            </div>--}}
 {{--                        </td>--}}
                         <td>
+                            <a href="{{route('editFruit',$fruits->id)}}" class="d-flex justify-content-center align-items-center w-50px-h50px  secondary-radius btn btn-info">
+                                <span class="material-symbols-outlined text-white">edit</span>
+                            </a>
+                        </td>
+                        <td>
                             <a href="{{route('fruitDetails', $fruits->token)}}" class="d-flex justify-content-center align-items-center w-50px-h50px secondary-radius text-decoration-none text-light btn theme_bg">
                                 <span class="material-symbols-outlined text-white">visibility</span>
                             </a>
@@ -67,11 +72,7 @@
                                 <span class="material-symbols-outlined ">history</span>
                             </a>
                         </td>
-                        <td>
-                            <a href="{{route('editFruit',$fruits->id)}}" class="d-flex justify-content-center align-items-center w-50px-h50px  secondary-radius btn btn-info">
-                                <span class="material-symbols-outlined text-white">edit</span>
-                            </a>
-                        </td>
+
                     </tr>
                 @endforeach
                 </tbody>
