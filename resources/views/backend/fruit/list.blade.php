@@ -31,7 +31,7 @@
                     <th>Uploader</th>
                     <th>Updater</th>
                     <th>Timestamp</th>
-                    <th>Updated Time</th>
+{{--                    <th>Updated Time</th>--}}
 {{--                    <th>Hide | Show</th>--}}
                     <th>View</th>
                     <th>History</th>
@@ -50,7 +50,7 @@
                         <td>{{$fruits->userInformation->name ?? '-'}}</td>
                         <td>{{!is_null($fruits->upd_id) && $fruits->updaterInformation ? $fruits->updaterInformation->name :''}}</td>
                         <td>{{$fruits->created_at}}</td>
-                        <td>{{$fruits->updated_at->diffForHumans()}}</td>
+{{--                        <td>{{$fruits->updated_at->diffForHumans()}}</td>--}}
 {{--                        <td>--}}
 {{--                            <div class="form-check form-switch p-0 m-0">--}}
 {{--                                <input data-id="{{$fruits->id}}" data-status-val="{{$fruits->hide_show}}" onchange="universalSwitch(2,{{$fruits->id}},'hide_show',{{$fruits->hide_show}});" class="toggle-class toggle-id{{$fruits->id}}" type="checkbox"  data-onstyle="success" data-offstyle="danger" data-toggle="toggle"--}}
