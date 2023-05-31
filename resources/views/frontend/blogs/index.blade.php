@@ -6,14 +6,19 @@
     <style>
         .custom-blog-card
         {
-            width: 100%;
+            width: 97%;
             height: auto;
             overflow: hidden;
             border-radius: 5px;
             position: relative;
+            transition: 0.5s;
+        }
+        .custom-blog-card img:hover{
+            transform: scale(1.1);
         }
         .custom-blog-card img
         {
+            transition: 0.5s;
             width: 100%;
             border-radius: 5px;
         }
@@ -68,7 +73,7 @@
                     <h4 class="text-center" >Recent Blogs</h4>
                     <hr>
                     <div class="custom-blog-card shadow" >
-                        <img class="right-img" style="opacity: 0.2px !important;" src="https://www.mediafire.com/convkey/d45c/0gsf55m6vo767vxzg.jpg?size_id=6" alt="">
+                        <img class="right-img" style="opacity: 0.2px !important;" src="https://www.mediafire.com/convkey/186f/f2s9lexfdgv65ir9g.jpg" alt="">
                         <!--                    <div class="postcard-text">-->
                         <!--                        <h4 class="text-white pb-3">Top 7 Emerging Technologies</h4>-->
                         <!--                        <span class="text-white pb-2">🗓️ Dec 23, 2020</span>-->
@@ -77,7 +82,7 @@
                         <!--                        </p>-->
                         <!--                    </div>-->
                     </div>
-                    <div class="custom-blog-card shadow" style="margin: 20px 0; ">
+                    <div class="custom-blog-card shadow" style="margin: 25px 0; ">
                         <img class="right-img" src="https://www.mediafire.com/convkey/50d0/68s1ucwg0t68p5vzg.jpg?size_id=6" alt="">
                     </div>
                     <div class="custom-blog-card shadow">
@@ -110,4 +115,3 @@
     </script>
 
 @endsection
-

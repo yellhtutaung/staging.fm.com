@@ -30,9 +30,9 @@
                             @csrf
                             <div class="row ">
                                 <div class="w-100 d-flex justify-content-center align-items-center  preview-img-container">
-                                        <a href="javascript:void(0)" class="border-dashed text-black text-center w-100" id="file-action">
-                                            <span class="upload-img-icon material-symbols-outlined">add_photo_alternate</span>
-                                        </a>
+                                    <a href="javascript:void(0)" class="border-dashed text-black text-center w-100" id="file-action">
+                                        <span class="upload-img-icon material-symbols-outlined">add_photo_alternate</span>
+                                    </a>
                                 </div>
                                 <input type="file" class="form-control" name="images" hidden id="file-input" onchange="preview()"/>
                                 <div class="form-group my-1">

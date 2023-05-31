@@ -1,6 +1,14 @@
 @extends('backend.layouts.app')
 @section('title', 'Country')
 @section('extra-css')
+    <style>
+        td{
+            text-align: center!important;
+        }
+        th{
+            text-align: center!important;
+        }
+    </style>
 @endsection
 @section('content')
     <div class="container-fluid ">

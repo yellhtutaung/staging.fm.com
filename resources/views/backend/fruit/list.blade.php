@@ -1,6 +1,14 @@
 @extends('backend.layouts.app')
 @section('title', 'Fruits')
 @section('extra-css')
+    <style>
+        td{
+            text-align: center;
+        }
+        th{
+            text-align: center!important;
+        }
+    </style>
 @endsection
 @section('content')
     <div class="container-fluid ">
@@ -55,8 +63,8 @@
                             </a>
                         </td>
                         <td>
-                            <a href="{{route('fruitHistory',$fruits->token)}}" class="secondary-radius btn theme_bg text-white">
-                                <span class="material-symbols-outlined p-1">history</span>
+                            <a href="{{route('fruitHistory',$fruits->token)}}" class="secondary-radius text-decoration-none btn theme_bg text-light">
+                                <span class="material-symbols-outlined mt-2">history</span>
                             </a>
                         </td>
                         <td>

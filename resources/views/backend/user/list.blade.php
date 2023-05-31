@@ -1,6 +1,13 @@
 @extends('backend.layouts.app')
 @section('title', 'User List')
-
+<style>
+    td{
+        text-align: center;
+    }
+    th{
+        text-align: center!important;
+    }
+</style>
 @section('content')
     <div class="container-fluid ">
 
