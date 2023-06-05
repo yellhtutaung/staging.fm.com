@@ -126,8 +126,10 @@
                                        name="password_confirmation" placeholder="{{ __('auth.sign_up.enter_confirm_password') }}"
                                        id="confirm-password" >
                             </div>
-                            <div  class="col-lg-12 input-wrapper">
-                                <button>{{ __('auth.sign_up.register') }}</button>
+
+{{--                                <button>{{ __('auth.sign_up.register') }}</button>--}}
+                            <div class="col-sm-12">
+                                <button style="border-radius: 10px" type="submit" class="btn w-100 p-2 theme_bg_red text-white ">{{ __('auth.sign_up.register') }}</button>
                             </div>
                         </div>
 
@@ -136,8 +138,8 @@
                     <div class="mt-2 body-fm bottom-text">
                         {{ __('auth.sign_up.already_acc') }}
                         <span class="underline ms-2">
-                                    <a href="{{route('login')}}" class="text-decoration-none">{{ __('auth.sign_up.sign_in') }}</a>
-                                </span>
+                            <a href="{{route('login')}}" class="text-decoration-none">{{ __('auth.sign_up.sign_in') }}</a>
+                        </span>
                     </div>
 
 
