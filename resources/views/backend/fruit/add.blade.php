@@ -41,7 +41,7 @@
                                 </div>
                                 <div class="form-group my-1">
                                     <label class="form-label my-1" for="">Price</label>
-                                    <input type="text" class="form-control" name="price" value="{{old('price')}}" />
+                                    <input type="number" class="form-control" name="price" value="{{old('price')}}" />
                                 </div>
                                 <div class="form-group my-1">
                                     <div class="row">
@@ -129,6 +129,16 @@
         });
         $('#file-action').click(function () {
             $('#file-input').click()
+        });
+        // disable mousewheel on a input number field when in focus
+        // (to prevent Chromium browsers change the value when scrolling)
+        $('form').on('focus', 'input[type=number]', function (e) {
+            $(this).on('wheel.disableScroll', function (e) {
+                e.preventDefault();
+            })
+        })
+        $('form').on('blur', 'input[type=number]', function (e) {
+            $(this).off('wheel.disableScroll');
         })
     </script>
 @endsection
