@@ -35,6 +35,7 @@ return [
     'about_partners' => 'About Partners',
     'target_of_market' => 'Target of Market',
     'cold_chain_transportation' => 'Cold Chain and Transportation',
+    'blogs' => 'Blogs',
     'contact_us_form'=>'Contact Us',
     'enter_ur_name'=>'Enter Your Name',
     'enter_ur_email'=>'Enter Your Email',
@@ -141,7 +142,7 @@ return [
     'current_country' => 'Current Country',
     'current_city' => 'Current City',
 
-    'logout_confirm' => 'Are you sure, you want to logout?',
+    'logout_confirm' => 'Are you sure ?',
     'cancel_btn' => 'Cancel',
     'confirm_btn' => 'Confirm',
 

@@ -66,16 +66,17 @@
 
         $('#goPublic').on('click', function () {
             window.open('/', '_blank');
-        })
+        });
 
         $('#profileInfo').on('click', function () {
             window.location.replace('{{route('accountDetails', Auth::guard('admin')->user()->token)}}')
-        })
+        });
 
         $('#updateProfile').on('click', function () {
             window.location.replace('{{route('editAccount', Auth::guard('admin')->user()->token)}}')
-        })
+        });
+    });
 
-    })
+    $('.swal2-title').css({"background-color": "yellow"});
 
 </script>

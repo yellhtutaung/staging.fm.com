@@ -29,7 +29,7 @@
 }
 
 .card {
-    border-radius: var(--radius) !important;
+    border-radius: var(--secondary-radius) !important;
     box-shadow: var(--box-shadow);
 }
 

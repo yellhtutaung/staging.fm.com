@@ -24,6 +24,7 @@
                                         <a class="{{Request::segment(1) == 'partnerships' ? 'footer_links2_active text-white' : null}}" href="/partnerships" >{{ __('message.about_partners') }}</a>
                                         <a class="{{Request::segment(1) == 'target-market' ? 'footer_links2_active text-white' : null}}" href="/target-market" >{{ __('message.target_of_market') }}</a>
                                         <a class="{{Request::segment(1) == 'coldchain-transport' ? 'footer_links2_active text-white' : null}}" href="/coldchain-transport" >{{ __('message.cold_chain_transportation') }}</a>
+                                        <a class="{{Request::segment(1) == 'blogs' ? 'footer_links2_active text-white' : null}}" href="/blogs" >{{ __('message.blogs') }}</a>
                                     </div>
                                 </div>
                             </div>

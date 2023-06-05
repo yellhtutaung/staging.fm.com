@@ -15,6 +15,9 @@
     height: 50px !important;
 }
 
+.size20{
+    font-size: 20px !important;
+}
 
 .add-button {
     padding: 0.7rem 1.5rem;
@@ -48,7 +51,7 @@ form .form-control {
     width: 100% !important;
     padding: 1rem !important;
     border: 1px solid #ccc !important;
-    border-radius: var(--radius) !important;
+    border-radius: var(--secondary-radius) !important;
 }
 form .form-control:focus {
     outline-color: #5BBA47 !important;
@@ -57,7 +60,7 @@ form textarea {
     width: 100% !important;
     padding: 1rem !important;
     border: 1px solid #ccc !important;
-    border-radius: var(--radius) !important;
+    border-radius: var(--secondary-radius) !important;
 }
 form textarea:focus {
     outline-color: #5BBA47  !important;
@@ -81,7 +84,7 @@ form .btn {
     height: 3.5rem !important;
     padding: 1rem !important;
     border: 1px solid #ccc !important;
-    border-radius: var(--radius) !important;
+    border-radius: var(--secondary-radius) !important;
 }
 
 .select2-container--default .select2-selection--single:focus {

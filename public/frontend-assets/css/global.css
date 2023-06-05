@@ -38,6 +38,7 @@
 
 .border-dashed{
     border: dashed 4px #000;
+    border-radius: var(--secondary-radius) !important;
 }
 
 .preview-img {

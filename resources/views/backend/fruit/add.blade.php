@@ -36,8 +36,13 @@
                                 </div>
                                 <input type="file" class="form-control" name="images" hidden id="file-input" onchange="preview()"/>
                                 <div class="form-group my-1">
-                                    <label class="form-label my-1" for="">Fruit Name</label>
-                                    <input type="text" class="form-control" name="name" value="{{old('name')}}" />
+                                    <label class="form-label my-1" for="name">Fruit Name</label>
+                                    <input type="text" value="{{old('name')}}" id="name" class="form-control @error('name') is-invalid @enderror" name="name"/>
+                                    @error('name')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                    @enderror
                                 </div>
                                 <div class="form-group my-1">
                                     <label class="form-label my-1" for="">Price</label>

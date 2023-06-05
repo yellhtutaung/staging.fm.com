@@ -2,7 +2,7 @@ let universalSwitch = (Index,findId,field,on_off) =>
 {
 
     Swal.fire({
-        title: 'Are you sure',
+        title: 'Are you sure ?',
         showCancelButton: true,
         cancelButtonText: 'Cancel',
         confirmButtonText: 'Confirm',
