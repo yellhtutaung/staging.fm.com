@@ -97,8 +97,8 @@ class FruitController extends Controller
         {
             $validator = Validator::make($In->all(), [
                 'name' => ['required'],
-                'price' => ['required','integer'],
-                'depend_count' => ['required','integer'],
+                'price' => ['required','numeric','min:1'],
+                'depend_count' => ['required','numeric','min:1'],
                 'unit' => ['required'],
                 'description' => ['nullable'],
                 'notes' => ['nullable'],
@@ -147,8 +147,8 @@ class FruitController extends Controller
 
             $validator = Validator::make($In->all(), [
                 'name' => ['required'],
-                'price' => ['required','integer'],
-                'depend_count' => ['required','integer'],
+                'price' => ['required','numeric','min:1'],
+                'depend_count' => ['required','numeric','min:1'],
                 'unit' => ['required'],
                 'description' => ['nullable'],
                 'notes' => ['nullable'],
