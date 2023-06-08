@@ -58,14 +58,18 @@
 {{--                            </div>--}}
 {{--                        </td>--}}
                         <td>
-                            <a href="{{route('editFruit',$fruits->id)}}" class="d-flex justify-content-center align-items-center w-50px-h50px  secondary-radius btn btn-info">
-                                <span class="material-symbols-outlined text-white">edit</span>
-                            </a>
+                            <div class="d-flex justify-content-center align-items-center">
+                                <a href="{{route('editFruit',$fruits->id)}}" class="d-flex justify-content-center align-items-center w-50px-h50px  secondary-radius btn btn-info">
+                                    <span class="material-symbols-outlined text-white">edit</span>
+                                </a>
+                            </div>
                         </td>
                         <td>
-                            <a href="{{route('fruitDetails', $fruits->token)}}" class="d-flex justify-content-center align-items-center w-50px-h50px secondary-radius text-decoration-none text-light btn theme_bg">
-                                <span class="material-symbols-outlined text-white">visibility</span>
-                            </a>
+                            <div class="d-flex justify-content-center align-items-center">
+                                <a href="{{route('fruitDetails', $fruits->token)}}" class="d-flex justify-content-center align-items-center w-50px-h50px secondary-radius text-decoration-none text-light btn theme_bg">
+                                    <span class="material-symbols-outlined text-white">visibility</span>
+                                </a>
+                            </div>
                         </td>
                         <td>
                             <div class="d-flex justify-content-center align-items-center">
