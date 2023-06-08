@@ -49,9 +49,11 @@
                             </a>
                         </td>
                         <td>
-                            <a href="" class="secondary-radius btn theme_bg_red d-flex justify-content-center align-items-center w-50px-h50px ">
-                                <span class="material-symbols-outlined text-white">Delete</span>
-                            </a>
+                            <div class="d-flex justify-content-center align-items-center">
+                                <a href="" class="secondary-radius btn theme_bg_red d-flex justify-content-center align-items-center w-50px-h50px ">
+                                    <span class="material-symbols-outlined text-white">Delete</span>
+                                </a>
+                            </div>
                         </td>
                     </tr>
                 @endforeach

@@ -58,9 +58,11 @@
                             </a>
                         </td>
                         <td>
-                            <a href="{{route('editUser',$user->id)}}" class="d-flex justify-content-center align-items-center w-50px-h50px secondary-radius btn btn-info">
-                                <span class="material-symbols-outlined text-white">edit</span>
-                            </a>
+                            <div class="d-flex justify-content-center align-items-center">
+                                <a href="{{route('editUser',$user->id)}}" class="d-flex justify-content-center align-items-center w-50px-h50px secondary-radius btn btn-info">
+                                    <span class="material-symbols-outlined text-white">edit</span>
+                                </a>
+                            </div>
                         </td>
                     </tr>
                 @endforeach

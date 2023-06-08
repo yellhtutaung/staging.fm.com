@@ -59,9 +59,11 @@
 {{--                            </div>--}}
 {{--                        </td>--}}
                         <td>
-                            <a href="{{route('editCountry', $city->token)}}" class="d-flex justify-content-center align-items-center w-50px-h50px  secondary-radius btn btn-info">
-                                <span class="material-symbols-outlined text-white">edit</span>
-                            </a>
+                            <div class="d-flex justify-content-center align-items-center">
+                                <a href="{{route('editCountry', $city->token)}}" class="d-flex justify-content-center align-items-center w-50px-h50px  secondary-radius btn btn-info">
+                                    <span class="material-symbols-outlined text-white">edit</span>
+                                </a>
+                            </div>
                         </td>
 {{--                        <td>--}}
 {{--                            <a href="" class="secondary-radius btn btn-danger">--}}

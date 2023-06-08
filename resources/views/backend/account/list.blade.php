@@ -55,10 +55,13 @@
                                 <span class="material-symbols-outlined  text-white">visibility</span>
                             </a>
                         </td>
-                        <td class="">
-                            <a href="{{route('editAccount', $admin->token)}}" class="d-flex justify-content-center align-items-center w-50px-h50px secondary-radius btn btn-info">
-                                <span class="material-symbols-outlined text-white">edit</span>
-                            </a>
+                        <td class=" ">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <a href="{{route('editAccount', $admin->token)}}" class="d-flex justify-content-center align-items-center w-50px-h50px secondary-radius btn btn-info">
+                                    <span class="material-symbols-outlined text-white">edit</span>
+                                </a>
+                            </div>
+
                         </td>
                     </tr>
                 @endforeach

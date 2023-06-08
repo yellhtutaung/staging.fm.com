@@ -68,9 +68,11 @@
                             </a>
                         </td>
                         <td>
-                            <a href="{{route('fruitHistory',$fruits->token)}}" class="d-flex justify-content-center align-items-center w-50px-h50px  secondary-radius text-decoration-none btn theme_bg text-light">
-                                <span class="material-symbols-outlined ">history</span>
-                            </a>
+                            <div class="d-flex justify-content-center align-items-center">
+                                <a href="{{route('fruitHistory',$fruits->token)}}" class="d-flex justify-content-center align-items-center w-50px-h50px  secondary-radius text-decoration-none btn theme_bg text-light">
+                                    <span class="material-symbols-outlined ">history</span>
+                                </a>
+                            </div>
                         </td>
 
                     </tr>

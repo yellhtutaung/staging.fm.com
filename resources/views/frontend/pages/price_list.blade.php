@@ -1,6 +1,14 @@
 @extends('frontend.layouts.app')
 @section('title', 'Price List')
 @section('extra-css')
+    <style>
+        td{
+            text-align: center;
+        }
+        th{
+            text-align: center!important;
+        }
+    </style>
     <link rel="stylesheet" href="{{asset('frontend-assets/css/profile.css')}}"/>
 
     <link rel="stylesheet" type="text/css"
