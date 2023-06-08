@@ -52,10 +52,12 @@
 {{--                                       data-on="Ban"  data-off="Active" {{$user->is_ban==1?"checked":""}}>--}}
 {{--                            </div>--}}
 {{--                        </td>--}}
-                        <td class="d-flex justify-content-center align-items-center ">
-                            <a href="{{route('userDetails',$user->token)}}" class="d-flex justify-content-center align-items-center w-50px-h50px  secondary-radius btn theme_bg">
-                                <span class="material-symbols-outlined text-white">visibility</span>
-                            </a>
+                        <td>
+                            <div class="d-flex justify-content-center align-items-center">
+                                <a href="{{route('userDetails',$user->token)}}" class="d-flex justify-content-center align-items-center w-50px-h50px  secondary-radius btn theme_bg">
+                                    <span class="material-symbols-outlined text-white">visibility</span>
+                                </a>
+                            </div>
                         </td>
                         <td>
                             <div class="d-flex justify-content-center align-items-center">

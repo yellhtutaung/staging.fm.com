@@ -58,26 +58,29 @@
                         </td>
                         <td>{{$permission->created_at->toDateString()}}</td>
                         <td>{{$permission->updated_at->diffForHumans()}}</td>
-                        <td class="d-flex justify-content-center align-items-center">
-                            <a href="{{route('permissionDetails', $permission->id)}}" class="d-flex justify-content-center align-items-center w-50px-h50px secondary-radius btn theme_bg">
-                                <span class="material-symbols-outlined text-white">visibility</span>
-                            </a>
+                        <td>
+                            <div class="d-flex justify-content-center align-items-center">
+                                <a href="{{route('permissionDetails', $permission->id)}}" class="d-flex justify-content-center align-items-center w-50px-h50px secondary-radius btn theme_bg">
+                                    <span class="material-symbols-outlined text-white">visibility</span>
+                                </a>
+                            </div>
                         </td>
                         <td class="">
-                            <center>
+                            <div class="d-flex justify-content-center align-items-center">
                                 <a href="{{route('editPermission', $permission->id)}}" class="d-flex justify-content-center align-items-center w-50px-h50px secondary-radius btn btn-info">
                                     <span class="material-symbols-outlined text-white">edit</span>
                                 </a>
-                            </center>
-
+                            </div>
                         </td>
-                        <td class="d-flex justify-content-center align-items-center">
+                        <td>
 {{--                            <form action="{{route('deletePermission', $permission->id)}}" id="delPermissionForm-{{$permission->id}}" method="POST">--}}
 {{--                                @csrf--}}
 {{--                            </form>--}}
-                            <button class="secondary-radius btn theme_bg_red d-flex justify-content-center align-items-center w-50px-h50px " onclick="delPermission({{$permission->id}})">
-                                <span class="material-symbols-outlined text-white">delete</span>
-                            </button>
+                            <div class="d-flex justify-content-center align-items-center">
+                                <button class="secondary-radius btn theme_bg_red d-flex justify-content-center align-items-center w-50px-h50px " onclick="delPermission({{$permission->id}})">
+                                    <span class="material-symbols-outlined text-white">delete</span>
+                                </button>
+                            </div>
                         </td>
                     </tr>
                 @endforeach

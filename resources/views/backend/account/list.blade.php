@@ -50,18 +50,19 @@
 {{--                                       data-on="Ban"  data-off="Active" {{$admin->is_ban==1?"checked":""}}>--}}
 {{--                            </div>--}}
 {{--                        </td>--}}
-                        <td class="d-flex justify-content-center align-items-center ">
-                            <a href="{{route('accountDetails', $admin->token)}}" class="d-flex justify-content-center align-items-center secondary-radius w-50px-h50px text-decoration-none text-light btn theme_bg">
-                                <span class="material-symbols-outlined  text-white">visibility</span>
-                            </a>
+                        <td>
+                            <div class="d-flex justify-content-center align-items-center" >
+                                <a href="{{route('accountDetails', $admin->token)}}" class="d-flex justify-content-center align-items-center secondary-radius w-50px-h50px text-decoration-none text-light btn theme_bg">
+                                    <span class="material-symbols-outlined  text-white">visibility</span>
+                                </a>
+                            </div>
                         </td>
-                        <td class=" ">
+                        <td>
                             <div class="d-flex justify-content-center align-items-center">
                                 <a href="{{route('editAccount', $admin->token)}}" class="d-flex justify-content-center align-items-center w-50px-h50px secondary-radius btn btn-info">
                                     <span class="material-symbols-outlined text-white">edit</span>
                                 </a>
                             </div>
-
                         </td>
                     </tr>
                 @endforeach

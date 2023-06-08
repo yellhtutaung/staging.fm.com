@@ -43,10 +43,12 @@
 {{--                        <td>{{$record->agent_info}}</td>--}}
                         <td>{{$record->created_at->toDateString()}}</td>
                         <td>{{$record->created_at->diffForHumans()}}</td>
-                        <td class="d-flex justify-content-center align-items-center ">
-                            <a href="javascript:void(0)" onclick="viewMessage(`{{$record->message}}`)" class="secondary-radius btn theme_bg d-flex justify-content-center align-items-center w-50px-h50px ">
-                                <span class="material-symbols-outlined text-white">visibility</span>
-                            </a>
+                        <td>
+                            <div class="d-flex justify-content-center align-items-center">
+                                <a href="javascript:void(0)" onclick="viewMessage(`{{$record->message}}`)" class="secondary-radius btn theme_bg d-flex justify-content-center align-items-center w-50px-h50px ">
+                                    <span class="material-symbols-outlined text-white">visibility</span>
+                                </a>
+                            </div>
                         </td>
                         <td>
                             <div class="d-flex justify-content-center align-items-center">
