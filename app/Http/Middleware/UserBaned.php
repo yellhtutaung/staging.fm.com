@@ -19,7 +19,6 @@ class UserBaned
     {
         if (Auth::check()){
             $UserStatus = auth()->user()->is_ban;
-            dd(auth()->user());
             if ($UserStatus == '1' || $UserStatus == 1)
             {
                 Auth::logout();
