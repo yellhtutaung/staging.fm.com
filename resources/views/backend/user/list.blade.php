@@ -70,7 +70,6 @@
                 @endforeach
                 </tbody>
             </table>
-
         </div>
     </div>
 @endsection
@@ -83,7 +82,7 @@
             $('#example').DataTable({
                 "pageLength": 100,
             });
-            $('.form-control-sm').addClass("input-data-search")
+            $('.form-control-sm').addClass("input-data-search");
             $('.input-data-search').focus(); // input auto focus
             $('.js-example-basic-multiple').select2();
 

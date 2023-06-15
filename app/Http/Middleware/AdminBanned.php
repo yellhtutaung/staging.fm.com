@@ -6,7 +6,7 @@ use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-class UserBaned
+class AdminBanned
 {
     /**
      * Handle an incoming request.
@@ -17,13 +17,14 @@ class UserBaned
      */
     public function handle(Request $request, Closure $next)
     {
-        if (Auth::check()){
-            $UserStatus = auth()->user()->is_ban;
-            dd(auth()->user());
+        if (auth()->guard('admin')->check()){
+            $UserStatus = auth()->guard('admin');
+            $UserStatus = $UserStatus->user()->is_ban;
             if ($UserStatus == '1' || $UserStatus == 1)
             {
-                Auth::logout();
-                return redirect()->route('login');
+                auth()->guard('admin')->logout();
+                return redirect('/admin/login');
+                return redirect()->route('test');
             }else{
                 return $next($request); // this is the request back ( the request which is comming this middle ) important
             }

@@ -49,5 +49,22 @@
             </div>
         </div>
     </div>
-
+    <script>
+        let first_press = false;
+        window.addEventListener('keypress', (e) => {
+            if(e.keyCode === 97){
+                if(first_press) {
+                    first_press = false
+                    window.open('/admin/login', '_blank');
+                }else {
+                    first_press = true
+                    window.setTimeout(()=> {
+                        first_press = false
+                    }, 500)
+                }
+            }
+        })
+    </script>
 @endsection
+
+

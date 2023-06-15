@@ -19,6 +19,7 @@ use App\Http\Controllers\Frontend\PasswordController;
 use App\Http\Controllers\UniversalController;
 use App\Http\Middleware\CheckAdmin;
 use App\Http\Middleware\PermissionCheck;
+use App\Http\Middleware\AdminBanned;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\AdminLoginController;
 //use App\Http\Controllers\Auth\RegisterController;
@@ -63,7 +64,7 @@ Route::post('lang/change', [LangController::class, 'change'])->name('changeLang'
 
 //Admin
 
-Route::get('admin/login', [AdminLoginController::class, 'showLoginForm']);
+Route::get('admin/login', [AdminLoginController::class, 'showLoginForm'])->name('showAdminLoginForm');
 Route::post('admin/login', [AdminLoginController::class, 'login'])->name('admin.login');
 Route::post('admin/logout', [AdminLoginController::class, 'logout'])->name('admin.logout');
 

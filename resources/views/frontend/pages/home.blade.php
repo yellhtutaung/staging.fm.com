@@ -461,16 +461,17 @@
         $(document).ready(function () {
             const header = $('.green_block').innerHeight() + $('.white_block').innerHeight() + $('.red_block').innerHeight() + $('.navigation_bar').innerHeight()
             const avalible = document.documentElement.clientHeight - header
-            $('.img').css({"height": `${avalible}px`, "margin-top": `${header}px`});
+            // $('.img').css({"height": `${avalible}px`, "margin-top": `${header}px`});
+            $('.img').css({ "margin-top": `${header}px`});
         })
 
-        window.addEventListener("resize", ()=>{
-            if (window.screen.width > 992) {
-                const header = $('.green_block').innerHeight() + $('.white_block').innerHeight() + $('.red_block').innerHeight() + $('.navigation_bar').innerHeight()
-                const avalible = document.documentElement.clientHeight - header
-                $('.img').css({"height": `${avalible}px`, "margin-top": `${header}px`});
-            }
-        });
+        // window.addEventListener("resize", ()=>{
+        //     if (window.screen.width > 992) {
+        //         const header = $('.green_block').innerHeight() + $('.white_block').innerHeight() + $('.red_block').innerHeight() + $('.navigation_bar').innerHeight()
+        //         const avalible = document.documentElement.clientHeight - header
+        //         $('.img').css({"height": `${avalible}px`, "margin-top": `${header}px`});
+        //     }
+        // });
 
 
 
