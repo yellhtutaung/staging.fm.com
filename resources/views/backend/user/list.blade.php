@@ -41,7 +41,7 @@
                         <td>{{$user->phone}}</td>
                         {{--                        <td>{{$user->shop_name}}</td>--}}
                         <td>{{$user->country_id!=null?$user->getCountry->name:''}}</td>
-                        <td>{{$user->city_id!=null?$user->getCountry->name:''}}</td>
+                        <td>{{$user->city_id!=null?$user->getCity->name:''}}</td>
                         <td>{{$user->created_at->toDateString()}}</td>
                         <td>{{$user->updated_at->diffForHumans()}}</td>
 {{--                        <td>--}}
