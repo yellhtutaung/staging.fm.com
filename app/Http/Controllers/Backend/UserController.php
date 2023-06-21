@@ -13,6 +13,8 @@ class UserController extends Controller
     public function userList()
     {
         $users = User::where('status',1)->orderBy('id','DESC')->get();
+//        $currentCountry = Country::where('status', 1)->where('level', 1)->where('id', $fetchUser->country_id)->first();
+//        $currentCity = Country::where('status', 1)->where('level', 2)->where('id', $fetchUser->city_id)->first();
         return view('backend.user.list',compact('users'));
     }
 
