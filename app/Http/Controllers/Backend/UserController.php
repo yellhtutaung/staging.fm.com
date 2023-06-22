@@ -24,15 +24,38 @@ class UserController extends Controller
         return view('backend.user.edit',compact('fetchUser'));
     }
 
+
+    public function checkUsername($userId,$username)
+    {
+        $findingUser = User::where('id',$userId)->where('username',$username)->first();
+        if ($findingUser){
+            return true;
+        }else{
+            $findingUser = User::where('username',$username)->first();
+            if ($findingUser){
+                return 'false';
+            }else{
+                return true;
+            }
+        }
+    }
+
     public function updateUser(Request $In)
     {
         try{
             $fetchUser = User::find($In->userId);
-            $fetchUser->username = $In->username;
-            if ($fetchUser->save())
+            $checkUsername = $this->checkUsername($fetchUser->id,$In->username);
+            if ($checkUsername)
             {
-                return redirect()->back()->with('success', 'Username successfully updated !');
+                $fetchUser->username = $In->username;
+                if ($fetchUser->save())
+                {
+                    return redirect()->back()->with('success', 'Username successfully updated !');
+                }
+            }else{
+                return redirect()->back()->with('warning', 'Username already exit');
             }
+
         }catch (\Exception $e) {
             return redirect()->back()->with('warning', $e->getMessage());
         }
