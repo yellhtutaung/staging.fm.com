@@ -29,13 +29,13 @@ class UserController extends Controller
     {
         $findingUser = User::where('id',$userId)->where('username',$username)->first();
         if ($findingUser){
-            return true;
+            return 1;
         }else{
             $findingUser = User::where('username',$username)->first();
             if ($findingUser){
-                return 'false';
+                return 0;
             }else{
-                return true;
+                return 1;
             }
         }
     }
@@ -45,15 +45,15 @@ class UserController extends Controller
         try{
             $fetchUser = User::find($In->userId);
             $checkUsername = $this->checkUsername($fetchUser->id,$In->username);
-            if ($checkUsername)
+            if ($checkUsername == 0)
             {
+                return redirect()->back()->with('warning', 'Username already exit');
+            }else{
                 $fetchUser->username = $In->username;
                 if ($fetchUser->save())
                 {
                     return redirect()->back()->with('success', 'Username successfully updated !');
                 }
-            }else{
-                return redirect()->back()->with('warning', 'Username already exit');
             }
 
         }catch (\Exception $e) {
