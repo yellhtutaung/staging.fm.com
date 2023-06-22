@@ -47,7 +47,7 @@ class UserController extends Controller
             $checkUsername = $this->checkUsername($fetchUser->id,$In->username);
             if ($checkUsername == 0)
             {
-                return redirect()->back()->with('warning', 'Username already exit');
+                return redirect()->back()->with('warning', 'You cannot change ! Username already exit');
             }else{
                 $fetchUser->username = $In->username;
                 if ($fetchUser->save())
